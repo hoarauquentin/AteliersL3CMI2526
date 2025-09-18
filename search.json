@@ -38,5 +38,247 @@
     "crumbs": [
       "References"
     ]
+  },
+  {
+    "objectID": "CMI-CN-intro.html",
+    "href": "CMI-CN-intro.html",
+    "title": "1  Concepts avancés",
+    "section": "",
+    "text": "Plongeons dans des sujets plus complexes.",
+    "crumbs": [
+      "Calcul Numérique",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Concepts avancés</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-CN-TP1.html",
+    "href": "CMI-CN-TP1.html",
+    "title": "2  Concepts avancés",
+    "section": "",
+    "text": "Plongeons dans des sujets plus complexes.",
+    "crumbs": [
+      "Calcul Numérique",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Concepts avancés</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-SIG-intro.html",
+    "href": "CMI-SIG-intro.html",
+    "title": "3  Concepts avancés",
+    "section": "",
+    "text": "Plongeons dans des sujets plus complexes.",
+    "crumbs": [
+      "SIG",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Concepts avancés</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-SIG-TP1.html",
+    "href": "CMI-SIG-TP1.html",
+    "title": "4  Concepts avancés",
+    "section": "",
+    "text": "Plongeons dans des sujets plus complexes.",
+    "crumbs": [
+      "SIG",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Concepts avancés</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-intro.html",
+    "href": "CMI-E1-intro.html",
+    "title": "5  Introduction",
+    "section": "",
+    "text": "Bienvenue dans la première partie de ce livre.",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-TP1.html",
+    "href": "CMI-E1-TP1.html",
+    "title": "6  TP1 : Commandes de base de R",
+    "section": "",
+    "text": "6.1 Exercice 1 : Manipulation de vecteurs\nSoit le vecteur \\(x = (1, 2, 3, 4, 5)\\)",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>TP1 : Commandes de base de R</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-TP1.html#exercice-1-manipulation-de-vecteurs",
+    "href": "CMI-E1-TP1.html#exercice-1-manipulation-de-vecteurs",
+    "title": "6  TP1 : Commandes de base de R",
+    "section": "",
+    "text": "Créer ce vecteur dans R et le stocker dans un objet que l’on appellera x ;\nAfficher le mode de x, puis sa longueur ;\nExtraire le premier élément, puis le dernier ;\nExtraire les trois premier éléments et les stocker dans un vecteur que l’on nommera a\nExtraire les éléments en position 1, 3, 5 ; les stocker dans un vecteur que l’on nommera b\nAdditionner le nombre 10 au vecteur x, puis multiplier le résultat par 2 ;\nEffectuer l’addition de a et b, commenter le résultat ;\nEffectuer l’addition suivante : x+a, commenter le résultat, puis regarder le résultat de a+x ;\nMultiplier le vecteur x par le scalaire c que l’on fixera à 2 ;\nEffectuer la multiplication de a et b, commenter le résultat ;\nEffectuer la multiplication suivante : x*a, commenter le résultat ;\nRécupérer les positions des multiples de 2 du vecteur x et les stocker dans un vecteur que l’on nommera ind, puis conserver uniquement les multiples de 2 de x dans un vecteur que l’on nommera mult_2 ;\nAfficher les éléments de x qui sont multiples de 3 et multiples de 2 ;\nAfficher les éléments de x qui sont multiples de 3 ou multiples de 2 ;\nCalculer la somme des éléments de x ;\nRemplacer le premier élément de x par un 4 ;\nRemplacer le premier élément de x par la valeur NA, puis calculer la somme des éléments de x;\nLister les objets en mémoire dans la session R ;\nSupprimer le vecteur a;\nSupprimer la totalité des objets de la session.",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>TP1 : Commandes de base de R</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-TP1.html#exercice-2-manipulation-de-listes",
+    "href": "CMI-E1-TP1.html#exercice-2-manipulation-de-listes",
+    "title": "6  TP1 : Commandes de base de R",
+    "section": "6.2 Exercice 2 : Manipulation de listes",
+    "text": "6.2 Exercice 2 : Manipulation de listes\n\nÉvaluer le code suivant : TRUE+FALSE+TRUE*4 et le commenter ;\nÉvaluer les expressions suivantes : c(1, 4, TRUE), et c(1, 4, TRUE, \"bonjour\"), commenter ;\nCréer une liste que l’on appellera l et qui contient les éléments 1, 4 et TRUE en première, seconde et troisième positions respectivement ;\nExtraire le premier élément de la liste l, et afficher son mode. En faire de même avec le troisième élément, et commenter ;\nAjouter un quatrième élément à la liste l : “bonjour”, puis afficher la structure de l ;\nRetirer le troisième élément de la liste l ;\nCréer une liste de trois éléments : votre nom, votre prénom, et votre année de naissance. Ces trois éléments de la liste devront être nommés respectivement \"nom\", \"prenom\" et année de naissance. Stocker la liste ainsi créée dans un objet nommé moi ;\nExtraire le prénom de la liste moi de deux manières : en utilisant l’indice, et en utilisant le nommage ;\nCréer une liste avec la même structure que celle de moi, en la remplissant avec les informations d’une autre personne et la nommer toi Puis, créer la liste personnes, qui contiendra les listes toi et moi ;\nExtraire la liste toi de personnes (en première position) ;\nExtraire directement depuis personnes le prénom de l’élément en première position.",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>TP1 : Commandes de base de R</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-TP1.html#exercice-3-manipulation-de-matrices",
+    "href": "CMI-E1-TP1.html#exercice-3-manipulation-de-matrices",
+    "title": "6  TP1 : Commandes de base de R",
+    "section": "6.3 Exercice 3 : Manipulation de matrices",
+    "text": "6.3 Exercice 3 : Manipulation de matrices\n\nCréer la matrice suivante : \\[ A =\n\\begin{bmatrix}\n-3 & 5 & 6 \\\\\n-1 & 2 & 2 \\\\\n1 & -1 & -1\n\\end{bmatrix}\n\\] ;\nAfficher la dimension de A, son nombre de colonnes, son nombre de lignes et sa longueur ;\nExtraire la seconde colonne de A, puis la première ligne ;\nExtraire l’élément en troisième position à la première ligne ;\nExtraire la sous-matrice de dimension 2 x 2 du coin inférieur de \\(A\\)\nCalculer la somme des colonnes puis des lignes de \\(A\\)\nAfficher la diagonale de A ;\nRajouter le vecteur colonne (1, 2 , 3) à droite de la matrice \\(A\\) et stocker le résultat dans un objet appelé \\(B\\) ;\nRetirer le quatrième vecteur de \\(B\\) ;\nRetirer la première et la troisième ligne de \\(B\\) ;\nAjouter le scalaire 10 à \\(A\\) ;\nAjouter le vecteur colonne (1 2 3) à \\(A\\) ;\nAjouter la matrice identité \\(I_3\\) à \\(A\\) ;\nDiviser tous les éléments de la matrice \\(A\\) par 2 ;\nMultiplier la matrice \\(A\\) par le vecteur colonne (1 2 3) ;\nAfficher la transposée de \\(A\\) ;\nEffectuer le produit avec transposition \\(A ^t A\\).",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>TP1 : Commandes de base de R</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-TP1.html#exercice-4-manipulation-de-chaînes-de-caractères",
+    "href": "CMI-E1-TP1.html#exercice-4-manipulation-de-chaînes-de-caractères",
+    "title": "6  TP1 : Commandes de base de R",
+    "section": "6.4 Exercice 4 : Manipulation de chaînes de caractères",
+    "text": "6.4 Exercice 4 : Manipulation de chaînes de caractères\nCharger le package tidyverse, qui contient le package stringr.\n\nCréer les objets a et b afin qu’il contiennent respectivement les chaînes de caractères suivantes : 23 à 0 et C’est la piquette, Jack!;\nCréer le vecteur phrases de longueur 2, dont les deux éléments sont a et b ;\nÀ l’aide de la fonction appropriée dans le package stringr, afficher le nombre de carac- tètres de a, de b, puis appliquer la même fonction à l’objet phrases ;\nEn utilisant la fonction str_c(), concaténer a et b dans une seule chaîne de caractères, en choisissant la virgule comme caractère de séparation ;\nConcaténer les deux éléments du vecteur phrases en une seule chaine de caractères, en les séparant par le caractère de retour à la ligne , puis utiliser la fonction cat() pour afficher le résultat ;\nAppliquer la même fonction que dans la question précédente à l’objet suivant : c(NA, phrases) et commenter ;\nMettre en majuscules, puis en minuscules les chaînes du vecteur phrases (afficher le résultat, ne pas modifier phrases) ;\nÀ l’aide de la fonction word() du package stringr, extraire le mot la, puis Jack de la chaîne b ;\nMême question que la précédente, en utilisant la fonction str_sub() ;\nÀ l’aide de la fonction str_detect(), rechercher si le motif piqu puis mauvais sont présents dans b ;\nÀ l’aide de la fonction str_detect(), rechercher si le motif piqu est présent dans les éléments du vecteur phrases ;\nÀ l’aide de la fonction str_detect(), rechercher si le motif piqu ou le motif à sont présents dans les éléments du vecteur phrases ;\nEn utilisant la fonction str_locate(), retourner les positions de la première occurence du caractère a dans la chaîne b, puis essayer avec le caractère w pour observer le résultat retourné ;\nRetourner toutes les positions du motif a dans la chaîne b ;\nEn utilisant la fonction str_replace(), remplacer la première occurence du motif a, par le motif Z (afficher le résultat, ne pas modifier phrases) ;\nRemplacer toutes les occurences de a par Z dans la chaîne b (afficher le résultat, ne pas modifier phrases) ;\nUtiliser la fonction str_split() pour séparer la chaîne b en utilisant la virgule comme séparateur de sous-chaînes ;\nRetirer tous les caractères de ponctuation de la chaîne b, puis utiliser la fonction tr_trim() sur le résultat pour retirer les caractères blancs du début et de la fin de la chaîne.",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>TP1 : Commandes de base de R</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-TP2.html",
+    "href": "CMI-E1-TP2.html",
+    "title": "7  TP2 : Tableaux de données",
+    "section": "",
+    "text": "7.1 Les verbes de base de dplyr\nOn commence par charger les extensions et les données nécessaires.\nExercice 1.1\nSélectionner la dixième ligne du tableau des aéroports (airports).\nSélectionner les 5 premières lignes de la table airlines.\nSélectionner l’aéroport avec l’altitude la plus basse.\nExercice 1.2\nSélectionnez les vols du mois de juillet (variable month).\nSélectionnez les vols avec un retard à l’arrivée (variable arr_delay) compris entre 5 et 15 minutes.\nSélectionnez les vols des compagnies Delta, United et American (codes DL, UA et AA de la variable carrier).\nExercice 1.3\nTriez la table flights par retard au départ décroissant.\nExercice 1.4\nSélectionnez les colonnes name, lat et lon de la table airports\nSélectionnez toutes les colonnes de la table airports sauf les colonnes tz et tzone\nSélectionnez toutes les colonnes de la table flights dont les noms se terminent par “delay”.\nDans la table airports, renommez la colonne alt en altitude et la colonne tzone en fuseau_horaire.\nExercice 1.5\nDans la table airports, la colonne alt contient l’altitude de l’aéroport en pieds. Créer une nouvelle variable alt_m contenant l’altitude en mètres (on convertit des pieds en mètres en les divisant par 3.2808). Sélectionner dans la table obtenue uniquement les deux colonnes alt et alt_m.",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>TP2 : Tableaux de données</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-TP2.html#enchaîner-des-opérations",
+    "href": "CMI-E1-TP2.html#enchaîner-des-opérations",
+    "title": "7  TP2 : Tableaux de données",
+    "section": "7.2 Enchaîner des opérations",
+    "text": "7.2 Enchaîner des opérations\nExercice 2.1\nRéécrire le code de l’exercice précédent en utilisant le pipe %&gt;%.\n\n\n\nExercice 2.2\nEn utilisant le pipe, sélectionnez les vols à destination de San Francico (code SFO de la variable dest) et triez-les selon le retard au départ décroissant (variable dep_delay).\n\n\n\nExercice 2.3\nSélectionnez les vols des mois de septembre et octobre, conservez les colonnes dest et dep_delay, créez une nouvelle variable retard_h contenant le retard au départ en heures, et conservez uniquement les 5 lignes avec les plus grandes valeurs de retard_h.\n\n\n\n\n7.2.1 group_by et summarise\nExercice 3.1\nAffichez le nombre de vols par mois.\n\n\n\nTriez la table résultat selon le nombre de vols croissant.\n\n\n\nExercice 3.2\nCalculer la distance moyenne des vols selon l’aéroport de départ (variable origin).\n\n\n\nExercice 3.3\nCalculer le nombre de vols à destination de Los Angeles (code LAX) pour chaque mois de l’année.\n\n\n\nExercice 3.4\nCalculer le nombre de vols selon le mois et la destination.\n\n\n\nNe conserver, pour chaque mois, que la destination avec le nombre maximal de vols.\n\n\n\nExercice 3.5\nCalculer le nombre de vols selon le mois. Ajouter une colonne comportant le pourcentage de vols annuels réalisés par mois.\n\n\n\nExercice 3.6\nCalculer, pour chaque aéroport de départ et de destination, la durée moyenne des vols (variable air_time). Pour chaque aéroport de départ, ne conserver que la destination avec la durée moyenne la plus longue.\n\n\n\n\n\n7.2.2 Jointures\nExercice 4.1\nFaire la jointure de la table airlines sur la table flights à l’aide de left_join.\n\n\n\nExercice 4.2\nÀ partir de la table résultat de l’exercice précédent, calculer le retard moyen au départ pour chaque compagnie, et trier selon ce retard décroissant.\n\n\n\nExercice 4.3\nFaire la jointure de la table airports sur la table flights en utilisant comme clé le code de l’aéroport de destination.\n\n\n\nÀ partir de cette table, afficher pour chaque mois le nom de l’aéroport de destination ayant eu le plus petit nombre de vol.\n\n\n\nExercice 4.4\nCréer une table indiquant, pour chaque vol, uniquement le nom de l’aéroport de départ et celui de l’aéroport d’arrivée.\n\n\n\n\n\n7.2.3 Bonus\nExercice 5.1\nCalculer le nombre de vols selon l’aéroport de destination, et fusionnez la table airports sur le résultat avec left_join. Stocker le résultat final dans un objet nommé flights_dest.",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>TP2 : Tableaux de données</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-TP3.html",
+    "href": "CMI-E1-TP3.html",
+    "title": "8  TP3 : Premiers Graphiques",
+    "section": "",
+    "text": "8.1 Exercice 1",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>TP3 : Premiers Graphiques</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-TP3.html#exercice-1",
+    "href": "CMI-E1-TP3.html#exercice-1",
+    "title": "8  TP3 : Premiers Graphiques",
+    "section": "",
+    "text": "Avant toute chose, charger tidyverse. Charger aussi le jeu de données rp2018 dans le package questionr. Assigner un dataframe rp69 comme la restriction de rp2018 aux départements du Rhône et de la Loire. Faire un nuage de points croisant le pourcentage de sans diplôme (dipl_aucun) et le pourcentage d’ouvriers (ouvr).\n\n\n\n\n\nFaire un nuage de points croisant le pourcentage de sans diplôme et le pourcentage d’ouvriers, avec les points en rouge et de transparence 0.2.\n\n\n\n\n\nReprésenter la répartition du pourcentage de propriétaires (variable proprio) selon la taille de la commune en classes (variable pop_cl) sous forme de boîtes à moustaches.\n\n\n\n\n\nReprésenter la répartition du nombre de communes selon la taille de la commune en classes sous la forme d’un diagramme en bâtons.\n\n\n\n\n\nFaire un nuage de points croisant le pourcentage de sans diplôme et le pourcentage d’ouvriers. Faire varier la couleur selon le département (departement).\n\n\n\n\n\nSur le même graphique, faire varier la taille des points selon la population totale de la commune (pop_tot).\n\n\n\n\n\nEnfin, toujours sur le même graphique, rendre les points transparents en plaçant leur opacité à 0.5.\n\n\n\n\n\nReprésenter la répartition du pourcentage de propriétaires (variable proprio) selon la taille de la commune en classes (variable pop_cl) sous forme de boîtes à moustaches. Faire varier la couleur de remplissage (attribut fill) selon le département.\n\n\n\n\n\nReprésenter la répartition du nombre de communes selon la taille de la commune en classes (variable pop_cl) sous forme de diagramme en bâtons empilés, avec une couleur différente selon le département.\n\n\n\n\n\nFaire varier la valeur du paramètre position pour afficher les barres les unes à côté des autres.\n\n\n\n\n\nChanger à nouveau la valeur du paramètre position pour représenter les proportions de communes de chaque département pour chaque catégorie de taille.\n\n\n\n\n\nFaire un nuage de points représentant en abscisse le pourcentage de cadres (cadres) et en ordonnée le pourcentage de diplômés du supérieur (dipl_sup). Représenter ce nuage par deux graphiques différents selon le département en utilisant facet_grid.\n\n\n\n\n\nSur le même graphique, faire varier la taille des points selon la population totale de la communes (variable pop_tot) et rendre les points transparents.\n\n\n\n\n\nFaire le nuage de points croisant pourcentage de chômeurs (chom) et pourcentage de sans diplôme. Y ajouter les noms des communes correspondant (variable commune), en rouge et en taille 2.5 :\n\n\n\n\n\nDans le graphique précédent, n’afficher que le nom des communes ayant plus de 15% de chômage.",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>TP3 : Premiers Graphiques</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-TP3.html#exercice-2",
+    "href": "CMI-E1-TP3.html#exercice-2",
+    "title": "8  TP3 : Premiers Graphiques",
+    "section": "8.2 Exercice 2",
+    "text": "8.2 Exercice 2\nAvant tout, charger le package tidyverse.\n\nUtiliser la fonction data() pour charger en mémoire le jeu de données economics. Consulter la page d’aide de ce jeu de données pour prendre connaissance de son contenu ;\nÀ l’aide de la fonction ggplot(), représenter les dépenses personnelles de consommation (pce) en fonction de la date (date). Les observations doivent être connectées par une ligne.\nModifier le graphique de la question précédente de manière à ce que la couleur de la ligne soit dodger blue et définir la taille de la ligne à 0.5. Stocker le résultat dans un objet que l’on appellera p_1 ;\nAjouter une couche au graphique p_1 pour modifier les titres des axes (les retirer), et définir le titre suivant : “Personal Consumption Expenditures (billions dollars)”.\nUtiliser la fonction scale_x_date() du package scales pour modifier l’échelle des abscisses de p_1, afin que les étiquettes des marques soient affichées tous les 5 ans ;\nA l’aide de l’option date_labels() de la fonction précédente, modifier le format de ces étiquettes pour que seule l’année des dates s’affiche ;",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>TP3 : Premiers Graphiques</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-TP3.html#exercice-3",
+    "href": "CMI-E1-TP3.html#exercice-3",
+    "title": "8  TP3 : Premiers Graphiques",
+    "section": "8.3 Exercice 3",
+    "text": "8.3 Exercice 3\n\nUtiliser la fonction data() pour charger en mémoire le jeu de données economics. Consulter la page d’aide de ce jeu de données pour prendre connaissance de son contenu ;\nSélectionner les variables date,psavert et uempmed dans le tableau de données economics et utiliser la fonction gather() sur le résultat pour obtenir un tableau dans lequel chaque ligne indiquera la valeur (value) pour une variable donnée (key) à une date donnée (date). Stocker le résultat dans un objet que l’on appellera df ;\nSur un même graphique, représenter à l’aide de lignes, l’évolution dans le temps du taux d’épargne personnelle (psavert) et de la durée médiane en semaines du chômage (uempmed). Stocker le graphique dans un objet que l’on appellera p_2 ;\nModifier le code ayant servi à construire le graphique p_2 pour que le type de ligne soit différent pour chacune des deux séries représentées. Les deux lignes doivent être tracées en bleu. Stocker le graphique dans un objet que l’on appellera p_3 ;\nÀ présent, modifier le code ayant servi à construire p_3 pour qu’à la fois la couleur et le type de ligne servent à différencier les deux séries. Stocker le graphique dans un objet que l’on appellera p_4 ;\nModifier le graphique p_4 en ajoutant une couche d’échelle de couleur pour que le taux d’épargne personnelle (psavert) soit représenté en dodger blue, et que la durée de chômage (uempmed) soit représentée en rouge. Par ailleurs, retirer le titre de la légende ;\nModifier le graphique p_4 en ajoutant une couche d’échelle de type de ligne pour que le taux d’épargne personnelle (psavert) soit représenté par des tirets, et que la durée de chômage (uempmed) soit représentée par une ligne pleine. Par ailleurs, retirer le titre de la légende des types de lignes, afin que les légendes de couleur et de type de ligne soient fusionnées ;\nCréer le tableaux de données df_2, une copie de df, dans lequel la variable key doit être un facteur dont les niveaux sont uempmed et psavert ;\nCréer le vecteur etiq suivant etiq &lt;- c(\"psavert\" = \"Pers. Saving Rate\",\"uempmed\" = \"Median Duration of Unemployment (weeks)\") Ce vecteur contient des valeurs d’étiquettes pour la légende du graphique qu’il va falloir créer. Représenter sur un même graphique l’évolution dans le temps du taux d’épargne personnelle et de la durée médiane du chômage en semaines, en s’appuyant sur les données contenues dans le tableau df_2. La courbe du taux d’épargne personnelle doit être composée de tirets et être de couleur dodger blue; la courbe de la durée médiane du taux de chômage doit être une ligne rouge. La légende ne doit pas comporter de titre, et ses étiquettes doivent être modifiées pour que “Pers. Saving Rate” s’affiche ’a la place de “psavert”, et pour que “Median Duration of Unemployment (weeks)” s’affiche à la place de “uempmed”. Stocker le graphique dans un objet que l’on appellera p_5 ; Note : il s’agit de reprendre le code ayant servi à créer le graphique p_4, en modifiant légèrement les échelles de couleur et de ligne pour prendre en compte les étiquettes proposées dans le vecteur etiq.\nModifier p_5 pour lui ajouter une couche permettant de déplacer la légende en bas du graphique (utiliser la fonction theme()) ;\nAjouter une couche au graphique p_5 qui permet de définir un thème. Utiliser le thème minimal (theme_minimal()). Que se passe-t-il pour la légende ? Repositionner la légende en dessous, et retirer les titres des axes ;\nSauvegarder le graphique p_5 au format PDF en précisant une largeur de 12 et une hauteur de 8.",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>TP3 : Premiers Graphiques</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-TP3.html#exercice-4",
+    "href": "CMI-E1-TP3.html#exercice-4",
+    "title": "8  TP3 : Premiers Graphiques",
+    "section": "8.4 Exercice 4",
+    "text": "8.4 Exercice 4\n\nCharger le jeu de données mpg contenu dans lepackage ggplot2 en mémoire, puis consulter la page d’aide du jeu de données pour en prendre connaissance ;\nReprésenter à l’aide d’un nuage de points la relation entre la consommation sur autoroute des véhicules de l’échantillon (hwy) et la cylindrée de leur moteur (displ)\nReprendre le code du graphique précédent et modifier la forme des points pour les changer en symbole +; modifier la couleur des + de manière à la faire dépendre du nombre de cylindres (cyl) ;\nÀ présent, représenter par des boîtes à moustaches la distribution de la consommation sur autoroute des véhicules (hwy) pour chacune des valeurs possibles du nombre de cylindres (cyl) ;\nCharger le jeu de données economics contenu dans le package ggplot2 en mémoire, puis consulter la page d’aide du jeu de données pour en prendre connaissance. Ensuite, ajouter au tableau (les créer) les variables u_rate et e_rate, respectivement le taux de chômage et le taux d’emploi (on définira le taux de chômage de manière très grossière ici : nombre de personnes non employées sur la population totale) ;\nReprésenter à l’aide de barres l’évolution dans le temps du taux de chômage, et remplir les barres avec la couleur rouge ;\nReprendre le code du graphique précédent et ajouter une couche permettant de modifier les limites de l’axe des abscisses pour afficher les valeurs uniquement sur la période “2012- 01-01” à “2015-01-01” (utiliser la fonction coord_cartesian()). Stocker le graphique dans un objet que l’on appellera p ;\nDans le tableau de données economics, sélectionner les variables date, u_rate et e_rate, puis utiliser la fonction gather() pour obtenir un tableau dans lequel chaque ligne correspond à la valeur d’une des variables (taux de chômage ou taux d’emploi) à une date donnée. Stocker le résultat dans un objet que l’on appellera df_3 ;\nUtiliser le tableau de données df_3 pour représenter graphiquement à l’aide de barres les taux de chômage et taux d’emploi par mois sur la période “2012-01-01” à “2015-01-01”. Sur le graphique, les barres représentant le taux de chômage et celles représentant le taux d’emploi devront être superposées. Note : il s’agit de modifier légèrement le code ayant permis de réaliser le graphique p.",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>TP3 : Premiers Graphiques</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-TP3.html#exercice-5",
+    "href": "CMI-E1-TP3.html#exercice-5",
+    "title": "8  TP3 : Premiers Graphiques",
+    "section": "8.5 Exercice 5",
+    "text": "8.5 Exercice 5\n\nÀ l’aide de la fonction WDI du package WDI, récupérer la série fournie par la Banque Mondiale du PIB par tête (NY.GDP.PCAP.PP.KD) pour tous les pays disponibles pour l’année 2010, et stocker ces données dans un tableau que l’on appellera gdp_capita ;\nDans le tableau gdp_capita, modifier la valeur de la variable country pour l’observation de la Slovaquie, pour qu’elle vaille Slovakia au lieu de Slovak Republic ;\nFiltrer les observations du tableau gdp_capita pour ne conserver que les observations des pays membres de l’Union Européenne dont les noms sont contenus dans le vecteur membres_ue. Stocker le résultat dans un tableau que l’on nommera gdp_capita_eu ;\n\n\nUtiliser le package rworldmap pour récupérer les données nécessaires à la réalisation d’une carte du monde ;\nAfficher une carte du monde à l’aide des fonctions contenues dans le package ggplot2 ;\nModifier les échelles des axes pour faire figurer les méridiens de -60 à 60 par pas de 30 et les parallèles de -180 à 180 par pas de 45. Modifier également la projection cartographique pour choisir la projection orthographique, à l’aide de la fonction coord_map() ;\nJoindre les informations contenues dans le tableau gdp_capita_eu au tableau contenant les données permettant la réalisation des cartes ;\nRéaliser une carte choroplèthe reflétant pour chaque pays membre de l’Union Européenne la valeur du PIB par tête de 2012 ;\nModifier les couleurs de l’échelle continue de la carte précédente, pour que les faibles valeurs du PIB par tête soient représentées en jaune, et les valeurs les plus hautes en rouge ;\nModifier les ruptures de l’échelle de couleur pour qu’elles aillent de 10000 à 100000; modifier également l’étiquette de ces ruptures de sorte que 35000 soit affiché comme 35k, 60000 comme 60k, etc. Enfin, ajouter un titre au graphique et retirer les titres d’axes.",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>TP3 : Premiers Graphiques</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-TP4.html",
+    "href": "CMI-E1-TP4.html",
+    "title": "9  TP4 : Probabilités et Statistiques avec R",
+    "section": "",
+    "text": "9.1 1. Probabilités avec R",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>TP4 : Probabilités et Statistiques avec R</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-TP4.html#probabilités-avec-r",
+    "href": "CMI-E1-TP4.html#probabilités-avec-r",
+    "title": "9  TP4 : Probabilités et Statistiques avec R",
+    "section": "",
+    "text": "9.1.1 1.1 - Échantillonnage\nVous êtes la fée des loteries dans une loterie hebdomadaire, où 6 numéros uniques sur 49 sont tirés.\n\nTirez aléatoirement les numéros gagnants de cette semaine (fixez la graine à 123) en utilisant la fonction sample.\n\n\n\n9.1.2 1.2 - Fonction de densité de probabilité\nConsidérez une variable aléatoire \\(X\\) avec une fonction de densité de probabilité (PDF)\n\\[f_X(x)=\\frac{x}{4}e^{-x^2/8},\\quad x\\geq 0.\\]\n\nDéfinissez la PDF ci-dessus comme une fonction \\(f()\\).\nVérifiez si la fonction que vous avez définie est effectivement une PDF.\n\n\n\n9.1.3 1.3 - Espérance et Variance\nDans cet exercice, vous devez calculer l’espérance et la variance de la variable aléatoire \\(X\\) considérée dans l’exercice précédent.\nLa PDF \\(f()\\) de l’exercice précédent est disponible dans votre environnement de travail.\n\nDéfinissez une fonction appropriée ex() qui s’intègre à l’espérance de \\(X\\).\nCalculez l’espérance de \\(X\\). Stockez le résultat dans expected_value.\nDéfinissez une fonction appropriée ex2() qui s’intègre à l’espérance de \\(X^2\\).\nCalculez la variance de \\(X\\). Stockez le résultat dans variance.",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>TP4 : Probabilités et Statistiques avec R</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-TP4.html#distribution-normale-standard",
+    "href": "CMI-E1-TP4.html#distribution-normale-standard",
+    "title": "9  TP4 : Probabilités et Statistiques avec R",
+    "section": "9.2 4 - Distribution Normale Standard",
+    "text": "9.2 4 - Distribution Normale Standard\nSoit $Z\\sim \\mathcal{N}(0, 1)$.\n\nCalculez $\\phi(3)$, c’est-à-dire la valeur de la densité de probabilité standard normale en $c=3$.\nCalculez $P(|Z|\\leq 1.64)$ en utilisant la fonction `pnorm()`.\n\n\n9.2.1 1.4 - Distribution du Chi-carré\n\nSoit \\(W\\sim \\chi^2_{1,0}\\). Tracez la PDF correspondante à l’aide de curve(). Spécifiez la plage de valeurs \\(x\\) comme [0,25] via l’argument xlim.\nSoient \\(X_1\\) et \\(X_2\\) deux variables aléatoires normalement distribuées indépendantes avec \\(\\mu=0\\) et \\(\\sigma^2=15\\). Calculez \\(P(X_1^2+X_2^2&gt;10)\\)\n\n\n\n9.2.2 1.5 - Distribution de Student\n\nSoit \\(X\\sim t_{10000}\\) et \\(Z \\sim N(0,1)\\). Calculez le quantile à 95 % des deux distributions. Que remarquez-vous ?\nSoit \\(X\\sim t_1\\). Générez 1000 nombres aléatoires à partir de cette distribution et attribuez-les à la variable x. Calculez la moyenne de l’échantillon de x. Pouvez-vous expliquer le résultat ?\n\n\n\n9.2.3 1.6 - Distribution de Fisher\n\nSoit \\(Y \\sim F(10,4)\\). Tracez la fonction quantile de la distribution donnée à l’aide de la fonction curve().\nSoit \\(Y \\sim F(4,5)\\). Calculez \\(P(1&lt;Y&lt;10)\\) en intégrant la PDF avec la fonction integrate.",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>TP4 : Probabilités et Statistiques avec R</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E1-TP4.html#statistiques-avec-r",
+    "href": "CMI-E1-TP4.html#statistiques-avec-r",
+    "title": "9  TP4 : Probabilités et Statistiques avec R",
+    "section": "9.3 2. Statistiques avec R",
+    "text": "9.3 2. Statistiques avec R\n\n9.3.1 2.1 - Biais\nOn considère l’estimateur alternatif suivant pour \\(\\mu_Y\\), la moyenne de \\(Y\\) : \\[\\widetilde{Y}= \\frac{1}{n-1}\\sum_{i=1}^n Y_i\\]\n\nDéfinissez une fonction Y_tilde() qui implémente l’estimateur ci-dessus.\nTirez aléatoirement 5 observations au hasard à partir de la distribution \\(N(10,25)\\) et calculez une estimation en utilisant Y_tilde(). Répétez cette procédure 10000 fois et stockez les résultats dans est_biased en utilisant la fonction replicate.\nTracez un histogramme de est_biased. Ajoutez une ligne verticale rouge à \\(\\mu=10\\) en utilisant la fonction abline().\nTirez aléatoirement 1000 observations au hasard à partir de la distribution \\(N(10,25)\\) et calculez une estimation de la moyenne en utilisantY_tilde(). Répétez cette procédure 10000 fois et stockez les résultats dans est_consistent.\nTracez un histogramme de est_consistent. Ajoutez une ligne verticale rouge à \\(\\mu=10\\) en utilisant la fonction abline().\n\n\n\n9.3.2 2.2 - Efficience d’un estimateur\nDans cet exercice, nous souhaitons illustrer le résultat selon lequel la moyenne de l’échantillon :\n\\[\\widehat{\\mu}_Y=\\sum\\limits_{i=1}^{n} a_i Y_i\\] avec le schéma de pondération égale \\(a_i=\\frac{1}{n}\\) pour \\(i=1,...,n\\) est l’estimateur linéaire non biaisé meilleur (BLUE) de \\(\\mu_Y\\).\nEn tant qu’alternative, considérez l’estimateur :\n\\[\\widetilde{\\mu}_Y=\\sum\\limits_{i=1}^{n}b_iY_i\\]\noù \\(b_i\\) donne aux premières \\(\\frac{n}{2}\\) observations un poids plus élevé de 3 que les deuxièmes \\(\\frac{n}{2}\\) observations (nous supposons que \\(n\\) est pair pour simplifier).\n%Le vecteur de poids \\(w\\) a déjà été défini et est disponible dans votre environnement de travail.\n\nDéfinissez un vecteur de pondération pour une taille d’échantillon n=100. Il doit être normalisé.\nVérifiez que \\(\\tilde{\\mu}_Y\\) est un estimateur non biaisé de \\(\\mu_Y\\), la moyenne de \\(Y_i\\).\nImplémentez l’estimateur alternatif de \\(\\mu_Y\\) en tant que fonction mu_tilde().\nTirez au hasard 100 observations à partir de la distribution \\(\\mathcal{N}(5, 10)\\) et calculez les estimations avec les deux estimateurs. Répétez cette procédure 10000 fois et stockez les résultats dans est_bar et est_tilde. Utilisez la fonction replicate.\nCalculez les variances de l’échantillon de est_bar et est_tilde. Que pouvez-vous dire sur les deux estimateurs?\n\n\n\n9.3.3 2.3 - Test d’hypothèse\nConsidérez l’ensemble de données wage1 du package wooldridge. La variable wage donne les gains horaires moyens des individus. Nous supposons que les gains horaires moyens wage dépassent 10 dollars par heure et souhaitons tester cette hypothèse à un niveau de signification de \\(\\alpha=0,05\\). Veuillez faire ce qui suit :\n\nCalculez la statistique de test manuellement et attribuez-la à tstat.\nUtilisez tstat pour accepter ou rejeter l’hypothèse nulle.\nRefaites-le en utilisant l’approximation normale.\nCalculez la valeur-p manuellement et attribuez-la à pval en utilisant l’approximation normale.\nUtilisez pval pour accepter ou rejeter l’hypothèse nulle.\nEffectuez le test d’hypothèse des questions précédentes en utilisant la fonction t.test().\nExtrayez la statistique t et la valeur-p de la liste créée par t.test(). Attribuez-les aux variables tstat et pvalue.\nVérifiez que l’utilisation de l’approximation normale ici est également valide en calculant la différence entre les deux valeurs-p.\n\n\n\n9.3.4 2.4 - Test d’hypothèse : valeur-p\nOn considère les données CO2 (data(CO2)).\n\nTester s’il existe une différence significative dans l’absorption entre les plantes traitées et les plantes non traitées à un niveau de signification de \\(\\alpha\\)=0,05.\nObtenez l’intervalle de confiance.\n\n\n\n9.3.5 2.5 - Corrélation\nCharger la librarie corrgram et le jeu de données auto.\n\nCalculez la corrélation simple (linéaire) entre le prix de la voiture (Price) et son économie de carburant MPG (mesurée en miles par gallon, ou mpg).\nUtilisez la fonction cor.test pour vérifier si le coefficient obtenu est statistiquement significatif au niveau de 5 %.\nLa corrélation simple suppose une relation linéaire entre les variables, mais il peut être utile de relâcher cette hypothèse. Calculez le coefficient de corrélation de Spearman pour les mêmes variables et trouvez sa signification statistique.\nEn R, il est possible de calculer la corrélation pour toutes les paires de variables numériques dans un dataframe en une seule fois. Cependant, cela nécessite d’exclure d’abord les variables non numériques. Créez un nouveau dataframe, auto_num, qui ne contient que les colonnes avec des valeurs numériques du dataframe auto. Vous pouvez le faire en utilisant la fonction filter.\nUtilisez la fonction cor pour créer une matrice de coefficients de corrélation pour les variables du dataframe auto_num.\nLa fonction standard cor.test ne fonctionne pas avec des dataframes. Cependant, la signification statistique des coefficients de corrélation pour un dataframe peut être vérifiée à l’aide de la fonction rcorr du package Hmisc. Transformez le dataframe auto_num en une matrice (auto_mat) et utilisez-le pour vérifier la signification des coefficients de corrélation avec la fonction rcorr.\nUtilisez la fonction corrgram du package corrgram pour créer un correlogramme par défaut afin de visualiser les corrélations entre les variables du dataframe auto.\nCréez un autre correlogramme qui (1) ne comprend que le panneau inférieur, (2) utilise des diagrammes en camembert pour représenter les coefficients de corrélation et (3) ordonne les variables selon l’ordre par défaut.\nCréez un nouveau dataframe, auto_subset, en sous-échantillonnant le dataframe auto pour inclure uniquement les variables Price, MPG, Hroom et Rseat. Utilisez le nouveau dataframe pour créer un correlogramme qui (1) affiche les coefficients de corrélation dans le panneau inférieur et (2) montre des diagrammes de dispersion (points) dans le panneau supérieur.\nUtilisez la fonction correlations du package ggm pour créer une matrice de corrélation avec à la fois des coefficients de corrélation complets et partiels pour le dataframe auto_subset. Trouvez la corrélation partielle entre le prix de la voiture et son économie de carburant.",
+    "crumbs": [
+      "Econométrie 1",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>TP4 : Probabilités et Statistiques avec R</span>"
+    ]
   }
 ]
