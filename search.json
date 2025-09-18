@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Ateliers L3 CMI",
     "section": "",
-    "text": "Introduction\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "text": "Introduction",
     "crumbs": [
       "Introduction"
     ]
@@ -12,12 +12,12 @@
   {
     "objectID": "CMI-CN-intro.html",
     "href": "CMI-CN-intro.html",
-    "title": "Concepts avancés",
+    "title": "Introduction",
     "section": "",
-    "text": "Plongeons dans des sujets plus complexes.",
+    "text": "24 h\nObjectifs : prise en main de R et markdown, statistiques descriptives, graphiques\nLangage : R; Power BI (introduction si on peut)\nModalités d’examens :\n\nNote de participation\nUn projet commun calcul numérique/économétrie avec choix du sujet libre\nPrésentation individuelle d’un chapitre d’un livre sur les bonnes pratiques de la dataviz (https://clauswilke.com/dataviz/)",
     "crumbs": [
       "Calcul Numérique",
-      "Concepts avancés"
+      "Introduction"
     ]
   },
   {
@@ -227,6 +227,26 @@
     "crumbs": [
       "Econométrie 1",
       "TP4 : Probabilités et Statistiques avec R"
+    ]
+  },
+  {
+    "objectID": "index.html#présentation",
+    "href": "index.html#présentation",
+    "title": "Ateliers L3 CMI",
+    "section": "Présentation",
+    "text": "Présentation\nCe livre contient les supports de TP des quatre ateliers spécifiques de la L3 CMI de l’université Paris Nanterre :\n\nCalcul numérique (S2) – 3 ECTS\nSIG : Système d’information géographique (S2) – 3 ECTS\nEconométrie 1 (S1) – 4.5 ECTS\nEconométrie 2 (S2) – 3 ECTS",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#notation",
+    "href": "index.html#notation",
+    "title": "Ateliers L3 CMI",
+    "section": "Notation",
+    "text": "Notation\nToute la notation est en contrôle continu. Les notes viennent de :\n\n« Participation » qui inclut l’implication en classe, la qualité des rendus des TP et des pénalités pour retards et absence\nPrésentations en classe\nProjets de fin de semestre :\n\nPeuvent être communs à plusieurs matières\nSujets donnés ou sujets libres\n\nRapport écrit propre (pas de compilation de code, ou de génération IA)\nPrésentation orale avec slides (sans les lire)",
+    "crumbs": [
+      "Introduction"
     ]
   }
 ]
