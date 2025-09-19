@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>TP1 : Commandes de base de R – Ateliers L3 CMI</title>
+<title>TP4 : Probabilités et Statistiques avec R – Ateliers L3 CMI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./CMI-E1-TP2.html" rel="next">
+<link href="./CMI-E1-P1.html" rel="next">
 <link href="./CMI-E1-intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -111,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Econométrie 1</a></li><li class="breadcrumb-item"><a href="./CMI-E1-TP1.html">TP1 : Commandes de base de R</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Econométrie 1</a></li><li class="breadcrumb-item"><a href="./CMI-E1-TP1.html">TP4 : Probabilités et Statistiques avec R</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -154,13 +154,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CMI-CN-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Concepts avancés</span></a>
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CMI-CN-TP1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">TP1</span></a>
+ <span class="menu-text">TP1 : Commandes de base de R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMI-CN-TP2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TP2 : Tableaux de données</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMI-CN-TP3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TP3 : Premiers Graphiques</span></a>
   </div>
 </li>
       </ul>
@@ -183,7 +195,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CMI-SIG-TP1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">TP1</span></a>
+ <span class="menu-text">TP1 : introduction à QGIS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMI-SIG-TP2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TP2 : Traitement sur les données vectorielles</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMI-SIG-TP3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TP3 : SIG avec R</span></a>
   </div>
 </li>
       </ul>
@@ -206,25 +230,36 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CMI-E1-TP1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">TP1 : Commandes de base de R</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./CMI-E1-TP2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">TP2 : Tableaux de données</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./CMI-E1-TP3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">TP3 : Premiers Graphiques</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./CMI-E1-TP4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TP4 : Probabilités et Statistiques avec R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMI-E1-P1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMI-E1-P2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Projet 2 - Etude économétrique de l’Enquête Nationale Transport 2019</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Econométrie 2</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMI-E2-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
       </ul>
@@ -239,19 +274,33 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#exercice-1-manipulation-de-vecteurs" id="toc-exercice-1-manipulation-de-vecteurs" class="nav-link active" data-scroll-target="#exercice-1-manipulation-de-vecteurs">Exercice 1 : Manipulation de vecteurs</a></li>
-  <li><a href="#exercice-2-manipulation-de-listes" id="toc-exercice-2-manipulation-de-listes" class="nav-link" data-scroll-target="#exercice-2-manipulation-de-listes">Exercice 2 : Manipulation de listes</a></li>
-  <li><a href="#exercice-3-manipulation-de-matrices" id="toc-exercice-3-manipulation-de-matrices" class="nav-link" data-scroll-target="#exercice-3-manipulation-de-matrices">Exercice 3 : Manipulation de matrices</a></li>
-  <li><a href="#exercice-4-manipulation-de-chaînes-de-caractères" id="toc-exercice-4-manipulation-de-chaînes-de-caractères" class="nav-link" data-scroll-target="#exercice-4-manipulation-de-chaînes-de-caractères">Exercice 4 : Manipulation de chaînes de caractères</a></li>
+  <li><a href="#probabilités-avec-r" id="toc-probabilités-avec-r" class="nav-link active" data-scroll-target="#probabilités-avec-r">1. Probabilités avec R</a>
+  <ul class="collapse">
+  <li><a href="#échantillonnage" id="toc-échantillonnage" class="nav-link" data-scroll-target="#échantillonnage">1.1 - Échantillonnage</a></li>
+  <li><a href="#fonction-de-densité-de-probabilité" id="toc-fonction-de-densité-de-probabilité" class="nav-link" data-scroll-target="#fonction-de-densité-de-probabilité">1.2 - Fonction de densité de probabilité</a></li>
+  <li><a href="#espérance-et-variance" id="toc-espérance-et-variance" class="nav-link" data-scroll-target="#espérance-et-variance">1.3 - Espérance et Variance</a></li>
+  <li><a href="#distribution-normale-standard" id="toc-distribution-normale-standard" class="nav-link" data-scroll-target="#distribution-normale-standard">1.4 - Distribution Normale Standard</a></li>
+  <li><a href="#distribution-du-chi-carré" id="toc-distribution-du-chi-carré" class="nav-link" data-scroll-target="#distribution-du-chi-carré">1.5 - Distribution du Chi-carré</a></li>
+  <li><a href="#distribution-de-student" id="toc-distribution-de-student" class="nav-link" data-scroll-target="#distribution-de-student">1.6 - Distribution de Student</a></li>
+  <li><a href="#distribution-de-fisher" id="toc-distribution-de-fisher" class="nav-link" data-scroll-target="#distribution-de-fisher">1.7 - Distribution de Fisher</a></li>
+  </ul></li>
+  <li><a href="#statistiques-avec-r" id="toc-statistiques-avec-r" class="nav-link" data-scroll-target="#statistiques-avec-r">2. Statistiques avec R</a>
+  <ul class="collapse">
+  <li><a href="#biais" id="toc-biais" class="nav-link" data-scroll-target="#biais">2.1 - Biais</a></li>
+  <li><a href="#efficience-dun-estimateur" id="toc-efficience-dun-estimateur" class="nav-link" data-scroll-target="#efficience-dun-estimateur">2.2 - Efficience d’un estimateur</a></li>
+  <li><a href="#test-dhypothèse" id="toc-test-dhypothèse" class="nav-link" data-scroll-target="#test-dhypothèse">2.3 - Test d’hypothèse</a></li>
+  <li><a href="#test-dhypothèse-valeur-p" id="toc-test-dhypothèse-valeur-p" class="nav-link" data-scroll-target="#test-dhypothèse-valeur-p">2.4 - Test d’hypothèse : valeur-p</a></li>
+  <li><a href="#corrélation" id="toc-corrélation" class="nav-link" data-scroll-target="#corrélation">2.5 - Corrélation</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Econométrie 1</a></li><li class="breadcrumb-item"><a href="./CMI-E1-TP1.html">TP1 : Commandes de base de R</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Econométrie 1</a></li><li class="breadcrumb-item"><a href="./CMI-E1-TP1.html">TP4 : Probabilités et Statistiques avec R</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">TP1 : Commandes de base de R</h1>
+<h1 class="title">TP4 : Probabilités et Statistiques avec R</h1>
 </div>
 
 
@@ -268,104 +317,134 @@ window.Quarto = {
 </header>
 
 
-<section id="exercice-1-manipulation-de-vecteurs" class="level2">
-<h2 class="anchored" data-anchor-id="exercice-1-manipulation-de-vecteurs">Exercice 1 : Manipulation de vecteurs</h2>
-<p>Soit le vecteur <span class="math inline">\(x = (1, 2, 3, 4, 5)\)</span></p>
+<section id="probabilités-avec-r" class="level2">
+<h2 class="anchored" data-anchor-id="probabilités-avec-r">1. Probabilités avec R</h2>
+<section id="échantillonnage" class="level3">
+<h3 class="anchored" data-anchor-id="échantillonnage">1.1 - Échantillonnage</h3>
+<p>Vous êtes la fée des loteries dans une loterie hebdomadaire, où 6 numéros uniques sur 49 sont tirés.</p>
 <ol type="1">
-<li>Créer ce vecteur dans R et le stocker dans un objet que l’on appellera <code>x</code> ;</li>
-<li>Afficher le mode de <code>x</code>, puis sa longueur ;</li>
-<li>Extraire le premier élément, puis le dernier ;</li>
-<li>Extraire les trois premier éléments et les stocker dans un vecteur que l’on nommera <code>a</code></li>
-<li>Extraire les éléments en position 1, 3, 5 ; les stocker dans un vecteur que l’on nommera <code>b</code></li>
-<li>Additionner le nombre 10 au vecteur <code>x</code>, puis multiplier le résultat par 2 ;</li>
-<li>Effectuer l’addition de <code>a</code> et <code>b</code>, commenter le résultat ;</li>
-<li>Effectuer l’addition suivante : <code>x+a</code>, commenter le résultat, puis regarder le résultat de <code>a+x</code> ;</li>
-<li>Multiplier le vecteur <code>x</code> par le scalaire <code>c</code> que l’on fixera à 2 ;</li>
-<li>Effectuer la multiplication de <code>a</code> et <code>b</code>, commenter le résultat ;</li>
-<li>Effectuer la multiplication suivante : <code>x*a</code>, commenter le résultat ;</li>
-<li>Récupérer les positions des multiples de 2 du vecteur <code>x</code> et les stocker dans un vecteur que l’on nommera <code>ind</code>, puis conserver uniquement les multiples de 2 de <code>x</code> dans un vecteur que l’on nommera <code>mult_2</code> ;</li>
-<li>Afficher les éléments de <code>x</code> qui sont multiples de 3 et multiples de 2 ;</li>
-<li>Afficher les éléments de <code>x</code> qui sont multiples de 3 ou multiples de 2 ;</li>
-<li>Calculer la somme des éléments de <code>x</code> ;</li>
-<li>Remplacer le premier élément de <code>x</code> par un 4 ;</li>
-<li>Remplacer le premier élément de <code>x</code> par la valeur <em>NA</em>, puis calculer la somme des éléments de <code>x</code>;</li>
-<li>Lister les objets en mémoire dans la session R ;</li>
-<li>Supprimer le vecteur <code>a</code>;</li>
-<li>Supprimer la totalité des objets de la session.</li>
+<li>Tirez aléatoirement les numéros gagnants de cette semaine (fixez la graine à 123) en utilisant la fonction <code>sample</code>.</li>
 </ol>
-<hr>
 </section>
-<section id="exercice-2-manipulation-de-listes" class="level2">
-<h2 class="anchored" data-anchor-id="exercice-2-manipulation-de-listes">Exercice 2 : Manipulation de listes</h2>
+<section id="fonction-de-densité-de-probabilité" class="level3">
+<h3 class="anchored" data-anchor-id="fonction-de-densité-de-probabilité">1.2 - Fonction de densité de probabilité</h3>
+<p>Considérez une variable aléatoire <span class="math inline">\(X\)</span> avec une fonction de densité de probabilité (PDF)</p>
+<p><span class="math display">\[f_X(x)=\frac{x}{4}e^{-x^2/8},\quad x\geq 0.\]</span></p>
 <ol type="1">
-<li><p>Évaluer le code suivant : TRUE+FALSE+TRUE*4 et le commenter ;</p></li>
-<li><p>Évaluer les expressions suivantes : <code>c(1, 4, TRUE)</code>, et <code>c(1, 4, TRUE, "bonjour")</code>, commenter ;</p></li>
-<li><p>Créer une liste que l’on appellera <code>l</code> et qui contient les éléments 1, 4 et TRUE en première, seconde et troisième positions respectivement ;</p></li>
-<li><p>Extraire le premier élément de la liste <code>l</code>, et afficher son mode. En faire de même avec le troisième élément, et commenter ;</p></li>
-<li><p>Ajouter un quatrième élément à la liste <code>l</code> : “bonjour”, puis afficher la structure de <code>l</code> ;</p></li>
-<li><p>Retirer le troisième élément de la liste <code>l</code> ;</p></li>
-<li><p>Créer une liste de trois éléments : votre nom, votre prénom, et votre année de naissance. Ces trois éléments de la liste devront être nommés respectivement <code>"nom"</code>, <code>"prenom"</code> et année de naissance. Stocker la liste ainsi créée dans un objet nommé <code>moi</code> ;</p></li>
-<li><p>Extraire le prénom de la liste moi de deux manières : en utilisant l’indice, et en utilisant le nommage ;</p></li>
-<li><p>Créer une liste avec la même structure que celle de <code>moi</code>, en la remplissant avec les informations d’une autre personne et la nommer <code>toi</code> Puis, créer la liste <code>personnes</code>, qui contiendra les listes <code>toi</code> et <code>moi</code> ;</p></li>
-<li><p>Extraire la liste <code>toi</code> de personnes (en première position) ;</p></li>
-<li><p>Extraire directement depuis <code>personnes</code> le prénom de l’élément en première position.</p></li>
+<li><p>Définissez la PDF ci-dessus comme une fonction <span class="math inline">\(f()\)</span>.</p></li>
+<li><p>Vérifiez si la fonction que vous avez définie est effectivement une PDF.</p></li>
 </ol>
-<hr>
 </section>
-<section id="exercice-3-manipulation-de-matrices" class="level2">
-<h2 class="anchored" data-anchor-id="exercice-3-manipulation-de-matrices">Exercice 3 : Manipulation de matrices</h2>
+<section id="espérance-et-variance" class="level3">
+<h3 class="anchored" data-anchor-id="espérance-et-variance">1.3 - Espérance et Variance</h3>
+<p>Dans cet exercice, vous devez calculer l’espérance et la variance de la variable aléatoire <span class="math inline">\(X\)</span> considérée dans l’exercice précédent.</p>
+<p>La PDF <span class="math inline">\(f()\)</span> de l’exercice précédent est disponible dans votre environnement de travail.</p>
 <ol type="1">
-<li>Créer la matrice suivante : <span class="math display">\[ A =
-\begin{bmatrix}
--3 &amp; 5 &amp; 6 \\
--1 &amp; 2 &amp; 2 \\
-1 &amp; -1 &amp; -1
-\end{bmatrix}
-\]</span> ;</li>
-<li>Afficher la dimension de A, son nombre de colonnes, son nombre de lignes et sa longueur ;</li>
-<li>Extraire la seconde colonne de A, puis la première ligne ;</li>
-<li>Extraire l’élément en troisième position à la première ligne ;</li>
-<li>Extraire la sous-matrice de dimension 2 x 2 du coin inférieur de <span class="math inline">\(A\)</span></li>
-<li>Calculer la somme des colonnes puis des lignes de <span class="math inline">\(A\)</span></li>
-<li>Afficher la diagonale de A ;</li>
-<li>Rajouter le vecteur colonne (1, 2 , 3) à droite de la matrice <span class="math inline">\(A\)</span> et stocker le résultat dans un objet appelé <span class="math inline">\(B\)</span> ;</li>
-<li>Retirer le quatrième vecteur de <span class="math inline">\(B\)</span> ;</li>
-<li>Retirer la première et la troisième ligne de <span class="math inline">\(B\)</span> ;</li>
-<li>Ajouter le scalaire 10 à <span class="math inline">\(A\)</span> ;</li>
-<li>Ajouter le vecteur colonne (1 2 3) à <span class="math inline">\(A\)</span> ;</li>
-<li>Ajouter la matrice identité <span class="math inline">\(I_3\)</span> à <span class="math inline">\(A\)</span> ;</li>
-<li>Diviser tous les éléments de la matrice <span class="math inline">\(A\)</span> par 2 ;</li>
-<li>Multiplier la matrice <span class="math inline">\(A\)</span> par le vecteur colonne (1 2 3) ;</li>
-<li>Afficher la transposée de <span class="math inline">\(A\)</span> ;</li>
-<li>Effectuer le produit avec transposition <span class="math inline">\(A ^t A\)</span>.</li>
+<li>Définissez une fonction appropriée <code>ex()</code> qui s’intègre à l’espérance de <span class="math inline">\(X\)</span>.</li>
+<li>Calculez l’espérance de <span class="math inline">\(X\)</span>. Stockez le résultat dans <code>expected_value</code>.</li>
+<li>Définissez une fonction appropriée <code>ex2()</code> qui s’intègre à l’espérance de <span class="math inline">\(X^2\)</span>.</li>
+<li>Calculez la variance de <span class="math inline">\(X\)</span>. Stockez le résultat dans <code>variance</code>.</li>
 </ol>
-<hr>
 </section>
-<section id="exercice-4-manipulation-de-chaînes-de-caractères" class="level2">
-<h2 class="anchored" data-anchor-id="exercice-4-manipulation-de-chaînes-de-caractères">Exercice 4 : Manipulation de chaînes de caractères</h2>
-<p>Charger le package <code>tidyverse</code>, qui contient le package <code>stringr</code>.</p>
+<section id="distribution-normale-standard" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-normale-standard">1.4 - Distribution Normale Standard</h3>
+<p>Soit $Z\sim \mathcal{N}(0, 1)$.</p>
 <ol type="1">
-<li>Créer les objets <code>a</code> et <code>b</code> afin qu’il contiennent respectivement les chaînes de caractères suivantes : <em>23 à 0</em> et <em>C’est la piquette, Jack!</em>;</li>
-<li>Créer le vecteur <code>phrases</code> de longueur 2, dont les deux éléments sont a et b ;</li>
-<li>À l’aide de la fonction appropriée dans le package stringr, afficher le nombre de carac- tètres de a, de b, puis appliquer la même fonction à l’objet phrases ;</li>
-<li>En utilisant la fonction <code>str_c()</code>, concaténer a et b dans une seule chaîne de caractères, en choisissant la virgule comme caractère de séparation ;</li>
-<li>Concaténer les deux éléments du vecteur phrases en une seule chaine de caractères, en les séparant par le caractère de retour à la ligne , puis utiliser la fonction <code>cat()</code> pour afficher le résultat ;</li>
-<li>Appliquer la même fonction que dans la question précédente à l’objet suivant : <code>c(NA, phrases)</code> et commenter ;</li>
-<li>Mettre en majuscules, puis en minuscules les chaînes du vecteur phrases (afficher le résultat, ne pas modifier phrases) ;</li>
-<li>À l’aide de la fonction word() du package stringr, extraire le mot la, puis Jack de la chaîne <code>b</code> ;</li>
-<li>Même question que la précédente, en utilisant la fonction <code>str_sub()</code> ;</li>
-<li>À l’aide de la fonction <code>str_detect()</code>, rechercher si le motif <code>piqu</code> puis <code>mauvais</code> sont présents dans <code>b</code> ;</li>
-<li>À l’aide de la fonction <code>str_detect()</code>, rechercher si le motif <code>piqu</code> est présent dans les éléments du vecteur phrases ;</li>
-<li>À l’aide de la fonction <code>str_detect()</code>, rechercher si le motif <code>piqu</code> ou le motif <code>à</code> sont présents dans les éléments du vecteur phrases ;</li>
-<li>En utilisant la fonction <code>str_locate()</code>, retourner les positions de la première occurence du caractère <code>a</code> dans la chaîne <code>b</code>, puis essayer avec le caractère <code>w</code> pour observer le résultat retourné ;</li>
-<li>Retourner toutes les positions du motif <code>a</code> dans la chaîne <code>b</code> ;</li>
-<li>En utilisant la fonction <code>str_replace()</code>, remplacer la première occurence du motif <code>a</code>, par le motif <code>Z</code> (afficher le résultat, ne pas modifier <code>phrases</code>) ;</li>
-<li>Remplacer toutes les occurences de <code>a</code> par <code>Z</code> dans la chaîne <code>b</code> (afficher le résultat, ne pas modifier <code>phrases</code>) ;</li>
-<li>Utiliser la fonction <code>str_split()</code> pour séparer la chaîne <code>b</code> en utilisant la virgule comme séparateur de sous-chaînes ;</li>
-<li>Retirer tous les caractères de ponctuation de la chaîne <code>b</code>, puis utiliser la fonction <code>tr_trim()</code> sur le résultat pour retirer les caractères blancs du début et de la fin de la chaîne.</li>
+<li>Calculez $\phi(3)$, c’est-à-dire la valeur de la densité de probabilité standard normale en $c=3$.</li>
+<li>Calculez $P(|Z|\leq 1.64)$ en utilisant la fonction `pnorm()`.</li>
+</ol>
+</section>
+<section id="distribution-du-chi-carré" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-du-chi-carré">1.5 - Distribution du Chi-carré</h3>
+<ol type="1">
+<li>Soit <span class="math inline">\(W\sim \chi^2_{1,0}\)</span>. Tracez la PDF correspondante à l’aide de <code>curve()</code>. Spécifiez la plage de valeurs <span class="math inline">\(x\)</span> comme [0,25] via l’argument <code>xlim.</code></li>
+<li>Soient <span class="math inline">\(X_1\)</span> et <span class="math inline">\(X_2\)</span> deux variables aléatoires normalement distribuées indépendantes avec <span class="math inline">\(\mu=0\)</span> et <span class="math inline">\(\sigma^2=15\)</span>. Calculez <span class="math inline">\(P(X_1^2+X_2^2&gt;10)\)</span></li>
+</ol>
+</section>
+<section id="distribution-de-student" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-de-student">1.6 - Distribution de Student</h3>
+<ol type="1">
+<li><p>Soit <span class="math inline">\(X\sim t_{10000}\)</span> et <span class="math inline">\(Z \sim N(0,1)\)</span>. Calculez le quantile à 95 % des deux distributions. Que remarquez-vous ?</p></li>
+<li><p>Soit <span class="math inline">\(X\sim t_1\)</span>. Générez 1000 nombres aléatoires à partir de cette distribution et attribuez-les à la variable <code>x</code>. Calculez la moyenne de l’échantillon de x. Pouvez-vous expliquer le résultat ?</p></li>
+</ol>
+</section>
+<section id="distribution-de-fisher" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-de-fisher">1.7 - Distribution de Fisher</h3>
+<ol type="1">
+<li>Soit <span class="math inline">\(Y \sim F(10,4)\)</span>. Tracez la fonction quantile de la distribution donnée à l’aide de la fonction <code>curve()</code>.</li>
+<li>Soit <span class="math inline">\(Y \sim F(4,5)\)</span>. Calculez <span class="math inline">\(P(1&lt;Y&lt;10)\)</span> en intégrant la PDF avec la fonction <code>integrate</code>.</li>
+</ol>
+</section>
+</section>
+<section id="statistiques-avec-r" class="level2">
+<h2 class="anchored" data-anchor-id="statistiques-avec-r">2. Statistiques avec R</h2>
+<section id="biais" class="level3">
+<h3 class="anchored" data-anchor-id="biais">2.1 - Biais</h3>
+<p>On considère l’estimateur alternatif suivant pour <span class="math inline">\(\mu_Y\)</span>, la moyenne de <span class="math inline">\(Y\)</span> : <span class="math display">\[\widetilde{Y}= \frac{1}{n-1}\sum_{i=1}^n Y_i\]</span></p>
+<ol type="1">
+<li><p>Définissez une fonction <code>Y_tilde()</code> qui implémente l’estimateur ci-dessus.</p></li>
+<li><p>Tirez aléatoirement 5 observations au hasard à partir de la distribution <span class="math inline">\(N(10,25)\)</span> et calculez une estimation en utilisant <code>Y_tilde()</code>. Répétez cette procédure 10000 fois et stockez les résultats dans <code>est_biased</code> en utilisant la fonction <code>replicate</code>.</p></li>
+<li><p>Tracez un histogramme de <code>est_biased</code>. Ajoutez une ligne verticale rouge à <span class="math inline">\(\mu=10\)</span> en utilisant la fonction <code>abline()</code>.</p></li>
+<li><p>Tirez aléatoirement 1000 observations au hasard à partir de la distribution <span class="math inline">\(N(10,25)\)</span> et calculez une estimation de la moyenne en utilisant<code>Y_tilde()</code>. Répétez cette procédure 10000 fois et stockez les résultats dans <code>est_consistent.</code></p></li>
+<li><p>Tracez un histogramme de <code>est_consistent</code>. Ajoutez une ligne verticale rouge à <span class="math inline">\(\mu=10\)</span> en utilisant la fonction <code>abline()</code>.</p></li>
+</ol>
+</section>
+<section id="efficience-dun-estimateur" class="level3">
+<h3 class="anchored" data-anchor-id="efficience-dun-estimateur">2.2 - Efficience d’un estimateur</h3>
+<p>Dans cet exercice, nous souhaitons illustrer le résultat selon lequel la moyenne de l’échantillon :</p>
+<p><span class="math display">\[\widehat{\mu}_Y=\sum\limits_{i=1}^{n} a_i Y_i\]</span> avec le schéma de pondération égale <span class="math inline">\(a_i=\frac{1}{n}\)</span> pour <span class="math inline">\(i=1,...,n\)</span> est l’estimateur linéaire non biaisé meilleur (BLUE) de <span class="math inline">\(\mu_Y\)</span>.</p>
+<p>En tant qu’alternative, considérez l’estimateur :</p>
+<p><span class="math display">\[\widetilde{\mu}_Y=\sum\limits_{i=1}^{n}b_iY_i\]</span></p>
+<p>où <span class="math inline">\(b_i\)</span> donne aux premières <span class="math inline">\(\frac{n}{2}\)</span> observations un poids plus élevé de 3 que les deuxièmes <span class="math inline">\(\frac{n}{2}\)</span> observations (nous supposons que <span class="math inline">\(n\)</span> est pair pour simplifier).</p>
+<p>%Le vecteur de poids <span class="math inline">\(w\)</span> a déjà été défini et est disponible dans votre environnement de travail.</p>
+<ol type="1">
+<li><p>Définissez un vecteur de pondération pour une taille d’échantillon <code>n=100</code>. Il doit être normalisé.</p></li>
+<li><p>Vérifiez que <span class="math inline">\(\tilde{\mu}_Y\)</span> est un estimateur non biaisé de <span class="math inline">\(\mu_Y\)</span>, la moyenne de <span class="math inline">\(Y_i\)</span>.</p></li>
+<li><p>Implémentez l’estimateur alternatif de <span class="math inline">\(\mu_Y\)</span> en tant que fonction <code>mu_tilde()</code>.</p></li>
+<li><p>Tirez au hasard 100 observations à partir de la distribution <span class="math inline">\(\mathcal{N}(5, 10)\)</span> et calculez les estimations avec les deux estimateurs. Répétez cette procédure 10000 fois et stockez les résultats dans <code>est_bar</code> et <code>est_tilde</code>. Utilisez la fonction <code>replicate</code>.</p></li>
+<li><p>Calculez les variances de l’échantillon de <code>est_bar</code> et <code>est_tilde</code>. Que pouvez-vous dire sur les deux estimateurs?</p></li>
+</ol>
+</section>
+<section id="test-dhypothèse" class="level3">
+<h3 class="anchored" data-anchor-id="test-dhypothèse">2.3 - Test d’hypothèse</h3>
+<p>Considérez l’ensemble de données <code>wage1</code> du package <code>wooldridge</code>. La variable <code>wage</code> donne les gains horaires moyens des individus. Nous supposons que les gains horaires moyens <code>wage</code> dépassent 10 dollars par heure et souhaitons tester cette hypothèse à un niveau de signification de <span class="math inline">\(\alpha=0,05\)</span>. Veuillez faire ce qui suit :</p>
+<ol type="1">
+<li><p>Calculez la statistique de test manuellement et attribuez-la à <code>tstat</code>.</p></li>
+<li><p>Utilisez <code>tstat</code> pour accepter ou rejeter l’hypothèse nulle.</p></li>
+<li><p>Refaites-le en utilisant l’approximation normale.</p></li>
+<li><p>Calculez la valeur-p manuellement et attribuez-la à <code>pval</code> en utilisant l’approximation normale.</p></li>
+<li><p>Utilisez <code>pval</code> pour accepter ou rejeter l’hypothèse nulle.</p></li>
+<li><p>Effectuez le test d’hypothèse des questions précédentes en utilisant la fonction <code>t.test()</code>.</p></li>
+<li><p>Extrayez la statistique t et la valeur-p de la liste créée par <code>t.test()</code>. Attribuez-les aux variables <code>tstat</code> et <code>pvalue</code>.</p></li>
+<li><p>Vérifiez que l’utilisation de l’approximation normale ici est également valide en calculant la différence entre les deux valeurs-p.</p></li>
+</ol>
+</section>
+<section id="test-dhypothèse-valeur-p" class="level3">
+<h3 class="anchored" data-anchor-id="test-dhypothèse-valeur-p">2.4 - Test d’hypothèse : valeur-p</h3>
+<p>On considère les données CO2 (<code>data(CO2)</code>).</p>
+<ol type="1">
+<li><p>Tester s’il existe une différence significative dans l’absorption entre les plantes traitées et les plantes non traitées à un niveau de signification de <span class="math inline">\(\alpha\)</span>=0,05.</p></li>
+<li><p>Obtenez l’intervalle de confiance.</p></li>
+</ol>
+</section>
+<section id="corrélation" class="level3">
+<h3 class="anchored" data-anchor-id="corrélation">2.5 - Corrélation</h3>
+<p>Charger la librarie <code>corrgram</code> et le jeu de données <code>auto</code>.</p>
+<ol type="1">
+<li><p>Calculez la corrélation simple (linéaire) entre le prix de la voiture (<code>Price</code>) et son économie de carburant <code>MPG</code> (mesurée en miles par gallon, ou mpg).</p></li>
+<li><p>Utilisez la fonction <code>cor.test</code> pour vérifier si le coefficient obtenu est statistiquement significatif au niveau de 5 %.</p></li>
+<li><p>La corrélation simple suppose une relation linéaire entre les variables, mais il peut être utile de relâcher cette hypothèse. Calculez le coefficient de corrélation de Spearman pour les mêmes variables et trouvez sa signification statistique.</p></li>
+<li><p>En R, il est possible de calculer la corrélation pour toutes les paires de variables numériques dans un dataframe en une seule fois. Cependant, cela nécessite d’exclure d’abord les variables non numériques. Créez un nouveau dataframe, <code>auto_num</code>, qui ne contient que les colonnes avec des valeurs numériques du dataframe <code>auto</code>. Vous pouvez le faire en utilisant la fonction <code>filter</code>.</p></li>
+<li><p>Utilisez la fonction <code>cor</code> pour créer une matrice de coefficients de corrélation pour les variables du dataframe <code>auto_num</code>.</p></li>
+<li><p>La fonction standard <code>cor.test</code> ne fonctionne pas avec des dataframes. Cependant, la signification statistique des coefficients de corrélation pour un dataframe peut être vérifiée à l’aide de la fonction <code>rcorr</code> du package <code>Hmisc</code>. Transformez le dataframe <code>auto_num</code> en une matrice (<code>auto_mat</code>) et utilisez-le pour vérifier la signification des coefficients de corrélation avec la fonction <code>rcorr</code>.</p></li>
+<li><p>Utilisez la fonction <code>corrgram</code> du package <code>corrgram</code> pour créer un correlogramme par défaut afin de visualiser les corrélations entre les variables du dataframe <code>auto</code>.</p></li>
+<li><p>Créez un autre correlogramme qui (1) ne comprend que le panneau inférieur, (2) utilise des diagrammes en camembert pour représenter les coefficients de corrélation et (3) ordonne les variables selon l’ordre par défaut.</p></li>
+<li><p>Créez un nouveau dataframe, <code>auto_subset</code>, en sous-échantillonnant le dataframe <code>auto</code> pour inclure uniquement les variables <code>Price</code>, <code>MPG</code>, <code>Hroom</code> et <code>Rseat</code>. Utilisez le nouveau dataframe pour créer un correlogramme qui (1) affiche les coefficients de corrélation dans le panneau inférieur et (2) montre des diagrammes de dispersion (points) dans le panneau supérieur.</p></li>
+<li><p>Utilisez la fonction <code>correlations</code> du package <code>ggm</code> pour créer une matrice de corrélation avec à la fois des coefficients de corrélation complets et partiels pour le dataframe <code>auto_subset</code>. Trouvez la corrélation partielle entre le prix de la voiture et son économie de carburant.</p></li>
 </ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -775,8 +854,8 @@ window.Quarto = {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./CMI-E1-TP2.html" class="pagination-link" aria-label="TP2 : Tableaux de données">
-        <span class="nav-page-text">TP2 : Tableaux de données</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./CMI-E1-P1.html" class="pagination-link" aria-label="Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges">
+        <span class="nav-page-text">Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

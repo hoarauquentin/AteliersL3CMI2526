@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – Ateliers L3 CMI</title>
+<title>Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges – Ateliers L3 CMI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./CMI-E1-TP1.html" rel="next">
-<link href="./CMI-SIG-TP3.html" rel="prev">
+<link href="./CMI-E1-P2.html" rel="next">
+<link href="./CMI-E1-TP1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Econométrie 1</a></li><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Econométrie 1</a></li><li class="breadcrumb-item"><a href="./CMI-E1-P1.html">Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -194,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-E1-intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./CMI-E1-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -206,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-E1-P1.html" class="sidebar-item-text sidebar-link">
+  <a href="./CMI-E1-P1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges</span></a>
   </div>
 </li>
@@ -240,15 +240,38 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#installation." id="toc-installation." class="nav-link active" data-scroll-target="#installation.">0. Installation.</a></li>
+  <li><a href="#données-brevet" id="toc-données-brevet" class="nav-link" data-scroll-target="#données-brevet">1. Données Brevet</a>
+  <ul class="collapse">
+  <li><a href="#description-des-données" id="toc-description-des-données" class="nav-link" data-scroll-target="#description-des-données">1.1 Description des données</a></li>
+  <li><a href="#evolution-temporelle" id="toc-evolution-temporelle" class="nav-link" data-scroll-target="#evolution-temporelle">1.2 Evolution temporelle</a></li>
+  <li><a href="#variation-en-coupe" id="toc-variation-en-coupe" class="nav-link" data-scroll-target="#variation-en-coupe">1.3 Variation en coupe</a></li>
+  </ul></li>
+  <li><a href="#données-socio-économiques" id="toc-données-socio-économiques" class="nav-link" data-scroll-target="#données-socio-économiques">2. Données socio-économiques</a>
+  <ul class="collapse">
+  <li><a href="#description-du-jeu-de-données" id="toc-description-du-jeu-de-données" class="nav-link" data-scroll-target="#description-du-jeu-de-données">2.1 Description du jeu de données</a></li>
+  <li><a href="#transformation-du-jeu" id="toc-transformation-du-jeu" class="nav-link" data-scroll-target="#transformation-du-jeu">2.2 Transformation du jeu</a></li>
+  </ul></li>
+  <li><a href="#analyse-jointe-." id="toc-analyse-jointe-." class="nav-link" data-scroll-target="#analyse-jointe-.">3. Analyse jointe .</a>
+  <ul class="collapse">
+  <li><a href="#jointure" id="toc-jointure" class="nav-link" data-scroll-target="#jointure">3.1 Jointure</a></li>
+  <li><a href="#analyse-en-coupe" id="toc-analyse-en-coupe" class="nav-link" data-scroll-target="#analyse-en-coupe">3.2 Analyse en coupe</a></li>
+  <li><a href="#regressions-linéaire" id="toc-regressions-linéaire" class="nav-link" data-scroll-target="#regressions-linéaire">3.3 Regressions linéaire</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Econométrie 1</a></li><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Introduction</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Econométrie 1</a></li><li class="breadcrumb-item"><a href="./CMI-E1-P1.html">Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges</h1>
 </div>
 
 
@@ -265,16 +288,90 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<ul>
-<li>30 h</li>
-<li>objectifs : développer, interpréter et critiquer des modèles économétriques</li>
-<li>modalités d’examens:</li>
-<li>Note de participation</li>
-<li>Un projet commun calcul numérique/économétrie avec choix du sujet libre</li>
-<li>Un projet commun SIG/économétrie avec choix du sujet imposé</li>
-</ul>
+<p>Les inégalités de performance scolaire sont un sujet récurrent dans les débats sur le système éducatif. Parmi les examens importants en France, le brevet des collèges permet de mesurer les compétences acquises par les élèves à la fin du cycle secondaire. Cependant, les résultats obtenus peuvent varier en fonction de divers facteurs, notamment le contexte socio-économique local.</p>
+<p>Ce TP vous propose d’explorer l’influence de facteurs socio-économiques, tels que le revenu médian, le taux de chômage ou encore le niveau d’éducation dans les communes, sur les résultats du brevet des collèges. À travers l’analyse de jeux de données réels, vous serez amenés à identifier des corrélations et à mieux comprendre les déterminants de la performance scolaire.</p>
+<section id="installation." class="level2">
+<h2 class="anchored" data-anchor-id="installation.">0. Installation.</h2>
+<p>Charger les packages <code>tidyverse</code>, <code>stargazer</code>. ChatGPT ou autre chatbot sont autorisés pour ce TP.</p>
+<p>Les données socio-économiques sont bien formatées ici : <a href="https://www.unehistoireduconflitpolitique.fr/telecharger.html" class="uri">https://www.unehistoireduconflitpolitique.fr/telecharger.html</a>. Commencer par télécharger les données sur les revenus des communes. On pourra réitérer l’analyse sur les diplômes et les catégories socio-professionnelles.</p>
+<ol type="1">
+<li>Chercher sur internet et télécharger les données sur les résultats de brevets par établissement.</li>
+</ol>
+</section>
+<section id="données-brevet" class="level2">
+<h2 class="anchored" data-anchor-id="données-brevet">1. Données Brevet</h2>
+<section id="description-des-données" class="level3">
+<h3 class="anchored" data-anchor-id="description-des-données">1.1 Description des données</h3>
+<ol type="1">
+<li>Décrire le jeu de données : colonnes, taille, niveau géographique, horizon temporel…</li>
+<li>Quelle est la période étudiée ?</li>
+<li>Combien y a-t-il d’établissements ?</li>
+</ol>
+</section>
+<section id="evolution-temporelle" class="level3">
+<h3 class="anchored" data-anchor-id="evolution-temporelle">1.2 Evolution temporelle</h3>
+<p>On veut caractériser les résultas du brevet au niveau national.</p>
+<ol type="1">
+<li><p>Créer un fichier de donnée aggrégé par année au niveau national (utiliser <code>group_by</code> et <code>summarize</code>).</p></li>
+<li><p>Comment semble calculé la colonne <code>taux_de_reussite</code>. Tester son intuition une colonne <code>taux_de_reussite2</code> et comparer avec <code>taux_de_reussite</code>.</p></li>
+<li><p>Faire des graphiques montrant l’évolution des nombres d’inscrits et d’admis.</p></li>
+<li><p>Faire des graphiques montrant le taux annuel d’admis.</p></li>
+<li><p>Faire des graphiques montrant les taux annuels d’admis pour chaque mention.</p></li>
+<li><p>Décrire et interpréter chaque graphiques.</p></li>
+</ol>
+</section>
+<section id="variation-en-coupe" class="level3">
+<h3 class="anchored" data-anchor-id="variation-en-coupe">1.3 Variation en coupe</h3>
+<p>On considère la dernière session reportée par le jeu de donnée.</p>
+<ol type="1">
+<li>Créer un jeu de donnée filtré sur cette dernière année.</li>
+<li>Montrer es graphiques en barres pour représenter les différences sur les taux de réussites selon le type d’établissement et le secteur d’enseignement.</li>
+<li>Faire des classements des dix meilleurs départements selon les différents taux de réussites.</li>
+</ol>
+</section>
+</section>
+<section id="données-socio-économiques" class="level2">
+<h2 class="anchored" data-anchor-id="données-socio-économiques">2. Données socio-économiques</h2>
+<section id="description-du-jeu-de-données" class="level3">
+<h3 class="anchored" data-anchor-id="description-du-jeu-de-données">2.1 Description du jeu de données</h3>
+<ol type="1">
+<li>Décrire le jeu de données de la même façon que pour le premier jeu. Utiliser les annexes où les données sont décrites.</li>
+<li>Quelles colonnes (ou ensemble de colonnes) vous semble-t-il pertinent de garder ?</li>
+</ol>
+</section>
+<section id="transformation-du-jeu" class="level3">
+<h3 class="anchored" data-anchor-id="transformation-du-jeu">2.2 Transformation du jeu</h3>
+<p>Transformer ce jeu de données en format “long” avec <code>pivot_longer</code>.</p>
+</section>
+</section>
+<section id="analyse-jointe-." class="level2">
+<h2 class="anchored" data-anchor-id="analyse-jointe-.">3. Analyse jointe .</h2>
+<section id="jointure" class="level3">
+<h3 class="anchored" data-anchor-id="jointure">3.1 Jointure</h3>
+<p>Pour chaque année et pour chaque établissement, on souhaite avoir les informations socio-économiques de la commune correspondante.</p>
+<ol type="1">
+<li>Faire la jointure entre les deux jeux de données.</li>
+<li>Analyser les données manquantes du nouveau jeu de données.</li>
+</ol>
+</section>
+<section id="analyse-en-coupe" class="level3">
+<h3 class="anchored" data-anchor-id="analyse-en-coupe">3.2 Analyse en coupe</h3>
+<ol type="1">
+<li>Faire des graphiques par points représentant le revenu moyen de la commune de l’établissement avec ses différents taux de réussites.</li>
+<li>Faire des graphiques en bar dans lequel par décile de revenu (utiliser la colonne de percentile coté socioeco).</li>
+</ol>
+</section>
+<section id="regressions-linéaire" class="level3">
+<h3 class="anchored" data-anchor-id="regressions-linéaire">3.3 Regressions linéaire</h3>
+<p>Pour une année donnée vs toutes taux de reussite en fonction de la taille de la commune, revenus moyen</p>
+<ol type="1">
+<li>Faites une régression</li>
+</ol>
+<p>Notes: - on fait les régressions avec la commande <code>lm</code>. - Pour visualiser les régressions, on enregistre les résultats de chaque regressions (eg, <code>lm1</code>,<code>lm2</code>…) et on visualise avec la commande <code>stargazer</code> du package du même nom (eg <code>stargazer(type="text",lm1,lm2)</code>).</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -678,13 +775,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./CMI-SIG-TP3.html" class="pagination-link" aria-label="TP3 : SIG avec R">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">TP3 : SIG avec R</span>
+      <a href="./CMI-E1-TP1.html" class="pagination-link" aria-label="TP4 : Probabilités et Statistiques avec R">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">TP4 : Probabilités et Statistiques avec R</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./CMI-E1-TP1.html" class="pagination-link" aria-label="TP4 : Probabilités et Statistiques avec R">
-        <span class="nav-page-text">TP4 : Probabilités et Statistiques avec R</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./CMI-E1-P2.html" class="pagination-link" aria-label="Projet 2 - Etude économétrique de l'Enquête Nationale Transport 2019">
+        <span class="nav-page-text">Projet 2 - Etude économétrique de l’Enquête Nationale Transport 2019</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

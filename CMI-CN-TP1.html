@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>TP1 – Ateliers L3 CMI</title>
+<title>TP1 : Commandes de base de R – Ateliers L3 CMI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./CMI-SIG-intro.html" rel="next">
+<link href="./CMI-CN-TP2.html" rel="next">
 <link href="./CMI-CN-intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -82,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-CN-intro.html">Calcul Numérique</a></li><li class="breadcrumb-item"><a href="./CMI-CN-TP1.html">TP1</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-CN-intro.html">Calcul Numérique</a></li><li class="breadcrumb-item"><a href="./CMI-CN-TP1.html">TP1 : Commandes de base de R</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -125,13 +154,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CMI-CN-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Concepts avancés</span></a>
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CMI-CN-TP1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">TP1</span></a>
+ <span class="menu-text">TP1 : Commandes de base de R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMI-CN-TP2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TP2 : Tableaux de données</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMI-CN-TP3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TP3 : Premiers Graphiques</span></a>
   </div>
 </li>
       </ul>
@@ -154,7 +195,19 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CMI-SIG-TP1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">TP1</span></a>
+ <span class="menu-text">TP1 : introduction à QGIS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMI-SIG-TP2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TP2 : Traitement sur les données vectorielles</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMI-SIG-TP3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TP3 : SIG avec R</span></a>
   </div>
 </li>
       </ul>
@@ -177,25 +230,36 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CMI-E1-TP1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">TP1 : Commandes de base de R</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./CMI-E1-TP2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">TP2 : Tableaux de données</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./CMI-E1-TP3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">TP3 : Premiers Graphiques</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./CMI-E1-TP4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TP4 : Probabilités et Statistiques avec R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMI-E1-P1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMI-E1-P2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Projet 2 - Etude économétrique de l’Enquête Nationale Transport 2019</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Econométrie 2</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMI-E2-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
       </ul>
@@ -205,15 +269,24 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#manipulation-de-vecteurs" id="toc-manipulation-de-vecteurs" class="nav-link active" data-scroll-target="#manipulation-de-vecteurs">1. Manipulation de vecteurs</a></li>
+  <li><a href="#manipulation-de-listes" id="toc-manipulation-de-listes" class="nav-link" data-scroll-target="#manipulation-de-listes">2. Manipulation de listes</a></li>
+  <li><a href="#exercice-3-manipulation-de-matrices" id="toc-exercice-3-manipulation-de-matrices" class="nav-link" data-scroll-target="#exercice-3-manipulation-de-matrices">Exercice 3 : Manipulation de matrices</a></li>
+  <li><a href="#exercice-4-manipulation-de-chaînes-de-caractères" id="toc-exercice-4-manipulation-de-chaînes-de-caractères" class="nav-link" data-scroll-target="#exercice-4-manipulation-de-chaînes-de-caractères">Exercice 4 : Manipulation de chaînes de caractères</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-CN-intro.html">Calcul Numérique</a></li><li class="breadcrumb-item"><a href="./CMI-CN-TP1.html">TP1</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-CN-intro.html">Calcul Numérique</a></li><li class="breadcrumb-item"><a href="./CMI-CN-TP1.html">TP1 : Commandes de base de R</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">TP1</h1>
+<h1 class="title">TP1 : Commandes de base de R</h1>
 </div>
 
 
@@ -230,8 +303,104 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="manipulation-de-vecteurs" class="level2">
+<h2 class="anchored" data-anchor-id="manipulation-de-vecteurs">1. Manipulation de vecteurs</h2>
+<p>Soit le vecteur <span class="math inline">\(x = (1, 2, 3, 4, 5)\)</span></p>
+<ol type="1">
+<li>Créer ce vecteur dans R et le stocker dans un objet que l’on appellera <code>x</code> ;</li>
+<li>Afficher le mode de <code>x</code>, puis sa longueur ;</li>
+<li>Extraire le premier élément, puis le dernier ;</li>
+<li>Extraire les trois premier éléments et les stocker dans un vecteur que l’on nommera <code>a</code></li>
+<li>Extraire les éléments en position 1, 3, 5 ; les stocker dans un vecteur que l’on nommera <code>b</code></li>
+<li>Additionner le nombre 10 au vecteur <code>x</code>, puis multiplier le résultat par 2 ;</li>
+<li>Effectuer l’addition de <code>a</code> et <code>b</code>, commenter le résultat ;</li>
+<li>Effectuer l’addition suivante : <code>x+a</code>, commenter le résultat, puis regarder le résultat de <code>a+x</code> ;</li>
+<li>Multiplier le vecteur <code>x</code> par le scalaire <code>c</code> que l’on fixera à 2 ;</li>
+<li>Effectuer la multiplication de <code>a</code> et <code>b</code>, commenter le résultat ;</li>
+<li>Effectuer la multiplication suivante : <code>x*a</code>, commenter le résultat ;</li>
+<li>Récupérer les positions des multiples de 2 du vecteur <code>x</code> et les stocker dans un vecteur que l’on nommera <code>ind</code>, puis conserver uniquement les multiples de 2 de <code>x</code> dans un vecteur que l’on nommera <code>mult_2</code> ;</li>
+<li>Afficher les éléments de <code>x</code> qui sont multiples de 3 et multiples de 2 ;</li>
+<li>Afficher les éléments de <code>x</code> qui sont multiples de 3 ou multiples de 2 ;</li>
+<li>Calculer la somme des éléments de <code>x</code> ;</li>
+<li>Remplacer le premier élément de <code>x</code> par un 4 ;</li>
+<li>Remplacer le premier élément de <code>x</code> par la valeur <em>NA</em>, puis calculer la somme des éléments de <code>x</code>;</li>
+<li>Lister les objets en mémoire dans la session R ;</li>
+<li>Supprimer le vecteur <code>a</code>;</li>
+<li>Supprimer la totalité des objets de la session.</li>
+</ol>
+</section>
+<section id="manipulation-de-listes" class="level2">
+<h2 class="anchored" data-anchor-id="manipulation-de-listes">2. Manipulation de listes</h2>
+<ol type="1">
+<li><p>Évaluer le code suivant : TRUE+FALSE+TRUE*4 et le commenter ;</p></li>
+<li><p>Évaluer les expressions suivantes : <code>c(1, 4, TRUE)</code>, et <code>c(1, 4, TRUE, "bonjour")</code>, commenter ;</p></li>
+<li><p>Créer une liste que l’on appellera <code>l</code> et qui contient les éléments 1, 4 et TRUE en première, seconde et troisième positions respectivement ;</p></li>
+<li><p>Extraire le premier élément de la liste <code>l</code>, et afficher son mode. En faire de même avec le troisième élément, et commenter ;</p></li>
+<li><p>Ajouter un quatrième élément à la liste <code>l</code> : “bonjour”, puis afficher la structure de <code>l</code> ;</p></li>
+<li><p>Retirer le troisième élément de la liste <code>l</code> ;</p></li>
+<li><p>Créer une liste de trois éléments : votre nom, votre prénom, et votre année de naissance. Ces trois éléments de la liste devront être nommés respectivement <code>"nom"</code>, <code>"prenom"</code> et année de naissance. Stocker la liste ainsi créée dans un objet nommé <code>moi</code> ;</p></li>
+<li><p>Extraire le prénom de la liste moi de deux manières : en utilisant l’indice, et en utilisant le nommage ;</p></li>
+<li><p>Créer une liste avec la même structure que celle de <code>moi</code>, en la remplissant avec les informations d’une autre personne et la nommer <code>toi</code> Puis, créer la liste <code>personnes</code>, qui contiendra les listes <code>toi</code> et <code>moi</code> ;</p></li>
+<li><p>Extraire la liste <code>toi</code> de personnes (en première position) ;</p></li>
+<li><p>Extraire directement depuis <code>personnes</code> le prénom de l’élément en première position.</p></li>
+</ol>
+<hr>
+</section>
+<section id="exercice-3-manipulation-de-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-3-manipulation-de-matrices">Exercice 3 : Manipulation de matrices</h2>
+<ol type="1">
+<li>Créer la matrice suivante : <span class="math display">\[ A =
+\begin{bmatrix}
+-3 &amp; 5 &amp; 6 \\
+-1 &amp; 2 &amp; 2 \\
+1 &amp; -1 &amp; -1
+\end{bmatrix}
+\]</span> ;</li>
+<li>Afficher la dimension de A, son nombre de colonnes, son nombre de lignes et sa longueur ;</li>
+<li>Extraire la seconde colonne de A, puis la première ligne ;</li>
+<li>Extraire l’élément en troisième position à la première ligne ;</li>
+<li>Extraire la sous-matrice de dimension 2 x 2 du coin inférieur de <span class="math inline">\(A\)</span></li>
+<li>Calculer la somme des colonnes puis des lignes de <span class="math inline">\(A\)</span></li>
+<li>Afficher la diagonale de A ;</li>
+<li>Rajouter le vecteur colonne (1, 2 , 3) à droite de la matrice <span class="math inline">\(A\)</span> et stocker le résultat dans un objet appelé <span class="math inline">\(B\)</span> ;</li>
+<li>Retirer le quatrième vecteur de <span class="math inline">\(B\)</span> ;</li>
+<li>Retirer la première et la troisième ligne de <span class="math inline">\(B\)</span> ;</li>
+<li>Ajouter le scalaire 10 à <span class="math inline">\(A\)</span> ;</li>
+<li>Ajouter le vecteur colonne (1 2 3) à <span class="math inline">\(A\)</span> ;</li>
+<li>Ajouter la matrice identité <span class="math inline">\(I_3\)</span> à <span class="math inline">\(A\)</span> ;</li>
+<li>Diviser tous les éléments de la matrice <span class="math inline">\(A\)</span> par 2 ;</li>
+<li>Multiplier la matrice <span class="math inline">\(A\)</span> par le vecteur colonne (1 2 3) ;</li>
+<li>Afficher la transposée de <span class="math inline">\(A\)</span> ;</li>
+<li>Effectuer le produit avec transposition <span class="math inline">\(A ^t A\)</span>.</li>
+</ol>
+<hr>
+</section>
+<section id="exercice-4-manipulation-de-chaînes-de-caractères" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-4-manipulation-de-chaînes-de-caractères">Exercice 4 : Manipulation de chaînes de caractères</h2>
+<p>Charger le package <code>tidyverse</code>, qui contient le package <code>stringr</code>.</p>
+<ol type="1">
+<li>Créer les objets <code>a</code> et <code>b</code> afin qu’il contiennent respectivement les chaînes de caractères suivantes : <em>23 à 0</em> et <em>C’est la piquette, Jack!</em>;</li>
+<li>Créer le vecteur <code>phrases</code> de longueur 2, dont les deux éléments sont a et b ;</li>
+<li>À l’aide de la fonction appropriée dans le package stringr, afficher le nombre de carac- tètres de a, de b, puis appliquer la même fonction à l’objet phrases ;</li>
+<li>En utilisant la fonction <code>str_c()</code>, concaténer a et b dans une seule chaîne de caractères, en choisissant la virgule comme caractère de séparation ;</li>
+<li>Concaténer les deux éléments du vecteur phrases en une seule chaine de caractères, en les séparant par le caractère de retour à la ligne , puis utiliser la fonction <code>cat()</code> pour afficher le résultat ;</li>
+<li>Appliquer la même fonction que dans la question précédente à l’objet suivant : <code>c(NA, phrases)</code> et commenter ;</li>
+<li>Mettre en majuscules, puis en minuscules les chaînes du vecteur phrases (afficher le résultat, ne pas modifier phrases) ;</li>
+<li>À l’aide de la fonction word() du package stringr, extraire le mot la, puis Jack de la chaîne <code>b</code> ;</li>
+<li>Même question que la précédente, en utilisant la fonction <code>str_sub()</code> ;</li>
+<li>À l’aide de la fonction <code>str_detect()</code>, rechercher si le motif <code>piqu</code> puis <code>mauvais</code> sont présents dans <code>b</code> ;</li>
+<li>À l’aide de la fonction <code>str_detect()</code>, rechercher si le motif <code>piqu</code> est présent dans les éléments du vecteur phrases ;</li>
+<li>À l’aide de la fonction <code>str_detect()</code>, rechercher si le motif <code>piqu</code> ou le motif <code>à</code> sont présents dans les éléments du vecteur phrases ;</li>
+<li>En utilisant la fonction <code>str_locate()</code>, retourner les positions de la première occurence du caractère <code>a</code> dans la chaîne <code>b</code>, puis essayer avec le caractère <code>w</code> pour observer le résultat retourné ;</li>
+<li>Retourner toutes les positions du motif <code>a</code> dans la chaîne <code>b</code> ;</li>
+<li>En utilisant la fonction <code>str_replace()</code>, remplacer la première occurence du motif <code>a</code>, par le motif <code>Z</code> (afficher le résultat, ne pas modifier <code>phrases</code>) ;</li>
+<li>Remplacer toutes les occurences de <code>a</code> par <code>Z</code> dans la chaîne <code>b</code> (afficher le résultat, ne pas modifier <code>phrases</code>) ;</li>
+<li>Utiliser la fonction <code>str_split()</code> pour séparer la chaîne <code>b</code> en utilisant la virgule comme séparateur de sous-chaînes ;</li>
+<li>Retirer tous les caractères de ponctuation de la chaîne <code>b</code>, puis utiliser la fonction <code>tr_trim()</code> sur le résultat pour retirer les caractères blancs du début et de la fin de la chaîne.</li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -635,13 +804,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./CMI-CN-intro.html" class="pagination-link" aria-label="Concepts avancés">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Concepts avancés</span>
+      <a href="./CMI-CN-intro.html" class="pagination-link" aria-label="Introduction">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./CMI-SIG-intro.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text">Introduction</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./CMI-CN-TP2.html" class="pagination-link" aria-label="TP2 : Tableaux de données">
+        <span class="nav-page-text">TP2 : Tableaux de données</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

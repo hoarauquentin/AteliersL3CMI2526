@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – Ateliers L3 CMI</title>
+<title>1&nbsp; TP2 : Traitement sur les données vectorielles – Ateliers L3 CMI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./CMI-E1-TP1.html" rel="next">
-<link href="./CMI-SIG-TP3.html" rel="prev">
+<link href="./CMI-SIG-TP3.html" rel="next">
+<link href="./CMI-SIG-TP1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Econométrie 1</a></li><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-SIG-intro.html">SIG</a></li><li class="breadcrumb-item"><a href="./CMI-SIG-TP2.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TP2 : Traitement sur les données vectorielles</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -171,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-SIG-TP2.html" class="sidebar-item-text sidebar-link">
+  <a href="./CMI-SIG-TP2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TP2 : Traitement sur les données vectorielles</span></span></a>
   </div>
 </li>
@@ -194,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-E1-intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./CMI-E1-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -240,15 +240,47 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#données-de-départ" id="toc-données-de-départ" class="nav-link active" data-scroll-target="#données-de-départ"><span class="header-section-number">1.1</span> 1. Données de départ</a></li>
+  <li><a href="#création-dun-geopackage" id="toc-création-dun-geopackage" class="nav-link" data-scroll-target="#création-dun-geopackage"><span class="header-section-number">1.2</span> 2. Création d’un GeoPackage</a></li>
+  <li><a href="#zone-tampon-sur-lautoroute-a61" id="toc-zone-tampon-sur-lautoroute-a61" class="nav-link" data-scroll-target="#zone-tampon-sur-lautoroute-a61"><span class="header-section-number">1.3</span> 3. Zone tampon sur l’autoroute A61</a>
+  <ul class="collapse">
+  <li><a href="#vérification-du-scr" id="toc-vérification-du-scr" class="nav-link" data-scroll-target="#vérification-du-scr"><span class="header-section-number">1.3.1</span> 3.1 Vérification du SCR</a></li>
+  <li><a href="#conversion-en-lambert-93" id="toc-conversion-en-lambert-93" class="nav-link" data-scroll-target="#conversion-en-lambert-93"><span class="header-section-number">1.3.2</span> 3.2 Conversion en Lambert 93</a></li>
+  <li><a href="#sélection-et-tampon" id="toc-sélection-et-tampon" class="nav-link" data-scroll-target="#sélection-et-tampon"><span class="header-section-number">1.3.3</span> 3.3 Sélection et tampon</a></li>
+  <li><a href="#analyse" id="toc-analyse" class="nav-link" data-scroll-target="#analyse"><span class="header-section-number">1.3.4</span> 3.4 Analyse</a></li>
+  </ul></li>
+  <li><a href="#matrice-de-distance" id="toc-matrice-de-distance" class="nav-link" data-scroll-target="#matrice-de-distance"><span class="header-section-number">1.4</span> 4. Matrice de distance</a></li>
+  <li><a href="#grille-hexagonale" id="toc-grille-hexagonale" class="nav-link" data-scroll-target="#grille-hexagonale"><span class="header-section-number">1.5</span> 5. Grille hexagonale</a>
+  <ul class="collapse">
+  <li><a href="#création" id="toc-création" class="nav-link" data-scroll-target="#création"><span class="header-section-number">1.5.1</span> 5.1 Création</a></li>
+  <li><a href="#nettoyage" id="toc-nettoyage" class="nav-link" data-scroll-target="#nettoyage"><span class="header-section-number">1.5.2</span> 5.2 Nettoyage</a></li>
+  </ul></li>
+  <li><a href="#comptages-dans-la-grille" id="toc-comptages-dans-la-grille" class="nav-link" data-scroll-target="#comptages-dans-la-grille"><span class="header-section-number">1.6</span> 6. Comptages dans la grille</a></li>
+  <li><a href="#analyse-de-superposition-corine-land-cover" id="toc-analyse-de-superposition-corine-land-cover" class="nav-link" data-scroll-target="#analyse-de-superposition-corine-land-cover"><span class="header-section-number">1.7</span> 7. Analyse de superposition (Corine Land Cover)</a>
+  <ul class="collapse">
+  <li><a href="#sélection-des-forêts" id="toc-sélection-des-forêts" class="nav-link" data-scroll-target="#sélection-des-forêts"><span class="header-section-number">1.7.1</span> 7.1 Sélection des forêts</a></li>
+  <li><a href="#superposition" id="toc-superposition" class="nav-link" data-scroll-target="#superposition"><span class="header-section-number">1.7.2</span> 7.2 Superposition</a></li>
+  </ul></li>
+  <li><a href="#intersection-et-group-stats" id="toc-intersection-et-group-stats" class="nav-link" data-scroll-target="#intersection-et-group-stats"><span class="header-section-number">1.8</span> 8. Intersection et Group Stats</a>
+  <ul class="collapse">
+  <li><a href="#zone-tampon-des-parcs" id="toc-zone-tampon-des-parcs" class="nav-link" data-scroll-target="#zone-tampon-des-parcs"><span class="header-section-number">1.8.1</span> 8.1 Zone tampon des parcs</a></li>
+  <li><a href="#intersection-avec-clc" id="toc-intersection-avec-clc" class="nav-link" data-scroll-target="#intersection-avec-clc"><span class="header-section-number">1.8.2</span> 8.2 Intersection avec CLC</a></li>
+  <li><a href="#tableau-croisé-dynamique" id="toc-tableau-croisé-dynamique" class="nav-link" data-scroll-target="#tableau-croisé-dynamique"><span class="header-section-number">1.8.3</span> 8.3 Tableau croisé dynamique</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Econométrie 1</a></li><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Introduction</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-SIG-intro.html">SIG</a></li><li class="breadcrumb-item"><a href="./CMI-SIG-TP2.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TP2 : Traitement sur les données vectorielles</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TP2 : Traitement sur les données vectorielles</span></h1>
 </div>
 
 
@@ -265,16 +297,167 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="données-de-départ" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="données-de-départ"><span class="header-section-number">1.1</span> 1. Données de départ</h2>
+<p>Dans un nouveau projet, ouvrez la couche :<br>
+- <code>DEPARTEMENT_occitanie.gpkg</code></p>
+<p>Ouvrez également la couche :<br>
+- <code>CLC12_RLRMP_RGF.shp</code></p>
+<p>Pour visualiser les types d’occupation du sol avec les couleurs standard <strong>Corine Land Cover</strong>, ouvrez les propriétés de la couche et chargez le fichier de style <code>CLC12.sld</code> (dans le dossier <em>FichiersLegende</em>).</p>
+<p>Ajoutez aussi :<br>
+- <code>trace-du-reseau-autoroutier-doccitanie.geojson</code><br>
+- <code>dreal-occitanie-mats-eoliens.geojson</code></p>
+<p>Enregistrez le projet sous le nom <code>TP2.qgz</code>.</p>
+</section>
+<section id="création-dun-geopackage" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="création-dun-geopackage"><span class="header-section-number">1.2</span> 2. Création d’un GeoPackage</h2>
+<p>Toutes les couches produites seront enregistrées dans une base unique <strong>GeoPackage</strong>.</p>
+<ol type="1">
+<li>Créez <code>TP2_couches.gpkg</code> (répertoire <em>data</em>) en exportant la couche des mâts éoliens.<br>
+</li>
+<li>Options :
 <ul>
-<li>30 h</li>
-<li>objectifs : développer, interpréter et critiquer des modèles économétriques</li>
-<li>modalités d’examens:</li>
-<li>Note de participation</li>
-<li>Un projet commun calcul numérique/économétrie avec choix du sujet libre</li>
-<li>Un projet commun SIG/économétrie avec choix du sujet imposé</li>
+<li>format = <em>GeoPackage</em><br>
+</li>
+<li>nom fichier = <code>TP2_couches.gpkg</code><br>
+</li>
+<li>nom couche = <code>Mâts éoliens</code><br>
+</li>
+<li>SCR = <code>EPSG:2154</code></li>
+</ul></li>
+</ol>
+</section>
+<section id="zone-tampon-sur-lautoroute-a61" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="zone-tampon-sur-lautoroute-a61"><span class="header-section-number">1.3</span> 3. Zone tampon sur l’autoroute A61</h2>
+<section id="vérification-du-scr" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="vérification-du-scr"><span class="header-section-number">1.3.1</span> 3.1 Vérification du SCR</h3>
+<p>Dans les propriétés de <code>trace-du-reseau-autoroutier-doccitanie</code>, identifiez le système de coordonnées.</p>
+</section>
+<section id="conversion-en-lambert-93" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="conversion-en-lambert-93"><span class="header-section-number">1.3.2</span> 3.2 Conversion en Lambert 93</h3>
+<p>Exporte la couche vers <code>TP2_couches.gpkg</code> avec :<br>
+- nom couche = <code>Réseau autoroutier</code><br>
+- SCR = <code>EPSG:2154</code></p>
+</section>
+<section id="sélection-et-tampon" class="level3" data-number="1.3.3">
+<h3 data-number="1.3.3" class="anchored" data-anchor-id="sélection-et-tampon"><span class="header-section-number">1.3.3</span> 3.3 Sélection et tampon</h3>
+<ol type="1">
+<li>Ouvrir la table attributaire → champ <code>num_route</code>.<br>
+</li>
+<li>Sélectionner les tronçons correspondant à <strong>A61</strong>.<br>
+</li>
+<li>Créer un tampon de <strong>5000 m</strong> avec options :
+<ul>
+<li>entités sélectionnées uniquement = Oui<br>
+</li>
+<li>Nb segments = 10<br>
+</li>
+<li>extrémités = Rond<br>
+</li>
+<li>regrouper = Oui<br>
+</li>
+<li>sortie = <code>TP2_couches.gpkg</code> → <code>Tampon A61 5000m</code></li>
+</ul></li>
+</ol>
+</section>
+<section id="analyse" class="level3" data-number="1.3.4">
+<h3 data-number="1.3.4" class="anchored" data-anchor-id="analyse"><span class="header-section-number">1.3.4</span> 3.4 Analyse</h3>
+<p>Avec <strong>Compter les points dans les polygones</strong>, combien d’éoliennes se trouvent dans cette zone tampon ?</p>
+</section>
+</section>
+<section id="matrice-de-distance" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="matrice-de-distance"><span class="header-section-number">1.4</span> 4. Matrice de distance</h2>
+<p>Pour chaque mât éolien, calculer la distance avec les <strong>2 plus proches voisins</strong>.<br>
+- entrée = <code>Mâts éoliens</code><br>
+- identifiant = <code>id_mat</code><br>
+- type = <em>Matrice de distance linéaire (N</em>k+3)*<br>
+- k = 2<br>
+- sortie = <code>TP2_couches.gpkg</code> → <code>Calcul Eoliennes 2 voisins</code></p>
+<p>Inspectez le résultat avec l’outil Identifier : remarquez-vous le type de géométrie ?</p>
+</section>
+<section id="grille-hexagonale" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="grille-hexagonale"><span class="header-section-number">1.5</span> 5. Grille hexagonale</h2>
+<section id="création" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="création"><span class="header-section-number">1.5.1</span> 5.1 Création</h3>
+<ol type="1">
+<li>Dans <code>departement_occitanie</code>, sélectionnez l’Aude et zoomez.<br>
+</li>
+<li>Avec <strong>Créer une grille</strong> :
+<ul>
+<li>type = hexagonale<br>
+</li>
+<li>étendue = canevas<br>
+</li>
+<li>espacement = 5000<br>
+</li>
+<li>SCR = EPSG:2154<br>
+</li>
+<li>sortie = <code>TP2_couches.gpkg</code> → <code>Grille Aude 5km</code></li>
+</ul></li>
+</ol>
+</section>
+<section id="nettoyage" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="nettoyage"><span class="header-section-number">1.5.2</span> 5.2 Nettoyage</h3>
+<p>Supprimez les hexagones hors de l’Aude :<br>
+- sélection par localisation → inverser → supprimer en mode édition.</p>
+</section>
+</section>
+<section id="comptages-dans-la-grille" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="comptages-dans-la-grille"><span class="header-section-number">1.6</span> 6. Comptages dans la grille</h2>
+<ul>
+<li><strong>Compter points/polygones</strong> → nb d’éoliennes par maille hexagonale.
+<ul>
+<li>sortie = <code>TP2_couches.gpkg</code> → <code>Calcul nb éoliennes</code><br>
+</li>
+</ul></li>
+<li><strong>Somme longueurs lignes</strong> → total autoroutes par maille.
+<ul>
+<li>sortie = <code>TP2_couches.gpkg</code> → <code>Calcul long autoroutes</code></li>
+</ul></li>
 </ul>
+</section>
+<section id="analyse-de-superposition-corine-land-cover" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="analyse-de-superposition-corine-land-cover"><span class="header-section-number">1.7</span> 7. Analyse de superposition (Corine Land Cover)</h2>
+<section id="sélection-des-forêts" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored" data-anchor-id="sélection-des-forêts"><span class="header-section-number">1.7.1</span> 7.1 Sélection des forêts</h3>
+<p>Sélectionner dans <code>CLC12_RLRMP_RGF</code> les polygones dont <code>CODE_12</code> commence par “3”.<br>
+Exporter vers <code>TP2_couches.gpkg</code> → <code>CLC12 Forets Milieux SemiNat</code>.</p>
+</section>
+<section id="superposition" class="level3" data-number="1.7.2">
+<h3 data-number="1.7.2" class="anchored" data-anchor-id="superposition"><span class="header-section-number">1.7.2</span> 7.2 Superposition</h3>
+<p>Avec <strong>Analyse de superposition</strong> :<br>
+- source = <code>Grille Aude 5km</code><br>
+- superposition = <code>CLC12 Forets Milieux SemiNat</code><br>
+- sortie = <code>TP2_couches.gpkg</code> → <code>Calcul P ForetsSemiNat</code></p>
+</section>
+</section>
+<section id="intersection-et-group-stats" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="intersection-et-group-stats"><span class="header-section-number">1.8</span> 8. Intersection et Group Stats</h2>
+<section id="zone-tampon-des-parcs" class="level3" data-number="1.8.1">
+<h3 data-number="1.8.1" class="anchored" data-anchor-id="zone-tampon-des-parcs"><span class="header-section-number">1.8.1</span> 8.1 Zone tampon des parcs</h3>
+<p>Créer tampon <strong>2000 m</strong> autour de chaque mât → <code>Tampon Eol 2000m</code>.<br>
+Puis regrouper par <code>id_parc, n_parc</code> → <code>Calcul ParcEol 2000m</code>.</p>
+</section>
+<section id="intersection-avec-clc" class="level3" data-number="1.8.2">
+<h3 data-number="1.8.2" class="anchored" data-anchor-id="intersection-avec-clc"><span class="header-section-number">1.8.2</span> 8.2 Intersection avec CLC</h3>
+<p>Avec <strong>Intersection</strong> :<br>
+- source = <code>CLC12_RLRMP_RGF</code><br>
+- superposition = <code>Tampon Eol 2000m</code><br>
+- champs conservés : <code>ID, CODE_12, id_parc, n_parc</code><br>
+- sortie = <code>TP2_couches.gpkg</code> → <code>Calcul Inter ParcEol CLC12</code></p>
+</section>
+<section id="tableau-croisé-dynamique" class="level3" data-number="1.8.3">
+<h3 data-number="1.8.3" class="anchored" data-anchor-id="tableau-croisé-dynamique"><span class="header-section-number">1.8.3</span> 8.3 Tableau croisé dynamique</h3>
+<p>Dans l’extension <strong>Group Stats</strong> :<br>
+- Couches = <code>Calcul Inter ParcEol CLC12</code><br>
+- Colonnes = <code>CODE_12</code><br>
+- Lignes = <code>id_parc, n_parc</code><br>
+- Valeurs = <code>Surface (somme)</code></p>
+<p>Exporter le tableau et coller dans Excel/Calc.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -678,13 +861,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./CMI-SIG-TP3.html" class="pagination-link" aria-label="TP3 : SIG avec R">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">TP3 : SIG avec R</span>
+      <a href="./CMI-SIG-TP1.html" class="pagination-link" aria-label="TP1 : introduction à QGIS">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">TP1 : introduction à QGIS</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./CMI-E1-TP1.html" class="pagination-link" aria-label="TP4 : Probabilités et Statistiques avec R">
-        <span class="nav-page-text">TP4 : Probabilités et Statistiques avec R</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./CMI-SIG-TP3.html" class="pagination-link" aria-label="TP3 : SIG avec R">
+        <span class="nav-page-text">TP3 : SIG avec R</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

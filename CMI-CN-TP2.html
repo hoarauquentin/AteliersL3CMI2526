@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – Ateliers L3 CMI</title>
+<title>TP2 : Tableaux de données – Ateliers L3 CMI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./CMI-E1-TP1.html" rel="next">
-<link href="./CMI-SIG-TP3.html" rel="prev">
+<link href="./CMI-CN-TP3.html" rel="next">
+<link href="./CMI-CN-TP1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Econométrie 1</a></li><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-CN-intro.html">Calcul Numérique</a></li><li class="breadcrumb-item"><a href="./CMI-CN-TP2.html">TP2 : Tableaux de données</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -136,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-CN-TP2.html" class="sidebar-item-text sidebar-link">
+  <a href="./CMI-CN-TP2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">TP2 : Tableaux de données</span></a>
   </div>
 </li>
@@ -194,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-E1-intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./CMI-E1-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -240,15 +275,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#les-verbes-de-base-de-dplyr" id="toc-les-verbes-de-base-de-dplyr" class="nav-link active" data-scroll-target="#les-verbes-de-base-de-dplyr">Les verbes de base de <code>dplyr</code></a></li>
+  <li><a href="#enchaîner-des-opérations" id="toc-enchaîner-des-opérations" class="nav-link" data-scroll-target="#enchaîner-des-opérations">Enchaîner des opérations</a>
+  <ul class="collapse">
+  <li><a href="#group_by-et-summarise" id="toc-group_by-et-summarise" class="nav-link" data-scroll-target="#group_by-et-summarise"><code>group_by</code> et <code>summarise</code></a></li>
+  <li><a href="#jointures" id="toc-jointures" class="nav-link" data-scroll-target="#jointures">Jointures</a></li>
+  <li><a href="#bonus" id="toc-bonus" class="nav-link" data-scroll-target="#bonus">Bonus</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Econométrie 1</a></li><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Introduction</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-CN-intro.html">Calcul Numérique</a></li><li class="breadcrumb-item"><a href="./CMI-CN-TP2.html">TP2 : Tableaux de données</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">TP2 : Tableaux de données</h1>
 </div>
 
 
@@ -265,16 +312,163 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<ul>
-<li>30 h</li>
-<li>objectifs : développer, interpréter et critiquer des modèles économétriques</li>
-<li>modalités d’examens:</li>
-<li>Note de participation</li>
-<li>Un projet commun calcul numérique/économétrie avec choix du sujet libre</li>
-<li>Un projet commun SIG/économétrie avec choix du sujet imposé</li>
-</ul>
+<p>On commence par charger les extensions et les données nécessaires.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nycflights13)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(flights)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(airports)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(airlines)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="les-verbes-de-base-de-dplyr" class="level2">
+<h2 class="anchored" data-anchor-id="les-verbes-de-base-de-dplyr">Les verbes de base de <code>dplyr</code></h2>
+<p><strong>Exercice 1.1</strong></p>
+<p>Sélectionner la dixième ligne du tableau des aéroports (<code>airports</code>).</p>
+<div class="solution-exo">
+
+</div>
+<p>Sélectionner les 5 premières lignes de la table <code>airlines</code>.</p>
+<div class="solution-exo">
+
+</div>
+<p>Sélectionner l’aéroport avec l’altitude la plus basse.</p>
+<div class="solution-exo">
+
+</div>
+<p><strong>Exercice 1.2</strong></p>
+<p>Sélectionnez les vols du mois de juillet (variable <code>month</code>).</p>
+<div class="solution-exo">
+
+</div>
+<p>Sélectionnez les vols avec un retard à l’arrivée (variable <code>arr_delay</code>) compris entre 5 et 15 minutes.</p>
+<div class="solution-exo">
+
+</div>
+<p>Sélectionnez les vols des compagnies Delta, United et American (codes <code>DL</code>, <code>UA</code> et <code>AA</code> de la variable <code>carrier</code>).</p>
+<div class="solution-exo">
+
+</div>
+<p><strong>Exercice 1.3</strong></p>
+<p>Triez la table <code>flights</code> par retard au départ décroissant.</p>
+<div class="solution-exo">
+
+</div>
+<p><strong>Exercice 1.4</strong></p>
+<p>Sélectionnez les colonnes <code>name</code>, <code>lat</code> et <code>lon</code> de la table <code>airports</code></p>
+<div class="solution-exo">
+
+</div>
+<p>Sélectionnez toutes les colonnes de la table <code>airports</code> sauf les colonnes <code>tz</code> et <code>tzone</code></p>
+<div class="solution-exo">
+
+</div>
+<p>Sélectionnez toutes les colonnes de la table <code>flights</code> dont les noms se terminent par “delay”.</p>
+<div class="solution-exo">
+
+</div>
+<p>Dans la table <code>airports</code>, renommez la colonne <code>alt</code> en <code>altitude</code> et la colonne <code>tzone</code> en <code>fuseau_horaire</code>.</p>
+<div class="solution-exo">
+
+</div>
+<p><strong>Exercice 1.5</strong></p>
+<p>Dans la table <code>airports</code>, la colonne <code>alt</code> contient l’altitude de l’aéroport en pieds. Créer une nouvelle variable <code>alt_m</code> contenant l’altitude en mètres (on convertit des pieds en mètres en les divisant par 3.2808). Sélectionner dans la table obtenue uniquement les deux colonnes <code>alt</code> et <code>alt_m</code>.</p>
+<div class="solution-exo">
+
+</div>
+</section>
+<section id="enchaîner-des-opérations" class="level2">
+<h2 class="anchored" data-anchor-id="enchaîner-des-opérations">Enchaîner des opérations</h2>
+<p><strong>Exercice 2.1</strong></p>
+<p>Réécrire le code de l’exercice précédent en utilisant le <em>pipe</em> <code>%&gt;%</code>.</p>
+<div class="solution-exo">
+
+</div>
+<p><strong>Exercice 2.2</strong></p>
+<p>En utilisant le <em>pipe</em>, sélectionnez les vols à destination de San Francico (code <code>SFO</code> de la variable <code>dest</code>) et triez-les selon le retard au départ décroissant (variable <code>dep_delay</code>).</p>
+<div class="solution-exo">
+
+</div>
+<p><strong>Exercice 2.3</strong></p>
+<p>Sélectionnez les vols des mois de septembre et octobre, conservez les colonnes <code>dest</code> et <code>dep_delay</code>, créez une nouvelle variable <code>retard_h</code> contenant le retard au départ en heures, et conservez uniquement les 5 lignes avec les plus grandes valeurs de <code>retard_h</code>.</p>
+<div class="solution-exo">
+
+</div>
+<section id="group_by-et-summarise" class="level3">
+<h3 class="anchored" data-anchor-id="group_by-et-summarise"><code>group_by</code> et <code>summarise</code></h3>
+<p><strong>Exercice 3.1</strong></p>
+<p>Affichez le nombre de vols par mois.</p>
+<div class="solution-exo">
+
+</div>
+<p>Triez la table résultat selon le nombre de vols croissant.</p>
+<div class="solution-exo">
+
+</div>
+<p><strong>Exercice 3.2</strong></p>
+<p>Calculer la distance moyenne des vols selon l’aéroport de départ (variable <code>origin</code>).</p>
+<div class="solution-exo">
+
+</div>
+<p><strong>Exercice 3.3</strong></p>
+<p>Calculer le nombre de vols à destination de Los Angeles (code <code>LAX</code>) pour chaque mois de l’année.</p>
+<div class="solution-exo">
+
+</div>
+<p><strong>Exercice 3.4</strong></p>
+<p>Calculer le nombre de vols selon le mois et la destination.</p>
+<div class="solution-exo">
+
+</div>
+<p>Ne conserver, pour chaque mois, que la destination avec le nombre maximal de vols.</p>
+<div class="solution-exo">
+
+</div>
+<p><strong>Exercice 3.5</strong></p>
+<p>Calculer le nombre de vols selon le mois. Ajouter une colonne comportant le pourcentage de vols annuels réalisés par mois.</p>
+<div class="solution-exo">
+
+</div>
+<p><strong>Exercice 3.6</strong></p>
+<p>Calculer, pour chaque aéroport de départ et de destination, la durée moyenne des vols (variable air_time). Pour chaque aéroport de départ, ne conserver que la destination avec la durée moyenne la plus longue.</p>
+<div class="solution-exo">
+
+</div>
+</section>
+<section id="jointures" class="level3">
+<h3 class="anchored" data-anchor-id="jointures">Jointures</h3>
+<p><strong>Exercice 4.1</strong></p>
+<p>Faire la jointure de la table <code>airlines</code> sur la table <code>flights</code> à l’aide de <code>left_join</code>.</p>
+<div class="solution-exo">
+
+</div>
+<p><strong>Exercice 4.2</strong></p>
+<p>À partir de la table résultat de l’exercice précédent, calculer le retard moyen au départ pour chaque compagnie, et trier selon ce retard décroissant.</p>
+<div class="solution-exo">
+
+</div>
+<p><strong>Exercice 4.3</strong></p>
+<p>Faire la jointure de la table <code>airports</code> sur la table <code>flights</code> en utilisant comme clé le code de l’aéroport de destination.</p>
+<div class="solution-exo">
+
+</div>
+<p>À partir de cette table, afficher pour chaque mois le nom de l’aéroport de destination ayant eu le plus petit nombre de vol.</p>
+<div class="solution-exo">
+
+</div>
+<p><strong>Exercice 4.4</strong></p>
+<p>Créer une table indiquant, pour chaque vol, uniquement le nom de l’aéroport de départ et celui de l’aéroport d’arrivée.</p>
+<div class="solution-exo">
+
+</div>
+</section>
+<section id="bonus" class="level3">
+<h3 class="anchored" data-anchor-id="bonus">Bonus</h3>
+<p><strong>Exercice 5.1</strong></p>
+<p>Calculer le nombre de vols selon l’aéroport de destination, et fusionnez la table <code>airports</code> sur le résultat avec <code>left_join</code>. Stocker le résultat final dans un objet nommé <code>flights_dest</code>.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -678,13 +872,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./CMI-SIG-TP3.html" class="pagination-link" aria-label="TP3 : SIG avec R">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">TP3 : SIG avec R</span>
+      <a href="./CMI-CN-TP1.html" class="pagination-link" aria-label="TP1 : Commandes de base de R">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">TP1 : Commandes de base de R</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./CMI-E1-TP1.html" class="pagination-link" aria-label="TP4 : Probabilités et Statistiques avec R">
-        <span class="nav-page-text">TP4 : Probabilités et Statistiques avec R</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./CMI-CN-TP3.html" class="pagination-link" aria-label="TP3 : Premiers Graphiques">
+        <span class="nav-page-text">TP3 : Premiers Graphiques</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

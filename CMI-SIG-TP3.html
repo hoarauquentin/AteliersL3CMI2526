@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – Ateliers L3 CMI</title>
+<title>TP3 : SIG avec R – Ateliers L3 CMI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./CMI-E1-TP1.html" rel="next">
-<link href="./CMI-SIG-TP3.html" rel="prev">
+<link href="./CMI-E1-intro.html" rel="next">
+<link href="./CMI-SIG-TP2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Econométrie 1</a></li><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-SIG-intro.html">SIG</a></li><li class="breadcrumb-item"><a href="./CMI-SIG-TP3.html">TP3 : SIG avec R</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -177,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-SIG-TP3.html" class="sidebar-item-text sidebar-link">
+  <a href="./CMI-SIG-TP3.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">TP3 : SIG avec R</span></a>
   </div>
 </li>
@@ -194,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-E1-intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./CMI-E1-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -240,15 +275,33 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#premières-cartes" id="toc-premières-cartes" class="nav-link active" data-scroll-target="#premières-cartes">1. Premières cartes</a></li>
+  <li><a href="#opérations-sur-les-attributs" id="toc-opérations-sur-les-attributs" class="nav-link" data-scroll-target="#opérations-sur-les-attributs">2. Opérations sur les attributs</a></li>
+  <li><a href="#opération-sur-les-données-spatiales" id="toc-opération-sur-les-données-spatiales" class="nav-link" data-scroll-target="#opération-sur-les-données-spatiales">3. Opération sur les données spatiales</a>
+  <ul class="collapse">
+  <li><a href="#opérations-sur-les-vecteurs" id="toc-opérations-sur-les-vecteurs" class="nav-link" data-scroll-target="#opérations-sur-les-vecteurs">3.1 Opérations sur les vecteurs</a></li>
+  </ul></li>
+  <li><a href="#opérations-sur-les-rasters" id="toc-opérations-sur-les-rasters" class="nav-link" data-scroll-target="#opérations-sur-les-rasters">3.2 Opérations sur les rasters</a></li>
+  <li><a href="#opérations-sur-les-géométries" id="toc-opérations-sur-les-géométries" class="nav-link" data-scroll-target="#opérations-sur-les-géométries">4. Opérations sur les géométries</a>
+  <ul class="collapse">
+  <li><a href="#opérations-sur-les-vecteurs-1" id="toc-opérations-sur-les-vecteurs-1" class="nav-link" data-scroll-target="#opérations-sur-les-vecteurs-1">4.1 Opérations sur les vecteurs</a></li>
+  <li><a href="#opérations-sur-les-rasters-1" id="toc-opérations-sur-les-rasters-1" class="nav-link" data-scroll-target="#opérations-sur-les-rasters-1">4.2 Opérations sur les rasters</a></li>
+  </ul></li>
+  <li><a href="#application-rapprochement-de-base-par-distances" id="toc-application-rapprochement-de-base-par-distances" class="nav-link" data-scroll-target="#application-rapprochement-de-base-par-distances">5. Application : rapprochement de base par distances</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Econométrie 1</a></li><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Introduction</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-SIG-intro.html">SIG</a></li><li class="breadcrumb-item"><a href="./CMI-SIG-TP3.html">TP3 : SIG avec R</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">TP3 : SIG avec R</h1>
 </div>
 
 
@@ -265,16 +318,167 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Chargez les libraries suivantes :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("spDataLarge", repos = "https://geocompr.r-universe.dev")</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("remotes")</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#remotes::install_github("r-tmap/tmap")</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stars)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spData)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spDataLarge)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tmap)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">#remotes::install_github("r-tmap/tmap")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="premières-cartes" class="level2">
+<h2 class="anchored" data-anchor-id="premières-cartes">1. Premières cartes</h2>
+<ol type="1">
+<li>Décrire l’objet Utilisez <code>world</code>. Utiliser <code>summary()</code> sur la colonne de géométrie de l’objet <code>world</code> inclus dans le package <code>spData.</code> Utilisez <code>ggplot2</code>. Tracez la carte des continents. Utiliser le <code>theme_void()</code>. Tracez le continent asiatique, en filtrant puis appliquant la fonction d’union de formes géométrique <code>st_union</code>.</li>
+</ol>
+<ol start="2" type="1">
+<li>Rajouter à la carte des continents des ronds pour chaque pays représentant la racine carré de leur population divisé par 10000. Il faudra pour ça calculer les centroides de chaque pays avec la commande <code>st_centroid</code> du package <strong>sf</strong></li>
+</ol>
+<ol start="3" type="1">
+<li>Tracez la carte de l’Inde dans le continent asiatique. Il faut :</li>
+</ol>
 <ul>
-<li>30 h</li>
-<li>objectifs : développer, interpréter et critiquer des modèles économétriques</li>
-<li>modalités d’examens:</li>
-<li>Note de participation</li>
-<li>Un projet commun calcul numérique/économétrie avec choix du sujet libre</li>
-<li>Un projet commun SIG/économétrie avec choix du sujet imposé</li>
+<li>filtrer et tracer le continent asiatique dans <code>world</code> .</li>
+<li>créer un object <code>india</code> qui filtre l’Inde dans <code>world</code> .</li>
+<li>rajouter la carte le l’Inde en grisant son contour</li>
+<li>créer le centroide de l’inde et rajouter sur la carte une étiquette “Inde” à la coordonnée du centroide du pays</li>
 </ul>
+<ol start="4" type="1">
+<li>Créer un raster de 10x10 pixels avec la commande <code>rast</code>, dont les niveaux avec des valeurs aléatoires allant de 0 à 10 (avec la commande <code>runif</code>). Tracez ce raster avec <code>geom_raster.</code></li>
+</ol>
+<ol start="5" type="1">
+<li>Chargez le fichier <code>raster/nlcd.tif</code> du package <code>spDataLarge</code> à l’aide de la commande. Décrire cet objet. Utiliser la fonction <code>plot</code>. Enfin, convertir le raster en objet du package <code>stars</code> et décrire le résultat.</li>
+</ol>
+</section>
+<section id="opérations-sur-les-attributs" class="level2">
+<h2 class="anchored" data-anchor-id="opérations-sur-les-attributs">2. Opérations sur les attributs</h2>
+<p>Pour ces exercices, nous utiliserons les ensembles de données <code>us_states</code> et <code>us_states_df</code> du package <strong>spData</strong>.</p>
+<ol type="1">
+<li>Créez un nouvel objet appelé <code>us_states_name</code> qui contient uniquement la colonne <code>NAME</code> de l’objet <code>us_states</code> en utilisant la syntaxe de base R (<code>[</code>) ou tidyverse (<code>select()</code>). Quelle est la classe du nouvel objet et qu’est-ce qui le rend géographique?</li>
+</ol>
+<ol start="2" type="1">
+<li>Sélectionnez les colonnes de l’objet <code>us_states</code> contenant les données de population. Obtenez le même résultat en utilisant une autre commande (bonus : essayez de trouver trois façons d’obtenir le même résultat). Indice : essayez d’utiliser des fonctions d’aide, telles que <code>contains</code> ou <code>matches</code> de <strong>dplyr</strong> (voir <code>?contains</code>).</li>
+</ol>
+<ol start="3" type="1">
+<li>Trouvez tous les États ayant les caractéristiques suivantes (bonus : trouvez-les <em>et</em> affichez-les) :</li>
+</ol>
+<ul>
+<li>Appartiennent à la région Midwest.</li>
+<li>Appartiennent à la région Ouest, ont une superficie inférieure à 250 000 km<sup>2</sup> <em>et</em> en 2015, une population supérieure à 5 000 000 d’habitants (astuce : vous devrez peut-être utiliser la fonction <code>units::set_units()</code> ou <code>as.numeric()</code>).</li>
+<li>Appartiennent à la région Sud, avaient une superficie supérieure à 150 000 km<sup>2</sup> ou une population totale en 2015 supérieure à 7 000 000 d’habitants.</li>
+</ul>
+<ol start="4" type="1">
+<li>Quelle était la population totale en 2015 dans l’ensemble de données <code>us_states</code> ? Quelle était la population minimale et maximale en 2015 ?</li>
+</ol>
+<ol start="5" type="1">
+<li><p>Combien d’États y a-t-il dans chaque région ?</p></li>
+<li><p>Quelle était la population minimale et maximale en 2015 dans chaque région ? Quelle était la population totale en 2015 dans chaque région ?</p></li>
+<li><p>Ajoutez des variables de <code>us_states_df</code> à <code>us_states</code> et créez un nouvel objet appelé <code>us_states_stats</code>. Quelle fonction avez-vous utilisée et pourquoi ? Quelle variable sert de clé dans les deux ensembles de données ? Quelle est la classe du nouvel objet ?</p></li>
+<li><p><code>us_states_df</code> a deux lignes de plus que <code>us_states</code>. Comment pouvez-vous les trouver ? (astuce : essayez d’utiliser la fonction <code>dplyr::anti_join()</code>)</p></li>
+<li><p>Quelle était la densité de population en 2015 dans chaque État ? Quelle était la densité de population en 2010 dans chaque État ?</p></li>
+<li><p>Combien la densité de population a-t-elle changé entre 2010 et 2015 dans chaque État ? Calculez le changement en pourcentage et cartographiez-le.</p></li>
+<li><p>Changez les noms des colonnes dans <code>us_states</code> en minuscules. (Astuce : les fonctions d’aide - <code>tolower()</code> et <code>colnames()</code> peuvent aider.)</p></li>
+<li><p>Utilisez <code>us_states</code> et <code>us_states_df</code> pour créer un nouvel objet appelé <code>us_states_sel</code>. Le nouvel objet ne doit contenir que deux variables - <code>median_income_15</code> et <code>geometry</code>. Changez le nom de la colonne <code>median_income_15</code> en <code>Income</code>.</p></li>
+<li><p>Calculez le changement du nombre de résidents vivant en dessous du seuil de pauvreté entre 2010 et 2015 pour chaque État. (Astuce : voir <code>?us_states_df</code> pour la documentation sur les colonnes du seuil de pauvreté.) Bonus : Calculez le changement en pourcentage des résidents vivant en dessous du seuil de pauvreté dans chaque État.</p></li>
+<li><p>Quelle était la population minimale, moyenne et maximale des personnes vivant en dessous du seuil de pauvreté en 2015 pour chaque région ? Bonus : Quelle est la région où l’augmentation du nombre de personnes vivant en dessous du seuil de pauvreté est la plus importante ?</p></li>
+</ol>
+<ol start="15" type="1">
+<li><p>Créez un raster <code>grain</code> vide avec neuf lignes et colonnes et une résolution de 0,5 degré décimal (WGS84). Remplissez-le avec des nombres aléatoires. Extraire les valeurs des quatre cellules de coin.</p></li>
+<li><p>Quelle est la classe la plus courante de notre exemple de raster <code>grain</code> ?</p></li>
+<li><p>Tracez l’histogramme et la boîte à moustaches du fichier <code>dem.tif</code> du package <strong>spDataLarge</strong> (<code>system.file("raster/dem.tif", package = "spDataLarge")</code>).</p></li>
+</ol>
+</section>
+<section id="opération-sur-les-données-spatiales" class="level2">
+<h2 class="anchored" data-anchor-id="opération-sur-les-données-spatiales">3. Opération sur les données spatiales</h2>
+<section id="opérations-sur-les-vecteurs" class="level3">
+<h3 class="anchored" data-anchor-id="opérations-sur-les-vecteurs">3.1 Opérations sur les vecteurs</h3>
+<ol type="1">
+<li>Utiliser les jeux de données <code>nz</code> et <code>nz_height</code> du package <code>spData</code>. Combien de ces points élevés la région de Canterbury contient-elle ?</li>
+</ol>
+<p><strong>Bonus :</strong> tracez le résultat en utilisant la fonction <code>plot()</code> pour montrer toute la Nouvelle-Zélande, la région de <code>Canterbury</code> en jaune, les points élevés à Canterbury représentés par des croix rouges (astuce : <code>pch = 7</code>) et les points élevés dans d’autres parties de la Nouvelle-Zélande représentés par des cercles bleus. Consultez la page d’aide <code>?points</code> pour plus de détails avec une illustration des différentes valeurs <code>pch</code>.</p>
+<ol start="2" type="1">
+<li><p>Quelle région a le deuxième plus grand nombre de points <code>nz_height</code>, et combien en a-t-elle ?</p></li>
+<li><p>En généralisant la question à toutes les régions : combien des 16 régions de Nouvelle-Zélande contiennent des points qui appartiennent aux 100 points les plus élevés du pays ? Quelles sont ces régions ?</p></li>
+</ol>
+<p><strong>Bonus :</strong> créez un tableau listant ces régions par ordre du nombre de points et leur nom.</p>
+<ol start="4" type="1">
+<li>Le point de départ de cet exercice est de créer un objet représentant l’État du Colorado aux États-Unis. Faites ceci avec la fonction <code>filter()</code> (<code>tidyverse</code>) et tracez l’objet résultant dans le contexte des États-Unis.</li>
+</ol>
+<ul>
+<li>Créez un nouvel objet représentant tous les États qui se chevauchent géographiquement avec le Colorado et tracez le résultat (astuce : la manière la plus concise de le faire est avec la méthode de sous-ensemble <code>[</code>).</li>
+<li>Créez un autre objet représentant tous les objets qui touchent (ont une frontière commune avec) le Colorado et tracez le résultat (astuce : souvenez-vous que vous pouvez utiliser l’argument <code>op = st_intersects</code> et d’autres relations spatiales lors des opérations de sous-ensemble spatial en R de base).</li>
+</ul>
+<p><strong>Bonus :</strong> créez une ligne droite allant du centroïde du district de Columbia près de la côte Est au centroïde de la Californie près de la côte Ouest des États-Unis (astuce : les fonctions <code>st_centroid()</code>, <code>st_union()</code> et <code>st_cast()</code> peuvent aider) et identifiez quels États cette longue ligne est.</p>
+</section>
+</section>
+<section id="opérations-sur-les-rasters" class="level2">
+<h2 class="anchored" data-anchor-id="opérations-sur-les-rasters">3.2 Opérations sur les rasters</h2>
+<ol start="5" type="1">
+<li><p>Utilisez <code>dem = rast(system.file("raster/dem.tif", package = "spDataLarge"))</code>, et reclassifiez l’élévation en trois classes : basse (&lt;300), moyenne et haute (&gt;500). Ensuite, lisez le raster NDVI (<code>ndvi = rast(system.file("raster/ndvi.tif", package = "spDataLarge"))</code>) et calculez la moyenne du NDVI et de l’élévation pour chaque classe d’altitude.</p></li>
+<li><p>Appliquez un filtre de détection de lignes à <code>rast(system.file("ex/logo.tif", package = "terra"))</code>. Tracez le résultat. Astuce : Lisez <code>?terra::focal()</code>.</p></li>
+</ol>
+<p>7 Calculez l’indice d’eau normalisé (NDWI ; <code>(green - nir)/(green + nir)</code>) d’une image Landsat. Utilisez l’image Landsat fournie par le package <strong>spDataLarge</strong> (<code>system.file("raster/landsat.tif", package = "spDataLarge")</code>). Calculez également une corrélation entre le NDVI et le NDWI pour cette région (astuce : vous pouvez utiliser la fonction <code>layerCor()</code>).</p>
+<ol start="8" type="1">
+<li><p>Un message sur <a href="https://stackoverflow.com/questions/35555709/global-raster-of-geographic-distances">StackOverflow</a> montre comment calculer les distances jusqu’à la côte la plus proche en utilisant <code>raster::distance()</code>. Essayez de faire quelque chose de similaire mais avec <code>terra::distance()</code>: récupérez un modèle numérique d’élévation de l’Espagne et calculez un raster qui représente les distances jusqu’à la côte à travers le pays (astuce : utilisez <code>geodata::elevation_30s()</code>). Convertissez les distances résultantes de mètres en kilomètres. Note : il peut être judicieux d’augmenter la taille de cellule du raster d’entrée pour réduire le temps de calcul lors de cette opération (<code>aggregate()</code>).</p></li>
+<li><p>Essayez de modifier l’approche utilisée dans l’exercice ci-dessus en pondérant le raster de distance avec le raster d’élévation ; chaque tranche de 100 mètres d’altitude devrait augmenter la distance jusqu’à la côte de 10 km. Ensuite, calculez et visualisez la différence entre le raster créé en utilisant la distance euclidienne (E7) et le raster pondéré par l’élévation.</p></li>
+</ol>
+</section>
+<section id="opérations-sur-les-géométries" class="level2">
+<h2 class="anchored" data-anchor-id="opérations-sur-les-géométries">4. Opérations sur les géométries</h2>
+<section id="opérations-sur-les-vecteurs-1" class="level3">
+<h3 class="anchored" data-anchor-id="opérations-sur-les-vecteurs-1">4.1 Opérations sur les vecteurs</h3>
+<ol type="1">
+<li>Générez et tracez des versions simplifiées de l’ensemble de données <code>nz</code>. Expérimentez avec différentes valeurs de <code>keep</code> (allant de 0,5 à 0,00005) pour <code>ms_simplify()</code> et <code>dTolerance</code> (de 100 à 100 000) pour <code>st_simplify()</code>.</li>
+</ol>
+<ul>
+<li>À partir de quelle valeur le résultat commence-t-il à se détériorer pour chaque méthode, rendant la Nouvelle-Zélande méconnaissable ?</li>
+<li>Avancé : Quelle est la différence entre le type de géométrie des résultats de <code>st_simplify()</code> par rapport au type de géométrie de <code>ms_simplify()</code> ? Quels problèmes cela crée-t-il et comment cela peut-il être résolu ?</li>
+</ul>
+<ol start="2" type="1">
+<li><p>Dans le premier exercice du chapitre sur les opérations de données spatiales, il a été établi que la région de Canterbury avait 70 des 101 points les plus élevés de Nouvelle-Zélande. En utilisant <code>st_buffer()</code>, combien de points dans <code>nz_height</code> se trouvent à moins de 100 km de Canterbury ?</p></li>
+<li><p>Trouvez le centroïde géographique de la Nouvelle-Zélande. À quelle distance se trouve-t-il du centroïde géographique de Canterbury ?</p></li>
+<li><p>La plupart des cartes du monde ont une orientation nord en haut. Une carte du monde avec une orientation sud en haut pourrait être créée par une réflexion (l’une des transformations affines non mentionnées dans ce chapitre) de la géométrie de l’objet <code>world</code>. Écrivez le code pour le faire. Astuce : vous devez utiliser un vecteur à deux éléments pour cette transformation. Bonus : créez une carte à l’envers de votre pays.</p></li>
+<li><p>Exécutez le code de la section <a href="https://r.geocompx.org/geometry-operations.html#subsetting-and-clipping">5.2.6</a>. En référence aux objets créés dans cette section, sélectionnez le point dans <code>p</code> qui est contenu à la fois dans <code>x</code> et <code>y</code>.</p></li>
+</ol>
+<ul>
+<li>Utilisez les opérateurs de sous-ensemble de base.</li>
+<li>Utilisez un objet intermédiaire créé avec <code>st_intersection()</code>.</li>
+</ul>
+<ol start="6" type="1">
+<li>Calculez la longueur des lignes de frontières des États-Unis en mètres. Quel État a la frontière la plus longue et lequel a la frontière la plus courte ? Astuce : La fonction <code>st_length</code> calcule la longueur d’une géométrie de type <code>LINESTRING</code> ou <code>MULTILINESTRING</code>. Il faut aussi transformer la géométrieavec un CRS qui puisse calculer des ditances : ici ESPG=2163.</li>
+</ol>
+</section>
+<section id="opérations-sur-les-rasters-1" class="level3">
+<h3 class="anchored" data-anchor-id="opérations-sur-les-rasters-1">4.2 Opérations sur les rasters</h3>
+<ol start="7" type="1">
+<li>Lisez le fichier srtm.tif dans R (<code>srtm = rast(system.file("raster/srtm.tif", package = "spDataLarge"))</code>). Ce raster a une résolution de 0,00083 par 0,00083 degrés. Modifiez sa résolution en 0,01 par 0,01 degrés en utilisant toutes les méthodes disponibles dans le package <strong>terra</strong>. Visualisez les résultats. Pouvez-vous remarquer des différences entre les résultats de ces méthodes de rééchantillonnage ?</li>
+</ol>
+</section>
+</section>
+<section id="application-rapprochement-de-base-par-distances" class="level2">
+<h2 class="anchored" data-anchor-id="application-rapprochement-de-base-par-distances">5. Application : rapprochement de base par distances</h2>
+<p>Le but de cet exercice est d’identifier la nature de stations de services. Un jeu de données issu de <em>https://www.data.gouv.fr/fr/datasets/prix-des-carburants-en-france-flux-instantane-v2-amelioree/</em> donne les prix des carburants mais on n’a pas d’information sur le type de station (station d’autoroute, de supermarché…). Le jeu de données magasins d’openstreetmap pourrait permettre d’apporter des informations.</p>
+<ol type="1">
+<li><p>Charger les données de <code>TP3.zip</code>. Les gpkg s’ouvrent la commande <code>st_read</code> du package <code>sf</code>.</p></li>
+<li><p>Restreindre la base <code>magasins</code> aux types de magasins (<code>shop</code>) suivants : “gas”,“supermarket”,“convenience”, “car_repair”,“car”,“mall”,“convenience;gas”</p></li>
+<li><p>Transformer les deux jeux en sf dataframe en système de coordonnées EPSG 2154. Attention, pour la base <code>station</code>, il faut diviser longitude et latitude par 100000.</p></li>
+<li><p>Pour chaque station station, le magasins le plus proche et calculer la distance correspondate.</p></li>
+<li><p>Quelle est la part des magasins à moins de 100 mètres d’une station.</p></li>
+<li><p>Ajouter les attributs <code>shop</code> et <code>operator</code> pour chaque magasins les plus proche à la base stations.</p></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -678,13 +882,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./CMI-SIG-TP3.html" class="pagination-link" aria-label="TP3 : SIG avec R">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">TP3 : SIG avec R</span>
+      <a href="./CMI-SIG-TP2.html" class="pagination-link" aria-label="TP2 : Traitement sur les données vectorielles">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TP2 : Traitement sur les données vectorielles</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./CMI-E1-TP1.html" class="pagination-link" aria-label="TP4 : Probabilités et Statistiques avec R">
-        <span class="nav-page-text">TP4 : Probabilités et Statistiques avec R</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./CMI-E1-intro.html" class="pagination-link" aria-label="Introduction">
+        <span class="nav-page-text">Introduction</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
