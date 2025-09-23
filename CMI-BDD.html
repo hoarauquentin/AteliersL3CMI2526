@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>TP 2 : Modèle de régression multiple – Ateliers L3 CMI</title>
+<title>Bases de données – Ateliers L3 CMI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -65,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./CMI-E1-TP3.html" rel="next">
-<link href="./CMI-E1-TP1.html" rel="prev">
+<link href="./CMI-CN-intro.html" rel="next">
+<link href="./CMI-Projet1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -105,35 +70,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -146,7 +82,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Econométrie 1</a></li><li class="breadcrumb-item"><a href="./CMI-E1-TP2.html">TP 2 : Modèle de régression multiple</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Général</a></li><li class="breadcrumb-item"><a href="./CMI-BDD.html">Bases de données</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -200,7 +136,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-BDD.html" class="sidebar-item-text sidebar-link">
+  <a href="./CMI-BDD.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Bases de données</span></a>
   </div>
 </li>
@@ -299,7 +235,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-E1-TP2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./CMI-E1-TP2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TP 2 : Modèle de régression multiple</span></a>
   </div>
 </li>
@@ -339,34 +275,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#rappel-sur-r" id="toc-rappel-sur-r" class="nav-link" data-scroll-target="#rappel-sur-r">Rappel sur R</a></li>
-  <li><a href="#retour-sur-la-régression-multiple" id="toc-retour-sur-la-régression-multiple" class="nav-link" data-scroll-target="#retour-sur-la-régression-multiple">Retour sur la régression multiple</a></li>
-  <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices">Exercices</a>
-  <ul class="collapse">
-  <li><a href="#bwght" id="toc-bwght" class="nav-link" data-scroll-target="#bwght">bwght</a></li>
-  <li><a href="#hprice1" id="toc-hprice1" class="nav-link" data-scroll-target="#hprice1">hprice1</a></li>
-  <li><a href="#ceosal2" id="toc-ceosal2" class="nav-link" data-scroll-target="#ceosal2">ceosal2</a></li>
-  <li><a href="#attend" id="toc-attend" class="nav-link" data-scroll-target="#attend">attend</a></li>
-  <li><a href="#meap93" id="toc-meap93" class="nav-link" data-scroll-target="#meap93">meap93</a></li>
-  <li><a href="#discrim" id="toc-discrim" class="nav-link" data-scroll-target="#discrim">discrim</a></li>
-  <li><a href="#charity" id="toc-charity" class="nav-link" data-scroll-target="#charity">charity</a></li>
-  <li><a href="#htv" id="toc-htv" class="nav-link" data-scroll-target="#htv">htv</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E1-intro.html">Econométrie 1</a></li><li class="breadcrumb-item"><a href="./CMI-E1-TP2.html">TP 2 : Modèle de régression multiple</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Général</a></li><li class="breadcrumb-item"><a href="./CMI-BDD.html">Bases de données</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">TP 2 : Modèle de régression multiple</h1>
+<h1 class="title">Bases de données</h1>
 </div>
 
 
@@ -383,163 +300,14 @@ window.Quarto = {
 </header>
 
 
-<hr>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(wooldridge)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(AER)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stargazer)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fixest)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>Lancez et ouvrez un nouveau . Ce sera votre document de travail durant tout le TP. L’intérêt des Markdown est de pouvoir lancer une multitude de petits scripts successivement. Typiquement, un (petit script) par question. Lorsque c’est nécessaire, répondez aux questions entre les chunks.</p>
-<p>Créez un fichier partagé “Econométrie-votre nom” sur votre drive fourni de l’université (OneDrive ou Google Drive). Envoyez-moi le lien de ce drive. Ce dossier partagé sera votre dossier de travail pendant toute la durée du cours. Créez un dossier “TP1” et enregistrez-y votre markdown sous le nom “TP1”.</p>
-</section>
-<section id="rappel-sur-r" class="level1">
-<h1>Rappel sur R</h1>
-<ol type="i">
-<li><p>Chargez le package (téléchargez-le si besoin). Ouvrez le fichier de données <span class="math inline">\(CASchools\)</span> avec la commande : data(CASchools).</p></li>
-<li><p>Définissez les variables <span class="math inline">\(STR = students/teachers\)</span> et <span class="math inline">\(score = (read + math)/2\)</span>.</p></li>
-<li><p>Affichez les statistiques descriptives de ce jeu de données avec la commande .</p></li>
-<li><p>Estimez le modèle suivant avec la commande et affichez les résultats de la régression :</p></li>
-</ol>
-<p><span class="math display">\[ score = \beta_0 + \beta_1 STR +\beta_2 english + u \]</span></p>
-<ol start="22" type="a">
-<li>Reprérentez les résultats précédents à l’aide du et utilisez la commande <code>stargazer( data , type = 'text')</code> en remplaçant <span class="math inline">\(data\)</span> par les jeux de données précédemment appelés.</li>
-</ol>
-<!-- -->
-<ol start="6" type="i">
-<li>Faites la même chose avec la fonction <code>feols()</code> du package <code>fixest</code> pour <code>lm</code> et <code>etable()</code> pour <code>stargazer</code>.</li>
-</ol>
-</section>
-<section id="retour-sur-la-régression-multiple" class="level1">
-<h1>Retour sur la régression multiple</h1>
-<p>La première partie de ce TP vise à reproduire manuellement les fonctions de régression basiques de R. On considère le modèle linéaire suivant :</p>
-<p><span class="math display">\[ Y = X'\beta + u\]</span></p>
-<p>Le but de cet exercice est de reproduire les résultats de la fonction <span class="math inline">\(lm\)</span> de R tels qu’obtenus à la partie précédente.</p>
-<ol type="i">
-<li><p>Rappelez la formule générale de l’estimateur des moindres carrés ordinaires (MCO) <span class="math inline">\(\hat{\beta}\)</span> sous forme matricielle.</p></li>
-<li><p>Proposez une fonction sur R qui prennent en argument un vecteur <span class="math inline">\(Y\)</span> et une matrice <span class="math inline">\(X\)</span> de variables dépendantes et renvoie l’estimateur <span class="math inline">\(\hat{\beta}\)</span> . Appliquez votre fonction de façon à reproduire les résultats de la regression précédentes.</p></li>
-<li><p>Rappelez la formule de l’estimateur des moindres carrés ordinaires (MCO) <span class="math inline">\(\hat{\sigma}^2\)</span> de la variance des résidus et la matrice de variance-covariance associée aux coefficients.</p></li>
-<li><p>Modifiez la fonction de la question (ii) pour y intégrer l’estimateur des MCO de la déviation standard des résidus, et l’erreur standard <span class="math inline">\(\hat{\sigma}_{\beta_i}\)</span> associé à chaque coefficient <span class="math inline">\(\beta_i\)</span>. Combinez <span class="math inline">\(\hat{\beta}\)</span> et les <span class="math inline">\(\hat{\sigma}_{\beta_i}\)</span> dans un dataframe avec comme nom de colonnes “coefficient” et “déviation standard”. Appliquez votre fonction de façon à reproduire les résultats de la régression précédentes.</p></li>
-<li><p>Rappelez la formule du <span class="math inline">\(R^2\)</span>. Modifiez votre fonction pour que le dataframe intègre aussi le <span class="math inline">\(R^2\)</span>. Appliquez votre fonction de façon à reproduire les résultats de la régression précédentes.</p></li>
-<li><p>Rappelez les formules des statistiques de Fisher <span class="math inline">\(F\)</span> et de student <span class="math inline">\(t_i\)</span> pour chaque coefficient.</p></li>
-<li><p>Modifier la fonction pour y ajouter les tests sur le coefficient. Le résultat de votre fonction reverra un dataframe avec des dans des colonnes séparées :</p></li>
-<li><p>Appliquez votre fonction de façon à reproduire les résultats de la régression précédentes.</p></li>
-</ol>
-</section>
-<section id="exercices" class="level1">
-<h1>Exercices</h1>
-<p>Ces exercices utilisent les données issus du package <code>wooldridge.</code></p>
-<section id="bwght" class="level2">
-<h2 class="anchored" data-anchor-id="bwght">bwght</h2>
-<p></p>
-<p>Un problème qui intéresse les responsables de santé (et d’autres) est de déterminer les effets du tabagisme pendant la grossesse sur la santé des nourrissons. L’une des mesures de la santé du nourrisson est le poids de naissance ; un poids de naissance trop faible peut exposer le nourrisson au risque de contracter diverses maladies. Étant donné que des facteurs autres que le tabagisme qui influent sur le poids à la naissance sont susceptibles d’être corrélés au tabagisme, nous devons tenir compte de ces facteurs. Par exemple, un revenu plus élevé donne généralement accès à de meilleurs soins prénataux, ainsi qu’à une meilleure nutrition pour la mère. Une équation qui en tient compte est la suivante :</p>
-<p><span class="math display">\[ bwght = \beta_0 + \beta_1 cigs +\beta_2 faminc + u \]</span></p>
-<p>Avec <span class="math inline">\(bwght\)</span> le poids du bébé à la naissance, <span class="math inline">\(cigs\)</span> le nombre de cigarette fumées par jour par la mère, et <span class="math inline">\(faminc\)</span> le revenu de la famille.</p>
-<ol type="i">
-<li><p>Quel est le signe le plus probable pour <span class="math inline">\(\beta_2\)</span> ?</p></li>
-<li><p>Pensez-vous que <span class="math inline">\(cigs\)</span> et <span class="math inline">\(faminc\)</span> sont susceptibles d’être corrélés ? Expliquez pourquoi cette corrélation corrélation pourrait être positive ou négative.</p></li>
-<li><p>Maintenant, estimez l’équation avec et sans <span class="math inline">\(faminc\)</span></p></li>
-</ol>
-<p>Présentez les résultats sous forme d’équation, y compris la taille de l’échantillon et le <span class="math inline">\(R^2\)</span>. Discutez de vos résultats, en vous concentrant sur la question de savoir si l’ajout de la <span class="math inline">\(faminc\)</span> modifie sensiblement l’effet estimé de la cigarette sur le poids corporel.</p>
-</section>
-<section id="hprice1" class="level2">
-<h2 class="anchored" data-anchor-id="hprice1">hprice1</h2>
-<p>Utilisez les données pour estimer le modèle :</p>
-<p><span class="math display">\[ price = \beta_0 + \beta_1 sqrft + \beta_2 bdrms + u\]</span></p>
-<p>où <span class="math inline">\(price\)</span> est le prix de la maison mesuré en milliers de dollars, <span class="math inline">\(sqrft\)</span> est la surface du logement et <span class="math inline">\(bdrms\)</span> le nombre de chambres.</p>
-<ol type="i">
-<li><p>Rédigez les résultats sous forme d’équation.</p></li>
-<li><p>Quelle est l’augmentation estimée du prix d’une maison comportant une chambre à coucher de plus, la superficie en pieds carrés étant constante ?</p></li>
-<li><p>Quelle est l’augmentation estimée du prix d’une maison avec une chambre supplémentaire de 140 pieds carrés ? Comparez ce résultat à votre réponse dans la partie (ii).</p></li>
-<li><p>Quel pourcentage de la variation du prix s’explique par la superficie en pieds carrés et le nombre de chambres à coucher ?</p></li>
-<li><p>La première maison de l’échantillon a une superficie de $sqrft = $2438$ et un nombre de chambres à coucher <span class="math inline">\(bdrms = 4\)</span>$. Trouvez le prix de vente prédit pour cette maison à partir de la ligne de régression MCO.</p></li>
-<li><p>Le prix de vente réel de la première maison de l’échantillon est de 300 000 $ (donc <span class="math inline">\(price\)</span> = 300). Trouvez le résidu pour cette maison. Cela suggère-t-il que l’acheteur a sous-payé ou sur-payé la maison ?</p></li>
-</ol>
-</section>
-<section id="ceosal2" class="level2">
-<h2 class="anchored" data-anchor-id="ceosal2">ceosal2</h2>
-<p>Le fichier contient des données sur 177 PDG et peut être utilisé pour examiner les effets de la performance de l’entreprise sur le salaire du PDG.</p>
-<ol type="i">
-<li><p>Estimez un modèle reliant le salaire annuel <span class="math inline">\(salary\)</span> aux ventes de l’entreprise <span class="math inline">\(sales\)</span> et à la valeur marchande <span class="math inline">\(mktval\)</span>. Transformer le modèle de façon à obtenir des élasticités constantes pour les deux variables indépendantes. Écrivez les résultats sous forme d’équation.</p></li>
-<li><p>Ajoutez <span class="math inline">\(profits\)</span> au modèle de la partie (i). Pourquoi cette variable ne peut-elle pas être incluse sous sous forme logarithmique ? Diriez-vous que ces variables de performance de l’entreprise expliquent la plus grande partie de la variation des salaires des PDG ?</p></li>
-<li><p>Ajoutez la variable <span class="math inline">\(ceoten\)</span> au modèle de la partie (ii). Quel est le pourcentage de rendement estimé estimé pour une année supplémentaire de mandat du PDG, les autres facteurs étant fixes ?</p></li>
-<li><p>Trouvez le coefficient de corrélation de l’échantillon entre les variables <span class="math inline">\(\log(mktval)\)</span> et <span class="math inline">\(profits\)</span>. Ces variables sont-elles fortement corrélées ? Qu’est-ce que cela signifie pour les estimateurs MCO ?</p></li>
-</ol>
-</section>
-<section id="attend" class="level2">
-<h2 class="anchored" data-anchor-id="attend">attend</h2>
-<p>Cet exercice étudie les lien entre entre présence en classe et réussite scolaire. Utilisez les données de pour cet exercice.</p>
-<ol type="i">
-<li><p>Obtenez les valeurs minimum, maximum et moyenne pour les variables <span class="math inline">\(atndrte\)</span> (pourcentage de présence en classe), <span class="math inline">\(priGPA\)</span> (GPA cumulé), et <span class="math inline">\(ACT\)</span> (score ACT).</p></li>
-<li><p>Estimez le modèle <span class="math display">\[atndrte = \beta_0 + \beta_1 priGPA + \beta_2 ACT + u\]</span> et écrivez les résultats sous forme d’équation. Interprétez l’ordonnée à l’origine. A-t-il une signification utile ?</p></li>
-<li><p>Discutez les coefficients de pente estimés. Y a-t-il des surprises ?</p></li>
-<li><p>Quel est <span class="math inline">\(atndrte\)</span> prédit si <span class="math inline">\(priGPA\)</span> = 3.65 et <span class="math inline">\(ACT\)</span> = 20 ? Que pensez-vous de ce résultat ? Existe-t-il des étudiants dans l’échantillon avec ces valeurs des variables explicatives ?</p></li>
-<li><p>Si l’étudiant A a une <span class="math inline">\(priGPA\)</span> de 3,1 et un <span class="math inline">\(ACT\)</span> de 21, et que l’étudiant B a une <span class="math inline">\(priGPA\)</span> de 2,1 et un <span class="math inline">\(ACT\)</span> de 26, quelle est la valeur de <span class="math inline">\(atndrte\)</span> ? et <span class="math inline">\(ACT  = 26\)</span>, quelle est la différence prédite dans leurs taux de présence ?</p></li>
-</ol>
-</section>
-<section id="meap93" class="level2">
-<h2 class="anchored" data-anchor-id="meap93">meap93</h2>
-<p>Utilisez les données de pour répondre à cette question.</p>
-<ol type="i">
-<li>Estimez le modèle <span class="math display">\[math_{10} = \beta_0 + \beta_1 \log(expend) + \beta_2 lnchprg + u\]</span></li>
-</ol>
-<p>et rapportez les résultats sous la forme habituelle, y compris la taille de l’échantillon et le R-carré. Les signes des coefficients de pente sont-ils ceux que vous attendiez ? Expliquez. (ii) Que faites-vous de l’ordonnée à l’origine que vous avez estimée dans la partie (i) ? En particulier, cela a-t-il un sens de mettre les deux variables explicatives à zéro ? (Indice : rappelez-vous que <span class="math inline">\(\log(1)=0\)</span>). (iii) Exécutez maintenant la régression simple de math10 sur <span class="math inline">\(\log(expend)\)</span>, et comparez le coefficient de pente avec l’estimation obtenue dans la partie (i). L’effet de dépense estimé est-il maintenant plus grand ou plus petit que dans la partie (i) ? (iv) Trouvez la corrélation entre <span class="math inline">\(lexpend = \log(expend)\)</span> et <span class="math inline">\(lnchprg\)</span>. Son signe vous semble-t-il logique ? (v) Utilisez la partie (iv) pour expliquer vos résultats dans la partie (iii).</p>
-</section>
-<section id="discrim" class="level2">
-<h2 class="anchored" data-anchor-id="discrim">discrim</h2>
-<p>Utilisez les données de pour répondre à cette question. Il s’agit de données au niveau du code postal sur les prix de divers articles dans les fast-foods, ainsi que des caractéristiques de la population du code postal, dans le New Jersey et en Pennsylvanie. L’idée est de voir si les restaurants fast-food pratiquent des prix plus élevés dans les zones où la concentration de Noirs est plus importante. (i) Trouvez les valeurs moyennes de <span class="math inline">\(prpblck\)</span> et de revenu dans l’échantillon, ainsi que leurs écarts types. Quelles sont les unités de mesure de <span class="math inline">\(prpblck\)</span> et du revenu ? (ii) Considérez un modèle pour expliquer le prix du soda, <span class="math inline">\(psoda\)</span>, en fonction de la proportion de la population qui est noire et du revenu médian :</p>
-<p><span class="math display">\[ psoda = \beta_0 + \beta_1 prpblck + \beta_2 revenu + u\]</span></p>
-<p>Estimez ce modèle par MCO et rapportez les résultats sous forme d’équation, y compris la taille de l’échantillon et le R-carré. (N’utilisez pas la notation scientifique pour présenter les estimations.) Interprétez le coefficient de <span class="math inline">\(prpblck\)</span>. Pensez-vous qu’il soit économiquement important ?</p>
-<ol start="3" type="i">
-<li><p>Comparez l’estimation de la partie (ii) avec l’estimation de régression simple de <span class="math inline">\(psoda\)</span> sur <span class="math inline">\(prpblck\)</span>. L’effet de discrimination est-il plus important ou plus faible lorsque vous contrôlez le revenu ?</p></li>
-<li><p>Un modèle avec une élasticité-prix constante par rapport au revenu pourrait être plus approprié. Présentez les estimations du modèle :</p></li>
-</ol>
-<p><span class="math display">\[log(psoda) = \beta_0 + \beta_1 prpblck + \beta_2log(income) + u \]</span></p>
-<p>Si <span class="math inline">\(prpblck\)</span> augmente de 0,20 (20 points de pourcentage), quelle est la variation estimée en pourcentage de <span class="math inline">\(psoda\)</span> ? (Indice : la réponse est 2.xx, où vous remplissez le “xx”). (v) Ajoutez maintenant la variable <span class="math inline">\(prppov\)</span> à la régression de la partie (iv). Que se passe-t-il ? attendu ?</p>
-<ol start="7" type="i">
-<li>Évaluez l’énoncé suivant : “Parce que le <span class="math inline">\(log(income)\)</span> et la variable <span class="math inline">\(prppov\)</span> sont si fortement corrélés, ils n’ont rien à faire dans la même régression.”</li>
-</ol>
-</section>
-<section id="charity" class="level2">
-<h2 class="anchored" data-anchor-id="charity">charity</h2>
-<p>Utilisez les données de pour répondre aux questions suivantes :</p>
-<ol type="i">
-<li><p>Estimez l’équation : <span class="math display">\[ gift = \beta_0 + \beta_1 mailsyear + \beta_2 giftlast + \beta_3 propresp + u \]</span> par MCO et rapportez les résultats de la manière habituelle, y compris la taille de l’échantillon et le R-carré. Comment le <span class="math inline">\(R^2\)</span> se compare-t-il à celui de la régression simple qui omet <span class="math inline">\(giftlast\)</span> et <span class="math inline">\(propresp\)</span> ?</p></li>
-<li><p>Interprétez le coefficient de l’année postale. Est-il plus grand ou plus petit que le coefficient de régression simple correspondant ?</p></li>
-<li><p>Interprétez le coefficient de <span class="math inline">\(propresp\)</span>, en prenant soin de noter les unités de mesure de <span class="math inline">\(propresp\)</span>.</p></li>
-<li><p>Ajoutez maintenant la variable <span class="math inline">\(avggift\)</span> à l’équation. Que devient l’effet estimé de <span class="math inline">\(mailsyear\)</span> ?</p></li>
-<li><p>Dans l’équation de la partie (iv), qu’est-il arrivé au coefficient de <span class="math inline">\(giftlast\)</span> ? A votre avis, que se passe-t-il ?</p></li>
-</ol>
-</section>
-<section id="htv" class="level2">
-<h2 class="anchored" data-anchor-id="htv">htv</h2>
-<p>Utilisez les données de pour répondre à cette question. L’ensemble de données comprend des informations sur les salaires, l’éducation, l’éducation des parents et plusieurs autres variables pour 1 230 hommes actifs en 1991.</p>
-<ol type="i">
-<li><p>Quelle est la fourchette de la variable éducation dans l’échantillon ? Quel pourcentage d’hommes ont terminé leur 12ème année mais pas une année supérieure ? Les hommes ou leurs parents ont-ils, en les hommes ou leurs parents ont-ils, en moyenne, un niveau d’éducation plus élevé ?</p></li>
-<li><p>Estimez le modèle de régression</p></li>
-</ol>
-<p><span class="math display">\[ educ = \beta_0 + \beta_1 motheduc + \beta_2 fatheduc + u \]</span> par MCO et présentez les résultats sous la forme habituelle. Quelle est la part de la variation de l’échantillon dans <span class="math inline">\(educ\)</span> est expliquée par l’éducation des parents ? Interprétez le coefficient de <span class="math inline">\(motheduc\)</span>.</p>
-<ol start="3" type="i">
-<li><p>Ajoutez la variable <span class="math inline">\(abil\)</span> (une mesure de l’aptitude cognitive) à la régression de la partie (ii), et rapportez les résultats.</p></li>
-<li><p>Ajoutez la variable <span class="math inline">\(abil\)</span> (une mesure de l’aptitude cognitive) à la régression de la partie (ii), et présentez les résultats sous forme d’équation. La “capacité” permet-elle d’expliquer expliquer les variations de l’éducation, même après avoir contrôlé l’éducation des parents ? Expliquez.</p></li>
-<li><p>(Nécessite un calcul) Estimez maintenant une équation où l’aptitude apparaît sous forme quadratique :</p></li>
-</ol>
-<p><span class="math display">\[  educ = \beta_0 + \beta_1 motheduc + \beta_2 fatheduc + \beta_3 abil + \beta_4 abil^2 + u \]</span></p>
-<p>En utilisant les estimations <span class="math inline">\(\hat{\beta}_3\)</span> et <span class="math inline">\(\hat{b}_4\)</span>, utiliser le calcul pour trouver la valeur de <span class="math inline">\(abil\)</span>, l’appeler <span class="math inline">\(abil^\star\)</span> , où <span class="math inline">\(educ\)</span> est minimisé. (Les autres coefficients et valeurs des variables d’éducation des parents n’ont pas d’effet ; nous maintenons l’éducation des parents fixe). Remarquez que <span class="math inline">\(abil\)</span> est mesuré de manière à ce que des valeurs négatives soient autorisées. Vous pouvez également vérifier que la dérivée seconde est positive et que vous avez bien un minimum.</p>
-<ol start="22" type="a">
-<li>Argumentez que seule une petite fraction des hommes de l’échantillon a une “capacité” inférieure à la valeur calculée dans la partie (iv). En quoi cela est-il important ?</li>
-</ol>
-<!-- -->
-<ol start="6" type="i">
-<li>Si vous avez accès à un programme statistique qui comprend des capacités graphiques, utilisez les estimations de la partie (iv) pour représenter graphiquement la relation entre l’éducation et l’aptitude prédites. Supposons que la <span class="math inline">\(motheduc\)</span> et la <span class="math inline">\(fatheduc\)</span> ont leurs valeurs moyennes dans l’échantillon, 12.18 et 12.45, respectivement.</li>
-</ol>
+<p>Général : - <a href="https://www.data.gouv.fr/">datagouv</a> - <a href="https://www.kaggle.com/">kaggle</a> - <a href="https://data.gov/">datagov US</a> - <a href="https://www.data.gov.uk/">datagov UK</a></p>
+<p>Statistiques publiques : - <a href="https://db.nomics.world/">DBnomics</a> ou voir le package R <code>dbnomics</code> - <a href="https://data-explorer.oecd.org/">OCDE</a> ou voir le package R <code>ocde</code> - <a href="https://ec.europa.eu/eurostat/">Eurostat</a> ou voir le package R <code>eurostat</code></p>
+<p>Données socioéconomiques : - <a href="https://unehistoireduconflitpolitique.fr/telecharger.html">Données du livre de Cagé &amp; Piketty</a>.</p>
+<p>Données SIG : - <a href="geoservices.ign.fr/catalogue">IGN</a> - <a href="https://www.naturalearthdata.com/">Natural Earth</a></p>
+<p>Données Energie/environnement : - <a href="https://www.statistiques.developpement-durable.gouv.fr/jeux-de-donnees">SDES (Ministère Transition Ecologique)</a>. - <a href="https://opendata.reseaux-energies.fr/">ODRE (réseaux d’énergie)</a>. - <a href="https://www.eea.europa.eu/en/datahub">EEA (Agence européenne de l’environnement)</a>. - <a href="https://bdiff.agriculture.gouv.fr/incendies">Données incendies</a>. - <a href="https://www.prix-carburants.gouv.fr/">Données prix carburants</a>.</p>
+<!--  []() -->
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -943,13 +711,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./CMI-E1-TP1.html" class="pagination-link" aria-label="TP1 : Probabilités et Statistiques avec R">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">TP1 : Probabilités et Statistiques avec R</span>
+      <a href="./CMI-Projet1.html" class="pagination-link" aria-label="Consignes Projet 1">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Consignes Projet 1</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./CMI-E1-TP3.html" class="pagination-link" aria-label="TP3 : Analyse des Disparités Scolaires au Collège">
-        <span class="nav-page-text">TP3 : Analyse des Disparités Scolaires au Collège</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./CMI-CN-intro.html" class="pagination-link" aria-label="Introduction">
+        <span class="nav-page-text">Introduction</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

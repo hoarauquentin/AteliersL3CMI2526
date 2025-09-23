@@ -33,8 +33,8 @@
     ]
   },
   {
-    "objectID": "projets.html",
-    "href": "projets.html",
+    "objectID": "CMI-projets.html",
+    "href": "CMI-projets.html",
     "title": "Projets et présentations",
     "section": "",
     "text": "Lien d’inscription\nToutes les projets sont recensés dans ce fichier Excel partagé.",
@@ -107,6 +107,17 @@
     "crumbs": [
       "Général",
       "Consignes Projet 1"
+    ]
+  },
+  {
+    "objectID": "CMI-BDD.html",
+    "href": "CMI-BDD.html",
+    "title": "Bases de données",
+    "section": "",
+    "text": "Général : - datagouv - kaggle - datagov US - datagov UK\nStatistiques publiques : - DBnomics ou voir le package R dbnomics - OCDE ou voir le package R ocde - Eurostat ou voir le package R eurostat\nDonnées socioéconomiques : - Données du livre de Cagé & Piketty.\nDonnées SIG : - IGN - Natural Earth\nDonnées Energie/environnement : - SDES (Ministère Transition Ecologique). - ODRE (réseaux d’énergie). - EEA (Agence européenne de l’environnement). - Données incendies. - Données prix carburants.",
+    "crumbs": [
+      "Général",
+      "Bases de données"
     ]
   },
   {
@@ -660,80 +671,80 @@
     ]
   },
   {
-    "objectID": "CMI-E1-P1.html",
-    "href": "CMI-E1-P1.html",
-    "title": "Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges",
+    "objectID": "CMI-E1-TP3.html",
+    "href": "CMI-E1-TP3.html",
+    "title": "TP3 : Analyse des Disparités Scolaires au Collège",
     "section": "",
     "text": "0. Installation.\nLes inégalités de performance scolaire sont un sujet récurrent dans les débats sur le système éducatif. Parmi les examens importants en France, le brevet des collèges permet de mesurer les compétences acquises par les élèves à la fin du cycle secondaire. Cependant, les résultats obtenus peuvent varier en fonction de divers facteurs, notamment le contexte socio-économique local.\nCe TP vous propose d’explorer l’influence de facteurs socio-économiques, tels que le revenu médian, le taux de chômage ou encore le niveau d’éducation dans les communes, sur les résultats du brevet des collèges. À travers l’analyse de jeux de données réels, vous serez amenés à identifier des corrélations et à mieux comprendre les déterminants de la performance scolaire.\nCharger les packages tidyverse, stargazer. ChatGPT ou autre chatbot sont autorisés pour ce TP.\nLes données socio-économiques sont bien formatées ici : https://www.unehistoireduconflitpolitique.fr/telecharger.html. Commencer par télécharger les données sur les revenus des communes. On pourra réitérer l’analyse sur les diplômes et les catégories socio-professionnelles.",
     "crumbs": [
       "Econométrie 1",
-      "Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges"
+      "TP3 : Analyse des Disparités Scolaires au Collège"
     ]
   },
   {
-    "objectID": "CMI-E1-P1.html#installation.",
-    "href": "CMI-E1-P1.html#installation.",
-    "title": "Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges",
+    "objectID": "CMI-E1-TP3.html#installation.",
+    "href": "CMI-E1-TP3.html#installation.",
+    "title": "TP3 : Analyse des Disparités Scolaires au Collège",
     "section": "",
     "text": "Chercher sur internet et télécharger les données sur les résultats de brevets par établissement.",
     "crumbs": [
       "Econométrie 1",
-      "Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges"
+      "TP3 : Analyse des Disparités Scolaires au Collège"
     ]
   },
   {
-    "objectID": "CMI-E1-P1.html#données-brevet",
-    "href": "CMI-E1-P1.html#données-brevet",
-    "title": "Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges",
+    "objectID": "CMI-E1-TP3.html#données-brevet",
+    "href": "CMI-E1-TP3.html#données-brevet",
+    "title": "TP3 : Analyse des Disparités Scolaires au Collège",
     "section": "1. Données Brevet",
     "text": "1. Données Brevet\n\n1.1 Description des données\n\nDécrire le jeu de données : colonnes, taille, niveau géographique, horizon temporel…\nQuelle est la période étudiée ?\nCombien y a-t-il d’établissements ?\n\n\n\n1.2 Evolution temporelle\nOn veut caractériser les résultas du brevet au niveau national.\n\nCréer un fichier de donnée aggrégé par année au niveau national (utiliser group_by et summarize).\nComment semble calculé la colonne taux_de_reussite. Tester son intuition une colonne taux_de_reussite2 et comparer avec taux_de_reussite.\nFaire des graphiques montrant l’évolution des nombres d’inscrits et d’admis.\nFaire des graphiques montrant le taux annuel d’admis.\nFaire des graphiques montrant les taux annuels d’admis pour chaque mention.\nDécrire et interpréter chaque graphiques.\n\n\n\n1.3 Variation en coupe\nOn considère la dernière session reportée par le jeu de donnée.\n\nCréer un jeu de donnée filtré sur cette dernière année.\nMontrer es graphiques en barres pour représenter les différences sur les taux de réussites selon le type d’établissement et le secteur d’enseignement.\nFaire des classements des dix meilleurs départements selon les différents taux de réussites.",
     "crumbs": [
       "Econométrie 1",
-      "Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges"
+      "TP3 : Analyse des Disparités Scolaires au Collège"
     ]
   },
   {
-    "objectID": "CMI-E1-P1.html#données-socio-économiques",
-    "href": "CMI-E1-P1.html#données-socio-économiques",
-    "title": "Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges",
+    "objectID": "CMI-E1-TP3.html#données-socio-économiques",
+    "href": "CMI-E1-TP3.html#données-socio-économiques",
+    "title": "TP3 : Analyse des Disparités Scolaires au Collège",
     "section": "2. Données socio-économiques",
     "text": "2. Données socio-économiques\n\n2.1 Description du jeu de données\n\nDécrire le jeu de données de la même façon que pour le premier jeu. Utiliser les annexes où les données sont décrites.\nQuelles colonnes (ou ensemble de colonnes) vous semble-t-il pertinent de garder ?\n\n\n\n2.2 Transformation du jeu\nTransformer ce jeu de données en format “long” avec pivot_longer.",
     "crumbs": [
       "Econométrie 1",
-      "Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges"
+      "TP3 : Analyse des Disparités Scolaires au Collège"
     ]
   },
   {
-    "objectID": "CMI-E1-P1.html#analyse-jointe-.",
-    "href": "CMI-E1-P1.html#analyse-jointe-.",
-    "title": "Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges",
+    "objectID": "CMI-E1-TP3.html#analyse-jointe-.",
+    "href": "CMI-E1-TP3.html#analyse-jointe-.",
+    "title": "TP3 : Analyse des Disparités Scolaires au Collège",
     "section": "3. Analyse jointe .",
     "text": "3. Analyse jointe .\n\n3.1 Jointure\nPour chaque année et pour chaque établissement, on souhaite avoir les informations socio-économiques de la commune correspondante.\n\nFaire la jointure entre les deux jeux de données.\nAnalyser les données manquantes du nouveau jeu de données.\n\n\n\n3.2 Analyse en coupe\n\nFaire des graphiques par points représentant le revenu moyen de la commune de l’établissement avec ses différents taux de réussites.\nFaire des graphiques en bar dans lequel par décile de revenu (utiliser la colonne de percentile coté socioeco).\n\n\n\n3.3 Regressions linéaire\nPour une année donnée vs toutes taux de reussite en fonction de la taille de la commune, revenus moyen\n\nFaites une régression\n\nNotes: - on fait les régressions avec la commande lm. - Pour visualiser les régressions, on enregistre les résultats de chaque regressions (eg, lm1,lm2…) et on visualise avec la commande stargazer du package du même nom (eg stargazer(type=\"text\",lm1,lm2)).",
     "crumbs": [
       "Econométrie 1",
-      "Projet 1 - Analyse des Disparités Scolaires : Impact des Facteurs Socio-Économiques sur les Résultats du Brevet des Collèges"
+      "TP3 : Analyse des Disparités Scolaires au Collège"
     ]
   },
   {
-    "objectID": "CMI-E1-P2.html",
-    "href": "CMI-E1-P2.html",
-    "title": "Projet 2 - Etude économétrique de l’Enquête Nationale Transport 2019",
+    "objectID": "CMI-E1-TP4.html",
+    "href": "CMI-E1-TP4.html",
+    "title": "TP4 : Etude économétrique de l’Enquête Nationale Transport 2019",
     "section": "",
     "text": "1. Enoncé\nDans ce TP, nous allons travaillons sur enquête nationale de l’INSEE. Vous aurez la liberté de choisir une question de recherche et de sélectionner les variables qui vous semblent pertinentes (en n’en prenant pas trop tout de même).\nLes données sont disponibles ici : https://www.statistiques.developpement-durable.gouv.fr/resultats-detailles-de-lenquete-mobilite-des-personnes-de-2019.\nOn considère les caractéristiques socio-économiques des ménages suivantes : le revenu, la catégorie socio-professionnelle, le lieux de résidence, la composition du ménage (nombre de personnes, age).\nQuestions : comment varie les grandeurs suivantes en fonction des grandeurs suivantes:\nTravail à faire :",
     "crumbs": [
       "Econométrie 1",
-      "Projet 2 - Etude économétrique de l'Enquête Nationale Transport 2019"
+      "TP4 : Etude économétrique de l'Enquête Nationale Transport 2019"
     ]
   },
   {
-    "objectID": "CMI-E1-P2.html#enoncé",
-    "href": "CMI-E1-P2.html#enoncé",
-    "title": "Projet 2 - Etude économétrique de l’Enquête Nationale Transport 2019",
+    "objectID": "CMI-E1-TP4.html#enoncé",
+    "href": "CMI-E1-TP4.html#enoncé",
+    "title": "TP4 : Etude économétrique de l’Enquête Nationale Transport 2019",
     "section": "",
     "text": "les caractéristiques du véhicule : age, motorisation\ndistance et nombre de trajets parcourue à velo pour les trajets du quotidient\ndistance et nombre de trajets parcourue en voiture en commun pour les trajets du quotidient\ndistance et nombre de trajets parcourue en transport en commun pour les trajets du quotidient\ndistance et nombre de trajets parcourue en avion pour les voyages\n\n\n\nidentifier dans les jeux de données où trouver les informations pertinentes\neffectuer des statistiques descriptives sur les caractéristiques socio-économiques\nconstruire votre jeu de donnée en construisant les grandeurs de transport puis en réalisant en appariemment sur les données socioéconomiques.\nEffectuer des régressions linéaires en combinant différemment les variables de controlms.",
     "crumbs": [
       "Econométrie 1",
-      "Projet 2 - Etude économétrique de l'Enquête Nationale Transport 2019"
+      "TP4 : Etude économétrique de l'Enquête Nationale Transport 2019"
     ]
   },
   {
