@@ -44,6 +44,72 @@
     ]
   },
   {
+    "objectID": "CMI-Projet1.html",
+    "href": "CMI-Projet1.html",
+    "title": "Consignes Projet 1",
+    "section": "",
+    "text": "Consignes Générales",
+    "crumbs": [
+      "Général",
+      "Consignes Projet 1"
+    ]
+  },
+  {
+    "objectID": "CMI-Projet1.html#consignes-générales",
+    "href": "CMI-Projet1.html#consignes-générales",
+    "title": "Consignes Projet 1",
+    "section": "",
+    "text": "Vous pouvez utiliser ChatGPT ou autre, mais posez-vous toujours la question : « Est-ce que je comprends ce qu’il me donne ? »\n\nLes sujets sont volontairement simples et vagues : il vous appartient de vous les approprier.\n\nApporter du contexte avec vos recherches personnelles.\n\nDécrire les métadonnées : origine, limites, etc.\n\nDécrire les données : taille, horizon géographique et temporel, grandeurs et catégories contenues. Colonnes utiles vs inutiles. Nombre de données manquantes.\n\nVous pouvez rapprocher les données que vous avez.\n\nSi les données sont trop lourdes, il est accepté de restreindre le jeu de données à une aire temporelle plus réduite.",
+    "crumbs": [
+      "Général",
+      "Consignes Projet 1"
+    ]
+  },
+  {
+    "objectID": "CMI-Projet1.html#partie-sig",
+    "href": "CMI-Projet1.html#partie-sig",
+    "title": "Consignes Projet 1",
+    "section": "Partie SIG",
+    "text": "Partie SIG\n\nRéaliser des cartes générales (choroplèthes) à l’échelle de la France pour chaque jeu de données.\n\nRéaliser des cartes combinées lorsqu’un même sujet fait apparaître deux jeux de données.\n\nExemple : une carte « zoom » avec des icônes différentes pour localiser les éoliennes et les maisons vendues à proximité.\n\n\nCalculer les distances pour rapprocher les deux bases :\n\nPour chaque bien immobilier, quelle est l’éolienne la plus proche ?\n\n\nCalculer les distances en intégrant la dimension temporelle.\n\nRestreindre le jeu de données aux observations pertinentes (ex. moins de 10 km autour de chaque évènement).\n\nExemple : enlever les maisons vendues à plus de 15 km d’une éolienne qui sera installée en 2024.",
+    "crumbs": [
+      "Général",
+      "Consignes Projet 1"
+    ]
+  },
+  {
+    "objectID": "CMI-Projet1.html#partie-économétrie",
+    "href": "CMI-Projet1.html#partie-économétrie",
+    "title": "Consignes Projet 1",
+    "section": "Partie Économétrie",
+    "text": "Partie Économétrie\n\nFaire des statistiques descriptives sur chaque jeu de données :\n\nExemple : évolution du nombre d’éoliennes installées/fermées, caractéristiques moyennes des évènements.\n\n\nFaire des statistiques descriptives sur la réunion des deux jeux de données :\n\nExemple : évolution du prix en fonction de la distance aux éoliennes.\n\n\nEstimer plusieurs régressions sur les prix de l’immobilier sans le deuxième jeu de données :\n\nExemple :\n\\(\\log(Prix) = nb\\_pieces + surface + departement + année + \\dots\\)\n\nEstimer plusieurs régressions sur les prix de l’immobilier avec le deuxième jeu de données :\n\nExemple :\n\\(\\log(Prix) = (distance &lt; 1km) + nb\\_pieces + surface + dep + année + \\dots\\)",
+    "crumbs": [
+      "Général",
+      "Consignes Projet 1"
+    ]
+  },
+  {
+    "objectID": "CMI-Projet1.html#rapport",
+    "href": "CMI-Projet1.html#rapport",
+    "title": "Consignes Projet 1",
+    "section": "Rapport",
+    "text": "Rapport\n\nConstruire une problématique :\n\nExemple : Quel est l’impact de l’installation d’éoliennes sur les prix des maisons en zone rurale ?\n\n\nExpliciter le mécanisme à l’œuvre :\n\nExemple : Une fermeture d’usine entraîne moins de travailleurs (donc baisse de la demande), mais aussi moins de pollution (hausse de la demande).\n\n\nPlan imposé :\n\nIntroduction + problématique + contexte + présentation des données\n\nSIG\n\nÉconométrie\n\n\nRédaction :\n\nPas moins de 20 pages.\n\nÉcrit en Word ou LaTeX (pas de knit en Markdown).\n\n\nPrésentation :\n\nPowerPoint de 10 minutes + 5 minutes de questions.",
+    "crumbs": [
+      "Général",
+      "Consignes Projet 1"
+    ]
+  },
+  {
+    "objectID": "CMI-Projet1.html#évaluation",
+    "href": "CMI-Projet1.html#évaluation",
+    "title": "Consignes Projet 1",
+    "section": "Évaluation",
+    "text": "Évaluation\n\nCe projet constitue l’évaluation pour deux matières couvrant 7.5 crédits ECTS : un travail conséquent est attendu.\n\nN’hésitez pas à poser des questions si vous rencontrez des problèmes.\n\nDate de rendu du projet : 20 janvier.\n\nDate de présentation : à déterminer après le 20 janvier.",
+    "crumbs": [
+      "Général",
+      "Consignes Projet 1"
+    ]
+  },
+  {
     "objectID": "CMI-CN-intro.html",
     "href": "CMI-CN-intro.html",
     "title": "Introduction",
