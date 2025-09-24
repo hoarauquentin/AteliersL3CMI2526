@@ -279,7 +279,7 @@
     "href": "CMI-SIG-intro.html",
     "title": "Introduction",
     "section": "",
-    "text": "Le cours en résumé : - 24 h - objectifs : appréhender les données géographiques et maîtriser les principales opérations sur ce type de données (intersection, distance etc) - Langage : R & QGIS (introduction) - modalités d’examens: - Note de participation - Un projet commun SIG/économétrie avec choix du sujet imposé - Présentation en classe d’une carte réalisée avec QGIS : 3mn de présentation\nLe plan : 1. Introduction à QGIS 2. Traitement sur les données vectorielles 3. Les SIG avec R",
+    "text": "Le cours en résumé :\n\n24 h\nobjectifs : appréhender les données géographiques et maîtriser les principales opérations sur ce type de données (intersection, distance etc)\nLangage : R & QGIS (introduction)\nmodalités d’examens:\n\nNote de participation\nUn projet commun SIG/économétrie avec choix du sujet imposé - Présentation en classe d’une carte réalisée avec QGIS : 3mn de présentation\n\n\nLe plan :\n\nIntroduction à QGIS\nTraitement sur les données vectorielles\nLes SIG avec R",
     "crumbs": [
       "SIG",
       "Introduction"
