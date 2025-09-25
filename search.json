@@ -312,51 +312,18 @@
     "href": "CMI-SIG-TP1.html#symbologie-1-pays-du-monde",
     "title": "TP1 : Introduction à QGIS",
     "section": "2. Symbologie 1 : Pays du monde",
-    "text": "2. Symbologie 1 : Pays du monde\n\nTéléchargez NaturalEarth_TP.gpkg.\n\nOuvrez :\n\n\n\nne_50m_admin_0_countries\n\nne_50m_populated_places_simple\n\nne_50m_geographic_lines\n\n\n\nCréez une carte par revenu (INCOME_GRP).\n\nUtilisez palette Viridis, projection World Robinson (EPSG:54030).\n\nRenommez la couche : Countries by Income (GDP).\n\nEnregistrez le projet : TP1_2.qgz.",
+    "text": "2. Symbologie 1 : Pays du monde\n\nTéléchargez NaturalEarth_TP.gpkg.\n\nOuvrez :\n\n\n\nne_50m_admin_0_countries\n\nne_50m_populated_places_simple\n\nne_50m_geographic_lines\n\n\n\nCréez une carte par revenu (INCOME_GRP).\n\nUtilisez palette Viridis, projection World Robinson (EPSG:54030).\n\nRenommez la couche : Countries by Income (GDP).\n\nEnregistrez le projet : TP1_2.qgz.\n\n\n2.1 Mise en page\n\nCréez une mise en page gpd en A4 paysage.\n\nAjoutez carte, légende, fond gris clair, export en PNG 300 dpi.\n\n\n\n2.2 Rendu gradué : Villes du monde\n\nUtilisez pop_max.\n\nCréez 6 classes (Jenks ou seuils manuels).\n\nSymbole ponctuel rose, transparence 60 %, taille 0.5–4 mm.\n\nExportez en PNG 300 dpi.\n\n\n\n2.2 Symboles proportionnels\n\nSymbole unique, rose, transparence 60 %.\n\nTaille proportionnelle pop_max.\n\nEnregistrez le projet.",
     "crumbs": [
       "SIG",
       "TP1 : Introduction à QGIS"
     ]
   },
   {
-    "objectID": "CMI-SIG-TP1.html#mise-en-page",
-    "href": "CMI-SIG-TP1.html#mise-en-page",
+    "objectID": "CMI-SIG-TP1.html#symbologie-2-france",
+    "href": "CMI-SIG-TP1.html#symbologie-2-france",
     "title": "TP1 : Introduction à QGIS",
-    "section": "Mise en page",
-    "text": "Mise en page\n\nCréez une mise en page gpd en A4 paysage.\n\nAjoutez carte, légende, fond gris clair, export en PNG 300 dpi.",
-    "crumbs": [
-      "SIG",
-      "TP1 : Introduction à QGIS"
-    ]
-  },
-  {
-    "objectID": "CMI-SIG-TP1.html#styles",
-    "href": "CMI-SIG-TP1.html#styles",
-    "title": "TP1 : Introduction à QGIS",
-    "section": "Styles",
-    "text": "Styles\n\nRégions en gris clair + bordures blanches.\n\nChefs-lieux : symboles catégorisés (Préfecture région et Préfecture).\n\nRéseau ferré : catégorisé sur type_voie.\n\nCommunes Occitanie : densité de population (Jenks, OrRd, bornes manuelles).",
-    "crumbs": [
-      "SIG",
-      "TP1 : Introduction à QGIS"
-    ]
-  },
-  {
-    "objectID": "CMI-SIG-TP1.html#étiquettes",
-    "href": "CMI-SIG-TP1.html#étiquettes",
-    "title": "TP1 : Introduction à QGIS",
-    "section": "Étiquettes",
-    "text": "Étiquettes\n\nChefs-lieux avec règles selon statut administratif.",
-    "crumbs": [
-      "SIG",
-      "TP1 : Introduction à QGIS"
-    ]
-  },
-  {
-    "objectID": "CMI-SIG-TP1.html#mise-en-page-finale",
-    "href": "CMI-SIG-TP1.html#mise-en-page-finale",
-    "title": "TP1 : Introduction à QGIS",
-    "section": "Mise en page finale",
-    "text": "Mise en page finale\n\nA4 portrait, titre Réseau ferré en Occitanie, carte 1/2 000 000, légende, échelle, nord, sources.\n\nAjoutez une carte miniature France + Occitanie.\n\nExport PNG et PDF.",
+    "section": "3. Symbologie 2 : France",
+    "text": "3. Symbologie 2 : France\n\nOuvrir :\n\nliste_cheflieu.geojson\n\nCOMMUNE.shp, REGION.shp\n\nliste-des-gares.geojson, RéseauFerré.gpkg\n\n\n3.1 Styles\n\nRégions en gris clair + bordures blanches.\n\nChefs-lieux : symboles catégorisés (Préfecture région et Préfecture).\n\nRéseau ferré : catégorisé sur type_voie.\n\nCommunes Occitanie : densité de population (Jenks, OrRd, bornes manuelles).\n\n\n\n3.2 Étiquettes\n\nChefs-lieux avec règles selon statut administratif.\n\n\n\n3.3 Mise en page finale\n\nA4 portrait, titre Réseau ferré en Occitanie, carte 1/2 000 000, légende, échelle, nord, sources.\n\nAjoutez une carte miniature France + Occitanie.\n\nExport PNG et PDF.",
     "crumbs": [
       "SIG",
       "TP1 : Introduction à QGIS"
