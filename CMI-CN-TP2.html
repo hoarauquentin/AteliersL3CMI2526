@@ -474,13 +474,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#les-verbes-de-base-de-dplyr" id="toc-les-verbes-de-base-de-dplyr" class="nav-link active" data-scroll-target="#les-verbes-de-base-de-dplyr">Les verbes de base de <code>dplyr</code></a></li>
-  <li><a href="#enchaîner-des-opérations" id="toc-enchaîner-des-opérations" class="nav-link" data-scroll-target="#enchaîner-des-opérations">Enchaîner des opérations</a>
+  <li><a href="#les-verbes-de-base-de-dplyr" id="toc-les-verbes-de-base-de-dplyr" class="nav-link active" data-scroll-target="#les-verbes-de-base-de-dplyr">1. Les verbes de base de <code>dplyr</code></a></li>
+  <li><a href="#enchaîner-des-opérations" id="toc-enchaîner-des-opérations" class="nav-link" data-scroll-target="#enchaîner-des-opérations">2. Enchaîner des opérations</a>
   <ul class="collapse">
   <li><a href="#group_by-et-summarise" id="toc-group_by-et-summarise" class="nav-link" data-scroll-target="#group_by-et-summarise"><code>group_by</code> et <code>summarise</code></a></li>
-  <li><a href="#jointures" id="toc-jointures" class="nav-link" data-scroll-target="#jointures">Jointures</a></li>
-  <li><a href="#bonus" id="toc-bonus" class="nav-link" data-scroll-target="#bonus">Bonus</a></li>
   </ul></li>
+  <li><a href="#jointures" id="toc-jointures" class="nav-link" data-scroll-target="#jointures">3. Jointures</a></li>
+  <li><a href="#bonus" id="toc-bonus" class="nav-link" data-scroll-target="#bonus">4. Bonus</a></li>
   </ul>
 </nav>
     </div>
@@ -516,7 +516,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(airlines)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="les-verbes-de-base-de-dplyr" class="level2">
-<h2 class="anchored" data-anchor-id="les-verbes-de-base-de-dplyr">Les verbes de base de <code>dplyr</code></h2>
+<h2 class="anchored" data-anchor-id="les-verbes-de-base-de-dplyr">1. Les verbes de base de <code>dplyr</code></h2>
 <p><strong>Exercice 1.1</strong></p>
 <p>Sélectionner la dixième ligne du tableau des aéroports (<code>airports</code>).</p>
 <div class="solution-exo">
@@ -572,7 +572,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 <section id="enchaîner-des-opérations" class="level2">
-<h2 class="anchored" data-anchor-id="enchaîner-des-opérations">Enchaîner des opérations</h2>
+<h2 class="anchored" data-anchor-id="enchaîner-des-opérations">2. Enchaîner des opérations</h2>
 <p><strong>Exercice 2.1</strong></p>
 <p>Réécrire le code de l’exercice précédent en utilisant le <em>pipe</em> <code>%&gt;%</code>.</p>
 <div class="solution-exo">
@@ -629,8 +629,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </div>
 </section>
-<section id="jointures" class="level3">
-<h3 class="anchored" data-anchor-id="jointures">Jointures</h3>
+</section>
+<section id="jointures" class="level2">
+<h2 class="anchored" data-anchor-id="jointures">3. Jointures</h2>
 <p><strong>Exercice 4.1</strong></p>
 <p>Faire la jointure de la table <code>airlines</code> sur la table <code>flights</code> à l’aide de <code>left_join</code>.</p>
 <div class="solution-exo">
@@ -656,13 +657,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </div>
 </section>
-<section id="bonus" class="level3">
-<h3 class="anchored" data-anchor-id="bonus">Bonus</h3>
+<section id="bonus" class="level2">
+<h2 class="anchored" data-anchor-id="bonus">4. Bonus</h2>
 <p><strong>Exercice 5.1</strong></p>
 <p>Calculer le nombre de vols selon l’aéroport de destination, et fusionnez la table <code>airports</code> sur le résultat avec <code>left_join</code>. Stocker le résultat final dans un objet nommé <code>flights_dest</code>.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
