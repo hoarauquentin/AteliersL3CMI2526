@@ -114,7 +114,7 @@
     "href": "CMI-BDD.html",
     "title": "Bases de données",
     "section": "",
-    "text": "Général : - datagouv - kaggle - datagov US - datagov UK\nStatistiques publiques : - DBnomics ou voir le package R dbnomics - OCDE ou voir le package R ocde - Eurostat ou voir le package R eurostat\nDonnées socioéconomiques : - Données du livre de Cagé & Piketty.\nDonnées SIG : - IGN - Natural Earth\nDonnées Energie/environnement : - SDES (Ministère Transition Ecologique). - ODRE (réseaux d’énergie). - EEA (Agence européenne de l’environnement). - Données incendies. - Données prix carburants.",
+    "text": "Général :\n\ndatagouv\nkaggle\ndatagov US\ndatagov UK\n\nStatistiques publiques :\n\nDBnomics ou voir le package R dbnomics\nOCDE ou voir le package R ocde\nEurostat ou voir le package R eurostat\n\nDonnées socioéconomiques :\n\nDonnées du livre de Cagé & Piketty.\n\nDonnées SIG : - IGN - Natural Earth\nDonnées Energie/environnement :\n\nSDES (Ministère Transition Ecologique).\nODRE (réseaux d’énergie).\nEEA (Agence européenne de l’environnement).\nDonnées incendies.\nDonnées prix carburants.",
     "crumbs": [
       "Général",
       "Bases de données"
