@@ -114,7 +114,7 @@
     "href": "CMI-BDD.html",
     "title": "Bases de données",
     "section": "",
-    "text": "Général :\n\ndatagouv: répertoire public français\ndatagov US: répertoire public américain\ndatagov UK: répertoire public anglais\nkaggle: répertoire public pour data science\nTidyTuesday: projets collaboratifs de la Data Science Learning Community.\nOpenintro: données éducatives\n\nStatistiques publiques :\n\nDBnomics ou voir le package R dbnomics\nOCDE ou voir le package R ocde\nEurostat ou voir le package R eurostat\n\nDonnées socioéconomiques :\n\nDonnées du livre de Cagé & Piketty.\n\nDonnées SIG : - IGN - Natural Earth\nDonnées Energie/environnement :\n\nSDES (Ministère Transition Ecologique).\nODRE (réseaux d’énergie).\nEEA (Agence européenne de l’environnement).\nDonnées incendies.\nDonnées prix carburants.",
+    "text": "Général :\n\ndatagouv: répertoire public français\ndatagov US: répertoire public américain\ndatagov UK: répertoire public anglais\nkaggle: répertoire public pour data science\nTidyTuesday: projets collaboratifs de la Data Science Learning Community.\nOpenintro: données éducatives\n\nStatistiques publiques :\n\nDBnomics ou voir le package R dbnomics\nOCDE ou voir le package R ocde\nEurostat ou voir le package R eurostat\n\nDonnées socioéconomiques :\n\nDonnées du livre de Cagé & Piketty: données à la maille commune sur les revenus, education, résultats électoraux…\n\nDonnées SIG :\n\nIGN\nNatural Earth\n\nDonnées Energie/environnement :\n\nSDES (Ministère Transition Ecologique).\nODRE (réseaux d’énergie).\nEEA (Agence européenne de l’environnement).\nDonnées incendies.\nDonnées prix carburants.",
     "crumbs": [
       "Général",
       "Bases de données"
