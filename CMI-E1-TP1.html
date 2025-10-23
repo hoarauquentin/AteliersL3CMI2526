@@ -558,10 +558,12 @@ window.Quarto = {
 <li>Calculez $ P(|Z|&nbsp;) $ en utilisant la fonction <code>pnorm()</code>.</li>
 </ol>
 <p>Indications : en R contient des distributions de probabilités pré-enregistrées (<code>norm</code> pour la distribution normale, <code>chiqsq</code> pour chi2, <code>t</code> pour Student). La syntaxe est la suivante :</p>
-<pre><code>•   d → density (ex: `dnorm`)
-•   p → probabilité (ex: `pnorm`)
-•   q → quantile (ex: `qnorm`)
-•   r → random (ex: `rnorm`)</code></pre>
+<ul>
+<li>d → densité (ex: <code>dnorm</code>)</li>
+<li>p → probabilité (ex: <code>pnorm</code>). Pour cette fonction, on utilise souvent l’option <code>lower.tail=F</code> pour calculer la probabilité complémentaire.</li>
+<li>q → quantile (ex: <code>qnorm</code>)</li>
+<li>r → tirage aléatoire (ex: <code>rnorm</code>)</li>
+</ul>
 </section>
 <section id="distribution-du-chi-carré" class="level3">
 <h3 class="anchored" data-anchor-id="distribution-du-chi-carré">1.5 - Distribution du Chi-carré</h3>
