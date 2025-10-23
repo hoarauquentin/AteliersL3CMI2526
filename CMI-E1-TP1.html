@@ -536,7 +536,7 @@ window.Quarto = {
 <p><span class="math display">\[f_X(x)=\frac{x}{4}e^{-x^2/8},\quad x\geq 0.\]</span></p>
 <ol type="1">
 <li><p>Définissez la PDF ci-dessus comme une fonction <span class="math inline">\(f()\)</span>.</p></li>
-<li><p>Vérifiez si la fonction que vous avez définie est effectivement une PDF.</p></li>
+<li><p>Vérifiez si la fonction que vous avez définie est effectivement une PDF (indice : utilisez la fonction <code>integrate</code>).</p></li>
 </ol>
 </section>
 <section id="espérance-et-variance" class="level3">
@@ -557,6 +557,11 @@ window.Quarto = {
 <li>Calculez <span class="math inline">\(\phi(3)\)</span>, c’est-à-dire la valeur de la densité de probabilité standard normale en <span class="math inline">\(c=3\)</span>.</li>
 <li>Calculez $ P(|Z|&nbsp;) $ en utilisant la fonction <code>pnorm()</code>.</li>
 </ol>
+<p>Indications : en R contient des distributions de probabilités pré-enregistrées (<code>norm</code> pour la distribution normale, <code>chiqsq</code> pour chi2, <code>t</code> pour Student). La syntaxe est la suivante :</p>
+<pre><code>•   d → density (ex: `dnorm`)
+•   p → probabilité (ex: `pnorm`)
+•   q → quantile (ex: `qnorm`)
+•   r → random (ex: `rnorm`)</code></pre>
 </section>
 <section id="distribution-du-chi-carré" class="level3">
 <h3 class="anchored" data-anchor-id="distribution-du-chi-carré">1.5 - Distribution du Chi-carré</h3>
