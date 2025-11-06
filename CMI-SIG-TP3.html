@@ -652,6 +652,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Dans le premier exercice du chapitre sur les opérations de données spatiales, il a été établi que la région de Canterbury avait 70 des 101 points les plus élevés de Nouvelle-Zélande. En utilisant <code>st_buffer()</code>, combien de points dans <code>nz_height</code> se trouvent à moins de 100 km de Canterbury ?</p></li>
 <li><p>Trouvez le centroïde géographique de la Nouvelle-Zélande. À quelle distance se trouve-t-il du centroïde géographique de Canterbury ?</p></li>
 <li><p>La plupart des cartes du monde ont une orientation nord en haut. Une carte du monde avec une orientation sud en haut pourrait être créée par une réflexion (l’une des transformations affines non mentionnées dans ce chapitre) de la géométrie de l’objet <code>world</code>. Écrivez le code pour le faire. Astuce : vous devez utiliser un vecteur à deux éléments pour cette transformation. Bonus : créez une carte à l’envers de votre pays.</p></li>
+<li><p>Calculez la longueur des lignes de frontières des États-Unis en mètres. Quel État a la frontière la plus longue et lequel a la frontière la plus courte ? Astuce : La fonction <code>st_length</code> calcule la longueur d’une géométrie de type <code>LINESTRING</code> ou <code>MULTILINESTRING</code>. Il faut aussi transformer la géométrieavec un CRS qui puisse calculer des ditances : ici ESPG=2163.</p></li>
 <li><p>Exécutez le code de la section <a href="https://r.geocompx.org/geometry-operations.html#subsetting-and-clipping">5.2.6</a>. En référence aux objets créés dans cette section, sélectionnez le point dans <code>p</code> qui est contenu à la fois dans <code>x</code> et <code>y</code>.</p></li>
 </ol>
 <ul>
@@ -659,8 +660,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Utilisez un objet intermédiaire créé avec <code>st_intersection()</code>.</li>
 </ul>
 <ol start="6" type="1">
-<li>Calculez la longueur des lignes de frontières des États-Unis en mètres. Quel État a la frontière la plus longue et lequel a la frontière la plus courte ? Astuce : La fonction <code>st_length</code> calcule la longueur d’une géométrie de type <code>LINESTRING</code> ou <code>MULTILINESTRING</code>. Il faut aussi transformer la géométrieavec un CRS qui puisse calculer des ditances : ici ESPG=2163.</li>
+<li>Exécutez le code suivant :</li>
 </ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>bb <span class="ot">=</span> <span class="fu">st_bbox</span>(<span class="fu">st_union</span>(x, y))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>box <span class="ot">=</span> <span class="fu">st_as_sfc</span>(bb)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2024</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="fu">st_sample</span>(<span class="at">x =</span> box, <span class="at">size =</span> <span class="dv">10</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>p_xy1 <span class="ot">=</span> p[x_and_y]</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(box, <span class="at">border =</span> <span class="st">"gray"</span>, <span class="at">lty =</span> <span class="dv">2</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, <span class="at">add =</span> <span class="cn">TRUE</span>, <span class="at">border =</span> <span class="st">"gray"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(y, <span class="at">add =</span> <span class="cn">TRUE</span>, <span class="at">border =</span> <span class="st">"gray"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(p, <span class="at">add =</span> <span class="cn">TRUE</span>, <span class="at">cex =</span> <span class="fl">3.5</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(p_xy1, <span class="at">cex =</span> <span class="dv">5</span>, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.5</span>, <span class="fl">1.5</span>), <span class="at">y =</span> <span class="dv">1</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"y"</span>), <span class="at">cex =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>En référence aux objets créés dans cette section, sélectionnez le point dans <code>p</code> qui est contenu à la fois dans <code>x</code> et <code>y</code>.</p>
+<ul>
+<li>Utilisez les opérateurs de sous-ensemble de base.</li>
+<li>Utilisez un objet intermédiaire créé avec <code>st_intersection()</code>.</li>
+</ul>
 </section>
 <section id="opérations-sur-les-rasters-1" class="level3">
 <h3 class="anchored" data-anchor-id="opérations-sur-les-rasters-1">4.2 Opérations sur les rasters</h3>
