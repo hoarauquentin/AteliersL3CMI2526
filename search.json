@@ -92,7 +92,7 @@
     "href": "CMI-Projet1.html#évaluation",
     "title": "Consignes Projet 1",
     "section": "Évaluation",
-    "text": "Évaluation\n\nPrésentation avec slides",
+    "text": "Évaluation\n\nRendus :  slides\nPrésentation :  15 minutes + 5 minutes de question\nDate de présentation : mercredi 3 décembre à partir de 14h",
     "crumbs": [
       "Général",
       "Consignes Projet 1"
@@ -158,7 +158,7 @@
     "href": "CMI-Projet2.html#évaluation",
     "title": "Consignes Projet 2",
     "section": "Évaluation",
-    "text": "Évaluation\n\nCe projet constitue l’évaluation pour deux matières couvrant 7.5 crédits ECTS : un travail conséquent est attendu.\n\nN’hésitez pas à poser des questions si vous rencontrez des problèmes.\n\nDate de rendu du projet : 15 décembre.\n\nDate de présentation : 16 décembre.",
+    "text": "Évaluation\n\nCe projet constitue l’évaluation pour deux matières couvrant 7.5 crédits ECTS : un travail conséquent est attendu.\n\nN’hésitez pas à poser des questions si vous rencontrez des problèmes.\n\nDate de rendu du projet : 15 décembre.\n\nDate de présentation : 16 décembre.\nRendus :  slides\nPrésentation :  15 minutes + 5 minutes de question\nDate de rendu du projet : 15 décembre.\nDate de présentation : 16 décembre.",
     "crumbs": [
       "Général",
       "Consignes Projet 2"
@@ -818,7 +818,7 @@
     "href": "CMI-E1-TP4.html",
     "title": "TP4 : Etude économétrique de l’Enquête Nationale Transport 2019",
     "section": "",
-    "text": "1. Enoncé\nDans ce TP, nous allons travaillons sur enquête nationale de l’INSEE. Vous aurez la liberté de choisir une question de recherche et de sélectionner les variables qui vous semblent pertinentes (en n’en prenant pas trop tout de même).\nLes données sont disponibles ici : https://www.statistiques.developpement-durable.gouv.fr/resultats-detailles-de-lenquete-mobilite-des-personnes-de-2019.\nOn considère les caractéristiques socio-économiques des ménages suivantes : le revenu, la catégorie socio-professionnelle, le lieux de résidence, la composition du ménage (nombre de personnes, age).\nQuestions : comment varie les grandeurs suivantes en fonction des grandeurs suivantes:\nTravail à faire :",
+    "text": "1. Enoncé\nDans ce TP, nous allons travaillons sur enquête nationale de l’INSEE. Vous aurez la liberté de choisir une question de recherche et de sélectionner les variables qui vous semblent pertinentes (en n’en prenant pas trop tout de même).\nLes données sont disponibles ici : sur le site du ministère.\nOn considère les caractéristiques socio-économiques des ménages suivantes : le revenu, la catégorie socio-professionnelle, le lieux de résidence, la composition du ménage (nombre de personnes, age).\nQuestions : comment varie les grandeurs suivantes en fonction des grandeurs suivantes:\nTravail à faire :",
     "crumbs": [
       "Econométrie 1",
       "TP4 : Etude économétrique de l'Enquête Nationale Transport 2019"
