@@ -48,7 +48,7 @@
     "href": "CMI-projets.html#résumé-des-consignes",
     "title": "Projets et présentations",
     "section": "Résumé des consignes",
-    "text": "Résumé des consignes\n\nProjet 1\nProjet en deux parties :\n\nPartie 1 (30% du projet) : travail SIG. Réalisation et discussion d’une carte avec QGIS.\nPartie 2 (70% du projet) : travail Calcul Numérique - Econométrie : réalisation d’un travail sur des données trouvées par l’étudiant.\n\nRendus :  slides\nPrésentation :  15 minutes + 5 minutes de question\nDate de présentation : mercredi 3 décembre à partir de 14h\n\n\nProjet 2\nProjet en deux parties :\n\nPartie 1 (30% du projet) : travail SIG. Réalisation et discussion d’une carte avec QGIS.\nPartie 2 (70% du projet) : travail Calcul Numérique - Econométrie : réalisation d’un travail sur les données sur des données imposées.\n\nRendus :  slides + rapport (5-10 pages de texte à remettre la veille)\nPrésentation :  15 minutes + 5 minutes de question\nDate de présentation : mardi 16 décembre à partir de 8h30",
+    "text": "Résumé des consignes\n\nProjet 1\nProjet en deux parties :\n\nPartie 1 (30% du projet) : travail SIG. Réalisation et discussion d’une carte avec QGIS.\nPartie 2 (70% du projet) : travail Calcul Numérique - Econométrie : réalisation d’un travail sur des données trouvées par l’étudiant.\n\nRendus : slides\nPrésentation : 15 minutes + 5 minutes de question\nDate de présentation : mercredi 3 décembre à partir de 14h\n\n\nProjet 2\nProjet en deux parties :\n\nPartie 1 (40% du projet) : travail SIG\nPartie 2 (60% du projet) : travail Econométrie : réalisation d’un travail sur les données sur des données imposées.\n\nRendus : slides + rapport (10 pages de texte à remettre la veille)\nPrésentation : 15 minutes + 5 minutes de question\nDate de présentation : mardi 16 décembre à partir de 8h30",
     "crumbs": [
       "Général",
       "Projets et présentations"
@@ -147,7 +147,7 @@
     "href": "CMI-Projet2.html#rapport",
     "title": "Consignes Projet 2",
     "section": "Rapport",
-    "text": "Rapport\n\nConstruire une problématique :\n\nExemple : Quel est l’impact de l’installation d’éoliennes sur les prix des maisons en zone rurale ?\n\n\nExpliciter le mécanisme à l’œuvre :\n\nExemple : Une fermeture d’usine entraîne moins de travailleurs (donc baisse de la demande), mais aussi moins de pollution (hausse de la demande).\n\n\nPlan imposé :\n\nIntroduction + problématique + contexte + présentation des données\n\nSIG\n\nÉconométrie\n\n\nRédaction :\n\nPas moins de 20 pages.\n\nÉcrit en Word ou LaTeX (pas de knit en Markdown).\n\n\nPrésentation :\n\nPowerPoint de 10 minutes + 5 minutes de questions.",
+    "text": "Rapport\n\nConstruire une problématique :\n\nExemple : Quel est l’impact de l’installation d’éoliennes sur les prix des maisons en zone rurale ?\n\n\nExpliciter le mécanisme à l’œuvre :\n\nExemple : Une fermeture d’usine entraîne moins de travailleurs (donc baisse de la demande), mais aussi moins de pollution (hausse de la demande).\n\n\nPlan imposé :\n\nIntroduction + problématique + contexte + présentation des données\n\nSIG\n\nÉconométrie\n\n\nRédaction :\n\nPas moins de 10 pages.\n\nÉcrit en Word ou LaTeX (pas de knit en Markdown).\n\n\nPrésentation :\n\nPowerPoint de 15 minutes + 5 minutes de questions.",
     "crumbs": [
       "Général",
       "Consignes Projet 2"
@@ -158,7 +158,7 @@
     "href": "CMI-Projet2.html#évaluation",
     "title": "Consignes Projet 2",
     "section": "Évaluation",
-    "text": "Évaluation\n\nCe projet constitue l’évaluation pour deux matières couvrant 7.5 crédits ECTS : un travail conséquent est attendu.\n\nN’hésitez pas à poser des questions si vous rencontrez des problèmes.\n\nDate de rendu du projet : 15 décembre.\n\nDate de présentation : 16 décembre.\nRendus :  slides\nPrésentation :  15 minutes + 5 minutes de question\nDate de rendu du projet : 15 décembre.\nDate de présentation : 16 décembre.",
+    "text": "Évaluation\n\nRendus :  slides et rapport sur CEL\nPrésentation :  15 minutes + 5 minutes de question\nDate de rendu du projet : 15 décembre à 16h\nDate de présentation : 16 décembre à partir de 8h30",
     "crumbs": [
       "Général",
       "Consignes Projet 2"
