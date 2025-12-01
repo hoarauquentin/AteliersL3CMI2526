@@ -48,7 +48,7 @@
     "href": "CMI-projets.html#résumé-des-consignes",
     "title": "Projets et présentations",
     "section": "Résumé des consignes",
-    "text": "Résumé des consignes\n\nProjet 1\nProjet en deux parties :\n\nPartie 1 (30% du projet) : travail SIG. Réalisation et discussion d’une carte avec QGIS.\nPartie 2 (70% du projet) : travail Calcul Numérique - Econométrie : réalisation d’un travail sur des données trouvées par l’étudiant.\n\nRendus : slides\nPrésentation : 15 minutes + 5 minutes de question\nDate de présentation : mercredi 3 décembre à partir de 14h\n\n\nProjet 2\nProjet en deux parties :\n\nPartie 1 (40% du projet) : travail SIG\nPartie 2 (60% du projet) : travail Econométrie : réalisation d’un travail sur les données sur des données imposées.\n\nRendus : slides + rapport (10 pages de texte à remettre la veille)\nPrésentation : 15 minutes + 5 minutes de question\nDate de présentation : mardi 16 décembre à partir de 8h30",
+    "text": "Résumé des consignes\n\nProjet 1\nProjet en deux parties :\n\nPartie 1 (30% du projet) : travail SIG. Réalisation et discussion d’une carte avec QGIS. Export de la carte en pdf/jpeg/… pas de capture d’écran.\nPartie 2 (70% du projet) : travail Calcul Numérique - Econométrie : réalisation d’un travail sur des données trouvées par l’étudiant.\n\nRendus : slides + script R. A déposer sur CEL.\nPrésentation : 15 minutes + 5 minutes de question\nDate de présentation : mercredi 3 décembre à partir de 14h\n\n\nProjet 2\nProjet en deux parties :\n\nPartie 1 (40% du projet) : travail SIG\nPartie 2 (60% du projet) : travail Econométrie : réalisation d’un travail sur les données sur des données imposées.\n\nRendus : slides + rapport + (10 pages de texte à remettre la veille) + script R. Pas de capture d’écran. A deposer sur CEL.\nPrésentation : 15 minutes + 5 minutes de question\nDate de présentation : mardi 16 décembre à partir de 8h30",
     "crumbs": [
       "Général",
       "Projets et présentations"
@@ -66,22 +66,22 @@
     ]
   },
   {
-    "objectID": "CMI-Projet1.html#partie-calcul-numérique",
-    "href": "CMI-Projet1.html#partie-calcul-numérique",
+    "objectID": "CMI-Projet1.html#partie-sig",
+    "href": "CMI-Projet1.html#partie-sig",
     "title": "Consignes Projet 1",
-    "section": "Partie Calcul Numérique",
-    "text": "Partie Calcul Numérique",
+    "section": "Partie SIG",
+    "text": "Partie SIG\nRéalisation d’une carte à partir de données originales trouvées par l’étudiant. La carte doit répondre à une problématique",
     "crumbs": [
       "Général",
       "Consignes Projet 1"
     ]
   },
   {
-    "objectID": "CMI-Projet1.html#partie-économétrie",
-    "href": "CMI-Projet1.html#partie-économétrie",
+    "objectID": "CMI-Projet1.html#partie-calcul-numérique-et-econométrie",
+    "href": "CMI-Projet1.html#partie-calcul-numérique-et-econométrie",
     "title": "Consignes Projet 1",
-    "section": "Partie Économétrie",
-    "text": "Partie Économétrie",
+    "section": "Partie Calcul Numérique et Econométrie",
+    "text": "Partie Calcul Numérique et Econométrie\nRéalisation d’analyse de données originales trouvées par l’étudiant. Pas nécessairement les mêmes que pour la partie SIG.",
     "crumbs": [
       "Général",
       "Consignes Projet 1"
@@ -92,7 +92,7 @@
     "href": "CMI-Projet1.html#évaluation",
     "title": "Consignes Projet 1",
     "section": "Évaluation",
-    "text": "Évaluation\n\nRendus :  slides\nPrésentation :  15 minutes + 5 minutes de question\nDate de présentation : mercredi 3 décembre à partir de 14h",
+    "text": "Évaluation\n\nRendus :  slides + carte\nPrésentation :  15 minutes + 5 minutes de question\nDate de présentation : mercredi 3 décembre à partir de 14h",
     "crumbs": [
       "Général",
       "Consignes Projet 1"
