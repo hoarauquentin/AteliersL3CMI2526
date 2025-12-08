@@ -70,7 +70,7 @@
     "href": "CMI-Projet1.html#partie-sig",
     "title": "Consignes Projet 1",
     "section": "Partie SIG",
-    "text": "Partie SIG\nRéalisation d’une carte à partir de données originales trouvées par l’étudiant. La carte doit répondre à une problématique",
+    "text": "Partie SIG\nRéalisation d’une carte à partir de données originales trouvées par l’étudiant. La carte doit répondre à une problématique\nExemples : - carte représentant la position de certains restaurants sur une carte chloropèthe sur les revenus",
     "crumbs": [
       "Général",
       "Consignes Projet 1"
@@ -92,7 +92,7 @@
     "href": "CMI-Projet1.html#évaluation",
     "title": "Consignes Projet 1",
     "section": "Évaluation",
-    "text": "Évaluation\n\nRendus :  slides + carte\nPrésentation :  15 minutes + 5 minutes de question\nDate de présentation : mercredi 3 décembre à partir de 14h",
+    "text": "Évaluation\n\nRendus :  slides + carte (en pdf/jpg mais pas de capture d’écran)\nPrésentation :  15 minutes + 5 minutes de question\nDate de présentation : mercredi 3 décembre à partir de 14h",
     "crumbs": [
       "Général",
       "Consignes Projet 1"
@@ -159,6 +159,17 @@
     "title": "Consignes Projet 2",
     "section": "Évaluation",
     "text": "Évaluation\n\nRendus :  slides et rapport sur CEL\nPrésentation :  15 minutes + 5 minutes de question\nDate de rendu du projet : 15 décembre à 16h\nDate de présentation : 16 décembre à partir de 8h30",
+    "crumbs": [
+      "Général",
+      "Consignes Projet 2"
+    ]
+  },
+  {
+    "objectID": "CMI-Projet2.html#données",
+    "href": "CMI-Projet2.html#données",
+    "title": "Consignes Projet 2",
+    "section": "Données",
+    "text": "Données\n\nImmobiliers\nLien :\n\n\nEolien\nLien :\n\n\nMéthaniseurs\n\n\nEolien",
     "crumbs": [
       "Général",
       "Consignes Projet 2"
