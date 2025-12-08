@@ -103,7 +103,7 @@
     "href": "CMI-Projet2.html",
     "title": "Consignes Projet 2",
     "section": "",
-    "text": "Consignes Générales",
+    "text": "Consignes Générales\nDans ce projet, vous devez combiner deux jeux de données pour faire une analyse économétrique et SIG. Tous les sujets s’intéressent aux effets de capitalisation dans l’immobilier : comment le marché immobilier valorise-t-il tel ou tel aspect de l’environnement proche du bien ?\nPar exemple : - l’installation d’éoliennes, de méthaniseurs, ou de centrale solaire provoquent-elles des nuisances qui entrainent une baisse des prix des maisons ? - Les inondations font-elles perdre de la valeur aux maisons proches des cours d’eau ?\nTout l’enjeu de ces sujets est de quantifier précisément ces effets à l’aide de modèles économétriques du type :\n\\[log(valeur bien) = 1(distance &lt; X km) + controles \\]\navec $ 1(distance &lt; X km)$ un dummy valant 1 si le bien est à moins de X km de la nuisance.",
     "crumbs": [
       "Général",
       "Consignes Projet 2"
@@ -114,7 +114,7 @@
     "href": "CMI-Projet2.html#consignes-générales",
     "title": "Consignes Projet 2",
     "section": "",
-    "text": "Vous pouvez utiliser ChatGPT ou autre, mais posez-vous toujours la question : « Est-ce que je comprends ce qu’il me donne ? »\n\nLes sujets sont volontairement simples et vagues : il vous appartient de vous les approprier.\n\nApporter du contexte avec vos recherches personnelles.\n\nDécrire les métadonnées : origine, limites, etc.\n\nDécrire les données : taille, horizon géographique et temporel, grandeurs et catégories contenues. Colonnes utiles vs inutiles. Nombre de données manquantes.\n\nVous pouvez rapprocher les données que vous avez.\n\nSi les données sont trop lourdes, il est accepté de restreindre le jeu de données à une aire temporelle plus réduite.",
+    "text": "Les sujets sont volontairement simples et vagues : il vous appartient de vous les approprier.\n\nApporter du contexte avec vos recherches personnelles.\n\nDécrire les métadonnées : origine, limites, etc.\n\nDécrire les données : taille, horizon géographique et temporel, grandeurs et catégories contenues. Colonnes utiles vs inutiles. Nombre de données manquantes.\n\nVous pouvez rapprocher les données que vous avez.\n\nSi les données sont trop lourdes, il est accepté de restreindre le jeu de données à une aire temporelle plus réduite.",
     "crumbs": [
       "Général",
       "Consignes Projet 2"
@@ -158,7 +158,7 @@
     "href": "CMI-Projet2.html#évaluation",
     "title": "Consignes Projet 2",
     "section": "Évaluation",
-    "text": "Évaluation\n\nRendus :  slides et rapport sur CEL\nPrésentation :  15 minutes + 5 minutes de question\nDate de rendu du projet : 15 décembre à 16h\nDate de présentation : 16 décembre à partir de 8h30",
+    "text": "Évaluation\n\nRendus : slides et rapport sur CEL\nPrésentation : 15 minutes + 5 minutes de question\nDate de rendu du projet : 15 décembre à 16h\nDate de présentation : 16 décembre à partir de 8h30",
     "crumbs": [
       "Général",
       "Consignes Projet 2"
@@ -169,7 +169,7 @@
     "href": "CMI-Projet2.html#données",
     "title": "Consignes Projet 2",
     "section": "Données",
-    "text": "Données\n\nImmobiliers\nLien :\n\n\nEolien\nLien :\n\n\nMéthaniseurs\n\n\nEolien",
+    "text": "Données\n\nLiens :\n\nImmobilier\nEolien\nSolaire\nMethaniseurs\nStations de recharge\nParc véhicules électriques\nIncendies\nCours d’eau\nInondations\nFiscalité locale\nDonnées Socioéconomiques\nCLC\nBPE\nInstallations polluantes\n\n\n\nImmobiliers\nLien :\n\n\nEolien\nAttention aux coordonnées gps des éoliennes (il faut diviser les x /10 ou 100 selon)\n\n\nMéthaniseurs\n\n\nInondations\nL’idéal est de rajouter les distances aux cours d’eau pour capturer la vulnérabilité aux inondations.\n\n\nIncendies\nLa base de données proposer porte sur les incendies de forets, en particulier dans l’aire Méditerranéenne. L’idéal est de rajouter les distances aux forêts pour capturer la vulnérabilité aux incendies de forêts.\n\n\nInstallations polluantes",
     "crumbs": [
       "Général",
       "Consignes Projet 2"

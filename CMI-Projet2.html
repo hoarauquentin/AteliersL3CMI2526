@@ -490,10 +490,13 @@ window.Quarto = {
   <li><a href="#évaluation" id="toc-évaluation" class="nav-link" data-scroll-target="#évaluation">Évaluation</a></li>
   <li><a href="#données" id="toc-données" class="nav-link" data-scroll-target="#données">Données</a>
   <ul class="collapse">
+  <li><a href="#liens" id="toc-liens" class="nav-link" data-scroll-target="#liens">Liens :</a></li>
   <li><a href="#immobiliers" id="toc-immobiliers" class="nav-link" data-scroll-target="#immobiliers">Immobiliers</a></li>
   <li><a href="#eolien" id="toc-eolien" class="nav-link" data-scroll-target="#eolien">Eolien</a></li>
   <li><a href="#méthaniseurs" id="toc-méthaniseurs" class="nav-link" data-scroll-target="#méthaniseurs">Méthaniseurs</a></li>
-  <li><a href="#eolien-1" id="toc-eolien-1" class="nav-link" data-scroll-target="#eolien-1">Eolien</a></li>
+  <li><a href="#inondations" id="toc-inondations" class="nav-link" data-scroll-target="#inondations">Inondations</a></li>
+  <li><a href="#incendies" id="toc-incendies" class="nav-link" data-scroll-target="#incendies">Incendies</a></li>
+  <li><a href="#installations-polluantes" id="toc-installations-polluantes" class="nav-link" data-scroll-target="#installations-polluantes">Installations polluantes</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -521,11 +524,14 @@ window.Quarto = {
 </header>
 
 
+<p>Dans ce projet, vous devez combiner deux jeux de données pour faire une analyse économétrique et SIG. Tous les sujets s’intéressent aux effets de capitalisation dans l’immobilier : comment le marché immobilier valorise-t-il tel ou tel aspect de l’environnement proche du bien ?</p>
+<p>Par exemple : - l’installation d’éoliennes, de méthaniseurs, ou de centrale solaire provoquent-elles des nuisances qui entrainent une baisse des prix des maisons ? - Les inondations font-elles perdre de la valeur aux maisons proches des cours d’eau ?</p>
+<p>Tout l’enjeu de ces sujets est de quantifier précisément ces effets à l’aide de modèles économétriques du type :</p>
+<p><span class="math display">\[log(valeur bien) = 1(distance &lt; X km) + controles \]</span></p>
+<p>avec $ 1(distance &lt; X km)$ un dummy valant 1 si le bien est à moins de X km de la nuisance.</p>
 <section id="consignes-générales" class="level2">
 <h2 class="anchored" data-anchor-id="consignes-générales">Consignes Générales</h2>
 <ul>
-<li>Vous pouvez utiliser ChatGPT ou autre, mais posez-vous toujours la question : <em>« Est-ce que je comprends ce qu’il me donne ? »</em><br>
-</li>
 <li>Les sujets sont volontairement simples et vagues : il vous appartient de vous les approprier.<br>
 </li>
 <li>Apporter du contexte avec vos recherches personnelles.<br>
@@ -625,27 +631,54 @@ window.Quarto = {
 <section id="évaluation" class="level2">
 <h2 class="anchored" data-anchor-id="évaluation">Évaluation</h2>
 <ul>
-<li><em>Rendus : </em> slides et rapport sur CEL</li>
-<li><em>Présentation : </em> 15 minutes + 5 minutes de question</li>
+<li><em>Rendus :</em> slides et rapport sur CEL</li>
+<li><em>Présentation :</em> 15 minutes + 5 minutes de question</li>
 <li><strong>Date de rendu du projet : 15 décembre à 16h</strong></li>
 <li><strong>Date de présentation : 16 décembre à partir de 8h30</strong></li>
 </ul>
 </section>
 <section id="données" class="level2">
 <h2 class="anchored" data-anchor-id="données">Données</h2>
+<section id="liens" class="level3">
+<h3 class="anchored" data-anchor-id="liens">Liens :</h3>
+<ul>
+<li><a href="https://parisnanterrefr-my.sharepoint.com/:f:/g/personal/qhoarau_parisnanterre_fr/EtAsrcw7gLlCiMZWGmkCEt0Bn2lSRPgqWBa-3MNyiWfo1g?e=162Gbs">Immobilier</a></li>
+<li><a href="https://files.georisques.fr/bdeole/production/csv/eolien_national.zip">Eolien</a></li>
+<li><a href="https://www.data.gouv.fr/fr/datasets/donnees-sur-les-installations-photovoltaique-en-france-et-quelques-pays-europeens/">Solaire</a></li>
+<li><a href="https://opendata.grdf.fr/explore/dataset/capacite-et-quantite-dinjection-de-biomethane/information/?disjunctive.id_unique_projet&amp;disjunctive.typologie&amp;disjunctive.quantite_annuelle_injectee_en_mwh">Methaniseurs</a></li>
+<li><a href="https://transport.data.gouv.fr/datasets/fichier-consolide-des-bornes-de-recharge-pour-vehicules-electriques">Stations de recharge</a></li>
+<li><a href="https://www.statistiques.developpement-durable.gouv.fr/donnees-sur-le-parc-de-vehicules-en-circulation-au-1er-janvier-2022">Parc véhicules électriques</a></li>
+<li><a href="https://bdiff.agriculture.gouv.fr/incendies">Incendies</a></li>
+<li><a href="https://services.sandre.eaufrance.fr/telechargement/geo/ETH/BDCarthage/FXX/2017/France_metropole_entiere/SHP/CoursEau_FXX-shp.zip">Cours d’eau</a></li>
+<li><a href="https://www.data.gouv.fr/fr/datasets/base-nationale-de-gestion-assistee-des-procedures-administratives-relatives-aux-risques-gaspar/">Inondations</a></li>
+<li><a href="https://www.data.gouv.fr/fr/datasets/limpot-sur-le-revenu-par-collectivite-territoriale-ircom/">Fiscalité locale</a></li>
+<li><a href="https://unehistoireduconflitpolitique.fr/telecharger.html">Données Socioéconomiques</a></li>
+<li><a href="https://www.statistiques.developpement-durable.gouv.fr/corine-land-cover-0">CLC</a></li>
+<li><a href="https://parisnanterrefr-my.sharepoint.com/:f:/g/personal/qhoarau_parisnanterre_fr/Ep3LHX7gJXRAs8ttebcf1E8BgNZoX3tsDftAphk7yXgLwA?e=2VjTpc">BPE</a></li>
+<li><a href="https://www.georisques.gouv.fr/donnees/bases-de-donnees/installations-industrielles-rejetant-des-polluants">Installations polluantes</a></li>
+</ul>
+</section>
 <section id="immobiliers" class="level3">
 <h3 class="anchored" data-anchor-id="immobiliers">Immobiliers</h3>
 <p>Lien :</p>
 </section>
 <section id="eolien" class="level3">
 <h3 class="anchored" data-anchor-id="eolien">Eolien</h3>
-<p>Lien :</p>
+<p>Attention aux coordonnées gps des éoliennes (il faut diviser les x /10 ou 100 selon)</p>
 </section>
 <section id="méthaniseurs" class="level3">
 <h3 class="anchored" data-anchor-id="méthaniseurs">Méthaniseurs</h3>
 </section>
-<section id="eolien-1" class="level3">
-<h3 class="anchored" data-anchor-id="eolien-1">Eolien</h3>
+<section id="inondations" class="level3">
+<h3 class="anchored" data-anchor-id="inondations">Inondations</h3>
+<p>L’idéal est de rajouter les distances aux cours d’eau pour capturer la vulnérabilité aux inondations.</p>
+</section>
+<section id="incendies" class="level3">
+<h3 class="anchored" data-anchor-id="incendies">Incendies</h3>
+<p>La base de données proposer porte sur les incendies de forets, en particulier dans l’aire Méditerranéenne. L’idéal est de rajouter les distances aux forêts pour capturer la vulnérabilité aux incendies de forêts.</p>
+</section>
+<section id="installations-polluantes" class="level3">
+<h3 class="anchored" data-anchor-id="installations-polluantes">Installations polluantes</h3>
 
 
 </section>
