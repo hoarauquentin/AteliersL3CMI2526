@@ -15,7 +15,7 @@
     "href": "index.html#présentation",
     "title": "Ateliers L3 CMI",
     "section": "Présentation",
-    "text": "Présentation\nCe livre contient les supports de TP des quatre ateliers spécifiques de la L3 CMI de l’université Paris Nanterre :\n\nCalcul numérique (S1) – 3 ECTS\nSystème d’information géographique (S1) – 3 ECTS\nEconométrie 1 (S1) – 4.5 ECTS\nEconométrie 2 (S2) – 3 ECTS",
+    "text": "Présentation\nCe livre contient les supports des quatre ateliers spécifiques de la L3 CMI de l’université Paris Nanterre :\n\nCalcul numérique (S1) – 3 ECTS\nSystème d’information géographique (S1) – 3 ECTS\nEconométrie 1 (S1) – 4.5 ECTS\nEconométrie 2 (S2) – 3 ECTS\n\nLa quasi-totalité des ateliers se font avec le langage R.",
     "crumbs": [
       "Général",
       "Introduction"
@@ -191,7 +191,7 @@
     "href": "CMI-CN-intro.html",
     "title": "Introduction",
     "section": "",
-    "text": "Le cours en résumé :\n\n24 h\nObjectifs : prise en main de R et markdown, statistiques descriptives, graphiques\nLangage : R & Power BI (introduction si a le temps)\nModalités d’examens :\nNote de participation\nUn projet commun calcul numérique/économétrie avec choix du sujet libre\nPrésentation individuelle d’un chapitre d’un livre sur les bonnes pratiques de la dataviz : (Fundamentals of Data Visualization) de Clause Wilke. Inscription (ici).\n\nLe plan :\n\nCommandes des bases de R\nLes tableaux de données en R\nLes graphiques",
+    "text": "Le cours en résumé :\n\n24 h\nObjectifs : prise en main de R et markdown, statistiques descriptives, graphiques\nLangage : R & Power BI (introduction si a le temps)\nModalités d’examens :\nNote de participation\nUn projet commun calcul numérique/économétrie avec choix du sujet libre\nPrésentation individuelle d’un chapitre d’un livre sur les bonnes pratiques de la dataviz : (Fundamentals of Data Visualization) de Clause Wilke. Inscription (ici).\n\nLe plan :\n\nCommandes des bases de R\nLes tableaux de données en R\nLes graphiques\n\nEn général pour R, regardez ce bon tutoriel sur le tidyverse.",
     "crumbs": [
       "Calcul Numérique",
       "Introduction"
@@ -202,7 +202,7 @@
     "href": "CMI-CN-TP1.html",
     "title": "TP1 : Commandes de base de R",
     "section": "",
-    "text": "1. Manipulation de vecteurs\nSoit le vecteur \\(x = (1, 2, 3, 4, 5)\\)",
+    "text": "1. Manipulation de vecteurs\nPour tout ce TP, essayez de chercher par vous-même les réponses sans utiliser de d’assistant IA. Pour ce faire, passez par google, ou l’outil d’aide de R. En général, regardez ce bon tutoriel sur le tidyverse.\nSoit le vecteur \\(x = (1, 2, 3, 4, 5)\\)",
     "crumbs": [
       "Calcul Numérique",
       "TP1 : Commandes de base de R"
@@ -631,7 +631,7 @@
     "href": "CMI-E1-intro.html",
     "title": "Introduction",
     "section": "",
-    "text": "Le cours en résumé : - 30 h - objectifs : développer, interpréter et critiquer des modèles économétriques - modalités d’examens: - Note de participation - Un projet commun calcul numérique/économétrie avec choix du sujet libre - Un projet commun SIG/économétrie avec choix du sujet imposé\nLe plan : 1. Statistiques et probabilités en R 2. Régression linéaire multiple 3. Projet 1 4. Projet 2",
+    "text": "Le cours en résumé :\n\n30 h\nobjectifs : développer, interpréter et critiquer des modèles économétriques\nmodalités d’examens:\nNote de participation\nUn projet commun calcul numérique/économétrie avec choix du sujet libre\nUn projet commun SIG/économétrie avec choix du sujet imposé\n\nLe plan :\n\nStatistiques et probabilités en R\nRégression linéaire multiple\nProjet 1\nProjet 2",
     "crumbs": [
       "Econométrie 1",
       "Introduction"
@@ -851,7 +851,7 @@
     "href": "CMI-E2-intro.html",
     "title": "Introduction",
     "section": "",
-    "text": "24 h\nobjectifs : économétrie avancée : tests statistiques (en parallèle du cours) et introduction à l’inférence causale\nmodalités d’examens :\n\nNote de participation (10%)\nPrésentations en groupe en classe de chapitre du manuel d’inférence causale de Scott Cunningham (40%)\nProjet 3 d’économétrie (50%)\nS’incrire ici pour les projets et présentations : fichier Excel partagé.\n\n\nLe plan : 1. Régression linéaire multiple et tests 2. Binaires et effets fixes 4. Multicolinéarité 5. Hétéroskédasticité 6. Panels\nPrésentation: Dans l’atelier Econométrie 1, nous nous sommes introduit aux concepts élémentaires de l’économétries : régressions linéaires multiples, estimation, significativité. Cet atelier vise à étendre votre connaissance des modèles linéaires sur les cas où les hypothèses de bases ne sont pas respectées (multicolinéarité, hétéroskédasticité etc). En parallèle, il cherche à vous introduire à l’approche de l’inférence causale, qui est le concept empirique dominant en économie et sciences sociales aujourd’hui. Pour ce faire, nous allons faire une lecture collective de l’ouvrage de Scott Cunningham, Causal Inference: the Mixtape. Dans le projet, nous reprendrons le projet 2 et chercherons à appliquer une des méthodes les plus classiques : les différences en différences.",
+    "text": "Le cours en résumé :\n\n24 h\nobjectifs : économétrie avancée : tests statistiques (en parallèle du cours) et introduction à l’inférence causale\nmodalités d’examens :\n\nNote de participation (10%)\nPrésentations en groupe en classe de chapitre du manuel d’inférence causale de Scott Cunningham (40%)\nProjet 3 d’économétrie (50%)\nS’incrire ici pour les projets et présentations : fichier Excel partagé.\n\n\nLe plan :\n\nRégression linéaire multiple et tests\nBinaires et effets fixes\nMulticolinéarité\nHétéroskédasticité\nEconométrie de Panel\n\nPrésentation :\nDans l’atelier Econométrie 1, nous nous sommes introduit aux concepts élémentaires de l’économétries : régressions linéaires multiples, estimation, significativité. Cet atelier vise à étendre votre connaissance des modèles linéaires sur les cas où les hypothèses de bases ne sont pas respectées (multicolinéarité, hétéroskédasticité etc). En parallèle, il cherche à vous introduire à l’approche de l’inférence causale, qui est le concept empirique dominant en économie et sciences sociales aujourd’hui. Pour ce faire, nous allons faire une lecture collective de l’ouvrage de Scott Cunningham, Causal Inference: the Mixtape. Dans le projet, nous reprendrons le projet 2 et chercherons à appliquer une des méthodes les plus classiques : les différences en différences.",
     "crumbs": [
       "Econométrie 2",
       "Introduction"
