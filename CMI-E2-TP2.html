@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Exercices – Ateliers L3 CMI</title>
+<title>2&nbsp; TP 2 : Régression multiple et variables binaires – Ateliers L3 CMI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -306,7 +306,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Exercices</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">TP 2 : Régression multiple et variables binaires</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -509,13 +509,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CMI-E2-TP1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TP 1 : Modèle de régression multiple”</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TP 1 : Modèle de régression multiple</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CMI-E2-TP2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Exercices</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">TP 2 : Régression multiple et variables binaires</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -554,13 +554,16 @@ window.Quarto = {
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#gpa1" id="toc-gpa1" class="nav-link active" data-scroll-target="#gpa1"><span class="header-section-number">2.1</span> gpa1</a></li>
-  <li><a href="#wage2" id="toc-wage2" class="nav-link" data-scroll-target="#wage2"><span class="header-section-number">2.2</span> wage2</a></li>
-  <li><a href="#mlb1" id="toc-mlb1" class="nav-link" data-scroll-target="#mlb1"><span class="header-section-number">2.3</span> mlb1</a></li>
-  <li><a href="#gpa2" id="toc-gpa2" class="nav-link" data-scroll-target="#gpa2"><span class="header-section-number">2.4</span> gpa2</a></li>
-  <li><a href="#charity" id="toc-charity" class="nav-link" data-scroll-target="#charity"><span class="header-section-number">2.5</span> charity</a></li>
-  <li><a href="#catholic" id="toc-catholic" class="nav-link" data-scroll-target="#catholic"><span class="header-section-number">2.6</span> catholic</a></li>
-  <li><a href="#apple" id="toc-apple" class="nav-link" data-scroll-target="#apple"><span class="header-section-number">2.7</span> apple</a></li>
+  <li><a href="#exercices" id="toc-exercices" class="nav-link active" data-scroll-target="#exercices"><span class="header-section-number">2.1</span> Exercices</a>
+  <ul class="collapse">
+  <li><a href="#gpa1" id="toc-gpa1" class="nav-link" data-scroll-target="#gpa1"><span class="header-section-number">2.1.1</span> gpa1</a></li>
+  <li><a href="#wage2" id="toc-wage2" class="nav-link" data-scroll-target="#wage2"><span class="header-section-number">2.1.2</span> wage2</a></li>
+  <li><a href="#mlb1" id="toc-mlb1" class="nav-link" data-scroll-target="#mlb1"><span class="header-section-number">2.1.3</span> mlb1</a></li>
+  <li><a href="#gpa2" id="toc-gpa2" class="nav-link" data-scroll-target="#gpa2"><span class="header-section-number">2.1.4</span> gpa2</a></li>
+  <li><a href="#charity" id="toc-charity" class="nav-link" data-scroll-target="#charity"><span class="header-section-number">2.1.5</span> charity</a></li>
+  <li><a href="#catholic" id="toc-catholic" class="nav-link" data-scroll-target="#catholic"><span class="header-section-number">2.1.6</span> catholic</a></li>
+  <li><a href="#apple" id="toc-apple" class="nav-link" data-scroll-target="#apple"><span class="header-section-number">2.1.7</span> apple</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -568,9 +571,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Exercices</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">TP 2 : Régression multiple et variables binaires</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Exercices</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">TP 2 : Régression multiple et variables binaires</span></h1>
 </div>
 
 
@@ -587,7 +590,6 @@ window.Quarto = {
 </header>
 
 
-<p>#TP 2 : Régression multiple et variables binaires</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo=</span><span class="cn">FALSE</span>, <span class="at">warning=</span><span class="cn">FALSE</span>, <span class="at">message=</span><span class="cn">FALSE</span>, <span class="at">eval=</span><span class="cn">FALSE</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -597,8 +599,10 @@ window.Quarto = {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stargazer)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fixest)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<section id="gpa1" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="gpa1"><span class="header-section-number">2.1</span> gpa1</h2>
+<section id="exercices" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="exercices"><span class="header-section-number">2.1</span> Exercices</h2>
+<section id="gpa1" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="gpa1"><span class="header-section-number">2.1.1</span> gpa1</h3>
 <ol type="i">
 <li><p>Estimez le modèle : <span class="math display">\[colGPA = PC + hsGPA + ACT\]</span>.</p></li>
 <li><p>Ajoutez les variables <code>mothcoll</code> et <code>fathcoll</code> et reportez les résultats d’estimation. Qu’observez-vous pour le coefficient de la variable relative à la possession d’un PC ? <code>PC</code> apparaît-il toujours statistiquement significatif ?</p></li>
@@ -606,8 +610,8 @@ window.Quarto = {
 <li><p>Ajoutez <code>hsGPA^2</code> au modèle décrit en (i), jugez-vous cette généralisation pertinente ?</p></li>
 </ol>
 </section>
-<section id="wage2" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="wage2"><span class="header-section-number">2.2</span> wage2</h2>
+<section id="wage2" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="wage2"><span class="header-section-number">2.1.2</span> wage2</h3>
 <ol type="i">
 <li>Estimez le modèle suivant :</li>
 </ol>
@@ -619,8 +623,8 @@ window.Quarto = {
 <li><p>À nouveau, partez du modèle de base et amendez le ensuite en autorisant les salaires à différer selon les groupes : mariés et africains américains, mariés et non africains américains, non mariés et africains américains, non mariés et non africains américains. Quelle est la différence de salaire estimée entre les mariés afro-américains et non afro-américains ?</p></li>
 </ol>
 </section>
-<section id="mlb1" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="mlb1"><span class="header-section-number">2.3</span> mlb1</h2>
+<section id="mlb1" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="mlb1"><span class="header-section-number">2.1.3</span> mlb1</h3>
 <p>Un modèle permettant de caractériser les salaires des joueurs de la ligue majeure de baseball aux États-Unis est donné par :</p>
 <p><span class="math display">\[log(salary) = \beta_0 + \beta_1 years + \beta_2 gamesyr + \beta_3 bavg + \beta_4 hrunsyr +\beta_5 rbisyr \]</span> <span class="math display">\[ + \beta_6 runsyr + \beta_7 fldperc + \beta_8 allstar + \beta_9 frstbase + \beta_{10} scndbase \]</span> <span class="math display">\[ + beta_{11} thrdbase + \beta_{12} shrtstop + \beta_{13} catcher + u \]</span></p>
 <p>avec <code>outfield</code> (joueur de champ extérieur) le groupe de référence.</p>
@@ -631,8 +635,8 @@ window.Quarto = {
 <li>Les résultats tirés des questions (i) et (ii) sont-ils cohérents ? Dans le cas contraire, expliquez le mécanisme sous-jacent.</li>
 </ol>
 </section>
-<section id="gpa2" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="gpa2"><span class="header-section-number">2.4</span> gpa2</h2>
+<section id="gpa2" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="gpa2"><span class="header-section-number">2.1.4</span> gpa2</h3>
 <ol type="i">
 <li>On considère le modèle suivant : <span class="math display">\[colgpa=\beta_0 +\beta_1 hsize+\beta_2 hsize^2 +\beta_3 hsperc+\beta_4 sat  + \beta_5 female + \beta_6 athlete + u, \]</span></li>
 </ol>
@@ -645,8 +649,8 @@ window.Quarto = {
 <li>L’effet de sat sur colgpa diffère-t-il selon le genre ? Justifiez votre réponse.</li>
 </ol>
 </section>
-<section id="charity" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="charity"><span class="header-section-number">2.5</span> charity</h2>
+<section id="charity" class="level3" data-number="2.1.5">
+<h3 data-number="2.1.5" class="anchored" data-anchor-id="charity"><span class="header-section-number">2.1.5</span> charity</h3>
 <p>Utilisez les données contenues dans le fichier <code>charity</code> pour répondre à cette question. La variable respond est une variable indicatrice égale à un si un individu a répondu par un don à la sollicitation par mail la plus récente d’une association caritative. La variable <code>resplast</code> est une variable indicatrice égale à un si un individu a répondu à la sollicitation par mail précédente, <code>avggift</code> est la moyenne des dons passés (en florins néerlandais) et <code>propresp</code> est le temps relatif passé par la personne à répondre aux sollicitations passées.</p>
 <ol type="i">
 <li>Estimez un modèle à probabilités linéaires expliquant respond en fonction de <code>resplast</code> et <code>avggift.</code> Reportez les résultats sous une forme usuelle et interprétez le coefficient de resplast.</li>
@@ -656,8 +660,8 @@ window.Quarto = {
 <li>Ajoutez <code>mailsyear</code>, le nombre de mails envoyés par an, au modèle. Evaluez l’effet associé ? Pourquoi n’est-ce sans doute pas une mesure correcte de l’effet causal de l’envoi ciblé de mails (ou « publipostage ») sur la probabilité de réponse ?</li>
 </ol>
 </section>
-<section id="catholic" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="catholic"><span class="header-section-number">2.6</span> catholic</h2>
+<section id="catholic" class="level3" data-number="2.1.6">
+<h3 data-number="2.1.6" class="anchored" data-anchor-id="catholic"><span class="header-section-number">2.1.6</span> catholic</h3>
 <ol type="i">
 <li>Considérez l’échantillon complet et identifiez quel pourcentage d’étudiants sont régulièrement inscrit dans un établissement secondaire d’obédience catholique. Quelle est la moyenne de la variable math12 ?</li>
 <li>Réalisez une régression simple de math12 sur cathhs et reportez les résultats selon les normes usuelles. Interprétez vos résultats.</li>
@@ -668,8 +672,8 @@ window.Quarto = {
 <li>Calculez l’effet marginal moyen de <code>cathhs</code> dans le model estimé en question (v). Comparez les résultats obtenus avec les coefficients de <code>cathhs</code> estimés dans la parties (iii) et (v).</li>
 </ol>
 </section>
-<section id="apple" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="apple"><span class="header-section-number">2.7</span> apple</h2>
+<section id="apple" class="level3" data-number="2.1.7">
+<h3 data-number="2.1.7" class="anchored" data-anchor-id="apple"><span class="header-section-number">2.1.7</span> apple</h3>
 <ol type="i">
 <li><p>Définissez une variable binaire <span class="math inline">\(ecobuy = 1\)</span> si <span class="math inline">\(ecolbs &gt; 0\)</span> et <span class="math inline">\(ecobuy = 0\)</span> si <span class="math inline">\(ecolbs = 0\)</span>. En d’autres termes, <code>ecobuy</code> indique si, à prix donnés, une famille consomme des pommes issues de l’agriculture biologique. Combien de familles affirment acheter des pommes labélisées bio ?</p></li>
 <li><p>Estimez le modèle à probabilités linéaires suivant : <span class="math display">\[ ecobuy = \beta_0 + \beta_1 ecoprc + \beta_2 regprc + \beta_3 faminc + \beta_4 hhsize+ \beta_5 educ+ \beta_6 age \]</span> et reportez les résultats sous une forme usuelle. Interprétez avec soin les coefficients associés aux variables de prix.</p></li>
@@ -680,6 +684,7 @@ window.Quarto = {
 </ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1098,8 +1103,8 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./CMI-E2-TP1.html" class="pagination-link" aria-label="TP 1 : Modèle de régression multiple&quot;">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TP 1 : Modèle de régression multiple”</span></span>
+      <a href="./CMI-E2-TP1.html" class="pagination-link" aria-label="TP 1 : Modèle de régression multiple">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TP 1 : Modèle de régression multiple</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
