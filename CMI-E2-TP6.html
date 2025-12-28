@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>TP2 : Tableaux de données – Ateliers L3 CMI</title>
+<title>6&nbsp; Estimateurs pour les données de panel – Ateliers L3 CMI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,48 +20,12 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
-<link href="./CMI-CN-TP3.html" rel="next">
-<link href="./CMI-CN-TP1.html" rel="prev">
+<link href="./CMI-E2-TP5.html" rel="prev">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -94,6 +58,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -277,7 +270,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-CN-intro.html">Calcul Numérique</a></li><li class="breadcrumb-item"><a href="./CMI-CN-TP2.html">TP2 : Tableaux de données</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Estimateurs pour les données de panel</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -368,7 +361,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-CN-TP2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./CMI-CN-TP2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TP2 : Tableaux de données</span></a>
   </div>
 </li>
@@ -509,7 +502,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-E2-TP6.html" class="sidebar-item-text sidebar-link">
+  <a href="./CMI-E2-TP6.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Estimateurs pour les données de panel</span></span></a>
   </div>
 </li>
@@ -525,13 +518,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#les-verbes-de-base-de-dplyr" id="toc-les-verbes-de-base-de-dplyr" class="nav-link active" data-scroll-target="#les-verbes-de-base-de-dplyr">1. Les verbes de base de <code>dplyr</code></a></li>
-  <li><a href="#enchaîner-des-opérations" id="toc-enchaîner-des-opérations" class="nav-link" data-scroll-target="#enchaîner-des-opérations">2. Enchaîner des opérations</a>
+  <li><a href="#exercices" id="toc-exercices" class="nav-link active" data-scroll-target="#exercices"><span class="header-section-number">6.1</span> Exercices</a>
   <ul class="collapse">
-  <li><a href="#group_by-et-summarise" id="toc-group_by-et-summarise" class="nav-link" data-scroll-target="#group_by-et-summarise"><code>group_by</code> et <code>summarise</code></a></li>
+  <li><a href="#fertil1" id="toc-fertil1" class="nav-link" data-scroll-target="#fertil1"><span class="header-section-number">6.1.1</span> fertil1</a></li>
+  <li><a href="#cps78_85" id="toc-cps78_85" class="nav-link" data-scroll-target="#cps78_85"><span class="header-section-number">6.1.2</span> cps78_85</a></li>
+  <li><a href="#kielmc" id="toc-kielmc" class="nav-link" data-scroll-target="#kielmc"><span class="header-section-number">6.1.3</span> kielmc</a></li>
+  <li><a href="#injury" id="toc-injury" class="nav-link" data-scroll-target="#injury"><span class="header-section-number">6.1.4</span> injury</a></li>
+  <li><a href="#rental" id="toc-rental" class="nav-link" data-scroll-target="#rental"><span class="header-section-number">6.1.5</span> rental</a></li>
+  <li><a href="#jtrain" id="toc-jtrain" class="nav-link" data-scroll-target="#jtrain"><span class="header-section-number">6.1.6</span> jtrain</a></li>
   </ul></li>
-  <li><a href="#jointures" id="toc-jointures" class="nav-link" data-scroll-target="#jointures">3. Jointures</a></li>
-  <li><a href="#bonus" id="toc-bonus" class="nav-link" data-scroll-target="#bonus">4. Bonus</a></li>
+  <li><a href="#murder" id="toc-murder" class="nav-link" data-scroll-target="#murder"><span class="header-section-number">6.2</span> murder</a></li>
   </ul>
 </nav>
     </div>
@@ -539,9 +535,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-CN-intro.html">Calcul Numérique</a></li><li class="breadcrumb-item"><a href="./CMI-CN-TP2.html">TP2 : Tableaux de données</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Estimateurs pour les données de panel</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">TP2 : Tableaux de données</h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Estimateurs pour les données de panel</span></h1>
 </div>
 
 
@@ -558,160 +554,85 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>On commence par charger les extensions et les données nécessaires.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nycflights13)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(flights)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(airports)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(airlines)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<section id="les-verbes-de-base-de-dplyr" class="level2">
-<h2 class="anchored" data-anchor-id="les-verbes-de-base-de-dplyr">1. Les verbes de base de <code>dplyr</code></h2>
-<p><strong>Exercice 1.1</strong></p>
-<p>Sélectionner la dixième ligne du tableau des aéroports (<code>airports</code>).</p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionner les 5 premières lignes de la table <code>airlines</code>.</p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionner l’aéroport avec l’altitude la plus basse.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 1.2</strong></p>
-<p>Sélectionnez les vols du mois de juillet (variable <code>month</code>).</p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionnez les vols avec un retard à l’arrivée (variable <code>arr_delay</code>) compris entre 5 et 15 minutes.</p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionnez les vols des compagnies Delta, United et American (codes <code>DL</code>, <code>UA</code> et <code>AA</code> de la variable <code>carrier</code>).</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 1.3</strong></p>
-<p>Triez la table <code>flights</code> par retard au départ décroissant.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 1.4</strong></p>
-<p>Sélectionnez les colonnes <code>name</code>, <code>lat</code> et <code>lon</code> de la table <code>airports</code></p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionnez toutes les colonnes de la table <code>airports</code> sauf les colonnes <code>tz</code> et <code>tzone</code></p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionnez toutes les colonnes de la table <code>flights</code> dont les noms se terminent par “delay”.</p>
-<div class="solution-exo">
-
-</div>
-<p>Dans la table <code>airports</code>, renommez la colonne <code>alt</code> en <code>altitude</code> et la colonne <code>tzone</code> en <code>fuseau_horaire</code>.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 1.5</strong></p>
-<p>Dans la table <code>airports</code>, la colonne <code>alt</code> contient l’altitude de l’aéroport en pieds. Créer une nouvelle variable <code>alt_m</code> contenant l’altitude en mètres (on convertit des pieds en mètres en les divisant par 3.2808). Sélectionner dans la table obtenue uniquement les deux colonnes <code>alt</code> et <code>alt_m</code>.</p>
-<div class="solution-exo">
-
-</div>
+<p>#TP 6 : Econométrie de Panel</p>
+<ol type="1">
+<li><p>Chargez le package <code>plm</code> et chargez le jeu de données <code>Grunfeld</code>.</p></li>
+<li><p>Estimez le modèle <code>inv ~ value + capital</code> en OLS simple avec la fonction <code>lm</code>.</p></li>
+<li><p>Modifier <code>Grunfeld</code> et créer les moyennes temporelles pour chaque firme <span class="math inline">\(X_{mean}\)</span> pour chaque variable <span class="math inline">\(X\)</span>, puis créer les variables <span class="math inline">\(X_{fe} = X-X_{mean}\)</span>. Estimez le modèle <span class="math inline">\(inv_{mean} ~ value_{mean} + capital_{mean}\)</span>.</p></li>
+<li><p>Modifier <code>Grunfeld</code> et créer les valeurs retardée temporelles pour chaque firme <span class="math inline">\(X_{lag}\)</span> pour chaque variable <span class="math inline">\(X\)</span>, puis créer les variables de différences <span class="math inline">\(X_{fd} = X-X_{lag}\)</span>. Estimez le modèle <span class="math inline">\(inv_{fe} ~ value_{fe} + capital_{fe}\)</span> avec <code>lm</code>. Attention : il faut fixer la constante à 0.</p></li>
+<li><p>Vérifiez les résultats précédents avec la fonction <code>plm</code> avec les arguments <code>model=pooling</code>, <code>model=within</code>, <code>model=fd</code>.</p></li>
+<li><p>Même chose avec la fonction <code>fixest</code>.</p></li>
+</ol>
+<section id="exercices" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="exercices"><span class="header-section-number">6.1</span> Exercices</h2>
+<section id="fertil1" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="fertil1"><span class="header-section-number">6.1.1</span> fertil1</h3>
+<ol type="i">
+<li><p>Estimez le modèle OLS avec <code>kids</code> comme variable dépendente : <code>lm(data=fertil1, kids ~ educ + age + agesq + black + east + northcen + west + farm + othrural + town + y74 + y76 + y78 + y80 + y82 + y84)</code></p></li>
+<li><p>Dans l’équation estimée précédemment, testez si le cadre de vie à l’âge de 16 ans a un effet sur la fertilité (<code>town</code>). (Le groupe de référence est la grande ville). Reportez la valeur de la statistique F et sa p-valeur.</p></li>
+<li><p>Testez si la région (<code>east</code>,<code>northcen</code>, <code>west</code>) du pays dans laquelle on vit à l’âge de 16 ans (le groupe de référence est celui du Sud) a un effet sur la fertilité.</p></li>
+<li><p>Soit u le terme d’erreur de l’équation de la population. Supposez que la variance de u change au cours du temps (mais pas avec educ, age, etc.). Un modèle tenant compte de cela peut s’écrire ainsi : <span class="math display">\[u^2 =\gamma_0 +\gamma_1 y74+\gamma_2 y76+...+\gamma_6 y84+ v\]</span> En utilisant ce modèle, testez l’hétéroscédasticité de u. (Indice : votre test F doit avoir 6 000 et 1 122 degrés de liberté).</p></li>
+<li><p>Ajoutez les termes d’interactione entre <code>educ</code> et les variables binaires sur les années au modèle estimé dans la question i. Expliquez ce que représentent ces termes. Sont-ils conjointement significatifs ?</p></li>
+</ol>
 </section>
-<section id="enchaîner-des-opérations" class="level2">
-<h2 class="anchored" data-anchor-id="enchaîner-des-opérations">2. Enchaîner des opérations</h2>
-<p><strong>Exercice 2.1</strong></p>
-<p>Réécrire le code de l’exercice précédent en utilisant le <em>pipe</em> <code>%&gt;%</code>.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 2.2</strong></p>
-<p>En utilisant le <em>pipe</em>, sélectionnez les vols à destination de San Francico (code <code>SFO</code> de la variable <code>dest</code>) et triez-les selon le retard au départ décroissant (variable <code>dep_delay</code>).</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 2.3</strong></p>
-<p>Sélectionnez les vols des mois de septembre et octobre, conservez les colonnes <code>dest</code> et <code>dep_delay</code>, créez une nouvelle variable <code>retard_h</code> contenant le retard au départ en heures, et conservez uniquement les 5 lignes avec les plus grandes valeurs de <code>retard_h</code>.</p>
-<div class="solution-exo">
-
-</div>
-<section id="group_by-et-summarise" class="level3">
-<h3 class="anchored" data-anchor-id="group_by-et-summarise"><code>group_by</code> et <code>summarise</code></h3>
-<p><strong>Exercice 3.1</strong></p>
-<p>Affichez le nombre de vols par mois.</p>
-<div class="solution-exo">
-
-</div>
-<p>Triez la table résultat selon le nombre de vols croissant.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 3.2</strong></p>
-<p>Calculer la distance moyenne des vols selon l’aéroport de départ (variable <code>origin</code>).</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 3.3</strong></p>
-<p>Calculer le nombre de vols à destination de Los Angeles (code <code>LAX</code>) pour chaque mois de l’année.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 3.4</strong></p>
-<p>Calculer le nombre de vols selon le mois et la destination.</p>
-<div class="solution-exo">
-
-</div>
-<p>Ne conserver, pour chaque mois, que la destination avec le nombre maximal de vols.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 3.5</strong></p>
-<p>Calculer le nombre de vols selon le mois. Ajouter une colonne comportant le pourcentage de vols annuels réalisés par mois.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 3.6</strong></p>
-<p>Calculer, pour chaque aéroport de départ et de destination, la durée moyenne des vols (variable air_time). Pour chaque aéroport de départ, ne conserver que la destination avec la durée moyenne la plus longue.</p>
-<div class="solution-exo">
-
-</div>
+<section id="cps78_85" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="cps78_85"><span class="header-section-number">6.1.2</span> cps78_85</h3>
+<ol type="i">
+<li><p>Estimez le modèle suivant : <span class="math display">\[lwage = y85 + educ + y85 \times educ + exper + exper^2 + union + female + y85 \times female \]</span></p></li>
+<li><p>Comment interprétez-vous le coefficient de <code>y85</code> dans le modèle ? A-t-il une interprétation intéressante ? (Soyez prudent ici ; vous devez expliquer les termes d’interactions y85·educ et y85·female.) iIi. En maintenant fixés les autres facteurs, quel est le pourcentage estimé d’augmentation du salaire nominal d’un homme ayant fait 12 ans d’études ? Proposez une régression permettant d’obtenir un intervalle de confiance pour cette estimation. [Indice : pour obtenir l’intervalle de confiance, remplacez y85·educ par y85(educ – 12)</p></li>
+<li><p>Faites une nouvelle estimation du modèle en exprimant tous les salaires en dollars de 1978. En particulier, définissez le salaire réel comme rwage = wage pour 1978 et comme rwage = wage/1,65 pour 1985. Utilisez maintenant <code>log(rwage)</code> à la place de <code>log(wage)</code>. Quels sont les coefficients qui changent au modèle i. ?</p></li>
+</ol>
+</section>
+<section id="kielmc" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="kielmc"><span class="header-section-number">6.1.3</span> kielmc</h3>
+<p>Pour cet exercice, utilisez les données du fichier kielmc i. La variable dist est la distance entre chaque maison et le site de l’incinérateur, en pieds. Examinez le modèle suivant : <span class="math display">\[log(price) = \beta_0 + \delta_0 y81 + \beta_1 log(dist) + \delta_1 y81· log(dist) + u.\]</span></p>
+<p>Si la construction de l’incinérateur réduit la valeur des maisons proches du site, quel est le signe attendu de <span class="math inline">\(\delta_1\)</span> ? Qu’est-ce que cela signifie si <span class="math inline">\(\beta_1\)</span> &gt; 0 ?</p>
+<ol start="2" type="i">
+<li>Estimez le modèle de la question (i) et reportez les résultats sous la forme habituelle. Interprétez le coefficient de y81· log(dist). Que pouvez-vous en conclure ?</li>
+<li>Ajoutez <code>age</code>, <code>age2</code>, <code>rooms</code>, <code>baths</code>, <code>log(intst)</code>, <code>log(land)</code>, et<code>log(area)</code> à l’équation. Maintenant, que pouvez-vous conclure concernant l’effet de la présence de l’incinérateur sur la valeur des logements ?</li>
+<li>Pourquoi le coefficient de log(dist) est-il positif et statistiquement significatif à la question (ii) mais pas à la question (iii) ? Qu’est-ce que cela nous apprend sur les variables de contrôle introduites à la question (iii) ?</li>
+</ol>
+</section>
+<section id="injury" class="level3" data-number="6.1.4">
+<h3 data-number="6.1.4" class="anchored" data-anchor-id="injury"><span class="header-section-number">6.1.4</span> injury</h3>
+<ol type="i">
+<li>En utilisant les données du Kentucky, estimez le modèle <span class="math display">\[log(durat) =  afchnge + highearn + afchnge*highearn + male + married\]</span></li>
+</ol>
+<p>et y ajouter les variables explicatives jeu entier de variables indicatrices pour les industries et les types d’accidents du travail (les transformer en facteurs au préalables). Comment l’estimation de <code>afchnge.highearn</code> varie lorsque ces autres facteurs sont pris en compte ? Est-ce que cette estimation est statistiquement significative ? ii. Comment interprétez-vous les faibles valeurs de R carré de la question (i) ? Cela signifie-t-il que l’équation est inutile ? iii. Estimez le modèle de i. en utilisant les données pour le Michigan. Comparez les estimations sur le terme d’interaction pour le Michigan et le Kentucky. Est-ce que l’estimation pour le Michigan est statistiquement significative ? Justifiez.</p>
+</section>
+<section id="rental" class="level3" data-number="6.1.5">
+<h3 data-number="6.1.5" class="anchored" data-anchor-id="rental"><span class="header-section-number">6.1.5</span> rental</h3>
+<p>Les données pour les années 1980 et 1990 incluent le prix des loyers ainsi que d’autres variables caractérisant les villes dans lesquelles sont établies des universités. L’idée est de voir si la présence d’un nombre élevé d’étudiants fait augmenter les loyers. Le modèle à effets non observés est : <span class="math display">\[log(rentit) =   y90t + \log(popit) + log(avgincit) +  pctstuit + a_i + u_{it}\]</span>, où <code>pop</code> est la population de la ville, <code>avginc</code> est le revenu moyen, et <code>pctstu</code> est le nombre d’étudiants exprimé en pourcentage de la population de la ville (au cours de l’année scolaire). i. Estimez l’équation par la méthode des MCO sur données empilées et reportez les résultats. Que pouvez-vous conclure ?</p>
+<ol start="2" type="i">
+<li>Les écarts-types estimés que vous avez reportés dans la question (i) sont-ils valides ? Justifiez.</li>
+<li>Maintenant, exprimez l’équation en différences et estimez-la par les MCO. Comparez votre estimation de <span class="math inline">\(\beta_3\)</span> avec celle de la question (ii). Est-ce que la taille relative de la population d’étudiants semble affecter les prix des loyers ?</li>
+<li>Obtenez les écarts-types estimés robustes à l’hétéroscédasticité pour l’équation en différences premières de la question (iii). Cela modifie-t-il vos conclusions ?</li>
+</ol>
+</section>
+<section id="jtrain" class="level3" data-number="6.1.6">
+<h3 data-number="6.1.6" class="anchored" data-anchor-id="jtrain"><span class="header-section-number">6.1.6</span> jtrain</h3>
+<p>Pour cet exercice, nous utilisons les données contenues dans la base JTRAIN pour étudier l’effet des subventions à la formation professionnelle sur la formation professionnelle par employé. Le modèle de base pour les trois années est donné par :</p>
+<p><span class="math display">\[hrsempit = \beta_0 + \delta_1 d88_t + \delta_2 d89_t     + \beta_1 grant_{it} + \beta_2 grant_{i,t–1} + \beta_3 log(employ_{it}) + a_i + u_{it}\]</span></p>
+<ol type="i">
+<li><p>Estimez l’équation en utilisant des effets fixes. Combien de firmes sont utilisées dans cette estimation ? Combien d’observations seraient utilisées si chacune des entreprises disposait de données pour l’ensemble des variables explicatives du modèle (et en particulier, <code>hrsemp</code>) pour chacune des trois années ?</p></li>
+<li><p>Interprétez le coefficient relatif à grant et commentez sa significativité.</p></li>
+<li><p>Cela vous surprend-il que le coefficient associé à grant–1 ne soit pas significatif ? Justifiez.</p></li>
+<li><p>Les grandes entreprises proposent-elles à leurs employés plus ou moins de temps de formation en moyenne ? De quel ordre sont les différences ? (Par exemple, si une entreprise a 10 % d’employés en plus, quel est le changement relatif dans le nombre d’heures allouées à la formation professionnelle ?)</p></li>
+</ol>
 </section>
 </section>
-<section id="jointures" class="level2">
-<h2 class="anchored" data-anchor-id="jointures">3. Jointures</h2>
-<p><strong>Exercice 4.1</strong></p>
-<p>Faire la jointure de la table <code>airlines</code> sur la table <code>flights</code> à l’aide de <code>left_join</code>.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 4.2</strong></p>
-<p>À partir de la table résultat de l’exercice précédent, calculer le retard moyen au départ pour chaque compagnie, et trier selon ce retard décroissant.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 4.3</strong></p>
-<p>Faire la jointure de la table <code>airports</code> sur la table <code>flights</code> en utilisant comme clé le code de l’aéroport de destination.</p>
-<div class="solution-exo">
-
-</div>
-<p>À partir de cette table, afficher pour chaque mois le nom de l’aéroport de destination ayant eu le plus petit nombre de vol.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 4.4</strong></p>
-<p>Créer une table indiquant, pour chaque vol, uniquement le nom de l’aéroport de départ et celui de l’aéroport d’arrivée.</p>
-<div class="solution-exo">
-
-</div>
-</section>
-<section id="bonus" class="level2">
-<h2 class="anchored" data-anchor-id="bonus">4. Bonus</h2>
-<p><strong>Exercice 5.1</strong></p>
-<p>Calculer le nombre de vols selon l’aéroport de destination, et fusionnez la table <code>airports</code> sur le résultat avec <code>left_join</code>. Stocker le résultat final dans un objet nommé <code>flights_dest</code>.</p>
+<section id="murder" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="murder"><span class="header-section-number">6.2</span> murder</h2>
+<p>Nous utilisons les données étatiques relatives aux taux de criminalité et d’exécution issues du fichier MURDER pour l’exercice qui suit.</p>
+<ol type="i">
+<li><p>Considérons le modèle à effets inobservés suivant : <span class="math display">\[mrdrte_{it} = \eta_t + \beta_1 exec_{it} + \beta_2 unem_{it} + a_i + u_{it}\]</span> avec <span class="math inline">\(\eta_t\)</span> les différentes variables indicatrices temporelles et ai l’effet inobservé relatif à l’appartenance à un État donné. Si les exécutions passées de personnes jugées coupables de meurtres avaient eu un effet dissuasif, quel aurait dû être le signe de <span class="math inline">\(\beta_1\)</span> ? À votre avis, quel devrait être le signe de <span class="math inline">\(\beta_2\)</span> ? Justifiez.</p></li>
+<li><p>En restreignant l’étude aux années 1990 et 1993, estimez l’équation considérée à la question (i) au moyen d’une estimation par les MCO sur les données empilées. Ignorez le problème de corrélation sérielle dans le terme d’erreur composé. Les résultats d’estimation sont-ils en faveur de l’hypothèse d’un effet dissuasif de la peine capitale ?</p></li>
+<li><p>En vous focalisant toujours sur les années 1990 et 1993, estimez maintenant le modèle au moyen d’effets fixes. Vous pouvez recourir aux différences premières puisque vous n’utilisez que deux années de données. Vos résultats sont-ils maintenant en faveur de l’hypothèse d’un effet dissuasif de la peine capitale ? Ce résultat est-il robuste ?</p></li>
+<li><p>Calculez les écarts-types estimés robustes à l’hétéroscédasticité des paramètres estimés du modèle décrit en question (ii).</p></li>
+<li><p>Identifiez l’État qui présente le nombre le plus important d’exécutions en 1993. (La variable exec correspond au nombre total d’exécutions réalisées en 1991, 1992, et 1993.) Identifiez le deuxième État en matière d’exécutions en 1993. Combien d’exécutions les séparent ?</p></li>
+<li><p>Estimez l’équation par la méthode des différences premières, en retirant l’État du Texas de votre ana- lyse. Calculez les écarts-types standard et ceux robustes à l’hétéroscédasticité. Que trouvez-vous ? Que se passe-t-il ?</p></li>
+<li><p>Utilisez maintenant les trois années de données dont vous disposez et estimez le modèle à effets fixes. Introduisez l’État du Texas dans votre analyse. Discutez la taille et la significativité de l’effet dissuasif de la peine capitale comparativement aux effets mis en exergue dans les questions précédentes lorsque les seules années 1990 et 1993 étaient considérées.</p></li>
+</ol>
 
 
 </section>
@@ -1132,14 +1053,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./CMI-CN-TP1.html" class="pagination-link" aria-label="TP1 : Commandes de base de R">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">TP1 : Commandes de base de R</span>
+      <a href="./CMI-E2-TP5.html" class="pagination-link" aria-label="Tests sur l'hétéroscédasticité">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tests sur l’hétéroscédasticité</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./CMI-CN-TP3.html" class="pagination-link" aria-label="TP3 : Premiers Graphiques">
-        <span class="nav-page-text">TP3 : Premiers Graphiques</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

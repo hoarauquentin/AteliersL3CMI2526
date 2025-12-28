@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>TP2 : Tableaux de données – Ateliers L3 CMI</title>
+<title>2&nbsp; Exercices – Ateliers L3 CMI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,8 +60,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
-<link href="./CMI-CN-TP3.html" rel="next">
-<link href="./CMI-CN-TP1.html" rel="prev">
+<link href="./CMI-E2-TP3.html" rel="next">
+<link href="./CMI-E2-TP1.html" rel="prev">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -94,6 +94,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -277,7 +306,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-CN-intro.html">Calcul Numérique</a></li><li class="breadcrumb-item"><a href="./CMI-CN-TP2.html">TP2 : Tableaux de données</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Exercices</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -368,7 +397,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-CN-TP2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./CMI-CN-TP2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TP2 : Tableaux de données</span></a>
   </div>
 </li>
@@ -485,7 +514,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-E2-TP2.html" class="sidebar-item-text sidebar-link">
+  <a href="./CMI-E2-TP2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Exercices</span></span></a>
   </div>
 </li>
@@ -525,13 +554,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#les-verbes-de-base-de-dplyr" id="toc-les-verbes-de-base-de-dplyr" class="nav-link active" data-scroll-target="#les-verbes-de-base-de-dplyr">1. Les verbes de base de <code>dplyr</code></a></li>
-  <li><a href="#enchaîner-des-opérations" id="toc-enchaîner-des-opérations" class="nav-link" data-scroll-target="#enchaîner-des-opérations">2. Enchaîner des opérations</a>
-  <ul class="collapse">
-  <li><a href="#group_by-et-summarise" id="toc-group_by-et-summarise" class="nav-link" data-scroll-target="#group_by-et-summarise"><code>group_by</code> et <code>summarise</code></a></li>
-  </ul></li>
-  <li><a href="#jointures" id="toc-jointures" class="nav-link" data-scroll-target="#jointures">3. Jointures</a></li>
-  <li><a href="#bonus" id="toc-bonus" class="nav-link" data-scroll-target="#bonus">4. Bonus</a></li>
+  <li><a href="#gpa1" id="toc-gpa1" class="nav-link active" data-scroll-target="#gpa1"><span class="header-section-number">2.1</span> gpa1</a></li>
+  <li><a href="#wage2" id="toc-wage2" class="nav-link" data-scroll-target="#wage2"><span class="header-section-number">2.2</span> wage2</a></li>
+  <li><a href="#mlb1" id="toc-mlb1" class="nav-link" data-scroll-target="#mlb1"><span class="header-section-number">2.3</span> mlb1</a></li>
+  <li><a href="#gpa2" id="toc-gpa2" class="nav-link" data-scroll-target="#gpa2"><span class="header-section-number">2.4</span> gpa2</a></li>
+  <li><a href="#charity" id="toc-charity" class="nav-link" data-scroll-target="#charity"><span class="header-section-number">2.5</span> charity</a></li>
+  <li><a href="#catholic" id="toc-catholic" class="nav-link" data-scroll-target="#catholic"><span class="header-section-number">2.6</span> catholic</a></li>
+  <li><a href="#apple" id="toc-apple" class="nav-link" data-scroll-target="#apple"><span class="header-section-number">2.7</span> apple</a></li>
   </ul>
 </nav>
     </div>
@@ -539,9 +568,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-CN-intro.html">Calcul Numérique</a></li><li class="breadcrumb-item"><a href="./CMI-CN-TP2.html">TP2 : Tableaux de données</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Exercices</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">TP2 : Tableaux de données</h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Exercices</span></h1>
 </div>
 
 
@@ -558,160 +587,97 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>On commence par charger les extensions et les données nécessaires.</p>
+<p>#TP 2 : Régression multiple et variables binaires</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nycflights13)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(flights)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(airports)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(airlines)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo=</span><span class="cn">FALSE</span>, <span class="at">warning=</span><span class="cn">FALSE</span>, <span class="at">message=</span><span class="cn">FALSE</span>, <span class="at">eval=</span><span class="cn">FALSE</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(wooldridge)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(AER)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stargazer)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fixest)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<section id="les-verbes-de-base-de-dplyr" class="level2">
-<h2 class="anchored" data-anchor-id="les-verbes-de-base-de-dplyr">1. Les verbes de base de <code>dplyr</code></h2>
-<p><strong>Exercice 1.1</strong></p>
-<p>Sélectionner la dixième ligne du tableau des aéroports (<code>airports</code>).</p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionner les 5 premières lignes de la table <code>airlines</code>.</p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionner l’aéroport avec l’altitude la plus basse.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 1.2</strong></p>
-<p>Sélectionnez les vols du mois de juillet (variable <code>month</code>).</p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionnez les vols avec un retard à l’arrivée (variable <code>arr_delay</code>) compris entre 5 et 15 minutes.</p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionnez les vols des compagnies Delta, United et American (codes <code>DL</code>, <code>UA</code> et <code>AA</code> de la variable <code>carrier</code>).</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 1.3</strong></p>
-<p>Triez la table <code>flights</code> par retard au départ décroissant.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 1.4</strong></p>
-<p>Sélectionnez les colonnes <code>name</code>, <code>lat</code> et <code>lon</code> de la table <code>airports</code></p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionnez toutes les colonnes de la table <code>airports</code> sauf les colonnes <code>tz</code> et <code>tzone</code></p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionnez toutes les colonnes de la table <code>flights</code> dont les noms se terminent par “delay”.</p>
-<div class="solution-exo">
-
-</div>
-<p>Dans la table <code>airports</code>, renommez la colonne <code>alt</code> en <code>altitude</code> et la colonne <code>tzone</code> en <code>fuseau_horaire</code>.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 1.5</strong></p>
-<p>Dans la table <code>airports</code>, la colonne <code>alt</code> contient l’altitude de l’aéroport en pieds. Créer une nouvelle variable <code>alt_m</code> contenant l’altitude en mètres (on convertit des pieds en mètres en les divisant par 3.2808). Sélectionner dans la table obtenue uniquement les deux colonnes <code>alt</code> et <code>alt_m</code>.</p>
-<div class="solution-exo">
-
-</div>
+<section id="gpa1" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="gpa1"><span class="header-section-number">2.1</span> gpa1</h2>
+<ol type="i">
+<li><p>Estimez le modèle : <span class="math display">\[colGPA = PC + hsGPA + ACT\]</span>.</p></li>
+<li><p>Ajoutez les variables <code>mothcoll</code> et <code>fathcoll</code> et reportez les résultats d’estimation. Qu’observez-vous pour le coefficient de la variable relative à la possession d’un PC ? <code>PC</code> apparaît-il toujours statistiquement significatif ?</p></li>
+<li><p>Testez pour la significativité jointe des coefficients associés aux variables <code>mothcoll</code> et <code>fathcoll</code> issues de l’équation en (i) en mentionnant les p-valeurs.</p></li>
+<li><p>Ajoutez <code>hsGPA^2</code> au modèle décrit en (i), jugez-vous cette généralisation pertinente ?</p></li>
+</ol>
 </section>
-<section id="enchaîner-des-opérations" class="level2">
-<h2 class="anchored" data-anchor-id="enchaîner-des-opérations">2. Enchaîner des opérations</h2>
-<p><strong>Exercice 2.1</strong></p>
-<p>Réécrire le code de l’exercice précédent en utilisant le <em>pipe</em> <code>%&gt;%</code>.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 2.2</strong></p>
-<p>En utilisant le <em>pipe</em>, sélectionnez les vols à destination de San Francico (code <code>SFO</code> de la variable <code>dest</code>) et triez-les selon le retard au départ décroissant (variable <code>dep_delay</code>).</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 2.3</strong></p>
-<p>Sélectionnez les vols des mois de septembre et octobre, conservez les colonnes <code>dest</code> et <code>dep_delay</code>, créez une nouvelle variable <code>retard_h</code> contenant le retard au départ en heures, et conservez uniquement les 5 lignes avec les plus grandes valeurs de <code>retard_h</code>.</p>
-<div class="solution-exo">
-
-</div>
-<section id="group_by-et-summarise" class="level3">
-<h3 class="anchored" data-anchor-id="group_by-et-summarise"><code>group_by</code> et <code>summarise</code></h3>
-<p><strong>Exercice 3.1</strong></p>
-<p>Affichez le nombre de vols par mois.</p>
-<div class="solution-exo">
-
-</div>
-<p>Triez la table résultat selon le nombre de vols croissant.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 3.2</strong></p>
-<p>Calculer la distance moyenne des vols selon l’aéroport de départ (variable <code>origin</code>).</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 3.3</strong></p>
-<p>Calculer le nombre de vols à destination de Los Angeles (code <code>LAX</code>) pour chaque mois de l’année.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 3.4</strong></p>
-<p>Calculer le nombre de vols selon le mois et la destination.</p>
-<div class="solution-exo">
-
-</div>
-<p>Ne conserver, pour chaque mois, que la destination avec le nombre maximal de vols.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 3.5</strong></p>
-<p>Calculer le nombre de vols selon le mois. Ajouter une colonne comportant le pourcentage de vols annuels réalisés par mois.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 3.6</strong></p>
-<p>Calculer, pour chaque aéroport de départ et de destination, la durée moyenne des vols (variable air_time). Pour chaque aéroport de départ, ne conserver que la destination avec la durée moyenne la plus longue.</p>
-<div class="solution-exo">
-
-</div>
+<section id="wage2" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="wage2"><span class="header-section-number">2.2</span> wage2</h2>
+<ol type="i">
+<li>Estimez le modèle suivant :</li>
+</ol>
+<p><span class="math display">\[log(wage) = \beta_0 + \beta_1 educ + \beta_2 exper + \beta_3 tenure + \beta_4 married + \beta_5 black + \beta_6 south + \beta_7 urban + u\]</span></p>
+<p>et reportez les résultats. Quelle est la différence approximative de salaire mensuel entre les afro-américains et les non afro-américains, toutes choses égales par ailleurs ? Cette différence est-elle statistiquement significative ?</p>
+<ol start="2" type="i">
+<li><p>Ajoutez les variables <span class="math inline">\(exper^2\)</span> et <span class="math inline">\(tenure^2\)</span> à l’équation précédente et montrez que les coefficients associés ne sont pas conjointement statistiquement significatifs au seuil de 5 %.</p></li>
+<li><p>Amendez le modèle original pour permettre aux rendements de l’éducation de dépendre des origines ethniques et testez si effectivement les rendements de l’éducation en dépendent.</p></li>
+<li><p>À nouveau, partez du modèle de base et amendez le ensuite en autorisant les salaires à différer selon les groupes : mariés et africains américains, mariés et non africains américains, non mariés et africains américains, non mariés et non africains américains. Quelle est la différence de salaire estimée entre les mariés afro-américains et non afro-américains ?</p></li>
+</ol>
 </section>
+<section id="mlb1" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="mlb1"><span class="header-section-number">2.3</span> mlb1</h2>
+<p>Un modèle permettant de caractériser les salaires des joueurs de la ligue majeure de baseball aux États-Unis est donné par :</p>
+<p><span class="math display">\[log(salary) = \beta_0 + \beta_1 years + \beta_2 gamesyr + \beta_3 bavg + \beta_4 hrunsyr +\beta_5 rbisyr \]</span> <span class="math display">\[ + \beta_6 runsyr + \beta_7 fldperc + \beta_8 allstar + \beta_9 frstbase + \beta_{10} scndbase \]</span> <span class="math display">\[ + beta_{11} thrdbase + \beta_{12} shrtstop + \beta_{13} catcher + u \]</span></p>
+<p>avec <code>outfield</code> (joueur de champ extérieur) le groupe de référence.</p>
+<ol type="i">
+<li>Établissez formellement l’hypothèse nulle selon laquelle, toutes choses égales par ailleurs, attrapeurs (<code>catcher</code>) et joueurs de champ extérieur gagnent en moyenne le même revenu. Calculez le salaire moyen par groupe.</li>
+<li>Testez ensuite cette hypothèse à partir des données contenues dans la base <code>mlb1</code> et commentez l’étendue du différentiel de salaire.</li>
+<li>Établissez formellement et testez l’hypothèse selon laquelle il n’y a aucune différence de salaire moyen selon les postes occupés, une fois l’ensemble des variables de contrôle prises en compte.</li>
+<li>Les résultats tirés des questions (i) et (ii) sont-ils cohérents ? Dans le cas contraire, expliquez le mécanisme sous-jacent.</li>
+</ol>
 </section>
-<section id="jointures" class="level2">
-<h2 class="anchored" data-anchor-id="jointures">3. Jointures</h2>
-<p><strong>Exercice 4.1</strong></p>
-<p>Faire la jointure de la table <code>airlines</code> sur la table <code>flights</code> à l’aide de <code>left_join</code>.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 4.2</strong></p>
-<p>À partir de la table résultat de l’exercice précédent, calculer le retard moyen au départ pour chaque compagnie, et trier selon ce retard décroissant.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 4.3</strong></p>
-<p>Faire la jointure de la table <code>airports</code> sur la table <code>flights</code> en utilisant comme clé le code de l’aéroport de destination.</p>
-<div class="solution-exo">
-
-</div>
-<p>À partir de cette table, afficher pour chaque mois le nom de l’aéroport de destination ayant eu le plus petit nombre de vol.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 4.4</strong></p>
-<p>Créer une table indiquant, pour chaque vol, uniquement le nom de l’aéroport de départ et celui de l’aéroport d’arrivée.</p>
-<div class="solution-exo">
-
-</div>
+<section id="gpa2" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="gpa2"><span class="header-section-number">2.4</span> gpa2</h2>
+<ol type="i">
+<li>On considère le modèle suivant : <span class="math display">\[colgpa=\beta_0 +\beta_1 hsize+\beta_2 hsize^2 +\beta_3 hsperc+\beta_4 sat  + \beta_5 female + \beta_6 athlete + u, \]</span></li>
+</ol>
+<p>avec <code>colgpa</code> la moyenne des notes obtenues en premier cycle à l’université, <code>hsize</code> la taille de la classe au lycée, en centaines, <code>hsperc</code> le quantile dans lequel se situe l’étudiant à l’issue de son parcours universitaire, <code>sat</code> le score SAT, <code>female</code> une variable binaire relative au genre, et <code>athlete</code> une variable binaire prenant la valeur un si l’étudiant est un athlète.</p>
+<p>Quelles sont vos attentes relativement aux valeurs des différents coefficients du modèle ? Quels sont ceux pour lesquels vous avez des doutes ?</p>
+<ol start="2" type="i">
+<li>Estimez l’équation mentionnée en question (i) et reportez les résultats de façon standard. Quel est le différentiel de GPA estimé entre les athlètes et les non athlètes ? Cette différence est-elle statistiquement significative ?</li>
+<li>Enlevez sat du modèle et ré-estimez l’équation. Quel est maintenant l’effet estimé du statut d’athlète ? Discutez les raisons pour lesquelles ces résultats diffèrent de ceux présentées à la question (ii).</li>
+<li>Dans le modèle décrit à la question (i), autorisez l’impact du statut d’athlète à différer selon le genre et testez l’hypothèse nulle d’absence de différence entre les femmes et les hommes athlètes, toutes choses égales par ailleurs.</li>
+<li>L’effet de sat sur colgpa diffère-t-il selon le genre ? Justifiez votre réponse.</li>
+</ol>
 </section>
-<section id="bonus" class="level2">
-<h2 class="anchored" data-anchor-id="bonus">4. Bonus</h2>
-<p><strong>Exercice 5.1</strong></p>
-<p>Calculer le nombre de vols selon l’aéroport de destination, et fusionnez la table <code>airports</code> sur le résultat avec <code>left_join</code>. Stocker le résultat final dans un objet nommé <code>flights_dest</code>.</p>
+<section id="charity" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="charity"><span class="header-section-number">2.5</span> charity</h2>
+<p>Utilisez les données contenues dans le fichier <code>charity</code> pour répondre à cette question. La variable respond est une variable indicatrice égale à un si un individu a répondu par un don à la sollicitation par mail la plus récente d’une association caritative. La variable <code>resplast</code> est une variable indicatrice égale à un si un individu a répondu à la sollicitation par mail précédente, <code>avggift</code> est la moyenne des dons passés (en florins néerlandais) et <code>propresp</code> est le temps relatif passé par la personne à répondre aux sollicitations passées.</p>
+<ol type="i">
+<li>Estimez un modèle à probabilités linéaires expliquant respond en fonction de <code>resplast</code> et <code>avggift.</code> Reportez les résultats sous une forme usuelle et interprétez le coefficient de resplast.</li>
+<li>La valeur moyenne des dons passés semble-t-elle affecter la probabilité de réponse ?</li>
+<li>Ajoutez la variable propresp au modèle et interprétez son coefficient. (Soyez attentif ici : une hausse de une unité de <code>propresp</code> est le changement le plus important possible.)</li>
+<li>Qu’est-il advenu du coefficient de <code>resplast</code> lorsque <code>propresp</code> a été ajouté au modèle de régression ? Cela a-t-il du sens ?</li>
+<li>Ajoutez <code>mailsyear</code>, le nombre de mails envoyés par an, au modèle. Evaluez l’effet associé ? Pourquoi n’est-ce sans doute pas une mesure correcte de l’effet causal de l’envoi ciblé de mails (ou « publipostage ») sur la probabilité de réponse ?</li>
+</ol>
+</section>
+<section id="catholic" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="catholic"><span class="header-section-number">2.6</span> catholic</h2>
+<ol type="i">
+<li>Considérez l’échantillon complet et identifiez quel pourcentage d’étudiants sont régulièrement inscrit dans un établissement secondaire d’obédience catholique. Quelle est la moyenne de la variable math12 ?</li>
+<li>Réalisez une régression simple de math12 sur cathhs et reportez les résultats selon les normes usuelles. Interprétez vos résultats.</li>
+<li>Ajoutez maintenant les variables <code>lfaminc</code>, <code>motheduc</code>, et <code>fatheduc</code> au modèle de régression précédent. De combien d’observations disposez-vous pour cette régression ? Qu’advient-il du coefficient de la variable <code>cathhs</code>, apparaît-il significatif ?</li>
+<li>Reprenez le cas d’une régression simple de <code>math12</code> sur <code>cathhs</code>, en restreignant les observations à celles utilisées dans la régression multiple de la question (iii). Certaines de vos conclusions en sont-elles modifiées ?</li>
+<li>À partir du modèle de régression étudié en question (iii), ajoutez des variables d’interaction entre <code>cathhs</code> et chacune des autres variables explicatives du modèle. Ces variables d’interaction sont-elles individuellement et/ou conjointement significatives ?</li>
+<li>Qu’advient-il du coefficient de <code>cathhs</code> dans la régression de la question (v). Expliquez pourquoi ce coefficient n’est pas très intéressant à étudier.</li>
+<li>Calculez l’effet marginal moyen de <code>cathhs</code> dans le model estimé en question (v). Comparez les résultats obtenus avec les coefficients de <code>cathhs</code> estimés dans la parties (iii) et (v).</li>
+</ol>
+</section>
+<section id="apple" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="apple"><span class="header-section-number">2.7</span> apple</h2>
+<ol type="i">
+<li><p>Définissez une variable binaire <span class="math inline">\(ecobuy = 1\)</span> si <span class="math inline">\(ecolbs &gt; 0\)</span> et <span class="math inline">\(ecobuy = 0\)</span> si <span class="math inline">\(ecolbs = 0\)</span>. En d’autres termes, <code>ecobuy</code> indique si, à prix donnés, une famille consomme des pommes issues de l’agriculture biologique. Combien de familles affirment acheter des pommes labélisées bio ?</p></li>
+<li><p>Estimez le modèle à probabilités linéaires suivant : <span class="math display">\[ ecobuy = \beta_0 + \beta_1 ecoprc + \beta_2 regprc + \beta_3 faminc + \beta_4 hhsize+ \beta_5 educ+ \beta_6 age \]</span> et reportez les résultats sous une forme usuelle. Interprétez avec soin les coefficients associés aux variables de prix.</p></li>
+<li><p>Y-a-t-il des variables non associées aux prix qui soient conjointement significatives dans le modèle ? (Utilisez les statistiques de Fisher usuelles même si celles-ci ne sont pas valides en présence d’hétéroscédasticité.) Quelle variable explicative autre que les variables de prix semblent avoir l’effet le plus important sur la décision de consommer des pommes issues de l’agriculture biologique ? Cela vous paraît-il avoir du sens ?</p></li>
+<li><p>À partir du modèle discuté dans la question (ii), remplacez faminc par <code>log(faminc)</code>. Lequel des deux modèles vous semble le mieux expliquer vos données celui introduisant <code>faminc</code> ou <code>log(faminc)</code> ? Interprétez le coefficient associé à <code>log(faminc)</code>.</p></li>
+<li><p>Sur base des estimations réalisées en question (iv), combien des probabilités estimées s’avèrent négatives ? Combien s’avèrent supérieures à l’unité ? En quoi cela devrait-il vous interpeler ?</p></li>
+<li><p>Revenons à l’estimation de la question (iv), calculez le pourcentage de prédictions correctes pour chacune des valeurs possible de la variable indépendante c’est-à-dire <code>ecobuy = 0</code> puis <code>ecobuy = 1</code>. Quel résultat s’avère le mieux prédit par le modèle ?</p></li>
+</ol>
 
 
 </section>
@@ -1132,13 +1098,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./CMI-CN-TP1.html" class="pagination-link" aria-label="TP1 : Commandes de base de R">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">TP1 : Commandes de base de R</span>
+      <a href="./CMI-E2-TP1.html" class="pagination-link" aria-label="TP 1 : Modèle de régression multiple&quot;">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TP 1 : Modèle de régression multiple”</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./CMI-CN-TP3.html" class="pagination-link" aria-label="TP3 : Premiers Graphiques">
-        <span class="nav-page-text">TP3 : Premiers Graphiques</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./CMI-E2-TP3.html" class="pagination-link" aria-label="Multicolinéarité">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Multicolinéarité</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

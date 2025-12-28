@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>TP2 : Tableaux de données – Ateliers L3 CMI</title>
+<title>4&nbsp; Tests sur la forme fonctionnelle – Ateliers L3 CMI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,48 +20,13 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
-<link href="./CMI-CN-TP3.html" rel="next">
-<link href="./CMI-CN-TP1.html" rel="prev">
+<link href="./CMI-E2-TP5.html" rel="next">
+<link href="./CMI-E2-TP3.html" rel="prev">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -94,6 +59,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -277,7 +271,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-CN-intro.html">Calcul Numérique</a></li><li class="breadcrumb-item"><a href="./CMI-CN-TP2.html">TP2 : Tableaux de données</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tests sur la forme fonctionnelle</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -368,7 +362,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-CN-TP2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./CMI-CN-TP2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TP2 : Tableaux de données</span></a>
   </div>
 </li>
@@ -497,7 +491,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-E2-TP4.html" class="sidebar-item-text sidebar-link">
+  <a href="./CMI-E2-TP4.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tests sur la forme fonctionnelle</span></span></a>
   </div>
 </li>
@@ -525,13 +519,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#les-verbes-de-base-de-dplyr" id="toc-les-verbes-de-base-de-dplyr" class="nav-link active" data-scroll-target="#les-verbes-de-base-de-dplyr">1. Les verbes de base de <code>dplyr</code></a></li>
-  <li><a href="#enchaîner-des-opérations" id="toc-enchaîner-des-opérations" class="nav-link" data-scroll-target="#enchaîner-des-opérations">2. Enchaîner des opérations</a>
+  <li><a href="#test-de-ramsey-reset" id="toc-test-de-ramsey-reset" class="nav-link active" data-scroll-target="#test-de-ramsey-reset"><span class="header-section-number">4.0.1</span> Test de Ramsey (RESET)</a></li>
+  <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices"><span class="header-section-number">4.1</span> Exercices</a>
   <ul class="collapse">
-  <li><a href="#group_by-et-summarise" id="toc-group_by-et-summarise" class="nav-link" data-scroll-target="#group_by-et-summarise"><code>group_by</code> et <code>summarise</code></a></li>
+  <li><a href="#kielmc" id="toc-kielmc" class="nav-link" data-scroll-target="#kielmc"><span class="header-section-number">4.1.1</span> kielmc</a></li>
+  <li><a href="#wage1" id="toc-wage1" class="nav-link" data-scroll-target="#wage1"><span class="header-section-number">4.1.2</span> wage1</a></li>
+  <li><a href="#gpa2" id="toc-gpa2" class="nav-link" data-scroll-target="#gpa2"><span class="header-section-number">4.1.3</span> gpa2</a></li>
+  <li><a href="#hprice1" id="toc-hprice1" class="nav-link" data-scroll-target="#hprice1"><span class="header-section-number">4.1.4</span> hprice1</a></li>
+  <li><a href="#vote1" id="toc-vote1" class="nav-link" data-scroll-target="#vote1"><span class="header-section-number">4.1.5</span> vote1</a></li>
+  <li><a href="#hprice1-1" id="toc-hprice1-1" class="nav-link" data-scroll-target="#hprice1-1"><span class="header-section-number">4.1.6</span> hprice1</a></li>
+  <li><a href="#nbsal" id="toc-nbsal" class="nav-link" data-scroll-target="#nbsal"><span class="header-section-number">4.1.7</span> nbsal</a></li>
+  <li><a href="#bwght2" id="toc-bwght2" class="nav-link" data-scroll-target="#bwght2"><span class="header-section-number">4.1.8</span> bwght2</a></li>
+  <li><a href="#apple" id="toc-apple" class="nav-link" data-scroll-target="#apple"><span class="header-section-number">4.1.9</span> apple</a></li>
   </ul></li>
-  <li><a href="#jointures" id="toc-jointures" class="nav-link" data-scroll-target="#jointures">3. Jointures</a></li>
-  <li><a href="#bonus" id="toc-bonus" class="nav-link" data-scroll-target="#bonus">4. Bonus</a></li>
   </ul>
 </nav>
     </div>
@@ -539,9 +539,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-CN-intro.html">Calcul Numérique</a></li><li class="breadcrumb-item"><a href="./CMI-CN-TP2.html">TP2 : Tableaux de données</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tests sur la forme fonctionnelle</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">TP2 : Tableaux de données</h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tests sur la forme fonctionnelle</span></h1>
 </div>
 
 
@@ -558,162 +558,147 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>On commence par charger les extensions et les données nécessaires.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nycflights13)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(flights)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(airports)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(airlines)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<section id="les-verbes-de-base-de-dplyr" class="level2">
-<h2 class="anchored" data-anchor-id="les-verbes-de-base-de-dplyr">1. Les verbes de base de <code>dplyr</code></h2>
-<p><strong>Exercice 1.1</strong></p>
-<p>Sélectionner la dixième ligne du tableau des aéroports (<code>airports</code>).</p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionner les 5 premières lignes de la table <code>airlines</code>.</p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionner l’aéroport avec l’altitude la plus basse.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 1.2</strong></p>
-<p>Sélectionnez les vols du mois de juillet (variable <code>month</code>).</p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionnez les vols avec un retard à l’arrivée (variable <code>arr_delay</code>) compris entre 5 et 15 minutes.</p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionnez les vols des compagnies Delta, United et American (codes <code>DL</code>, <code>UA</code> et <code>AA</code> de la variable <code>carrier</code>).</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 1.3</strong></p>
-<p>Triez la table <code>flights</code> par retard au départ décroissant.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 1.4</strong></p>
-<p>Sélectionnez les colonnes <code>name</code>, <code>lat</code> et <code>lon</code> de la table <code>airports</code></p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionnez toutes les colonnes de la table <code>airports</code> sauf les colonnes <code>tz</code> et <code>tzone</code></p>
-<div class="solution-exo">
-
-</div>
-<p>Sélectionnez toutes les colonnes de la table <code>flights</code> dont les noms se terminent par “delay”.</p>
-<div class="solution-exo">
-
-</div>
-<p>Dans la table <code>airports</code>, renommez la colonne <code>alt</code> en <code>altitude</code> et la colonne <code>tzone</code> en <code>fuseau_horaire</code>.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 1.5</strong></p>
-<p>Dans la table <code>airports</code>, la colonne <code>alt</code> contient l’altitude de l’aéroport en pieds. Créer une nouvelle variable <code>alt_m</code> contenant l’altitude en mètres (on convertit des pieds en mètres en les divisant par 3.2808). Sélectionner dans la table obtenue uniquement les deux colonnes <code>alt</code> et <code>alt_m</code>.</p>
-<div class="solution-exo">
-
-</div>
+<p>#TP 4 : Forme fonctionnelle</p>
+<p>On considère le modèle linéaire suivant :</p>
+<p><span class="math display">\[ Y = X'\beta + u\]</span></p>
+<section id="test-de-ramsey-reset" class="level3" data-number="4.0.1">
+<h3 data-number="4.0.1" class="anchored" data-anchor-id="test-de-ramsey-reset"><span class="header-section-number">4.0.1</span> Test de Ramsey (RESET)</h3>
+<p>Le test de Ramsey cherche à tester si des spécifications non-linéaires n’apportent pas un pouvoir explicatif supérieur au modèle linéaire. Pour ce faire, on test si <span class="math inline">\((X'\beta)^2\)</span>, <span class="math inline">\((X'\beta)^3\)</span>, …, <span class="math inline">\((X'\beta)^m\)</span> on un effet significatif sur <span class="math inline">\(Y\)</span>.</p>
+<ol type="1">
+<li>Dans R, partons du jeu de données <code>hprice1</code> du package wooldridge, et estimez le modèle :</li>
+</ol>
+<p><span class="math display">\[ price = \beta_0 + \beta_1 lotsize + \beta_2 sqrft + \beta_3 bdrms \]</span> Puis le modèle augmenté :</p>
+<p><span class="math display">\[ price = \beta_0 + \beta_1 lotsize + \beta_2 sqrft + \beta_3 bdrms + \beta_4 \widehat{price}^2 + \beta_5 \widehat{price}^3\]</span></p>
+<p>avec <span class="math inline">\(\widehat{price}\)</span> la prédiction de <span class="math inline">\(price\)</span> du premier modèle.</p>
+<ol start="2" type="1">
+<li><p>Effectuez un test de Fisher de restrictions aux coefficients <span class="math inline">\(\beta_4 = \beta_5 = 0\)</span>. Construisez ce test manuellement et vérifiez avec les résultats obtenus avec la fonction du package <code>car</code>.</p></li>
+<li><p>Généralisez les étapes ci-dessus en construisant une fonction qui prend en argument une régression obtenu avec la fonction et un entier <span class="math inline">\(m\)</span> qui donne l’exposant maximal. Votre fonction renvoie les résultats du test de Fisher.</p></li>
+<li><p>Vérifiez vos résultats avec la fonction du package <code>lmtest</code>.</p></li>
+</ol>
 </section>
-<section id="enchaîner-des-opérations" class="level2">
-<h2 class="anchored" data-anchor-id="enchaîner-des-opérations">2. Enchaîner des opérations</h2>
-<p><strong>Exercice 2.1</strong></p>
-<p>Réécrire le code de l’exercice précédent en utilisant le <em>pipe</em> <code>%&gt;%</code>.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 2.2</strong></p>
-<p>En utilisant le <em>pipe</em>, sélectionnez les vols à destination de San Francico (code <code>SFO</code> de la variable <code>dest</code>) et triez-les selon le retard au départ décroissant (variable <code>dep_delay</code>).</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 2.3</strong></p>
-<p>Sélectionnez les vols des mois de septembre et octobre, conservez les colonnes <code>dest</code> et <code>dep_delay</code>, créez une nouvelle variable <code>retard_h</code> contenant le retard au départ en heures, et conservez uniquement les 5 lignes avec les plus grandes valeurs de <code>retard_h</code>.</p>
-<div class="solution-exo">
-
-</div>
-<section id="group_by-et-summarise" class="level3">
-<h3 class="anchored" data-anchor-id="group_by-et-summarise"><code>group_by</code> et <code>summarise</code></h3>
-<p><strong>Exercice 3.1</strong></p>
-<p>Affichez le nombre de vols par mois.</p>
-<div class="solution-exo">
-
-</div>
-<p>Triez la table résultat selon le nombre de vols croissant.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 3.2</strong></p>
-<p>Calculer la distance moyenne des vols selon l’aéroport de départ (variable <code>origin</code>).</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 3.3</strong></p>
-<p>Calculer le nombre de vols à destination de Los Angeles (code <code>LAX</code>) pour chaque mois de l’année.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 3.4</strong></p>
-<p>Calculer le nombre de vols selon le mois et la destination.</p>
-<div class="solution-exo">
-
-</div>
-<p>Ne conserver, pour chaque mois, que la destination avec le nombre maximal de vols.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 3.5</strong></p>
-<p>Calculer le nombre de vols selon le mois. Ajouter une colonne comportant le pourcentage de vols annuels réalisés par mois.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 3.6</strong></p>
-<p>Calculer, pour chaque aéroport de départ et de destination, la durée moyenne des vols (variable air_time). Pour chaque aéroport de départ, ne conserver que la destination avec la durée moyenne la plus longue.</p>
-<div class="solution-exo">
-
-</div>
+<section id="exercices" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="exercices"><span class="header-section-number">4.1</span> Exercices</h2>
+<section id="kielmc" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="kielmc"><span class="header-section-number">4.1.1</span> kielmc</h3>
+<p>Utilisez les données de <code>kielmc</code>, uniquement pour l’année 1981, pour répondre aux questions suivantes. Les données concernent les maisons vendues en 1981 à North Andover, Massachusetts ; 1981 est l’année du début de la construction d’un incinérateur d’ordures local.</p>
+<ol type="1">
+<li>Pour étudier les effets de l’emplacement de l’incinérateur sur le prix des logements, considérez le modèle de régression simple suivant :</li>
+</ol>
+<p><span class="math display">\[log(prix) = \beta_0 + \beta_1 log(dist) + u\]</span></p>
+<p>où le prix est le prix du logement en dollars et <span class="math inline">\(dist\)</span> est la distance entre la maison et l’incinérateur, mesurée en pieds. En interprétant cette équation de manière causale, quel signe attendez-vous pour <span class="math inline">\(\beta_1\)</span> si la présence de l’incinérateur fait baisser les prix des logements ? Estimez cette équation et interprétez les résultats.</p>
+<ol start="2" type="1">
+<li><p>Au modèle de régression simple de la partie 1. , ajoutez les variables log(<span class="math inline">\(intst\)</span>), log(<span class="math inline">\(area\)</span>), log(<span class="math inline">\(land\)</span>), <span class="math inline">\(rooms\)</span>, <span class="math inline">\(baths\)</span> et <span class="math inline">\(age\)</span>, où <span class="math inline">\(intst\)</span> est la distance entre le domicile et l’inter-état, <span class="math inline">\(area\)</span> est la superficie de la maison, land est la taille du terrain en pieds carrés, <span class="math inline">\(rooms\)</span> est le nombre total de pièces, <span class="math inline">\(baths\)</span> est le nombre de salles de bain et <span class="math inline">\(age\)</span> est l’âge de la maison en années. Que concluez-vous sur les effets de l’incinérateur ? Expliquez pourquoi 1. et 2. donnent des résultats contradictoires.</p></li>
+<li><p>Ajoutez<span class="math inline">\(log(intst)^2\)</span> au modèle de la partie 2. . Que se passe-t-il maintenant ? Qu’en concluez-vous quant à l’importance de la forme fonctionnelle ?</p></li>
+<li><p>Le carré de log(<span class="math inline">\(dist\)</span>) est-il significatif lorsque vous l’ajoutez au modèle de la partie 3. ?</p></li>
+</ol>
 </section>
+<section id="wage1" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="wage1"><span class="header-section-number">4.1.2</span> wage1</h3>
+<ol type="1">
+<li>Utilisez les MCO pour estimer l’équation suivante</li>
+</ol>
+<p><span class="math display">\[log(wage) = \beta_0 + \beta_1e duc + \beta_2 exper + \beta_3 exper2 + u\]</span></p>
+<p>et présentez les résultats en utilisant le format habituel.</p>
+<ol start="2" type="1">
+<li><p><span class="math inline">\(exper2\)</span> est-il statistiquement significatif au niveau de 1% ?</p></li>
+<li><p>En utilisant l’approximation</p></li>
+</ol>
+<p>trouvez le rendement approximatif de la cinquième année d’expérience. Quel est le rendement approximatif de la vingtième année d’expérience ? Quel est le rendement approximatif de la vingtième année d’expérience ?</p>
+<ol start="4" type="1">
+<li>A partir de quelle valeur de <span class="math inline">\(exper\)</span> l’expérience supplémentaire fait-elle baisser le log(<span class="math inline">\(wage\)</span>) prédit ? Combien de personnes ont plus d’expérience dans cet échantillon ?</li>
+</ol>
 </section>
-<section id="jointures" class="level2">
-<h2 class="anchored" data-anchor-id="jointures">3. Jointures</h2>
-<p><strong>Exercice 4.1</strong></p>
-<p>Faire la jointure de la table <code>airlines</code> sur la table <code>flights</code> à l’aide de <code>left_join</code>.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 4.2</strong></p>
-<p>À partir de la table résultat de l’exercice précédent, calculer le retard moyen au départ pour chaque compagnie, et trier selon ce retard décroissant.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 4.3</strong></p>
-<p>Faire la jointure de la table <code>airports</code> sur la table <code>flights</code> en utilisant comme clé le code de l’aéroport de destination.</p>
-<div class="solution-exo">
-
-</div>
-<p>À partir de cette table, afficher pour chaque mois le nom de l’aéroport de destination ayant eu le plus petit nombre de vol.</p>
-<div class="solution-exo">
-
-</div>
-<p><strong>Exercice 4.4</strong></p>
-<p>Créer une table indiquant, pour chaque vol, uniquement le nom de l’aéroport de départ et celui de l’aéroport d’arrivée.</p>
-<div class="solution-exo">
-
-</div>
+<section id="gpa2" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="gpa2"><span class="header-section-number">4.1.3</span> gpa2</h3>
+<ol type="1">
+<li>Estimez le modèle</li>
+</ol>
+<p><span class="math display">\[sat = \beta_0 + \beta_1 hsize + b2 hsize2 + u\]</span></p>
+<p>où <span class="math inline">\(hsize\)</span> est la taille de la classe de diplômés (en centaines), et écrivez les résultats sous la forme habituelle. Le terme quadratique est-il statistiquement significatif ?</p>
+<ol start="2" type="1">
+<li><p>En utilisant l’équation estimée dans la partie 1. , quelle est la taille “optimale” de l’école secondaire ? Justifiez votre réponse.</p></li>
+<li><p>Cette analyse est-elle représentative des résultats scolaires de tous les élèves de terminale ? lycée ? Expliquez votre réponse.</p></li>
+<li><p>Trouvez la taille optimale estimée de l’école secondaire, en utilisant le log(<span class="math inline">\(sat\)</span>) comme variable dépendante. variable dépendante. Est-ce très différent de ce que vous avez obtenu dans la partie 2. ?</p></li>
+</ol>
 </section>
-<section id="bonus" class="level2">
-<h2 class="anchored" data-anchor-id="bonus">4. Bonus</h2>
-<p><strong>Exercice 5.1</strong></p>
-<p>Calculer le nombre de vols selon l’aéroport de destination, et fusionnez la table <code>airports</code> sur le résultat avec <code>left_join</code>. Stocker le résultat final dans un objet nommé <code>flights_dest</code>.</p>
+<section id="hprice1" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="hprice1"><span class="header-section-number">4.1.4</span> hprice1</h3>
+<ol type="1">
+<li>Estimez le modèle : <span class="math display">\[price = \beta_0 + \beta_1 lotsize + \beta_2 sqrft + \beta_3 bdrms + u \]</span></li>
+</ol>
+<p>%<span class="math display">\[log(price) = \beta_0 + \beta_1 log(lotsize) + b2 log(sqrft) + \beta_3 bdrms + u\]</span></p>
+<ol start="2" type="1">
+<li><p>Trouvez la valeur prédite de log(<span class="math inline">\(price\)</span>), lorsque <span class="math inline">\(lotsize\)</span> = 20,000, <span class="math inline">\(sqrft\)</span> = 2,500, et <span class="math inline">\(bdrms\)</span> = 4. En utilisant les méthodes de la section 6.4, trouvez la valeur prédite du prix pour les mêmes valeurs des variables explicatives. les mêmes valeurs des variables explicatives.</p></li>
+<li><p>Pour expliquer la variation du prix, décidez si vous préférez le modèle de la partie 1. ou le modèle</p></li>
+</ol>
+</section>
+<section id="vote1" class="level3" data-number="4.1.5">
+<h3 data-number="4.1.5" class="anchored" data-anchor-id="vote1"><span class="header-section-number">4.1.5</span> vote1</h3>
+<ol type="1">
+<li>Considérons un modèle avec une interaction entre les dépenses :</li>
+</ol>
+<p><span class="math display">\[voteA = \beta_0 + \beta_1 prtystrA + b2 expendA + \beta_3 expendB + \beta_4 expendA expendB + u\]</span></p>
+<p>Quel est l’effet partiel de <span class="math inline">\(expendB\)</span> sur <span class="math inline">\(voteA\)</span>, en maintenant fixes <span class="math inline">\(prtystrA\)</span> et <span class="math inline">\(expendA\)</span> ? Quel est l’effet partiel de <span class="math inline">\(expendA\)</span> sur <span class="math inline">\(voteA\)</span> ? Le signe attendu pour <span class="math inline">\(\beta_4\)</span> est-il évident ?</p>
+<ol start="2" type="1">
+<li><p>Estimez l’équation de la partie 1. et présentez les résultats sous la forme habituelle. Le terme d’interaction est-il statistiquement significatif ?</p></li>
+<li><p>Trouver la moyenne de <span class="math inline">\(expendA\)</span> dans l’échantillon. Fixer <span class="math inline">\(expendA\)</span> à 300 (pour 300 000 $). Quel est l’effet estimé de 100 000 dollars supplémentaires dépensés par le candidat B sur le <span class="math inline">\(voteA\)</span> ? S’agit-il d’un effet important ?</p></li>
+<li><p>Fixez maintenant <span class="math inline">\(expendB\)</span> à 100. Quel est l’effet estimé de <span class="math inline">\(\Delta expendA\)</span> = 100 sur le <span class="math inline">\(voteA\)</span> ? Cela a-t-il un sens ?</p></li>
+<li><p>Estimez maintenant un modèle qui remplace l’interaction par <span class="math inline">\(shareA\)</span>, la part en pourcentage du candidat A dans les dépenses totales de la campagne. Est-il judicieux de maintenir les <span class="math inline">\(expendA\)</span> et les <span class="math inline">\(expendB\)</span> fixes, tout en modifiant la <span class="math inline">\(shareA\)</span> ?</p></li>
+<li><p>(Nécessite des calculs) Dans le modèle de la partie 5. , trouvez l’effet partiel de <span class="math inline">\(expendB\)</span> sur <span class="math inline">\(voteA\)</span>, en maintenant <span class="math inline">\(prtystrA\)</span> et <span class="math inline">\(expendA\)</span> fixes. Evaluez ceci à <span class="math inline">\(expendA\)</span> = 300 et <span class="math inline">\(expendB\)</span> = 0 et commentez les résultats.</p></li>
+</ol>
+</section>
+<section id="hprice1-1" class="level3" data-number="4.1.6">
+<h3 data-number="4.1.6" class="anchored" data-anchor-id="hprice1-1"><span class="header-section-number">4.1.6</span> hprice1</h3>
+<ol type="1">
+<li>Estimez le modèle <span class="math display">\[prix = \beta_0 + \beta_1 lotsize + b2 sqrft + \beta_3 bdrms + u\]</span></li>
+</ol>
+<p>et présentez les résultats sous la forme habituelle, y compris l’erreur standard de la régression. Obtenez le prix prédit, lorsque vous introduisez <span class="math inline">\(lotsize\)</span> = 10,000, <span class="math inline">\(sqrft\)</span> = 2,300, et <span class="math inline">\(bdrms\)</span> = 4 ; arrondissez ce prix au dollar le plus proche.</p>
+<ol start="2" type="1">
+<li><p>Effectuez une régression qui vous permette d’obtenir un intervalle de confiance de 95 % autour de la valeur prédite dans la partie 1. . Notez que votre prédiction sera légèrement différente en raison des erreurs d’arrondi.</p></li>
+<li><p>Soit <span class="math inline">\(price_0\)</span> le prix de vente futur inconnu de la maison avec les caractéristiques utilisées dans les parties 1. et 2. . Trouvez un intervalle de confiance à 95% pour <span class="math inline">\(price_0\)</span> et commentez la largeur de cet intervalle de confiance.</p></li>
+</ol>
+</section>
+<section id="nbsal" class="level3" data-number="4.1.7">
+<h3 data-number="4.1.7" class="anchored" data-anchor-id="nbsal"><span class="header-section-number">4.1.7</span> nbsal</h3>
+<p>L’ensemble de données <code>nbsal</code> contient des informations sur les salaires et des statistiques de carrière pour 269 joueurs de la National Basketball Association (NBA).</p>
+<ol type="1">
+<li><p>Estimez un modèle reliant les points par match (<span class="math inline">\(points\)</span>) aux années passées dans la ligue (<span class="math inline">\(exper\)</span>), l’âge et le nombre d’années passées à l’université (<span class="math inline">\(coll\)</span>). Inclure une quadratique dans <span class="math inline">\(exper\)</span> ; les autres variables doivent apparaître sous forme de niveau. variables doivent apparaître sous forme de niveau. Rapportez les résultats de la manière habituelle.</p></li>
+<li><p>En gardant les années d’université et l’âge fixes, à partir de quelle valeur d’expérience l’année d’expérience suivante réduit-elle réellement le nombre de points par match ? Cela a-t-il un sens ?</p></li>
+<li><p>Pourquoi pensez-vous que <span class="math inline">\(coll\)</span> a un coefficient négatif et statistiquement significatif ? (Indice : les joueurs de la NBA peuvent être recrutés avant la fin de leur carrière universitaire et même directement à la sortie du lycée).</p></li>
+<li><p>Ajoutez une quadratique de l’âge à l’équation. Est-ce nécessaire ? Qu’est-ce que cela semble impliquer sur les effets de l’âge, une fois que l’expérience et l’éducation sont contrôlées ?</p></li>
+<li><p>Régressez maintenant log(<span class="math inline">\(wage\)</span>) sur <span class="math inline">\(points\)</span>, <span class="math inline">\(exper\)</span>, <span class="math inline">\(exper\)</span> , <span class="math inline">\(age\)</span> et <span class="math inline">\(coll\)</span>.</p></li>
+<li><p>Testez si l’âge et le col sont conjointement significatifs dans la régression de la partie 5.<br>
+Qu’est-ce que cela implique quant à la question de savoir si l’âge et l’éducation ont des effets distincts sur le salaire, une fois que la productivité et l’ancienneté sont prises en compte ?</p></li>
+</ol>
+</section>
+<section id="bwght2" class="level3" data-number="4.1.8">
+<h3 data-number="4.1.8" class="anchored" data-anchor-id="bwght2"><span class="header-section-number">4.1.8</span> bwght2</h3>
+<ol type="1">
+<li>Estimez le modèle :</li>
+</ol>
+<p><span class="math display">\[log(bwght) = \beta_0 + \beta_1 npvis + b2 npvis2 + u \]</span></p>
+<p>par la méthode des moindres carrés ordinaires (MCO), et rapportez les résultats de la manière habituelle. Le terme quadratique est-il significatif ?</p>
+<ol start="2" type="1">
+<li><p>Montrez que, sur la base de l’équation de la partie 1. , le nombre de visites prénatales qui maximise le log(<span class="math inline">\(bwght\)</span>) est estimé à environ 22. Combien de femmes ont eu au moins 22 visites prénatales dans l’échantillon ?</p></li>
+<li><p>Est-il logique de prédire que le poids de naissance diminue après 22 visites prénatales ? Expliquez pourquoi.</p></li>
+<li><p>Ajoutez l’âge de la mère à l’équation, en utilisant une forme fonctionnelle quadratique. En maintenant <span class="math inline">\(npvis\)</span> fixe, à quel âge de la mère le poids de naissance de l’enfant est-il maximisé ? Quelle fraction des femmes de l’échantillon est plus âgée que la moyenne ? Quelle fraction des femmes de l’échantillon est plus âgée que l’âge “optimal” ?</p></li>
+<li><p>Diriez-vous que l’âge de la mère et le nombre de visites prénatales expliquent une grande partie de la variation du log(<span class="math inline">\(bwght\)</span>) ?</p></li>
+<li><p>En utilisant des quadratiques pour le <span class="math inline">\(npvis\)</span> et l’âge, décidez si l’utilisation du logarithme naturel ou du niveau de <span class="math inline">\(bwght\)</span> est meilleure que l’utilisation du logarithme de l’âge.</p></li>
+</ol>
+</section>
+<section id="apple" class="level3" data-number="4.1.9">
+<h3 data-number="4.1.9" class="anchored" data-anchor-id="apple"><span class="header-section-number">4.1.9</span> apple</h3>
+<ol type="1">
+<li><p>Exécutez la régression <span class="math inline">\(ecolbs\)</span> sur <span class="math inline">\(ecoprc\)</span> et <span class="math inline">\(regprc\)</span> et reportez les résultats. Présentez les résultats sous la forme d’un tableau, y compris le R-carré et le R-carré ajusté. Interprétez les coefficients sur les variables de prix et commentez leurs signes. les variables de prix et commentez leurs signes et leurs amplitudes.</p></li>
+<li><p>Les variables de prix sont-elles statistiquement significatives ? Indiquez les valeurs p pour les tests t individuels. pour les différents tests t.</p></li>
+<li><p>Quel est l’éventail des valeurs ajustées pour <span class="math inline">\(ecolbs\)</span> ? Quelle fraction de l’échantillon rapporte <span class="math inline">\(ecolbs\)</span> = 0 ? Commenter.</p></li>
+<li><p>Pensez-vous que l’ensemble des variables de prix explique bien la variation de l’indice <span class="math inline">\(ecolbs\)</span> ? Expliquez.</p></li>
+<li><p>Ajoutez les variables <span class="math inline">\(faminc\)</span>, <span class="math inline">\(hhsize\)</span> (taille du ménage), <span class="math inline">\(educ\)</span>, et <span class="math inline">\(age\)</span> à la régression de la partie 1. . Trouvez la valeur p pour leur signification conjointe. Qu’en concluez-vous ?</p></li>
+<li><p>Effectuez des régressions simples séparées de <span class="math inline">\(ecolbs\)</span> sur <span class="math inline">\(ecoprc\)</span>, puis de <span class="math inline">\(ecolbs\)</span> sur <span class="math inline">\(regprc\)</span>. Comment les coefficients de régression simple se comparent-ils à la régression multiple de la partie 1. ? Trouvez le coefficient de corrélation entre <span class="math inline">\(ecoprc\)</span> et <span class="math inline">\(regprc\)</span> pour expliquer vos résultats.</p></li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1132,13 +1117,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./CMI-CN-TP1.html" class="pagination-link" aria-label="TP1 : Commandes de base de R">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">TP1 : Commandes de base de R</span>
+      <a href="./CMI-E2-TP3.html" class="pagination-link" aria-label="Multicolinéarité">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Multicolinéarité</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./CMI-CN-TP3.html" class="pagination-link" aria-label="TP3 : Premiers Graphiques">
-        <span class="nav-page-text">TP3 : Premiers Graphiques</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./CMI-E2-TP5.html" class="pagination-link" aria-label="Tests sur l'hétéroscédasticité">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tests sur l’hétéroscédasticité</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
