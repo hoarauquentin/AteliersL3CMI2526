@@ -862,7 +862,7 @@
     "href": "CMI-E2-TP1.html",
     "title": "1  TP 1 : Modèle de régression multiple",
     "section": "",
-    "text": "1.1 Introduction\nLancez et ouvrez un nouveau . Ce sera votre document de travail durant tout le TP. L’intérêt des Markdown est de pouvoir lancer une multitude de petits scripts successivement. Typiquement, un (petit script) par question. Lorsque c’est nécessaire, répondez aux questions entre les chunks.\nCréez un fichier partagé “Econométrie-votre nom” sur votre drive fourni de l’université (OneDrive ou Google Drive). Envoyez-moi le lien de ce drive. Ce dossier partagé sera votre dossier de travail pendant toute la durée du cours. Créez un dossier “TP1” et enregistrez-y votre markdown sous le nom “TP1”.",
+    "text": "1.1 Introduction\nLancez RStudio et ouvrez un nouveau R Markdown. Ce sera votre document de travail durant tout le TP. L’intérêt des Markdown est de pouvoir lancer une multitude de petits scripts successivement. Typiquement, un chunk (petit script) par question. Lorsque c’est nécessaire, répondez aux questions entre les chunks.\nCréez un fichier partagé “Econométrie-votre nom” sur votre drive fourni de l’université (OneDrive ou Google Drive). Envoyez-moi le lien de ce drive. Ce dossier partagé sera votre dossier de travail pendant toute la durée du cours. Créez un dossier “TP1” et enregistrez-y votre markdown sous le nom “TP1”.",
     "crumbs": [
       "Econométrie 2",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>TP 1 : Modèle de régression multiple</span>"
@@ -873,7 +873,7 @@
     "href": "CMI-E2-TP1.html#rappel-sur-r",
     "title": "1  TP 1 : Modèle de régression multiple",
     "section": "1.2 Rappel sur R",
-    "text": "1.2 Rappel sur R\n\nChargez le package (téléchargez-le si besoin). Ouvrez le fichier de données \\(CASchools\\) avec la commande : data(CASchools).\nDéfinissez les variables \\(STR = students/teachers\\) et \\(score = (read + math)/2\\).\nAffichez les statistiques descriptives de ce jeu de données avec la commande .\nEstimez le modèle suivant avec la commande et affichez les résultats de la régression :\n\n\\[ score = \\beta_0 + \\beta_1 STR +\\beta_2 english + u \\]\n\nReprérentez els résultats précédents à l’air du et utilisez la commande stargazer( \\(data\\) , type = ‘text’) en remplaçant \\(data\\) par les jeux de données précédemment appelés.\n\n\n\nFaites la même chose avec la fonction feols() du package fixest pour lm et etable() pour stargazer.",
+    "text": "1.2 Rappel sur R\n\nChargez le package AER (téléchargez-le si besoin). Ouvrez le fichier de données CASchools avec la commande : data(CASchools).\nDéfinissez les variables \\(STR = students/teachers\\) et \\(score = (read + math)/2\\).\nAffichez les statistiques descriptives de ce jeu de données avec la commande .\nEstimez le modèle suivant avec la commande et affichez les résultats de la régression :\n\n\\[ score = \\beta_0 + \\beta_1 STR +\\beta_2 english + u \\]\n\nReprérentez els résultats précédents à l’air du et utilisez la commande stargazer( \\(data\\) , type = ‘text’) en remplaçant \\(data\\) par les jeux de données précédemment appelés.\n\n\n\nFaites la même chose avec la fonction feols() du package fixest pour lm et etable() pour stargazer.",
     "crumbs": [
       "Econométrie 2",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>TP 1 : Modèle de régression multiple</span>"
