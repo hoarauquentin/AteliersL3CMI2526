@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Multicolinéarité – Ateliers L3 CMI</title>
+<title>3&nbsp; TP3 : Multicolinéarité – Ateliers L3 CMI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -306,7 +306,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Multicolinéarité</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">TP3 : Multicolinéarité</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -521,7 +521,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CMI-E2-TP3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Multicolinéarité</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">TP3 : Multicolinéarité</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -554,10 +554,10 @@ window.Quarto = {
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#matrice-de-corrélation" id="toc-matrice-de-corrélation" class="nav-link active" data-scroll-target="#matrice-de-corrélation"><span class="header-section-number">3.0.1</span> Matrice de corrélation</a></li>
-  <li><a href="#vif" id="toc-vif" class="nav-link" data-scroll-target="#vif"><span class="header-section-number">3.0.2</span> VIF</a></li>
-  <li><a href="#test-de-farrar-et-glauber" id="toc-test-de-farrar-et-glauber" class="nav-link" data-scroll-target="#test-de-farrar-et-glauber"><span class="header-section-number">3.0.3</span> Test de Farrar et Glauber</a></li>
-  <li><a href="#essais-sur-dautres-jeux-de-données" id="toc-essais-sur-dautres-jeux-de-données" class="nav-link" data-scroll-target="#essais-sur-dautres-jeux-de-données"><span class="header-section-number">3.0.4</span> Essais sur d’autres jeux de données</a></li>
+  <li><a href="#matrice-de-corrélation" id="toc-matrice-de-corrélation" class="nav-link active" data-scroll-target="#matrice-de-corrélation"><span class="header-section-number">3.1</span> Matrice de corrélation</a></li>
+  <li><a href="#vif" id="toc-vif" class="nav-link" data-scroll-target="#vif"><span class="header-section-number">3.2</span> VIF</a></li>
+  <li><a href="#test-de-farrar-et-glauber" id="toc-test-de-farrar-et-glauber" class="nav-link" data-scroll-target="#test-de-farrar-et-glauber"><span class="header-section-number">3.3</span> Test de Farrar et Glauber</a></li>
+  <li><a href="#essais-sur-dautres-jeux-de-données" id="toc-essais-sur-dautres-jeux-de-données" class="nav-link" data-scroll-target="#essais-sur-dautres-jeux-de-données"><span class="header-section-number">3.4</span> Essais sur d’autres jeux de données</a></li>
   </ul>
 </nav>
     </div>
@@ -565,9 +565,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Multicolinéarité</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">TP3 : Multicolinéarité</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Multicolinéarité</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">TP3 : Multicolinéarité</span></h1>
 </div>
 
 
@@ -584,7 +584,6 @@ window.Quarto = {
 </header>
 
 
-<p>#TP3 : Multicolinéarité</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo=</span><span class="cn">FALSE</span>, <span class="at">warning=</span><span class="cn">FALSE</span>, <span class="at">message=</span><span class="cn">FALSE</span>, <span class="at">eval=</span><span class="cn">FALSE</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -600,16 +599,16 @@ window.Quarto = {
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(corrplot)</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mctest)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>%On considère le modèle général : %<span class="math display">\[ Y = X'\beta + u\]</span></p>
+<p>On considère le modèle général : <span class="math display">\[ Y = X'\beta + u\]</span></p>
 <p>Installer et charger les packages :</p>
 <ul>
-<li><code>ISLR</code> : contient le jeu de données `Auto}</li>
+<li><code>ISLR</code> : contient le jeu de données <code>Auto</code></li>
 <li><code>corrplot</code> : contient des fonctions de visualisation de matrice de correlation</li>
 <li><code>PerformanceAnalytics</code> : contient des fonctions de visualisation de matrice de corrélation</li>
 <li><code>mctest</code> : contient des fonctions de test de multicolinéarité</li>
 </ul>
-<section id="matrice-de-corrélation" class="level3" data-number="3.0.1">
-<h3 data-number="3.0.1" class="anchored" data-anchor-id="matrice-de-corrélation"><span class="header-section-number">3.0.1</span> Matrice de corrélation</h3>
+<section id="matrice-de-corrélation" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="matrice-de-corrélation"><span class="header-section-number">3.1</span> Matrice de corrélation</h2>
 <ol type="i">
 <li>Charger les données <code>Auto</code> du package <code>ISLR</code>. Estimez le modèle :</li>
 </ol>
@@ -621,16 +620,16 @@ window.Quarto = {
 <li><p>Que peut-on dire sur le niveau de multicolinéarité ? Commenter.</p></li>
 </ol>
 </section>
-<section id="vif" class="level3" data-number="3.0.2">
-<h3 data-number="3.0.2" class="anchored" data-anchor-id="vif"><span class="header-section-number">3.0.2</span> VIF</h3>
+<section id="vif" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="vif"><span class="header-section-number">3.2</span> VIF</h2>
 <ol type="i">
 <li><p>Rappelez l’expression du Variance Inflation Factor <span class="math inline">\(VIF_i\)</span> d’une covariable <span class="math inline">\(i\)</span> en fonction de <span class="math inline">\(R_i^2\)</span>, le coefficient de détermination de la régression linéaire <span class="math inline">\(X_i = \gamma X_{-i}\)</span>, avec <span class="math inline">\(X_{-i}\)</span> étant tous les covariables autres que <span class="math inline">\(X_i\)</span>.</p></li>
 <li><p>Ecrire une fonction <code>VIF.test(X)</code> qui associe à une matrice de covariables un vecteur contenant les <span class="math inline">\(VIF_i\)</span> associés à chaque covariable <span class="math inline">\(X_i\)</span>. Indication : il faut faire <span class="math inline">\(k\)</span> régressions et pour chaque régression, récupérer le <span class="math inline">\(R^2\)</span> à l’aide de la commande <code>summary(regression)$r.squared</code>.</p></li>
 <li><p>Vérifier votre fonction à l’aide de la fonction <code>imcdiag</code> de <code>mctest</code>.</p></li>
 </ol>
 </section>
-<section id="test-de-farrar-et-glauber" class="level3" data-number="3.0.3">
-<h3 data-number="3.0.3" class="anchored" data-anchor-id="test-de-farrar-et-glauber"><span class="header-section-number">3.0.3</span> Test de Farrar et Glauber</h3>
+<section id="test-de-farrar-et-glauber" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="test-de-farrar-et-glauber"><span class="header-section-number">3.3</span> Test de Farrar et Glauber</h2>
 <p>Dans cette section, nous allons recoder le test de Farrar et Glauber. Il s’agit de créer une fonction qui prend un <span class="math inline">\(model\)</span> issu d’une régression de <span class="math inline">\(lm\)</span> et d’effectuer :</p>
 <ol type="1">
 <li><p>Extraire la matrice des covariables en excluant le terme constant</p></li>
@@ -642,8 +641,8 @@ window.Quarto = {
 <li>Calculer la pvalue associée à <span class="math inline">\(\chi^2_{calc}\)</span>. Le chi2 du test de Farrar et Glauber suit une loi du chi2 à <span class="math inline">\(\frac{1}{2}k(k+1)\)</span> degrés de liberté.</li>
 </ol>
 </section>
-<section id="essais-sur-dautres-jeux-de-données" class="level3" data-number="3.0.4">
-<h3 data-number="3.0.4" class="anchored" data-anchor-id="essais-sur-dautres-jeux-de-données"><span class="header-section-number">3.0.4</span> Essais sur d’autres jeux de données</h3>
+<section id="essais-sur-dautres-jeux-de-données" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="essais-sur-dautres-jeux-de-données"><span class="header-section-number">3.4</span> Essais sur d’autres jeux de données</h2>
 <p>Appliquez vos fonctions et sur les modèles et jeux de données des exercices 1, 2 et 3 du TP1.</p>
 
 

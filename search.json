@@ -926,12 +926,56 @@
   {
     "objectID": "CMI-E2-TP3.html",
     "href": "CMI-E2-TP3.html",
-    "title": "3  Multicolinéarité",
+    "title": "3  TP3 : Multicolinéarité",
     "section": "",
-    "text": "#TP3 : Multicolinéarité\n\nknitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE, eval=FALSE)\n\nlibrary(tidyverse)\nlibrary(wooldridge)\nlibrary(AER)\nlibrary(stargazer)\nlibrary(fixest)\nlibrary(AER)\nlibrary(calibrate)\nlibrary(PerformanceAnalytics)\nlibrary(ISLR)\nlibrary(corrplot)\nlibrary(mctest)\n\n%On considère le modèle général : %\\[ Y = X'\\beta + u\\]\nInstaller et charger les packages :\n\nISLR : contient le jeu de données `Auto}\ncorrplot : contient des fonctions de visualisation de matrice de correlation\nPerformanceAnalytics : contient des fonctions de visualisation de matrice de corrélation\nmctest : contient des fonctions de test de multicolinéarité\n\n\n3.0.1 Matrice de corrélation\n\nCharger les données Auto du package ISLR. Estimez le modèle :\n\n\\[mpg = \\beta_0 + \\beta_1 cylinders + \\beta_2  horsepower + \\beta_3  weight + \\beta_4 acceleration + \\beta_5 displacement + \\beta_6 year   + u \\]\n\nCalculer la matrice de corrélation des covariables avec la commande native cor.\nUtiliser la commande corrplot.mixed issue de corrplot. Pour visualiser cette matrice.\nMéthode alternative : utiliser la commande chart.Correlation(data, histogram=TRUE, pch=19) issue de PerformanceAnalytics.\nQue peut-on dire sur le niveau de multicolinéarité ? Commenter.\n\n\n\n3.0.2 VIF\n\nRappelez l’expression du Variance Inflation Factor \\(VIF_i\\) d’une covariable \\(i\\) en fonction de \\(R_i^2\\), le coefficient de détermination de la régression linéaire \\(X_i = \\gamma X_{-i}\\), avec \\(X_{-i}\\) étant tous les covariables autres que \\(X_i\\).\nEcrire une fonction VIF.test(X) qui associe à une matrice de covariables un vecteur contenant les \\(VIF_i\\) associés à chaque covariable \\(X_i\\). Indication : il faut faire \\(k\\) régressions et pour chaque régression, récupérer le \\(R^2\\) à l’aide de la commande summary(regression)$r.squared.\nVérifier votre fonction à l’aide de la fonction imcdiag de mctest.\n\n\n\n3.0.3 Test de Farrar et Glauber\nDans cette section, nous allons recoder le test de Farrar et Glauber. Il s’agit de créer une fonction qui prend un \\(model\\) issu d’une régression de \\(lm\\) et d’effectuer :\n\nExtraire la matrice des covariables en excluant le terme constant\nDéfinir la matrice de corrélation de cette matrice et calculer son déterminant \\(D\\).\nLa deuxième étape de ce test vise à effectuer un test du chi2 sur les hypothèses suivantes : $ {=tex}     \\begin{array}{cc}             H_0:  & D=1 \\\\             H_1:  & D&lt;1          \\end{array} $\n\nCalculer la statistique du Chi-2 associé au test de Farrar et Glauber : \\[ \\chi^2_{calc} =  - log(D)  \\big(n - 1 - \\frac{1}{6}(2k+7)\\big) \\] avec \\(n\\) est le nombre d’observations et \\(k\\) le nombre de covariables.\n\nCalculer la pvalue associée à \\(\\chi^2_{calc}\\). Le chi2 du test de Farrar et Glauber suit une loi du chi2 à \\(\\frac{1}{2}k(k+1)\\) degrés de liberté.\n\n\n\n3.0.4 Essais sur d’autres jeux de données\nAppliquez vos fonctions et sur les modèles et jeux de données des exercices 1, 2 et 3 du TP1.",
+    "text": "3.1 Matrice de corrélation\nOn considère le modèle général : \\[ Y = X'\\beta + u\\]\nInstaller et charger les packages :\n\\[mpg = \\beta_0 + \\beta_1 cylinders + \\beta_2  horsepower + \\beta_3  weight + \\beta_4 acceleration + \\beta_5 displacement + \\beta_6 year   + u \\]",
     "crumbs": [
       "Econométrie 2",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Multicolinéarité</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>TP3 : Multicolinéarité</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E2-TP3.html#matrice-de-corrélation",
+    "href": "CMI-E2-TP3.html#matrice-de-corrélation",
+    "title": "3  TP3 : Multicolinéarité",
+    "section": "",
+    "text": "Charger les données Auto du package ISLR. Estimez le modèle :\n\n\n\nCalculer la matrice de corrélation des covariables avec la commande native cor.\nUtiliser la commande corrplot.mixed issue de corrplot. Pour visualiser cette matrice.\nMéthode alternative : utiliser la commande chart.Correlation(data, histogram=TRUE, pch=19) issue de PerformanceAnalytics.\nQue peut-on dire sur le niveau de multicolinéarité ? Commenter.",
+    "crumbs": [
+      "Econométrie 2",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>TP3 : Multicolinéarité</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E2-TP3.html#vif",
+    "href": "CMI-E2-TP3.html#vif",
+    "title": "3  TP3 : Multicolinéarité",
+    "section": "3.2 VIF",
+    "text": "3.2 VIF\n\nRappelez l’expression du Variance Inflation Factor \\(VIF_i\\) d’une covariable \\(i\\) en fonction de \\(R_i^2\\), le coefficient de détermination de la régression linéaire \\(X_i = \\gamma X_{-i}\\), avec \\(X_{-i}\\) étant tous les covariables autres que \\(X_i\\).\nEcrire une fonction VIF.test(X) qui associe à une matrice de covariables un vecteur contenant les \\(VIF_i\\) associés à chaque covariable \\(X_i\\). Indication : il faut faire \\(k\\) régressions et pour chaque régression, récupérer le \\(R^2\\) à l’aide de la commande summary(regression)$r.squared.\nVérifier votre fonction à l’aide de la fonction imcdiag de mctest.",
+    "crumbs": [
+      "Econométrie 2",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>TP3 : Multicolinéarité</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E2-TP3.html#test-de-farrar-et-glauber",
+    "href": "CMI-E2-TP3.html#test-de-farrar-et-glauber",
+    "title": "3  TP3 : Multicolinéarité",
+    "section": "3.3 Test de Farrar et Glauber",
+    "text": "3.3 Test de Farrar et Glauber\nDans cette section, nous allons recoder le test de Farrar et Glauber. Il s’agit de créer une fonction qui prend un \\(model\\) issu d’une régression de \\(lm\\) et d’effectuer :\n\nExtraire la matrice des covariables en excluant le terme constant\nDéfinir la matrice de corrélation de cette matrice et calculer son déterminant \\(D\\).\nLa deuxième étape de ce test vise à effectuer un test du chi2 sur les hypothèses suivantes : $ {=tex}     \\begin{array}{cc}             H_0:  & D=1 \\\\             H_1:  & D&lt;1          \\end{array} $\n\nCalculer la statistique du Chi-2 associé au test de Farrar et Glauber : \\[ \\chi^2_{calc} =  - log(D)  \\big(n - 1 - \\frac{1}{6}(2k+7)\\big) \\] avec \\(n\\) est le nombre d’observations et \\(k\\) le nombre de covariables.\n\nCalculer la pvalue associée à \\(\\chi^2_{calc}\\). Le chi2 du test de Farrar et Glauber suit une loi du chi2 à \\(\\frac{1}{2}k(k+1)\\) degrés de liberté.",
+    "crumbs": [
+      "Econométrie 2",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>TP3 : Multicolinéarité</span>"
+    ]
+  },
+  {
+    "objectID": "CMI-E2-TP3.html#essais-sur-dautres-jeux-de-données",
+    "href": "CMI-E2-TP3.html#essais-sur-dautres-jeux-de-données",
+    "title": "3  TP3 : Multicolinéarité",
+    "section": "3.4 Essais sur d’autres jeux de données",
+    "text": "3.4 Essais sur d’autres jeux de données\nAppliquez vos fonctions et sur les modèles et jeux de données des exercices 1, 2 et 3 du TP1.",
+    "crumbs": [
+      "Econométrie 2",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>TP3 : Multicolinéarité</span>"
     ]
   },
   {
