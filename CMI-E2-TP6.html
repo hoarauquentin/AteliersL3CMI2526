@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; Estimateurs pour les données de panel – Ateliers L3 CMI</title>
+<title>6&nbsp; TP 6 : Econométrie de Panel – Ateliers L3 CMI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -270,7 +270,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Estimateurs pour les données de panel</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">TP 6 : Econométrie de Panel</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -503,7 +503,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CMI-E2-TP6.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Estimateurs pour les données de panel</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">TP 6 : Econométrie de Panel</span></span></a>
   </div>
 </li>
       </ul>
@@ -518,16 +518,17 @@ window.Quarto = {
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#exercices" id="toc-exercices" class="nav-link active" data-scroll-target="#exercices"><span class="header-section-number">6.1</span> Exercices</a>
+  <li><a href="#estimateurs-pour-les-données-de-panel" id="toc-estimateurs-pour-les-données-de-panel" class="nav-link active" data-scroll-target="#estimateurs-pour-les-données-de-panel"><span class="header-section-number">6.1</span> Estimateurs pour les données de panel</a></li>
+  <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices"><span class="header-section-number">6.2</span> Exercices</a>
   <ul class="collapse">
-  <li><a href="#fertil1" id="toc-fertil1" class="nav-link" data-scroll-target="#fertil1"><span class="header-section-number">6.1.1</span> fertil1</a></li>
-  <li><a href="#cps78_85" id="toc-cps78_85" class="nav-link" data-scroll-target="#cps78_85"><span class="header-section-number">6.1.2</span> cps78_85</a></li>
-  <li><a href="#kielmc" id="toc-kielmc" class="nav-link" data-scroll-target="#kielmc"><span class="header-section-number">6.1.3</span> kielmc</a></li>
-  <li><a href="#injury" id="toc-injury" class="nav-link" data-scroll-target="#injury"><span class="header-section-number">6.1.4</span> injury</a></li>
-  <li><a href="#rental" id="toc-rental" class="nav-link" data-scroll-target="#rental"><span class="header-section-number">6.1.5</span> rental</a></li>
-  <li><a href="#jtrain" id="toc-jtrain" class="nav-link" data-scroll-target="#jtrain"><span class="header-section-number">6.1.6</span> jtrain</a></li>
+  <li><a href="#fertil1" id="toc-fertil1" class="nav-link" data-scroll-target="#fertil1"><span class="header-section-number">6.2.1</span> fertil1</a></li>
+  <li><a href="#cps78_85" id="toc-cps78_85" class="nav-link" data-scroll-target="#cps78_85"><span class="header-section-number">6.2.2</span> cps78_85</a></li>
+  <li><a href="#kielmc" id="toc-kielmc" class="nav-link" data-scroll-target="#kielmc"><span class="header-section-number">6.2.3</span> kielmc</a></li>
+  <li><a href="#injury" id="toc-injury" class="nav-link" data-scroll-target="#injury"><span class="header-section-number">6.2.4</span> injury</a></li>
+  <li><a href="#rental" id="toc-rental" class="nav-link" data-scroll-target="#rental"><span class="header-section-number">6.2.5</span> rental</a></li>
+  <li><a href="#jtrain" id="toc-jtrain" class="nav-link" data-scroll-target="#jtrain"><span class="header-section-number">6.2.6</span> jtrain</a></li>
   </ul></li>
-  <li><a href="#murder" id="toc-murder" class="nav-link" data-scroll-target="#murder"><span class="header-section-number">6.2</span> murder</a></li>
+  <li><a href="#murder" id="toc-murder" class="nav-link" data-scroll-target="#murder"><span class="header-section-number">6.3</span> murder</a></li>
   </ul>
 </nav>
     </div>
@@ -535,9 +536,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Estimateurs pour les données de panel</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">TP 6 : Econométrie de Panel</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Estimateurs pour les données de panel</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">TP 6 : Econométrie de Panel</span></h1>
 </div>
 
 
@@ -554,19 +555,21 @@ window.Quarto = {
 </header>
 
 
-<p>#TP 6 : Econométrie de Panel</p>
+<section id="estimateurs-pour-les-données-de-panel" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="estimateurs-pour-les-données-de-panel"><span class="header-section-number">6.1</span> Estimateurs pour les données de panel</h2>
 <ol type="1">
 <li><p>Chargez le package <code>plm</code> et chargez le jeu de données <code>Grunfeld</code>.</p></li>
 <li><p>Estimez le modèle <code>inv ~ value + capital</code> en OLS simple avec la fonction <code>lm</code>.</p></li>
-<li><p>Modifier <code>Grunfeld</code> et créer les moyennes temporelles pour chaque firme <span class="math inline">\(X_{mean}\)</span> pour chaque variable <span class="math inline">\(X\)</span>, puis créer les variables <span class="math inline">\(X_{fe} = X-X_{mean}\)</span>. Estimez le modèle <span class="math inline">\(inv_{mean} ~ value_{mean} + capital_{mean}\)</span>.</p></li>
-<li><p>Modifier <code>Grunfeld</code> et créer les valeurs retardée temporelles pour chaque firme <span class="math inline">\(X_{lag}\)</span> pour chaque variable <span class="math inline">\(X\)</span>, puis créer les variables de différences <span class="math inline">\(X_{fd} = X-X_{lag}\)</span>. Estimez le modèle <span class="math inline">\(inv_{fe} ~ value_{fe} + capital_{fe}\)</span> avec <code>lm</code>. Attention : il faut fixer la constante à 0.</p></li>
+<li><p>Modifier <code>Grunfeld</code> et créer les moyennes temporelles pour chaque firme <span class="math inline">\(X_{mean}\)</span> pour chaque variable <span class="math inline">\(X\)</span>, puis créer les variables <span class="math inline">\(X_{fe} = X-X_{mean}\)</span>. Estimez le modèle <span class="math inline">\(inv_{mean} = value_{mean} + capital_{mean}\)</span>.</p></li>
+<li><p>Modifier <code>Grunfeld</code> et créer les valeurs retardée temporelles pour chaque firme <span class="math inline">\(X_{lag}\)</span> pour chaque variable <span class="math inline">\(X\)</span>, puis créer les variables de différences <span class="math inline">\(X_{fd} = X-X_{lag}\)</span>. Estimez le modèle <span class="math inline">\(inv_{fe} = value_{fe} + capital_{fe}\)</span> avec <code>lm</code>. Attention : il faut fixer la constante à 0.</p></li>
 <li><p>Vérifiez les résultats précédents avec la fonction <code>plm</code> avec les arguments <code>model=pooling</code>, <code>model=within</code>, <code>model=fd</code>.</p></li>
 <li><p>Même chose avec la fonction <code>fixest</code>.</p></li>
 </ol>
-<section id="exercices" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="exercices"><span class="header-section-number">6.1</span> Exercices</h2>
-<section id="fertil1" class="level3" data-number="6.1.1">
-<h3 data-number="6.1.1" class="anchored" data-anchor-id="fertil1"><span class="header-section-number">6.1.1</span> fertil1</h3>
+</section>
+<section id="exercices" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="exercices"><span class="header-section-number">6.2</span> Exercices</h2>
+<section id="fertil1" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="fertil1"><span class="header-section-number">6.2.1</span> fertil1</h3>
 <ol type="i">
 <li><p>Estimez le modèle OLS avec <code>kids</code> comme variable dépendente : <code>lm(data=fertil1, kids ~ educ + age + agesq + black + east + northcen + west + farm + othrural + town + y74 + y76 + y78 + y80 + y82 + y84)</code></p></li>
 <li><p>Dans l’équation estimée précédemment, testez si le cadre de vie à l’âge de 16 ans a un effet sur la fertilité (<code>town</code>). (Le groupe de référence est la grande ville). Reportez la valeur de la statistique F et sa p-valeur.</p></li>
@@ -575,16 +578,16 @@ window.Quarto = {
 <li><p>Ajoutez les termes d’interactione entre <code>educ</code> et les variables binaires sur les années au modèle estimé dans la question i. Expliquez ce que représentent ces termes. Sont-ils conjointement significatifs ?</p></li>
 </ol>
 </section>
-<section id="cps78_85" class="level3" data-number="6.1.2">
-<h3 data-number="6.1.2" class="anchored" data-anchor-id="cps78_85"><span class="header-section-number">6.1.2</span> cps78_85</h3>
+<section id="cps78_85" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="cps78_85"><span class="header-section-number">6.2.2</span> cps78_85</h3>
 <ol type="i">
 <li><p>Estimez le modèle suivant : <span class="math display">\[lwage = y85 + educ + y85 \times educ + exper + exper^2 + union + female + y85 \times female \]</span></p></li>
 <li><p>Comment interprétez-vous le coefficient de <code>y85</code> dans le modèle ? A-t-il une interprétation intéressante ? (Soyez prudent ici ; vous devez expliquer les termes d’interactions y85·educ et y85·female.) iIi. En maintenant fixés les autres facteurs, quel est le pourcentage estimé d’augmentation du salaire nominal d’un homme ayant fait 12 ans d’études ? Proposez une régression permettant d’obtenir un intervalle de confiance pour cette estimation. [Indice : pour obtenir l’intervalle de confiance, remplacez y85·educ par y85(educ – 12)</p></li>
 <li><p>Faites une nouvelle estimation du modèle en exprimant tous les salaires en dollars de 1978. En particulier, définissez le salaire réel comme rwage = wage pour 1978 et comme rwage = wage/1,65 pour 1985. Utilisez maintenant <code>log(rwage)</code> à la place de <code>log(wage)</code>. Quels sont les coefficients qui changent au modèle i. ?</p></li>
 </ol>
 </section>
-<section id="kielmc" class="level3" data-number="6.1.3">
-<h3 data-number="6.1.3" class="anchored" data-anchor-id="kielmc"><span class="header-section-number">6.1.3</span> kielmc</h3>
+<section id="kielmc" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3" class="anchored" data-anchor-id="kielmc"><span class="header-section-number">6.2.3</span> kielmc</h3>
 <p>Pour cet exercice, utilisez les données du fichier kielmc i. La variable dist est la distance entre chaque maison et le site de l’incinérateur, en pieds. Examinez le modèle suivant : <span class="math display">\[log(price) = \beta_0 + \delta_0 y81 + \beta_1 log(dist) + \delta_1 y81· log(dist) + u.\]</span></p>
 <p>Si la construction de l’incinérateur réduit la valeur des maisons proches du site, quel est le signe attendu de <span class="math inline">\(\delta_1\)</span> ? Qu’est-ce que cela signifie si <span class="math inline">\(\beta_1\)</span> &gt; 0 ?</p>
 <ol start="2" type="i">
@@ -593,15 +596,15 @@ window.Quarto = {
 <li>Pourquoi le coefficient de log(dist) est-il positif et statistiquement significatif à la question (ii) mais pas à la question (iii) ? Qu’est-ce que cela nous apprend sur les variables de contrôle introduites à la question (iii) ?</li>
 </ol>
 </section>
-<section id="injury" class="level3" data-number="6.1.4">
-<h3 data-number="6.1.4" class="anchored" data-anchor-id="injury"><span class="header-section-number">6.1.4</span> injury</h3>
+<section id="injury" class="level3" data-number="6.2.4">
+<h3 data-number="6.2.4" class="anchored" data-anchor-id="injury"><span class="header-section-number">6.2.4</span> injury</h3>
 <ol type="i">
 <li>En utilisant les données du Kentucky, estimez le modèle <span class="math display">\[log(durat) =  afchnge + highearn + afchnge*highearn + male + married\]</span></li>
 </ol>
 <p>et y ajouter les variables explicatives jeu entier de variables indicatrices pour les industries et les types d’accidents du travail (les transformer en facteurs au préalables). Comment l’estimation de <code>afchnge.highearn</code> varie lorsque ces autres facteurs sont pris en compte ? Est-ce que cette estimation est statistiquement significative ? ii. Comment interprétez-vous les faibles valeurs de R carré de la question (i) ? Cela signifie-t-il que l’équation est inutile ? iii. Estimez le modèle de i. en utilisant les données pour le Michigan. Comparez les estimations sur le terme d’interaction pour le Michigan et le Kentucky. Est-ce que l’estimation pour le Michigan est statistiquement significative ? Justifiez.</p>
 </section>
-<section id="rental" class="level3" data-number="6.1.5">
-<h3 data-number="6.1.5" class="anchored" data-anchor-id="rental"><span class="header-section-number">6.1.5</span> rental</h3>
+<section id="rental" class="level3" data-number="6.2.5">
+<h3 data-number="6.2.5" class="anchored" data-anchor-id="rental"><span class="header-section-number">6.2.5</span> rental</h3>
 <p>Les données pour les années 1980 et 1990 incluent le prix des loyers ainsi que d’autres variables caractérisant les villes dans lesquelles sont établies des universités. L’idée est de voir si la présence d’un nombre élevé d’étudiants fait augmenter les loyers. Le modèle à effets non observés est : <span class="math display">\[log(rentit) =   y90t + \log(popit) + log(avgincit) +  pctstuit + a_i + u_{it}\]</span>, où <code>pop</code> est la population de la ville, <code>avginc</code> est le revenu moyen, et <code>pctstu</code> est le nombre d’étudiants exprimé en pourcentage de la population de la ville (au cours de l’année scolaire). i. Estimez l’équation par la méthode des MCO sur données empilées et reportez les résultats. Que pouvez-vous conclure ?</p>
 <ol start="2" type="i">
 <li>Les écarts-types estimés que vous avez reportés dans la question (i) sont-ils valides ? Justifiez.</li>
@@ -609,8 +612,8 @@ window.Quarto = {
 <li>Obtenez les écarts-types estimés robustes à l’hétéroscédasticité pour l’équation en différences premières de la question (iii). Cela modifie-t-il vos conclusions ?</li>
 </ol>
 </section>
-<section id="jtrain" class="level3" data-number="6.1.6">
-<h3 data-number="6.1.6" class="anchored" data-anchor-id="jtrain"><span class="header-section-number">6.1.6</span> jtrain</h3>
+<section id="jtrain" class="level3" data-number="6.2.6">
+<h3 data-number="6.2.6" class="anchored" data-anchor-id="jtrain"><span class="header-section-number">6.2.6</span> jtrain</h3>
 <p>Pour cet exercice, nous utilisons les données contenues dans la base JTRAIN pour étudier l’effet des subventions à la formation professionnelle sur la formation professionnelle par employé. Le modèle de base pour les trois années est donné par :</p>
 <p><span class="math display">\[hrsempit = \beta_0 + \delta_1 d88_t + \delta_2 d89_t     + \beta_1 grant_{it} + \beta_2 grant_{i,t–1} + \beta_3 log(employ_{it}) + a_i + u_{it}\]</span></p>
 <ol type="i">
@@ -621,8 +624,8 @@ window.Quarto = {
 </ol>
 </section>
 </section>
-<section id="murder" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="murder"><span class="header-section-number">6.2</span> murder</h2>
+<section id="murder" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="murder"><span class="header-section-number">6.3</span> murder</h2>
 <p>Nous utilisons les données étatiques relatives aux taux de criminalité et d’exécution issues du fichier MURDER pour l’exercice qui suit.</p>
 <ol type="i">
 <li><p>Considérons le modèle à effets inobservés suivant : <span class="math display">\[mrdrte_{it} = \eta_t + \beta_1 exec_{it} + \beta_2 unem_{it} + a_i + u_{it}\]</span> avec <span class="math inline">\(\eta_t\)</span> les différentes variables indicatrices temporelles et ai l’effet inobservé relatif à l’appartenance à un État donné. Si les exécutions passées de personnes jugées coupables de meurtres avaient eu un effet dissuasif, quel aurait dû être le signe de <span class="math inline">\(\beta_1\)</span> ? À votre avis, quel devrait être le signe de <span class="math inline">\(\beta_2\)</span> ? Justifiez.</p></li>
