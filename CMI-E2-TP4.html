@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Tests sur la forme fonctionnelle – Ateliers L3 CMI</title>
+<title>4&nbsp; TP 4 : Forme fonctionnelle – Ateliers L3 CMI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -271,7 +271,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tests sur la forme fonctionnelle</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">TP 4 : Forme fonctionnelle</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -329,6 +329,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./CMI-Projet2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Consignes Projet 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMI-Projet3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Consignes Projet 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -492,13 +498,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CMI-E2-TP4.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tests sur la forme fonctionnelle</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">TP 4 : Forme fonctionnelle</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CMI-E2-TP5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tests sur l’hétéroscédasticité</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">TP 5 : Heteroscedasticité</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -519,18 +525,21 @@ window.Quarto = {
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#test-de-ramsey-reset" id="toc-test-de-ramsey-reset" class="nav-link active" data-scroll-target="#test-de-ramsey-reset"><span class="header-section-number">4.0.1</span> Test de Ramsey (RESET)</a></li>
-  <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices"><span class="header-section-number">4.1</span> Exercices</a>
+  <li><a href="#tests-sur-la-forme-fonctionnelle" id="toc-tests-sur-la-forme-fonctionnelle" class="nav-link active" data-scroll-target="#tests-sur-la-forme-fonctionnelle"><span class="header-section-number">4.1</span> Tests sur la forme fonctionnelle</a>
   <ul class="collapse">
-  <li><a href="#kielmc" id="toc-kielmc" class="nav-link" data-scroll-target="#kielmc"><span class="header-section-number">4.1.1</span> kielmc</a></li>
-  <li><a href="#wage1" id="toc-wage1" class="nav-link" data-scroll-target="#wage1"><span class="header-section-number">4.1.2</span> wage1</a></li>
-  <li><a href="#gpa2" id="toc-gpa2" class="nav-link" data-scroll-target="#gpa2"><span class="header-section-number">4.1.3</span> gpa2</a></li>
-  <li><a href="#hprice1" id="toc-hprice1" class="nav-link" data-scroll-target="#hprice1"><span class="header-section-number">4.1.4</span> hprice1</a></li>
-  <li><a href="#vote1" id="toc-vote1" class="nav-link" data-scroll-target="#vote1"><span class="header-section-number">4.1.5</span> vote1</a></li>
-  <li><a href="#hprice1-1" id="toc-hprice1-1" class="nav-link" data-scroll-target="#hprice1-1"><span class="header-section-number">4.1.6</span> hprice1</a></li>
-  <li><a href="#nbsal" id="toc-nbsal" class="nav-link" data-scroll-target="#nbsal"><span class="header-section-number">4.1.7</span> nbsal</a></li>
-  <li><a href="#bwght2" id="toc-bwght2" class="nav-link" data-scroll-target="#bwght2"><span class="header-section-number">4.1.8</span> bwght2</a></li>
-  <li><a href="#apple" id="toc-apple" class="nav-link" data-scroll-target="#apple"><span class="header-section-number">4.1.9</span> apple</a></li>
+  <li><a href="#test-de-ramsey-reset" id="toc-test-de-ramsey-reset" class="nav-link" data-scroll-target="#test-de-ramsey-reset"><span class="header-section-number">4.1.1</span> Test de Ramsey (RESET)</a></li>
+  </ul></li>
+  <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices"><span class="header-section-number">4.2</span> Exercices</a>
+  <ul class="collapse">
+  <li><a href="#kielmc" id="toc-kielmc" class="nav-link" data-scroll-target="#kielmc"><span class="header-section-number">4.2.1</span> kielmc</a></li>
+  <li><a href="#wage1" id="toc-wage1" class="nav-link" data-scroll-target="#wage1"><span class="header-section-number">4.2.2</span> wage1</a></li>
+  <li><a href="#gpa2" id="toc-gpa2" class="nav-link" data-scroll-target="#gpa2"><span class="header-section-number">4.2.3</span> gpa2</a></li>
+  <li><a href="#hprice1" id="toc-hprice1" class="nav-link" data-scroll-target="#hprice1"><span class="header-section-number">4.2.4</span> hprice1</a></li>
+  <li><a href="#vote1" id="toc-vote1" class="nav-link" data-scroll-target="#vote1"><span class="header-section-number">4.2.5</span> vote1</a></li>
+  <li><a href="#hprice1-1" id="toc-hprice1-1" class="nav-link" data-scroll-target="#hprice1-1"><span class="header-section-number">4.2.6</span> hprice1</a></li>
+  <li><a href="#nbsal" id="toc-nbsal" class="nav-link" data-scroll-target="#nbsal"><span class="header-section-number">4.2.7</span> nbsal</a></li>
+  <li><a href="#bwght2" id="toc-bwght2" class="nav-link" data-scroll-target="#bwght2"><span class="header-section-number">4.2.8</span> bwght2</a></li>
+  <li><a href="#apple" id="toc-apple" class="nav-link" data-scroll-target="#apple"><span class="header-section-number">4.2.9</span> apple</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -539,9 +548,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tests sur la forme fonctionnelle</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">TP 4 : Forme fonctionnelle</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tests sur la forme fonctionnelle</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">TP 4 : Forme fonctionnelle</span></h1>
 </div>
 
 
@@ -558,11 +567,12 @@ window.Quarto = {
 </header>
 
 
-<p>#TP 4 : Forme fonctionnelle</p>
+<section id="tests-sur-la-forme-fonctionnelle" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="tests-sur-la-forme-fonctionnelle"><span class="header-section-number">4.1</span> Tests sur la forme fonctionnelle</h2>
 <p>On considère le modèle linéaire suivant :</p>
 <p><span class="math display">\[ Y = X'\beta + u\]</span></p>
-<section id="test-de-ramsey-reset" class="level3" data-number="4.0.1">
-<h3 data-number="4.0.1" class="anchored" data-anchor-id="test-de-ramsey-reset"><span class="header-section-number">4.0.1</span> Test de Ramsey (RESET)</h3>
+<section id="test-de-ramsey-reset" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="test-de-ramsey-reset"><span class="header-section-number">4.1.1</span> Test de Ramsey (RESET)</h3>
 <p>Le test de Ramsey cherche à tester si des spécifications non-linéaires n’apportent pas un pouvoir explicatif supérieur au modèle linéaire. Pour ce faire, on test si <span class="math inline">\((X'\beta)^2\)</span>, <span class="math inline">\((X'\beta)^3\)</span>, …, <span class="math inline">\((X'\beta)^m\)</span> on un effet significatif sur <span class="math inline">\(Y\)</span>.</p>
 <ol type="1">
 <li>Dans R, partons du jeu de données <code>hprice1</code> du package wooldridge, et estimez le modèle :</li>
@@ -576,10 +586,11 @@ window.Quarto = {
 <li><p>Vérifiez vos résultats avec la fonction du package <code>lmtest</code>.</p></li>
 </ol>
 </section>
-<section id="exercices" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="exercices"><span class="header-section-number">4.1</span> Exercices</h2>
-<section id="kielmc" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="kielmc"><span class="header-section-number">4.1.1</span> kielmc</h3>
+</section>
+<section id="exercices" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="exercices"><span class="header-section-number">4.2</span> Exercices</h2>
+<section id="kielmc" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="kielmc"><span class="header-section-number">4.2.1</span> kielmc</h3>
 <p>Utilisez les données de <code>kielmc</code>, uniquement pour l’année 1981, pour répondre aux questions suivantes. Les données concernent les maisons vendues en 1981 à North Andover, Massachusetts ; 1981 est l’année du début de la construction d’un incinérateur d’ordures local.</p>
 <ol type="1">
 <li>Pour étudier les effets de l’emplacement de l’incinérateur sur le prix des logements, considérez le modèle de régression simple suivant :</li>
@@ -592,8 +603,8 @@ window.Quarto = {
 <li><p>Le carré de log(<span class="math inline">\(dist\)</span>) est-il significatif lorsque vous l’ajoutez au modèle de la partie 3. ?</p></li>
 </ol>
 </section>
-<section id="wage1" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="wage1"><span class="header-section-number">4.1.2</span> wage1</h3>
+<section id="wage1" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="wage1"><span class="header-section-number">4.2.2</span> wage1</h3>
 <ol type="1">
 <li>Utilisez les MCO pour estimer l’équation suivante</li>
 </ol>
@@ -608,8 +619,8 @@ window.Quarto = {
 <li>A partir de quelle valeur de <span class="math inline">\(exper\)</span> l’expérience supplémentaire fait-elle baisser le log(<span class="math inline">\(wage\)</span>) prédit ? Combien de personnes ont plus d’expérience dans cet échantillon ?</li>
 </ol>
 </section>
-<section id="gpa2" class="level3" data-number="4.1.3">
-<h3 data-number="4.1.3" class="anchored" data-anchor-id="gpa2"><span class="header-section-number">4.1.3</span> gpa2</h3>
+<section id="gpa2" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="gpa2"><span class="header-section-number">4.2.3</span> gpa2</h3>
 <ol type="1">
 <li>Estimez le modèle</li>
 </ol>
@@ -621,8 +632,8 @@ window.Quarto = {
 <li><p>Trouvez la taille optimale estimée de l’école secondaire, en utilisant le log(<span class="math inline">\(sat\)</span>) comme variable dépendante. variable dépendante. Est-ce très différent de ce que vous avez obtenu dans la partie 2. ?</p></li>
 </ol>
 </section>
-<section id="hprice1" class="level3" data-number="4.1.4">
-<h3 data-number="4.1.4" class="anchored" data-anchor-id="hprice1"><span class="header-section-number">4.1.4</span> hprice1</h3>
+<section id="hprice1" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="hprice1"><span class="header-section-number">4.2.4</span> hprice1</h3>
 <ol type="1">
 <li>Estimez le modèle : <span class="math display">\[price = \beta_0 + \beta_1 lotsize + \beta_2 sqrft + \beta_3 bdrms + u \]</span></li>
 </ol>
@@ -632,8 +643,8 @@ window.Quarto = {
 <li><p>Pour expliquer la variation du prix, décidez si vous préférez le modèle de la partie 1. ou le modèle</p></li>
 </ol>
 </section>
-<section id="vote1" class="level3" data-number="4.1.5">
-<h3 data-number="4.1.5" class="anchored" data-anchor-id="vote1"><span class="header-section-number">4.1.5</span> vote1</h3>
+<section id="vote1" class="level3" data-number="4.2.5">
+<h3 data-number="4.2.5" class="anchored" data-anchor-id="vote1"><span class="header-section-number">4.2.5</span> vote1</h3>
 <ol type="1">
 <li>Considérons un modèle avec une interaction entre les dépenses :</li>
 </ol>
@@ -647,8 +658,8 @@ window.Quarto = {
 <li><p>(Nécessite des calculs) Dans le modèle de la partie 5. , trouvez l’effet partiel de <span class="math inline">\(expendB\)</span> sur <span class="math inline">\(voteA\)</span>, en maintenant <span class="math inline">\(prtystrA\)</span> et <span class="math inline">\(expendA\)</span> fixes. Evaluez ceci à <span class="math inline">\(expendA\)</span> = 300 et <span class="math inline">\(expendB\)</span> = 0 et commentez les résultats.</p></li>
 </ol>
 </section>
-<section id="hprice1-1" class="level3" data-number="4.1.6">
-<h3 data-number="4.1.6" class="anchored" data-anchor-id="hprice1-1"><span class="header-section-number">4.1.6</span> hprice1</h3>
+<section id="hprice1-1" class="level3" data-number="4.2.6">
+<h3 data-number="4.2.6" class="anchored" data-anchor-id="hprice1-1"><span class="header-section-number">4.2.6</span> hprice1</h3>
 <ol type="1">
 <li>Estimez le modèle <span class="math display">\[prix = \beta_0 + \beta_1 lotsize + b2 sqrft + \beta_3 bdrms + u\]</span></li>
 </ol>
@@ -658,8 +669,8 @@ window.Quarto = {
 <li><p>Soit <span class="math inline">\(price_0\)</span> le prix de vente futur inconnu de la maison avec les caractéristiques utilisées dans les parties 1. et 2. . Trouvez un intervalle de confiance à 95% pour <span class="math inline">\(price_0\)</span> et commentez la largeur de cet intervalle de confiance.</p></li>
 </ol>
 </section>
-<section id="nbsal" class="level3" data-number="4.1.7">
-<h3 data-number="4.1.7" class="anchored" data-anchor-id="nbsal"><span class="header-section-number">4.1.7</span> nbsal</h3>
+<section id="nbsal" class="level3" data-number="4.2.7">
+<h3 data-number="4.2.7" class="anchored" data-anchor-id="nbsal"><span class="header-section-number">4.2.7</span> nbsal</h3>
 <p>L’ensemble de données <code>nbsal</code> contient des informations sur les salaires et des statistiques de carrière pour 269 joueurs de la National Basketball Association (NBA).</p>
 <ol type="1">
 <li><p>Estimez un modèle reliant les points par match (<span class="math inline">\(points\)</span>) aux années passées dans la ligue (<span class="math inline">\(exper\)</span>), l’âge et le nombre d’années passées à l’université (<span class="math inline">\(coll\)</span>). Inclure une quadratique dans <span class="math inline">\(exper\)</span> ; les autres variables doivent apparaître sous forme de niveau. variables doivent apparaître sous forme de niveau. Rapportez les résultats de la manière habituelle.</p></li>
@@ -671,8 +682,8 @@ window.Quarto = {
 Qu’est-ce que cela implique quant à la question de savoir si l’âge et l’éducation ont des effets distincts sur le salaire, une fois que la productivité et l’ancienneté sont prises en compte ?</p></li>
 </ol>
 </section>
-<section id="bwght2" class="level3" data-number="4.1.8">
-<h3 data-number="4.1.8" class="anchored" data-anchor-id="bwght2"><span class="header-section-number">4.1.8</span> bwght2</h3>
+<section id="bwght2" class="level3" data-number="4.2.8">
+<h3 data-number="4.2.8" class="anchored" data-anchor-id="bwght2"><span class="header-section-number">4.2.8</span> bwght2</h3>
 <ol type="1">
 <li>Estimez le modèle :</li>
 </ol>
@@ -686,8 +697,8 @@ Qu’est-ce que cela implique quant à la question de savoir si l’âge et l’
 <li><p>En utilisant des quadratiques pour le <span class="math inline">\(npvis\)</span> et l’âge, décidez si l’utilisation du logarithme naturel ou du niveau de <span class="math inline">\(bwght\)</span> est meilleure que l’utilisation du logarithme de l’âge.</p></li>
 </ol>
 </section>
-<section id="apple" class="level3" data-number="4.1.9">
-<h3 data-number="4.1.9" class="anchored" data-anchor-id="apple"><span class="header-section-number">4.1.9</span> apple</h3>
+<section id="apple" class="level3" data-number="4.2.9">
+<h3 data-number="4.2.9" class="anchored" data-anchor-id="apple"><span class="header-section-number">4.2.9</span> apple</h3>
 <ol type="1">
 <li><p>Exécutez la régression <span class="math inline">\(ecolbs\)</span> sur <span class="math inline">\(ecoprc\)</span> et <span class="math inline">\(regprc\)</span> et reportez les résultats. Présentez les résultats sous la forme d’un tableau, y compris le R-carré et le R-carré ajusté. Interprétez les coefficients sur les variables de prix et commentez leurs signes. les variables de prix et commentez leurs signes et leurs amplitudes.</p></li>
 <li><p>Les variables de prix sont-elles statistiquement significatives ? Indiquez les valeurs p pour les tests t individuels. pour les différents tests t.</p></li>
@@ -1122,8 +1133,8 @@ Qu’est-ce que cela implique quant à la question de savoir si l’âge et l’
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./CMI-E2-TP5.html" class="pagination-link" aria-label="Tests sur l'hétéroscédasticité">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tests sur l’hétéroscédasticité</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./CMI-E2-TP5.html" class="pagination-link" aria-label="TP 5 : Heteroscedasticité">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">TP 5 : Heteroscedasticité</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

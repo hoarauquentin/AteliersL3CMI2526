@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – Ateliers L3 CMI</title>
+<title>Consignes Projet 3 – Ateliers L3 CMI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,8 +25,8 @@ ul.task-list li input[type="checkbox"] {
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
-<link href="./CMI-SIG-TP1.html" rel="next">
-<link href="./CMI-CN-TP4.html" rel="prev">
+<link href="./CMI-BDD.html" rel="next">
+<link href="./CMI-Projet2.html" rel="prev">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -242,7 +242,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-SIG-intro.html">SIG</a></li><li class="breadcrumb-item"><a href="./CMI-SIG-intro.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Général</a></li><li class="breadcrumb-item"><a href="./CMI-Projet3.html">Consignes Projet 3</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -304,7 +304,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-Projet3.html" class="sidebar-item-text sidebar-link">
+  <a href="./CMI-Projet3.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Consignes Projet 3</span></a>
   </div>
 </li>
@@ -368,7 +368,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-SIG-intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./CMI-SIG-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -491,16 +491,25 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#évaluation" id="toc-évaluation" class="nav-link active" data-scroll-target="#évaluation">Évaluation</a>
+  <ul class="collapse">
+  <li><a href="#nouveau-jeu-de-données" id="toc-nouveau-jeu-de-données" class="nav-link" data-scroll-target="#nouveau-jeu-de-données">Nouveau jeu de données</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-SIG-intro.html">SIG</a></li><li class="breadcrumb-item"><a href="./CMI-SIG-intro.html">Introduction</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Général</a></li><li class="breadcrumb-item"><a href="./CMI-Projet3.html">Consignes Projet 3</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">Consignes Projet 3</h1>
 </div>
 
 
@@ -517,27 +526,37 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Le cours en résumé :</p>
+<p>Ce projet reprend le projet 2 mais avec une perspective d’inférence causale. Il s’agira d’utiliser une méthode de différences en différences échelonnées (<em>DiD</em>), voir une <em>event study</em>.</p>
+<p>Le traitement sera défini par le croisement la proximité à une installation (éolienne, usine) ou élément naturel (foret, cours d’eau) après l’apparititon. Par exemple, la proximité à une éolienne après sons ouverture, la proximité à un cours d’eau après une inondation, la proximité à une forêt après un incendie.</p>
+<p>Penser à utiliser le package <code>did</code> (lien <a href="https://bcallaway11.github.io/did/">ici</a>.</p>
 <ul>
-<li><p>24 h</p></li>
-<li><p>objectifs : appréhender les données géographiques et maîtriser les principales opérations sur ce type de données (intersection, distance etc)</p></li>
-<li><p>Langage : R &amp; QGIS (introduction)</p></li>
-<li><p>modalités d’examens:</p>
+<li>Rédaction :
 <ul>
-<li>Note de participation</li>
-<li>Un projet commun SIG/économétrie avec choix du sujet imposé</li>
-<li>Présentation en classe d’une carte réalisée avec QGIS : 3mn de présentation</li>
+<li>Pas moins de <strong>10 pages</strong>.<br>
+</li>
+<li>Écrit en <strong>Word ou LaTeX</strong> (pas de <em>knit</em> en Markdown).<br>
+</li>
+</ul></li>
+<li>Présentation :
+<ul>
+<li>PowerPoint de <strong>15 minutes</strong> + <strong>5 minutes</strong> de questions.</li>
 </ul></li>
 </ul>
-<p>Le plan :</p>
-<ol type="1">
-<li>Introduction à QGIS</li>
-<li>Traitement sur les données vectorielles</li>
-<li>Les SIG avec R</li>
-</ol>
-<p>Toutes les données des TP sont disponibles sur <a href="https://parisnanterrefr-my.sharepoint.com/:f:/g/personal/qhoarau_parisnanterre_fr/EqPHGeqhRZJCsIHsGwcfLlYBzTIoqv6UkkZBnIJUETmPug?e=tsYleJ">ce drive</a>.</p>
+<section id="évaluation" class="level2">
+<h2 class="anchored" data-anchor-id="évaluation">Évaluation</h2>
+<ul>
+<li><em>Rendus :</em> slides et rapport sur CEL</li>
+<li><em>Présentation :</em> 15 minutes + 5 minutes de question</li>
+<li><strong>Date de rendu du projet : 22 mars à 10h</strong></li>
+<li><strong>Date de présentation : 23 mars à partir de 8h30</strong></li>
+</ul>
+<section id="nouveau-jeu-de-données" class="level3">
+<h3 class="anchored" data-anchor-id="nouveau-jeu-de-données">Nouveau jeu de données</h3>
+<p>Lien : <a href="https://parisnanterrefr-my.sharepoint.com/:u:/g/personal/qhoarau_parisnanterre_fr/IQA4MUsOpSYgR7MoG8NXj7YJAZEWT90b8Do2RYzHPlix6OE?e=Oyf2Rh" class="uri">https://parisnanterrefr-my.sharepoint.com/:u:/g/personal/qhoarau_parisnanterre_fr/IQA4MUsOpSYgR7MoG8NXj7YJAZEWT90b8Do2RYzHPlix6OE?e=Oyf2Rh</a></p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -955,13 +974,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./CMI-CN-TP4.html" class="pagination-link" aria-label="TP4 : Fonctions et manipulation de données">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">TP4 : Fonctions et manipulation de données</span>
+      <a href="./CMI-Projet2.html" class="pagination-link" aria-label="Consignes Projet 2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Consignes Projet 2</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./CMI-SIG-TP1.html" class="pagination-link" aria-label="TP1 : Introduction à QGIS">
-        <span class="nav-page-text">TP1 : Introduction à QGIS</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./CMI-BDD.html" class="pagination-link" aria-label="Bases de données">
+        <span class="nav-page-text">Bases de données</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

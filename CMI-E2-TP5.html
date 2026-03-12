@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Tests sur l’hétéroscédasticité – Ateliers L3 CMI</title>
+<title>5&nbsp; TP 5 : Heteroscedasticité – Ateliers L3 CMI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -271,7 +271,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tests sur l’hétéroscédasticité</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">TP 5 : Heteroscedasticité</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -329,6 +329,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./CMI-Projet2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Consignes Projet 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMI-Projet3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Consignes Projet 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -492,13 +498,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CMI-E2-TP4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tests sur la forme fonctionnelle</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">TP 4 : Forme fonctionnelle</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CMI-E2-TP5.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tests sur l’hétéroscédasticité</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">TP 5 : Heteroscedasticité</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -519,18 +525,19 @@ window.Quarto = {
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#erreurs-standards-robustes" id="toc-erreurs-standards-robustes" class="nav-link active" data-scroll-target="#erreurs-standards-robustes"><span class="header-section-number">6</span> Erreurs standards robustes</a></li>
-  <li><a href="#moindres-carrés-quasi-généralisés" id="toc-moindres-carrés-quasi-généralisés" class="nav-link" data-scroll-target="#moindres-carrés-quasi-généralisés"><span class="header-section-number">7</span> Moindres carrés quasi-généralisés</a></li>
-  <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices"><span class="header-section-number">8</span> Exercices</a>
+  <li><a href="#tests-sur-lhétéroscédasticité" id="toc-tests-sur-lhétéroscédasticité" class="nav-link active" data-scroll-target="#tests-sur-lhétéroscédasticité"><span class="header-section-number">6</span> Tests sur l’hétéroscédasticité</a></li>
+  <li><a href="#erreurs-standards-robustes" id="toc-erreurs-standards-robustes" class="nav-link" data-scroll-target="#erreurs-standards-robustes"><span class="header-section-number">7</span> Erreurs standards robustes</a></li>
+  <li><a href="#moindres-carrés-quasi-généralisés" id="toc-moindres-carrés-quasi-généralisés" class="nav-link" data-scroll-target="#moindres-carrés-quasi-généralisés"><span class="header-section-number">8</span> Moindres carrés quasi-généralisés</a></li>
+  <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices"><span class="header-section-number">9</span> Exercices</a>
   <ul class="collapse">
-  <li><a href="#sleep75" id="toc-sleep75" class="nav-link" data-scroll-target="#sleep75"><span class="header-section-number">8.1</span> sleep75</a></li>
-  <li><a href="#vote1" id="toc-vote1" class="nav-link" data-scroll-target="#vote1"><span class="header-section-number">8.2</span> vote1</a></li>
-  <li><a href="#pntsprd" id="toc-pntsprd" class="nav-link" data-scroll-target="#pntsprd"><span class="header-section-number">8.3</span> pntsprd</a></li>
-  <li><a href="#loanapp" id="toc-loanapp" class="nav-link" data-scroll-target="#loanapp"><span class="header-section-number">8.4</span> loanapp</a></li>
-  <li><a href="#gpa1" id="toc-gpa1" class="nav-link" data-scroll-target="#gpa1"><span class="header-section-number">8.5</span> gpa1</a></li>
-  <li><a href="#meap00" id="toc-meap00" class="nav-link" data-scroll-target="#meap00"><span class="header-section-number">8.6</span> meap00</a></li>
-  <li><a href="#fertil2" id="toc-fertil2" class="nav-link" data-scroll-target="#fertil2"><span class="header-section-number">8.7</span> fertil2</a></li>
-  <li><a href="#beauty" id="toc-beauty" class="nav-link" data-scroll-target="#beauty"><span class="header-section-number">8.8</span> beauty</a></li>
+  <li><a href="#sleep75" id="toc-sleep75" class="nav-link" data-scroll-target="#sleep75"><span class="header-section-number">9.1</span> sleep75</a></li>
+  <li><a href="#vote1" id="toc-vote1" class="nav-link" data-scroll-target="#vote1"><span class="header-section-number">9.2</span> vote1</a></li>
+  <li><a href="#pntsprd" id="toc-pntsprd" class="nav-link" data-scroll-target="#pntsprd"><span class="header-section-number">9.3</span> pntsprd</a></li>
+  <li><a href="#loanapp" id="toc-loanapp" class="nav-link" data-scroll-target="#loanapp"><span class="header-section-number">9.4</span> loanapp</a></li>
+  <li><a href="#gpa1" id="toc-gpa1" class="nav-link" data-scroll-target="#gpa1"><span class="header-section-number">9.5</span> gpa1</a></li>
+  <li><a href="#meap00" id="toc-meap00" class="nav-link" data-scroll-target="#meap00"><span class="header-section-number">9.6</span> meap00</a></li>
+  <li><a href="#fertil2" id="toc-fertil2" class="nav-link" data-scroll-target="#fertil2"><span class="header-section-number">9.7</span> fertil2</a></li>
+  <li><a href="#beauty" id="toc-beauty" class="nav-link" data-scroll-target="#beauty"><span class="header-section-number">9.8</span> beauty</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -539,9 +546,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tests sur l’hétéroscédasticité</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">TP 5 : Heteroscedasticité</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tests sur l’hétéroscédasticité</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">TP 5 : Heteroscedasticité</span></h1>
 </div>
 
 
@@ -558,7 +565,8 @@ window.Quarto = {
 </header>
 
 
-<p>#TP 5 : Heteroscedasticité</p>
+<section id="tests-sur-lhétéroscédasticité" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Tests sur l’hétéroscédasticité</h1>
 <p>%Le but de cette partie est de recoder les fonctions bptest du package <code>lmtest</code> et les données de <code>CASchools</code></p>
 <p>On considère le modèle linéaire suivant :</p>
 <p><span class="math display">\[ Y = X'\beta + u\]</span></p>
@@ -573,16 +581,17 @@ window.Quarto = {
 <li>On effectue un test de Fisher sur la 2e régression. La fonction reportera la p-valeur de ce test.</li>
 </ul></li>
 </ol>
-<section id="erreurs-standards-robustes" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Erreurs standards robustes</h1>
+</section>
+<section id="erreurs-standards-robustes" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Erreurs standards robustes</h1>
 <ol type="1">
 <li><p>Rappelez la formule générale des erreurs standars robutes à l’hétéroscédasticité de White.</p></li>
 <li><p>Codez une fonction qui prend en argument un modèle issu de <code>lm</code> et renvoie les erreurs standards robustes.</p></li>
 <li><p>Pour calculer les erreurs standards dans R, il faut charger le package <code>sandwich</code> et utiliser la fonction <code>vcovHC</code>. On peut afficher l’un modèle issu de <span class="math inline">\(lm\)</span> dans stargazer avec le code suivant :</p></li>
 </ol>
 </section>
-<section id="moindres-carrés-quasi-généralisés" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Moindres carrés quasi-généralisés</h1>
+<section id="moindres-carrés-quasi-généralisés" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Moindres carrés quasi-généralisés</h1>
 <p>On considère le modèle linéaire dans lequel l’hypothèse d’homoscedasticité est levée. On peut utiliser les données <code>vote1</code> pour cette partie.</p>
 <ol type="1">
 <li><p>Estimer le modèle linéaire <span class="math inline">\(Y = X'\beta + u\)</span> par MCO.</p></li>
@@ -592,11 +601,11 @@ window.Quarto = {
 <li><p>Effectuez une boucle qui répète les étapes 2. à 4. jusqu’à que les écarts entre <span class="math inline">\(1/exp(\hat{g}/2)\)</span> converge vers <span class="math inline">\(10^{-7}\)</span>.</p></li>
 </ol>
 </section>
-<section id="exercices" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Exercices</h1>
+<section id="exercices" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Exercices</h1>
 <p>Ces exercices utilisent les données issus du package wooldridge. Installez-le puis lancez la commande <code>library(wooldridge)</code>.</p>
-<section id="sleep75" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="sleep75"><span class="header-section-number">8.1</span> sleep75</h2>
+<section id="sleep75" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="sleep75"><span class="header-section-number">9.1</span> sleep75</h2>
 <p>Considérez le modèle suivant pour expliquer le comportement de sommeil : <span class="math display">\[sleep = \beta_0+ \beta_1 totwrk + \beta_2 educ + \beta_3 age + \beta_4 age^2 + \beta_5 yngkid + \beta_6 male + u \]</span></p>
 <ol type="1">
 <li><p>Rédigez un modèle qui permet à la variance de <span class="math inline">\(u\)</span> de différer entre les hommes et les femmes. La variance ne doit pas dépendre d’autres facteurs.</p></li>
@@ -604,16 +613,16 @@ window.Quarto = {
 <li><p>La variance de <span class="math inline">\(u\)</span> est-elle statistiquement différente pour les hommes et pour les femmes ?</p></li>
 </ol>
 </section>
-<section id="vote1" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="vote1"><span class="header-section-number">8.2</span> vote1</h2>
+<section id="vote1" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="vote1"><span class="header-section-number">9.2</span> vote1</h2>
 <ol type="1">
 <li><p>Estimez un modèle avec <code>voteA</code> comme variable dépendante et <span class="math inline">\(prtystrA\)</span>, <span class="math inline">\(democA\)</span>, <span class="math inline">\(log(expendA)\)</span>, et <span class="math inline">\(log(expendB)\)</span> comme variables indépendantes. Obtenez les résidus des MCO, <span class="math inline">\(\hat{u}_i\)</span>, et régressez-les sur toutes les variables indépendantes. Expliquez pourquoi vous obtenez <span class="math inline">\(R^2 = 0\)</span>.</p></li>
 <li><p>Calculez maintenant le test de Breusch-Pagan pour l’hétéroscédasticité. Relevez la valeur de la statistique F et indiquez la valeur p.</p></li>
 <li><p>Calculez le cas particulier du test de White pour l’hétéroscédasticité, en relevant à nouveau la valeur de la statistique F. Quelle est la force de la preuve de l’hétéroscédasticité maintenant ?</p></li>
 </ol>
 </section>
-<section id="pntsprd" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="pntsprd"><span class="header-section-number">8.3</span> pntsprd</h2>
+<section id="pntsprd" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="pntsprd"><span class="header-section-number">9.3</span> pntsprd</h2>
 <ol type="1">
 <li><p>La variable <span class="math inline">\(sprdcvr\)</span> est une variable binaire égale à un si l’écart de points de Las Vegas pour un match de basket universitaire a été couvert. La valeur attendue de <span class="math inline">\(sprdcvr\)</span>, soit <span class="math inline">\(\mu\)</span>, est la probabilité que l’écart soit couvert lors d’un match choisi au hasard. Testez H0 : <span class="math inline">\(\mu = 0.5\)</span> contre H1 : <span class="math inline">\(\mu \neq .5\)</span> au niveau de signification de 10 % et discutez vos résultats. (Conseil : ceci est facilement réalisable à l’aide d’un test de student en régressant <span class="math inline">\(sprdcvr\)</span> sur une ordonnée à l’origine uniquement).</p></li>
 <li><p>Combien de matchs dans l’échantillon de 553 ont été joués sur un terrain neutre ?</p></li>
@@ -627,8 +636,8 @@ window.Quarto = {
 <li><p>Compte tenu de l’analyse précédente, diriez-vous qu’il est possible de prédire systématiquement si l’écart de Las Vegas sera couvert en utilisant les informations disponibles avant le match ?</p></li>
 </ol>
 </section>
-<section id="loanapp" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="loanapp"><span class="header-section-number">8.4</span> loanapp</h2>
+<section id="loanapp" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="loanapp"><span class="header-section-number">9.4</span> loanapp</h2>
 <ol type="1">
 <li>Estimez l’équation avec <span class="math inline">\(approve\)</span> comme variable d’intérêt et comme variables explicatives : <span class="math inline">\(white\)</span> , <span class="math inline">\(hrat\)</span>, <span class="math inline">\(obrat\)</span>, <span class="math inline">\(loanprc\)</span>, <span class="math inline">\(unem\)</span>, <span class="math inline">\(male\)</span>, <span class="math inline">\(married\)</span>, <span class="math inline">\(dep\)</span>, <span class="math inline">\(sch\)</span>, <span class="math inline">\(cosign\)</span>, <span class="math inline">\(chist\)</span>, <span class="math inline">\(pubrec\)</span>, <span class="math inline">\(mortlat1\)</span>, <span class="math inline">\(mortlat2\)</span>, et <span class="math inline">\(vr\)</span>.</li>
 </ol>
@@ -637,8 +646,8 @@ window.Quarto = {
 <li>Obtenez les valeurs ajustées de la régression de la partie 1. Certaines d’entre elles sont-elles inférieures à zéro ? Certaines d’entre elles sont-elles supérieures à un ? Qu’est-ce que cela signifie pour l’application des moindres carrés pondérés ?</li>
 </ol>
 </section>
-<section id="gpa1" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="gpa1"><span class="header-section-number">8.5</span> gpa1</h2>
+<section id="gpa1" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="gpa1"><span class="header-section-number">9.5</span> gpa1</h2>
 <ol type="1">
 <li><p>Utilisez les MCO pour estimer un modèle reliant <span class="math inline">\(colgpa\)</span> à <span class="math inline">\(hsGPA\)</span>, <span class="math inline">\(ACT\)</span>, <span class="math inline">\(skipped\)</span> et <span class="math inline">\(PC\)</span>. Résidus des MCO.</p></li>
 <li><p>Calculez le cas particulier du test de White pour l’hétéroscédasticité. Dans la régression de <span class="math inline">\(\hat{u}_i^2\)</span> sur <span class="math inline">\(\hat{colgpa}_i\)</span> , <span class="math inline">\(\hat{colgpa}_i^2\)</span> obtenez les valeurs ajustées <span class="math inline">\(\hat{h}_i\)</span>.</p></li>
@@ -646,8 +655,8 @@ window.Quarto = {
 <li><p>Dans l’estimation WLS de la partie 3, obtenez des erreurs standard corrigées de l’hétéroscédasticité. En d’autres termes, tenir compte du fait que la fonction de variance estimée dans la partie 2. puisse être mal spécifiée. Les erreurs standard changent-elles beaucoup par rapport à la partie 3. ?</p></li>
 </ol>
 </section>
-<section id="meap00" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="meap00"><span class="header-section-number">8.6</span> meap00</h2>
+<section id="meap00" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="meap00"><span class="header-section-number">9.6</span> meap00</h2>
 <ol type="1">
 <li>Estimez le modèle :</li>
 </ol>
@@ -659,8 +668,8 @@ window.Quarto = {
 <li><p>Pour estimer l’effet des dépenses en <span class="math inline">\(math4\)</span>, les MCO ou les MCO semblent-ils plus précis ?</p></li>
 </ol>
 </section>
-<section id="fertil2" class="level2" data-number="8.7">
-<h2 data-number="8.7" class="anchored" data-anchor-id="fertil2"><span class="header-section-number">8.7</span> fertil2</h2>
+<section id="fertil2" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="fertil2"><span class="header-section-number">9.7</span> fertil2</h2>
 <p>Utilisez les données de <code>fertil2</code> pour répondre à cette question.</p>
 <ol type="1">
 <li>Estimez le modèle <span class="math display">\[enfants = \beta_0+ \beta_1 age + \beta_2 age^2 + \beta_3 educ + \beta_4 electric + \beta_5 urban + u\]</span></li>
@@ -672,8 +681,8 @@ window.Quarto = {
 <li><p>Diriez-vous que l’hétéroscédasticité que vous avez trouvée dans la partie 3. est pratiquement importante dans la pratique ?</p></li>
 </ol>
 </section>
-<section id="beauty" class="level2" data-number="8.8">
-<h2 data-number="8.8" class="anchored" data-anchor-id="beauty"><span class="header-section-number">8.8</span> beauty</h2>
+<section id="beauty" class="level2" data-number="9.8">
+<h2 data-number="9.8" class="anchored" data-anchor-id="beauty"><span class="header-section-number">9.8</span> beauty</h2>
 <p>Utilisez les données de <code>beauty</code> pour cette question. 1. En utilisant les données regroupées pour les hommes et les femmes, estimez l’équation</p>
 <p><span class="math display">\[  lwage = \beta_0 + \beta_1 belavg + \beta_2 abvavg + \beta_3 female + \beta_4 educ + \beta_5 exper + \beta_6 exper^2 + u \]</span></p>
 <p>et présentez les résultats en utilisant des erreurs standard corrigées de l’hétéroscédasticité sous les coefficients. Certains des coefficients sont-ils surprenants, que ce soit par leur signe ou par leur ampleur ? Le coefficient de la femme est-il pratiquement grand et statistiquement significatif ?</p>
@@ -1102,8 +1111,8 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./CMI-E2-TP4.html" class="pagination-link" aria-label="Tests sur la forme fonctionnelle">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tests sur la forme fonctionnelle</span></span>
+      <a href="./CMI-E2-TP4.html" class="pagination-link" aria-label="TP 4 : Forme fonctionnelle">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">TP 4 : Forme fonctionnelle</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
