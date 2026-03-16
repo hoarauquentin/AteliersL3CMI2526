@@ -180,7 +180,7 @@
     "href": "CMI-Projet3.html",
     "title": "Consignes Projet 3",
     "section": "",
-    "text": "Évaluation\nCe projet reprend le projet 2 mais avec une perspective d’inférence causale. Il s’agira d’utiliser une méthode de différences en différences échelonnées (DiD), voir une event study.\nLe traitement sera défini par le croisement la proximité à une installation (éolienne, usine) ou élément naturel (foret, cours d’eau) après l’apparititon. Par exemple, la proximité à une éolienne après sons ouverture, la proximité à un cours d’eau après une inondation, la proximité à une forêt après un incendie.\nPenser à utiliser le package did (lien ici.",
+    "text": "Évaluation\nCe projet reprend le projet 2 mais avec une perspective d’inférence causale. Il s’agira d’utiliser une méthode de différences en différences échelonnées (DiD), voir une event study.\nLe traitement sera défini par le croisement la proximité à une installation (éolienne, usine) ou élément naturel (foret, cours d’eau) après l’apparititon. Par exemple, la proximité à une éolienne après sons ouverture, la proximité à un cours d’eau après une inondation, la proximité à une forêt après un incendie.\nPour estimer un effet causal, il s’agira de travailler exclusivement sur les maisons qui ont été vendues plusieurs fois (plus de deux)\nConcretement, il faudra repartir du projet 2 du S1 sur un ce jeu d e données (lien plus bas). Cela implique de refaire tourner le code des plus proches voisins et des distances. Il faudra aussi montrer des statistiques descriptives.\nPour la partie économétrique des différences en différences, vous utiliserez le package fixest. En bonus, si pour faire une event study, on pourra utiliser le package did (lien ici).",
     "crumbs": [
       "Général",
       "Consignes Projet 3"
@@ -191,7 +191,7 @@
     "href": "CMI-Projet3.html#évaluation",
     "title": "Consignes Projet 3",
     "section": "",
-    "text": "Rendus : slides et rapport sur CEL\nPrésentation : 15 minutes + 5 minutes de question\nDate de rendu du projet : 22 mars à 10h\nDate de présentation : 23 mars à partir de 8h30\n\n\nNouveau jeu de données\nLien : https://parisnanterrefr-my.sharepoint.com/:u:/g/personal/qhoarau_parisnanterre_fr/IQA4MUsOpSYgR7MoG8NXj7YJAZEWT90b8Do2RYzHPlix6OE?e=Oyf2Rh",
+    "text": "Rendus : slides et rapport sur CEL\nPrésentation : 15 minutes + 5 minutes de question\nDate de rendu du projet : 28 mars à 10h\nDate de présentation : 30 mars à partir de 8h\n\n\nNouveau jeu de données\nLien : https://parisnanterrefr-my.sharepoint.com/:u:/g/personal/qhoarau_parisnanterre_fr/IQA4MUsOpSYgR7MoG8NXj7YJAZEWT90b8Do2RYzHPlix6OE?e=Oyf2Rh",
     "crumbs": [
       "Général",
       "Consignes Projet 3"
