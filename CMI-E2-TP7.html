@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>TP3 : Premiers Graphiques – Ateliers L3 CMI</title>
+<title>7&nbsp; TP7 : Différences en Différences – Ateliers L3 CMI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,13 +20,47 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
-<link href="./CMI-CN-TP4.html" rel="next">
-<link href="./CMI-CN-TP2.html" rel="prev">
+<link href="./CMI-E2-TP6.html" rel="prev">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -59,6 +93,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -242,7 +305,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-CN-intro.html">Calcul Numérique</a></li><li class="breadcrumb-item"><a href="./CMI-CN-TP3.html">TP3 : Premiers Graphiques</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP7.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">TP7 : Différences en Différences</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -345,7 +408,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-CN-TP3.html" class="sidebar-item-text sidebar-link active">
+  <a href="./CMI-CN-TP3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TP3 : Premiers Graphiques</span></a>
   </div>
 </li>
@@ -486,7 +549,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CMI-E2-TP7.html" class="sidebar-item-text sidebar-link">
+  <a href="./CMI-E2-TP7.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">TP7 : Différences en Différences</span></span></a>
   </div>
 </li>
@@ -502,11 +565,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#exercice-1" id="toc-exercice-1" class="nav-link active" data-scroll-target="#exercice-1">Exercice 1</a></li>
-  <li><a href="#exercice-2" id="toc-exercice-2" class="nav-link" data-scroll-target="#exercice-2">Exercice 2</a></li>
-  <li><a href="#exercice-3" id="toc-exercice-3" class="nav-link" data-scroll-target="#exercice-3">Exercice 3</a></li>
-  <li><a href="#exercice-4" id="toc-exercice-4" class="nav-link" data-scroll-target="#exercice-4">Exercice 4</a></li>
-  <li><a href="#exercice-5" id="toc-exercice-5" class="nav-link" data-scroll-target="#exercice-5">Exercice 5</a></li>
+  <li><a href="#did-22-classique-lincinérateur-de-north-andover" id="toc-did-22-classique-lincinérateur-de-north-andover" class="nav-link active" data-scroll-target="#did-22-classique-lincinérateur-de-north-andover"><span class="header-section-number">7.1</span> DiD 2×2 classique : l’incinérateur de North Andover</a></li>
+  <li><a href="#staggered-did-avec-twfe" id="toc-staggered-did-avec-twfe" class="nav-link" data-scroll-target="#staggered-did-avec-twfe"><span class="header-section-number">7.2</span> Staggered DiD avec TWFE</a></li>
+  <li><a href="#event-study-et-estimateurs-robustes" id="toc-event-study-et-estimateurs-robustes" class="nav-link" data-scroll-target="#event-study-et-estimateurs-robustes"><span class="header-section-number">7.3</span> Event study et estimateurs robustes</a>
+  <ul class="collapse">
+  <li><a href="#estimateur-de-callaway-santanna-2021" id="toc-estimateur-de-callaway-santanna-2021" class="nav-link" data-scroll-target="#estimateur-de-callaway-santanna-2021"><span class="header-section-number">7.3.1</span> Estimateur de Callaway &amp; Sant’Anna (2021)</a></li>
+  <li><a href="#event-study-dynamique" id="toc-event-study-dynamique" class="nav-link" data-scroll-target="#event-study-dynamique"><span class="header-section-number">7.3.2</span> Event study dynamique</a></li>
+  <li><a href="#comparaison-avec-levent-study-twfe" id="toc-comparaison-avec-levent-study-twfe" class="nav-link" data-scroll-target="#comparaison-avec-levent-study-twfe"><span class="header-section-number">7.3.3</span> Comparaison avec l’event study TWFE</a></li>
+  </ul></li>
+  <li><a href="#questions-de-synthèse" id="toc-questions-de-synthèse" class="nav-link" data-scroll-target="#questions-de-synthèse"><span class="header-section-number">7.4</span> Questions de synthèse</a></li>
   </ul>
 </nav>
     </div>
@@ -514,9 +581,9 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-CN-intro.html">Calcul Numérique</a></li><li class="breadcrumb-item"><a href="./CMI-CN-TP3.html">TP3 : Premiers Graphiques</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CMI-E2-intro.html">Econométrie 2</a></li><li class="breadcrumb-item"><a href="./CMI-E2-TP7.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">TP7 : Différences en Différences</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">TP3 : Premiers Graphiques</h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">TP7 : Différences en Différences</span></h1>
 </div>
 
 
@@ -533,157 +600,136 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="exercice-1" class="level2">
-<h2 class="anchored" data-anchor-id="exercice-1">Exercice 1</h2>
-<ol type="1">
-<li>Avant toute chose, charger <code>tidyverse</code>. Charger aussi le jeu de données <code>rp2018</code> dans le package <code>questionr</code>. Assigner un dataframe <code>rp69</code> comme la restriction de <code>rp2018</code> aux départements du Rhône et de la Loire. Faire un nuage de points croisant le pourcentage de sans diplôme (<code>dipl_aucun</code>) et le pourcentage d’ouvriers (<code>ouvr</code>).</li>
-</ol>
-<div class="solution-exo">
-
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo=</span><span class="cn">FALSE</span>, <span class="at">warning=</span><span class="cn">FALSE</span>, <span class="at">message=</span><span class="cn">FALSE</span>, <span class="at">eval=</span><span class="cn">FALSE</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fixest)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(did)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(wooldridge)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<ol start="2" type="1">
-<li>Faire un nuage de points croisant le pourcentage de sans diplôme et le pourcentage d’ouvriers, avec les points en rouge et de transparence 0.2.</li>
-</ol>
-<div class="solution-exo">
-
-</div>
-<ol start="3" type="1">
-<li>Représenter la répartition du pourcentage de propriétaires (variable <code>proprio</code>) selon la taille de la commune en classes (variable <code>pop_cl</code>) sous forme de boîtes à moustaches.</li>
-</ol>
-<div class="solution-exo">
-
-</div>
-<ol start="4" type="1">
-<li>Représenter la répartition du nombre de communes selon la taille de la commune en classes sous la forme d’un diagramme en bâtons.</li>
-</ol>
-<div class="solution-exo">
-
-</div>
-<ol start="5" type="1">
-<li>Faire un nuage de points croisant le pourcentage de sans diplôme et le pourcentage d’ouvriers. Faire varier la couleur selon le département (<code>departement</code>).</li>
-</ol>
-<div class="solution-exo">
-
-</div>
-<ol start="6" type="1">
-<li>Sur le même graphique, faire varier la taille des points selon la population totale de la commune (<code>pop_tot</code>).</li>
-</ol>
-<div class="solution-exo">
-
-</div>
-<ol start="7" type="1">
-<li>Enfin, toujours sur le même graphique, rendre les points transparents en plaçant leur opacité à 0.5.</li>
-</ol>
-<div class="solution-exo">
-
-</div>
-<ol start="9" type="1">
-<li>Représenter la répartition du pourcentage de propriétaires (variable <code>proprio</code>) selon la taille de la commune en classes (variable <code>pop_cl</code>) sous forme de boîtes à moustaches. Faire varier la couleur de remplissage (attribut <code>fill</code>) selon le département.</li>
-</ol>
-<div class="solution-exo">
-
-</div>
-<ol start="10" type="1">
-<li>Représenter la répartition du nombre de communes selon la taille de la commune en classes (variable <code>pop_cl</code>) sous forme de diagramme en bâtons empilés, avec une couleur différente selon le département.</li>
-</ol>
-<div class="solution-exo">
-
-</div>
-<ol start="11" type="1">
-<li>Faire varier la valeur du paramètre <code>position</code> pour afficher les barres les unes à côté des autres.</li>
-</ol>
-<div class="solution-exo">
-
-</div>
-<ol start="12" type="1">
-<li>Changer à nouveau la valeur du paramètre <code>position</code> pour représenter les proportions de communes de chaque département pour chaque catégorie de taille.</li>
-</ol>
-<div class="solution-exo">
-
-</div>
-<ol start="13" type="1">
-<li>Faire un nuage de points représentant en abscisse le pourcentage de cadres (<code>cadres</code>) et en ordonnée le pourcentage de diplômés du supérieur (<code>dipl_sup</code>). Représenter ce nuage par deux graphiques différents selon le département en utilisant <code>facet_grid</code>.</li>
-</ol>
-<div class="solution-exo">
-
-</div>
-<ol start="14" type="1">
-<li>Sur le même graphique, faire varier la taille des points selon la population totale de la communes (variable <code>pop_tot</code>) et rendre les points transparents.</li>
-</ol>
-<div class="solution-exo">
-
-</div>
-<ol start="15" type="1">
-<li>Faire le nuage de points croisant pourcentage de chômeurs (<code>chom</code>) et pourcentage de sans diplôme. Y ajouter les noms des communes correspondant (variable <code>commune</code>), en rouge et en taille 2.5&nbsp;:</li>
-</ol>
-<div class="solution-exo">
-
-</div>
-<ol start="16" type="1">
-<li>Dans le graphique précédent, n’afficher que le nom des communes ayant plus de 15% de chômage.</li>
-</ol>
-<div class="solution-exo">
-
-</div>
-</section>
-<section id="exercice-2" class="level2">
-<h2 class="anchored" data-anchor-id="exercice-2">Exercice 2</h2>
-<p>Avant tout, charger le package <code>tidyverse</code>.</p>
-<ol type="1">
-<li>Utiliser la fonction <code>data()</code> pour charger en mémoire le jeu de données <code>economics.</code> Consulter la page d’aide de ce jeu de données pour prendre connaissance de son contenu ;</li>
-<li>À l’aide de la fonction <code>ggplot()</code>, représenter les dépenses personnelles de consommation (<code>pce</code>) en fonction de la date (<code>date</code>). Les observations doivent être connectées par une ligne.</li>
-<li>Modifier le graphique de la question précédente de manière à ce que la couleur de la ligne soit dodger blue et définir la taille de la ligne à 0.5. Stocker le résultat dans un objet que l’on appellera <code>p_1</code> ;</li>
-<li>Ajouter une couche au graphique <code>p_1</code> pour modifier les titres des axes (les retirer), et définir le titre suivant : <em>“Personal Consumption Expenditures (billions dollars)”</em>.</li>
-<li>Utiliser la fonction <code>scale_x_date()</code> du package <code>scales</code> pour modifier l’échelle des abscisses de <code>p_1</code>, afin que les étiquettes des marques soient affichées tous les 5 ans ;</li>
-<li>A l’aide de l’option <code>date_labels()</code> de la fonction précédente, modifier le format de ces étiquettes pour que seule l’année des dates s’affiche ;</li>
+<p>On considère le modèle de différences en différences (DiD) général : <span class="math display">\[Y_{it} = \alpha_i + \lambda_t + \delta \cdot D_{it} + \varepsilon_{it}\]</span></p>
+<p>Installer et charger les packages :</p>
+<ul>
+<li><code>fixest</code> : estimation de modèles à effets fixes (OLS, TWFE)</li>
+<li><code>did</code> : estimateur de Callaway &amp; Sant’Anna (2021), contient le jeu de données <code>mpdta</code></li>
+<li><code>wooldridge</code> : contient le jeu de données <code>kielmc</code></li>
+</ul>
+<section id="did-22-classique-lincinérateur-de-north-andover" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="did-22-classique-lincinérateur-de-north-andover"><span class="header-section-number">7.1</span> DiD 2×2 classique : l’incinérateur de North Andover</h2>
+<p>On étudie l’effet de la construction d’un incinérateur de déchets sur les prix immobiliers à North Andover, Massachusetts (Kiel &amp; McClain, 1995).</p>
+<ul>
+<li><strong>Groupe traité</strong> : maisons proches de l’incinérateur (<code>nearinc = 1</code>)</li>
+<li><strong>Groupe de contrôle</strong> : maisons éloignées (<code>nearinc = 0</code>)</li>
+<li><strong>Périodes</strong> : 1978 (avant, <code>y81 = 0</code>) et 1981 (après, <code>y81 = 1</code>)</li>
+</ul>
+<ol type="i">
+<li><p>Charger les données <code>kielmc</code> du package <code>wooldridge</code>. Examiner la structure des données avec <code>glimpse()</code>. Créer une variable <code>lrprice = log(rprice)</code>.</p></li>
+<li><p>Calculer le prix moyen (<code>rprice</code>) par groupe (<code>nearinc</code>) et par période (<code>y81</code>) avec <code>group_by()</code> et <code>summarise()</code>. Représenter graphiquement les quatre moyennes avec <code>ggplot</code> : périodes en abscisse, prix moyen en ordonnée, une ligne par groupe. L’hypothèse de tendances parallèles vous semble-t-elle raisonnable ?</p></li>
+<li><p>Calculer le DiD à la main. Construire un tableau croisé des moyennes (utiliser <code>pivot_wider()</code>), puis calculer : <span class="math display">\[\widehat{\delta}_{DiD} = (\bar{Y}_{1,1} - \bar{Y}_{1,0}) - (\bar{Y}_{0,1} - \bar{Y}_{0,0})\]</span> où le premier indice désigne le groupe et le second la période. Interpréter.</p></li>
+<li><p>Estimer par régression avec <code>feols()</code> le modèle : <span class="math display">\[rprice = \alpha + \beta_1 \cdot nearinc + \beta_2 \cdot y81 + \delta \cdot (nearinc \times y81) + \varepsilon\]</span> En R, l’opérateur <code>*</code> dans la formule génère les termes principaux et l’interaction. Vérifier que <span class="math inline">\(\hat{\delta}\)</span> correspond au calcul manuel de (iii).</p></li>
+<li><p>Refaire la régression avec <code>lrprice</code> comme variable dépendante. Interpréter le coefficient de l’interaction en termes de variation en pourcentage.</p></li>
+<li><p>Enrichir le modèle en log avec les contrôles suivants : <code>age</code>, <code>I(age^2)</code>, <code>lintst</code>, <code>lland</code>, <code>larea</code>, <code>rooms</code>, <code>baths</code>. Le coefficient DiD change-t-il beaucoup ? Commenter la robustesse.</p></li>
 </ol>
 </section>
-<section id="exercice-3" class="level2">
-<h2 class="anchored" data-anchor-id="exercice-3">Exercice 3</h2>
-<ol type="1">
-<li><p>Utiliser la fonction data() pour charger en mémoire le jeu de données <code>economics.</code> Consulter la page d’aide de ce jeu de données pour prendre connaissance de son contenu ;</p></li>
-<li><p>Sélectionner les variables <code>date</code>,<code>psavert</code> et <code>uempmed</code> dans le tableau de données economics et utiliser la fonction <code>gather()</code> sur le résultat pour obtenir un tableau dans lequel chaque ligne indiquera la valeur (<code>value</code>) pour une variable donnée (<code>key</code>) à une date donnée (<code>date</code>). Stocker le résultat dans un objet que l’on appellera <code>df</code> ;</p></li>
-<li><p>Sur un même graphique, représenter à l’aide de lignes, l’évolution dans le temps du taux d’épargne personnelle (psavert) et de la durée médiane en semaines du chômage (<code>uempmed</code>). Stocker le graphique dans un objet que l’on appellera <code>p_2</code> ;</p></li>
-<li><p>Modifier le code ayant servi à construire le graphique <code>p_2</code> pour que le type de ligne soit différent pour chacune des deux séries représentées. Les deux lignes doivent être tracées en bleu. Stocker le graphique dans un objet que l’on appellera <code>p_3</code> ;</p></li>
-<li><p>À présent, modifier le code ayant servi à construire <code>p_3</code> pour qu’à la fois la couleur et le type de ligne servent à différencier les deux séries. Stocker le graphique dans un objet que l’on appellera <code>p_4</code> ;</p></li>
-<li><p>Modifier le graphique <code>p_4</code> en ajoutant une couche d’échelle de couleur pour que le taux d’épargne personnelle (<code>psavert</code>) soit représenté en dodger blue, et que la durée de chômage (<code>uempmed</code>) soit représentée en rouge. Par ailleurs, retirer le titre de la légende ;</p></li>
-<li><p>Modifier le graphique <code>p_4</code> en ajoutant une couche d’échelle de type de ligne pour que le taux d’épargne personnelle (<code>psavert</code>) soit représenté par des tirets, et que la durée de chômage (<code>uempmed</code>) soit représentée par une ligne pleine. Par ailleurs, retirer le titre de la légende des types de lignes, afin que les légendes de couleur et de type de ligne soient fusionnées ;</p></li>
-<li><p>Créer le tableaux de données df_2, une copie de df, dans lequel la variable key doit être un facteur dont les niveaux sont uempmed et psavert ;</p></li>
-<li><p>Créer le vecteur etiq suivant <code>etiq &lt;- c("psavert" = "Pers. Saving</code> <code>Rate","uempmed" = "Median Duration of Unemployment (weeks)")</code> Ce vecteur contient des valeurs d’étiquettes pour la légende du graphique qu’il va falloir créer. Représenter sur un même graphique l’évolution dans le temps du taux d’épargne personnelle et de la durée médiane du chômage en semaines, en s’appuyant sur les données contenues dans le tableau <code>df_2</code>. La courbe du taux d’épargne personnelle doit être composée de tirets et être de couleur dodger blue; la courbe de la durée médiane du taux de chômage doit être une ligne rouge. La légende ne doit pas comporter de titre, et ses étiquettes doivent être modifiées pour que <em>“Pers. Saving Rate”</em> s’affiche ’a la place de <em>“psavert”</em>, et pour que <em>“Median Duration of Unemployment (weeks)”</em> s’affiche à la place de <em>“uempmed”</em>. Stocker le graphique dans un objet que l’on appellera <code>p_5</code> ; Note : il s’agit de reprendre le code ayant servi à créer le graphique <code>p_4</code>, en modifiant légèrement les échelles de couleur et de ligne pour prendre en compte les étiquettes proposées dans le vecteur <code>etiq</code>.</p></li>
-<li><p>Modifier <code>p_5</code> pour lui ajouter une couche permettant de déplacer la légende en bas du graphique (utiliser la fonction theme()) ;</p></li>
-<li><p>Ajouter une couche au graphique <code>p_5</code> qui permet de définir un thème. Utiliser le thème minimal (<code>theme_minimal()</code>). Que se passe-t-il pour la légende ? Repositionner la légende en dessous, et retirer les titres des axes ;</p></li>
-<li><p>Sauvegarder le graphique <code>p_5</code> au format PDF en précisant une largeur de 12 et une hauteur de 8.</p></li>
+<section id="staggered-did-avec-twfe" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="staggered-did-avec-twfe"><span class="header-section-number">7.2</span> Staggered DiD avec TWFE</h2>
+<p>En pratique, les politiques sont rarement adoptées simultanément par toutes les unités. Lorsque le traitement est adopté à des dates différentes (<em>staggered treatment</em>), on estime classiquement un modèle TWFE : <span class="math display">\[Y_{it} = \alpha_i + \lambda_t + \delta \cdot D_{it} + \varepsilon_{it}\]</span> avec <span class="math inline">\(D_{it} = 1\)</span> si l’unité <span class="math inline">\(i\)</span> est traitée en <span class="math inline">\(t\)</span>.</p>
+<p>On utilise le jeu de données <code>mpdta</code> du package <code>did</code> (Callaway &amp; Sant’Anna, 2021) : effet des hausses du salaire minimum sur l’emploi dans la restauration au niveau des comtés américains.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 81%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>countyreal</code></td>
+<td>Identifiant du comté</td>
+</tr>
+<tr class="even">
+<td><code>year</code></td>
+<td>Année</td>
+</tr>
+<tr class="odd">
+<td><code>lemp</code></td>
+<td>Log de l’emploi</td>
+</tr>
+<tr class="even">
+<td><code>first.treat</code></td>
+<td>Année de premier traitement (0 = jamais traité)</td>
+</tr>
+<tr class="odd">
+<td><code>treat</code></td>
+<td>= 1 si le comté est traité à un moment donné</td>
+</tr>
+</tbody>
+</table>
+<ol type="i">
+<li><p>Charger <code>mpdta</code> et examiner sa structure. Combien d’observations et de comtés distincts ?</p></li>
+<li><p>Visualiser la répartition des cohortes de traitement : utiliser <code>distinct()</code> pour garder une ligne par comté, puis <code>count(first.treat)</code> et <code>geom_col()</code>. Combien de cohortes ? Quelle part n’est jamais traitée ?</p></li>
+<li><p>Créer une variable indicatrice <span class="math inline">\(D_{it}\)</span> valant 1 lorsque <code>first.treat &gt; 0</code> <strong>et</strong> <code>year &gt;= first.treat</code>.</p></li>
+<li><p>Estimer le TWFE avec <code>feols()</code>. Rappel de la syntaxe : les effets fixes se placent après <code>|</code> (ex. <code>y ~ x | fe1 + fe2</code>). Clusteriser les erreurs standard au niveau du comté avec <code>cluster = ~countyreal</code>. Interpréter <span class="math inline">\(\hat{\delta}\)</span>.</p></li>
+<li><p>La littérature récente (Goodman-Bacon, 2021 ; de Chaisemartin &amp; D’Haultfœuille, 2020) montre que <span class="math inline">\(\hat{\delta}_{TWFE}\)</span> est une moyenne pondérée de DiD 2×2, dont certains ont des <strong>poids négatifs</strong>. Expliquez pourquoi utiliser une unité déjà traitée en 2004 comme « contrôle » pour une unité traitée en 2006 pose problème si l’effet du traitement évolue dans le temps.</p></li>
 </ol>
 </section>
-<section id="exercice-4" class="level2">
-<h2 class="anchored" data-anchor-id="exercice-4">Exercice 4</h2>
-<ol type="1">
-<li>Charger le jeu de données <code>mpg</code> contenu dans lepackage ggplot2 en mémoire, puis consulter la page d’aide du jeu de données pour en prendre connaissance ;</li>
-<li>Représenter à l’aide d’un nuage de points la relation entre la consommation sur autoroute des véhicules de l’échantillon (<code>hwy</code>) et la cylindrée de leur moteur (<code>displ</code>)</li>
-<li>Reprendre le code du graphique précédent et modifier la forme des points pour les changer en symbole +; modifier la couleur des + de manière à la faire dépendre du nombre de cylindres (<code>cyl</code>) ;</li>
-<li>À présent, représenter par des boîtes à moustaches la distribution de la consommation sur autoroute des véhicules (<code>hwy</code>) pour chacune des valeurs possibles du nombre de cylindres (<code>cyl</code>) ;</li>
-<li>Charger le jeu de données <code>economics</code> contenu dans le package <code>ggplot2</code> en mémoire, puis consulter la page d’aide du jeu de données pour en prendre connaissance. Ensuite, ajouter au tableau (les créer) les variables <code>u_rate</code> et <code>e_rate</code>, respectivement le taux de chômage et le taux d’emploi (on définira le taux de chômage de manière très grossière ici : nombre de personnes non employées sur la population totale) ;</li>
-<li>Représenter à l’aide de barres l’évolution dans le temps du taux de chômage, et remplir les barres avec la couleur rouge ;</li>
-<li>Reprendre le code du graphique précédent et ajouter une couche permettant de modifier les limites de l’axe des abscisses pour afficher les valeurs uniquement sur la période “2012- 01-01” à “2015-01-01” (utiliser la fonction <code>coord_cartesian()</code>). Stocker le graphique dans un objet que l’on appellera p ;</li>
-<li>Dans le tableau de données economics, sélectionner les variables date, <code>u_rate</code> et <code>e_rate</code>, puis utiliser la fonction <code>gather()</code> pour obtenir un tableau dans lequel chaque ligne correspond à la valeur d’une des variables (taux de chômage ou taux d’emploi) à une date donnée. Stocker le résultat dans un objet que l’on appellera <code>df_3</code> ;</li>
-<li>Utiliser le tableau de données <code>df_3</code> pour représenter graphiquement à l’aide de barres les taux de chômage et taux d’emploi par mois sur la période “2012-01-01” à “2015-01-01”. Sur le graphique, les barres représentant le taux de chômage et celles représentant le taux d’emploi devront être superposées. Note : il s’agit de modifier légèrement le code ayant permis de réaliser le graphique <code>p</code>.</li>
+<section id="event-study-et-estimateurs-robustes" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="event-study-et-estimateurs-robustes"><span class="header-section-number">7.3</span> Event study et estimateurs robustes</h2>
+<section id="estimateur-de-callaway-santanna-2021" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="estimateur-de-callaway-santanna-2021"><span class="header-section-number">7.3.1</span> Estimateur de Callaway &amp; Sant’Anna (2021)</h3>
+<p>L’estimateur de Callaway &amp; Sant’Anna calcule un <span class="math inline">\(ATT(g,t)\)</span> pour chaque couple (cohorte <span class="math inline">\(g\)</span>, période <span class="math inline">\(t\)</span>), en n’utilisant que les unités <strong>pas encore traitées</strong> comme contrôle.</p>
+<ol type="i">
+<li>Utiliser la fonction <code>att_gt()</code> du package <code>did</code> avec les arguments :</li>
+</ol>
+<ul>
+<li><code>yname = "lemp"</code>, <code>tname = "year"</code>, <code>idname = "countyreal"</code>, <code>gname = "first.treat"</code></li>
+<li><code>control_group = "notyettreated"</code></li>
+<li><code>bstrap = TRUE</code>, <code>cband = TRUE</code></li>
+</ul>
+<p>Stocker le résultat et afficher le résumé (<code>summary()</code>). Visualiser avec <code>ggdid()</code>.</p>
+<ol start="2" type="i">
+<li><p>Agréger les <span class="math inline">\(ATT(g,t)\)</span> en un <strong>effet moyen global</strong> avec <code>aggte()</code> et <code>type = "simple"</code>. Comparer à l’estimation TWFE de la section précédente.</p></li>
+<li><p>Agréger <strong>par cohorte</strong> avec <code>aggte()</code> et <code>type = "group"</code>. Visualiser avec <code>ggdid()</code>. L’effet est-il homogène entre cohortes ?</p></li>
 </ol>
 </section>
-<section id="exercice-5" class="level2">
-<h2 class="anchored" data-anchor-id="exercice-5">Exercice 5</h2>
-<ol type="1">
-<li>À l’aide de la fonction <code>WDI</code> du package <code>WDI</code>, récupérer la série fournie par la Banque Mondiale du PIB par tête (<em>NY.GDP.PCAP.PP.KD</em>) pour tous les pays disponibles pour l’année 2010, et stocker ces données dans un tableau que l’on appellera <code>gdp_capita</code> ;</li>
-<li>Dans le tableau <code>gdp_capita</code>, modifier la valeur de la variable country pour l’observation de la Slovaquie, pour qu’elle vaille Slovakia au lieu de Slovak Republic ;</li>
-<li>Filtrer les observations du tableau gdp_capita pour ne conserver que les observations des pays membres de l’Union Européenne dont les noms sont contenus dans le vecteur membres_ue. Stocker le résultat dans un tableau que l’on nommera gdp_capita_eu ;</li>
+<section id="event-study-dynamique" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="event-study-dynamique"><span class="header-section-number">7.3.2</span> Event study dynamique</h3>
+<ol start="4" type="i">
+<li>Calculer l’event study avec <code>aggte()</code> et <code>type = "dynamic"</code>. Visualiser avec <code>ggdid()</code>.</li>
 </ol>
-<ol start="4" type="1">
-<li>Utiliser le package <code>rworldmap</code> pour récupérer les données nécessaires à la réalisation d’une carte du monde ;</li>
-<li>Afficher une carte du monde à l’aide des fonctions contenues dans le package <code>ggplot2</code> ;</li>
-<li>Modifier les échelles des axes pour faire figurer les méridiens de -60 à 60 par pas de 30 et les parallèles de -180 à 180 par pas de 45. Modifier également la projection cartographique pour choisir la projection orthographique, à l’aide de la fonction <code>coord_map()</code> ;</li>
-<li>Joindre les informations contenues dans le tableau <code>gdp_capita_eu</code> au tableau contenant les données permettant la réalisation des cartes ;</li>
-<li>Réaliser une carte choroplèthe reflétant pour chaque pays membre de l’Union Européenne la valeur du PIB par tête de 2012 ;</li>
-<li>Modifier les couleurs de l’échelle continue de la carte précédente, pour que les faibles valeurs du PIB par tête soient représentées en jaune, et les valeurs les plus hautes en rouge ;</li>
-<li>Modifier les ruptures de l’échelle de couleur pour qu’elles aillent de 10000 à 100000; modifier également l’étiquette de ces ruptures de sorte que 35000 soit affiché comme 35k, 60000 comme 60k, etc. Enfin, ajouter un titre au graphique et retirer les titres d’axes.</li>
+<p>Rappel de lecture du graphique :</p>
+<ul>
+<li><span class="math inline">\(e &lt; 0\)</span> (pré-traitement) : test de l’hypothèse de tendances parallèles</li>
+<li><span class="math inline">\(e = 0\)</span> : effet instantané</li>
+<li><span class="math inline">\(e &gt; 0\)</span> : dynamique post-traitement</li>
+</ul>
+<p>L’hypothèse de tendances parallèles semble-t-elle vérifiée ?</p>
+</section>
+<section id="comparaison-avec-levent-study-twfe" class="level3" data-number="7.3.3">
+<h3 data-number="7.3.3" class="anchored" data-anchor-id="comparaison-avec-levent-study-twfe"><span class="header-section-number">7.3.3</span> Comparaison avec l’event study TWFE</h3>
+<ol start="22" type="a">
+<li>Estimer un event study TWFE « naïf » avec <code>fixest</code> :</li>
+</ol>
+<ol type="1">
+<li>Créer <code>rel_time = year - first.treat</code>. Attribuer <code>-Inf</code> aux comtés jamais traités (<code>first.treat == 0</code>).</li>
+<li>Estimer avec <code>feols()</code> en utilisant <code>i(rel_time, ref = -1)</code> pour les indicatrices de temps relatif (la référence est la période juste avant le traitement). Effets fixes comté + année, cluster au niveau du comté. Filtrer pour exclure les <code>rel_time</code> infinis.</li>
+<li>Visualiser avec <code>iplot()</code>.</li>
+</ol>
+<p>Comparer à l’event study de Callaway &amp; Sant’Anna. Quelles différences observez-vous dans les coefficients pré- et post-traitement ?</p>
+</section>
+</section>
+<section id="questions-de-synthèse" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="questions-de-synthèse"><span class="header-section-number">7.4</span> Questions de synthèse</h2>
+<ol type="i">
+<li><p>Résumez les avantages de l’estimateur de Callaway &amp; Sant’Anna par rapport au TWFE classique.</p></li>
+<li><p>Dans quel cas le TWFE reste-t-il valide, même en présence d’adoption échelonnée ?</p></li>
+<li><p>Un collègue vous montre un event study dont tous les coefficients pré-traitement sont nuls. Peut-on conclure avec certitude que l’hypothèse de tendances parallèles est vérifiée ? Discutez (cf.&nbsp;Roth, 2022).</p></li>
+<li><p>Si vous deviez évaluer une politique environnementale (par exemple une taxe carbone adoptée progressivement par différents pays), quelle stratégie DiD choisiriez-vous et pourquoi ?</p></li>
 </ol>
 
 
@@ -1105,14 +1151,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./CMI-CN-TP2.html" class="pagination-link" aria-label="TP2 : Tableaux de données">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">TP2 : Tableaux de données</span>
+      <a href="./CMI-E2-TP6.html" class="pagination-link" aria-label="TP 6 : Econométrie de Panel">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">TP 6 : Econométrie de Panel</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./CMI-CN-TP4.html" class="pagination-link" aria-label="TP4 : Fonctions et manipulation de données">
-        <span class="nav-page-text">TP4 : Fonctions et manipulation de données</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
