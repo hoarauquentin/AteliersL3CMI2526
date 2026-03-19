@@ -637,10 +637,6 @@ window.Quarto = {
 <p>En pratique, les politiques sont rarement adoptées simultanément par toutes les unités. Lorsque le traitement est adopté à des dates différentes (<em>staggered treatment</em>), on estime classiquement un modèle TWFE : <span class="math display">\[Y_{it} = \alpha_i + \lambda_t + \delta \cdot D_{it} + \varepsilon_{it}\]</span> avec <span class="math inline">\(D_{it} = 1\)</span> si l’unité <span class="math inline">\(i\)</span> est traitée en <span class="math inline">\(t\)</span>.</p>
 <p>On utilise le jeu de données <code>mpdta</code> du package <code>did</code> (Callaway &amp; Sant’Anna, 2021) : effet des hausses du salaire minimum sur l’emploi dans la restauration au niveau des comtés américains.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 18%">
-<col style="width: 81%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Variable</th>
@@ -715,6 +711,7 @@ window.Quarto = {
 <ol start="22" type="a">
 <li>Estimer un event study TWFE « naïf » avec <code>fixest</code> :</li>
 </ol>
+<!-- -->
 <ol type="1">
 <li>Créer <code>rel_time = year - first.treat</code>. Attribuer <code>-Inf</code> aux comtés jamais traités (<code>first.treat == 0</code>).</li>
 <li>Estimer avec <code>feols()</code> en utilisant <code>i(rel_time, ref = -1)</code> pour les indicatrices de temps relatif (la référence est la période juste avant le traitement). Effets fixes comté + année, cluster au niveau du comté. Filtrer pour exclure les <code>rel_time</code> infinis.</li>
