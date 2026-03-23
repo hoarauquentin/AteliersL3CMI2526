@@ -591,7 +591,7 @@ window.Quarto = {
 <section id="erreurs-standards-robustes" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="erreurs-standards-robustes"><span class="header-section-number">5.2</span> Erreurs standards robustes</h2>
 <ol type="1">
-<li><p>Rappelez la formule générale des erreurs standars robutes à l’hétéroscédasticité de White.</p></li>
+<li><p>Rappelez la formule générale des erreurs standards robustes à l’hétéroscédasticité de White.</p></li>
 <li><p>Codez une fonction qui prend en argument un modèle issu de <code>lm</code> et renvoie les erreurs standards robustes.</p></li>
 <li><p>Pour calculer les erreurs standards dans R, il faut charger le package <code>sandwich</code> et utiliser la fonction <code>vcovHC</code>. On peut afficher l’un modèle issu de <span class="math inline">\(lm\)</span> dans stargazer avec le code suivant :</p></li>
 </ol>
@@ -609,7 +609,7 @@ window.Quarto = {
 </section>
 <section id="exercices" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="exercices"><span class="header-section-number">5.4</span> Exercices</h2>
-<p>Ces exercices utilisent les données issus du package wooldridge. Installez-le puis lancez la commande <code>library(wooldridge)</code>.</p>
+<p>Ces exercices utilisent les données issues du package wooldridge. Installez-le puis lancez la commande <code>library(wooldridge)</code>.</p>
 <section id="sleep75" class="level3" data-number="5.4.1">
 <h3 data-number="5.4.1" class="anchored" data-anchor-id="sleep75"><span class="header-section-number">5.4.1</span> sleep75</h3>
 <p>Considérez le modèle suivant pour expliquer le comportement de sommeil : <span class="math display">\[sleep = \beta_0+ \beta_1 totwrk + \beta_2 educ + \beta_3 age + \beta_4 age^2 + \beta_5 yngkid + \beta_6 male + u \]</span></p>
@@ -682,7 +682,7 @@ window.Quarto = {
 </ol>
 <p>et présentez les erreurs standard habituelles et corrigées de l’hétéroscédasticité. Les erreurs standard robustes sont-elles toujours plus grandes que les erreurs standard non robustes ? Les erreurs standard robustes sont-elles toujours plus grandes que les erreurs standard non robustes ?</p>
 <ol start="2" type="1">
-<li><p>Ajoutez les trois variables muettes religieuses et testez si elles sont conjointement significatives. significatives. Quelles sont les valeurs p pour les tests non robustes et robustes ?</p></li>
+<li><p>Ajoutez les trois variables muettes religieuses et testez si elles sont conjointement significatives. Quelles sont les valeurs p pour les tests non robustes et robustes ?</p></li>
 <li><p>A partir de la régression de la partie 2. , obtenez les valeurs ajustées <span class="math inline">\(\hat y\)</span> et les résidus, <span class="math inline">\(\hat u\)</span>. Régressez <span class="math inline">\(\hat{u}^2\)</span> sur <span class="math inline">\(\hat{y}\)</span> et <span class="math inline">\(\hat{y}^2\)</span> et testez la signification conjointe des deux régresseurs. Concluez que l’hétéroscédasticité est présente dans l’équation pour les enfants.</p></li>
 <li><p>Diriez-vous que l’hétéroscédasticité que vous avez trouvée dans la partie 3. est pratiquement importante dans la pratique ?</p></li>
 </ol>

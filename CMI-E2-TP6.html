@@ -584,11 +584,11 @@ window.Quarto = {
 <section id="fertil1" class="level3" data-number="6.2.1">
 <h3 data-number="6.2.1" class="anchored" data-anchor-id="fertil1"><span class="header-section-number">6.2.1</span> fertil1</h3>
 <ol type="i">
-<li><p>Estimez le modèle OLS avec <code>kids</code> comme variable dépendente : <code>lm(data=fertil1, kids ~ educ + age + agesq + black + east + northcen + west + farm + othrural + town + y74 + y76 + y78 + y80 + y82 + y84)</code></p></li>
+<li><p>Estimez le modèle OLS avec <code>kids</code> comme variable dépendante : <code>lm(data=fertil1, kids ~ educ + age + agesq + black + east + northcen + west + farm + othrural + town + y74 + y76 + y78 + y80 + y82 + y84)</code></p></li>
 <li><p>Dans l’équation estimée précédemment, testez si le cadre de vie à l’âge de 16 ans a un effet sur la fertilité (<code>town</code>). (Le groupe de référence est la grande ville). Reportez la valeur de la statistique F et sa p-valeur.</p></li>
 <li><p>Testez si la région (<code>east</code>,<code>northcen</code>, <code>west</code>) du pays dans laquelle on vit à l’âge de 16 ans (le groupe de référence est celui du Sud) a un effet sur la fertilité.</p></li>
 <li><p>Soit u le terme d’erreur de l’équation de la population. Supposez que la variance de u change au cours du temps (mais pas avec educ, age, etc.). Un modèle tenant compte de cela peut s’écrire ainsi : <span class="math display">\[u^2 =\gamma_0 +\gamma_1 y74+\gamma_2 y76+...+\gamma_6 y84+ v\]</span> En utilisant ce modèle, testez l’hétéroscédasticité de u. (Indice : votre test F doit avoir 6 000 et 1 122 degrés de liberté).</p></li>
-<li><p>Ajoutez les termes d’interactione entre <code>educ</code> et les variables binaires sur les années au modèle estimé dans la question i. Expliquez ce que représentent ces termes. Sont-ils conjointement significatifs ?</p></li>
+<li><p>Ajoutez les termes d’interaction entre <code>educ</code> et les variables binaires sur les années au modèle estimé dans la question i. Expliquez ce que représentent ces termes. Sont-ils conjointement significatifs ?</p></li>
 </ol>
 </section>
 <section id="cps78_85" class="level3" data-number="6.2.2">
@@ -601,7 +601,7 @@ window.Quarto = {
 </section>
 <section id="kielmc" class="level3" data-number="6.2.3">
 <h3 data-number="6.2.3" class="anchored" data-anchor-id="kielmc"><span class="header-section-number">6.2.3</span> kielmc</h3>
-<p>Pour cet exercice, utilisez les données du fichier kielmc i. La variable dist est la distance entre chaque maison et le site de l’incinérateur, en pieds. Examinez le modèle suivant : <span class="math display">\[log(price) = \beta_0 + \delta_0 y81 + \beta_1 log(dist) + \delta_1 y81· log(dist) + u.\]</span></p>
+<p>Pour cet exercice, utilisez les données du fichier kielmc. La variable dist est la distance entre chaque maison et le site de l’incinérateur, en pieds. Examinez le modèle suivant : <span class="math display">\[log(price) = \beta_0 + \delta_0 y81 + \beta_1 log(dist) + \delta_1 y81· log(dist) + u.\]</span></p>
 <p>Si la construction de l’incinérateur réduit la valeur des maisons proches du site, quel est le signe attendu de <span class="math inline">\(\delta_1\)</span> ? Qu’est-ce que cela signifie si <span class="math inline">\(\beta_1\)</span> &gt; 0 ?</p>
 <ol start="2" type="i">
 <li>Estimez le modèle de la question (i) et reportez les résultats sous la forme habituelle. Interprétez le coefficient de y81· log(dist). Que pouvez-vous en conclure ?</li>
@@ -614,7 +614,7 @@ window.Quarto = {
 <ol type="i">
 <li>En utilisant les données du Kentucky, estimez le modèle <span class="math display">\[log(durat) =  afchnge + highearn + afchnge*highearn + male + married\]</span></li>
 </ol>
-<p>et y ajouter les variables explicatives jeu entier de variables indicatrices pour les industries et les types d’accidents du travail (les transformer en facteurs au préalables). Comment l’estimation de <code>afchnge.highearn</code> varie lorsque ces autres facteurs sont pris en compte ? Est-ce que cette estimation est statistiquement significative ? ii. Comment interprétez-vous les faibles valeurs de R carré de la question (i) ? Cela signifie-t-il que l’équation est inutile ? iii. Estimez le modèle de i. en utilisant les données pour le Michigan. Comparez les estimations sur le terme d’interaction pour le Michigan et le Kentucky. Est-ce que l’estimation pour le Michigan est statistiquement significative ? Justifiez.</p>
+<p>et y ajouter le jeu entier de variables indicatrices pour les industries et les types d’accidents du travail (les transformer en facteurs au préalables). Comment l’estimation de <code>afchnge.highearn</code> varie lorsque ces autres facteurs sont pris en compte ? Est-ce que cette estimation est statistiquement significative ? ii. Comment interprétez-vous les faibles valeurs de R carré de la question (i) ? Cela signifie-t-il que l’équation est inutile ? iii. Estimez le modèle de i. en utilisant les données pour le Michigan. Comparez les estimations sur le terme d’interaction pour le Michigan et le Kentucky. Est-ce que l’estimation pour le Michigan est statistiquement significative ? Justifiez.</p>
 </section>
 <section id="rental" class="level3" data-number="6.2.5">
 <h3 data-number="6.2.5" class="anchored" data-anchor-id="rental"><span class="header-section-number">6.2.5</span> rental</h3>
