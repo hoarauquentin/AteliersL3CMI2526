@@ -561,7 +561,7 @@ window.Quarto = {
 </header>
 
 
-<p>Pour tout ce TP, essayez de chercher par vous-même les réponses sans utiliser de d’assistant IA. Pour ce faire, passez par google, ou l’outil d’aide de R. En général, regardez ce <a href="https://juba.github.io/tidyverse/">bon tutoriel</a> sur le <code>tidyverse</code>.</p>
+<p>Pour tout ce TP, essayez de chercher par vous-même les réponses sans utiliser d’assistant IA. Pour ce faire, passez par google, ou l’outil d’aide de R. En général, regardez ce <a href="https://juba.github.io/tidyverse/">bon tutoriel</a> sur le <code>tidyverse</code>.</p>
 <section id="manipulation-de-vecteurs" class="level2">
 <h2 class="anchored" data-anchor-id="manipulation-de-vecteurs">1. Manipulation de vecteurs</h2>
 <p>Soit le vecteur <span class="math inline">\(x = (1, 2, 3, 4, 5)\)</span></p>
@@ -569,7 +569,7 @@ window.Quarto = {
 <li>Créer ce vecteur dans R et le stocker dans un objet que l’on appellera <code>x</code> ;</li>
 <li>Afficher le mode de <code>x</code>, puis sa longueur ;</li>
 <li>Extraire le premier élément, puis le dernier ;</li>
-<li>Extraire les trois premier éléments et les stocker dans un vecteur que l’on nommera <code>a</code></li>
+<li>Extraire les trois premiers éléments et les stocker dans un vecteur que l’on nommera <code>a</code></li>
 <li>Extraire les éléments en position 1, 3, 5 ; les stocker dans un vecteur que l’on nommera <code>b</code></li>
 <li>Additionner le nombre 10 au vecteur <code>x</code>, puis multiplier le résultat par 2 ;</li>
 <li>Effectuer l’addition de <code>a</code> et <code>b</code>, commenter le résultat ;</li>
@@ -640,7 +640,7 @@ window.Quarto = {
 <ol type="1">
 <li>Créer les objets <code>a</code> et <code>b</code> afin qu’il contiennent respectivement les chaînes de caractères suivantes : <em>23 à 0</em> et <em>C’est la piquette, Jack!</em>;</li>
 <li>Créer le vecteur <code>phrases</code> de longueur 2, dont les deux éléments sont a et b ;</li>
-<li>À l’aide de la fonction appropriée dans le package stringr, afficher le nombre de carac- tètres de a, de b, puis appliquer la même fonction à l’objet phrases ;</li>
+<li>À l’aide de la fonction appropriée dans le package stringr, afficher le nombre de caractères de a, de b, puis appliquer la même fonction à l’objet phrases ;</li>
 <li>En utilisant la fonction <code>str_c()</code>, concaténer a et b dans une seule chaîne de caractères, en choisissant la virgule comme caractère de séparation ;</li>
 <li>Concaténer les deux éléments du vecteur phrases en une seule chaine de caractères, en les séparant par le caractère de retour à la ligne , puis utiliser la fonction <code>cat()</code> pour afficher le résultat ;</li>
 <li>Appliquer la même fonction que dans la question précédente à l’objet suivant : <code>c(NA, phrases)</code> et commenter ;</li>
@@ -650,12 +650,12 @@ window.Quarto = {
 <li>À l’aide de la fonction <code>str_detect()</code>, rechercher si le motif <code>piqu</code> puis <code>mauvais</code> sont présents dans <code>b</code> ;</li>
 <li>À l’aide de la fonction <code>str_detect()</code>, rechercher si le motif <code>piqu</code> est présent dans les éléments du vecteur phrases ;</li>
 <li>À l’aide de la fonction <code>str_detect()</code>, rechercher si le motif <code>piqu</code> ou le motif <code>à</code> sont présents dans les éléments du vecteur phrases ;</li>
-<li>En utilisant la fonction <code>str_locate()</code>, retourner les positions de la première occurence du caractère <code>a</code> dans la chaîne <code>b</code>, puis essayer avec le caractère <code>w</code> pour observer le résultat retourné ;</li>
+<li>En utilisant la fonction <code>str_locate()</code>, retourner les positions de la première occurrence du caractère <code>a</code> dans la chaîne <code>b</code>, puis essayer avec le caractère <code>w</code> pour observer le résultat retourné ;</li>
 <li>Retourner toutes les positions du motif <code>a</code> dans la chaîne <code>b</code> ;</li>
-<li>En utilisant la fonction <code>str_replace()</code>, remplacer la première occurence du motif <code>a</code>, par le motif <code>Z</code> (afficher le résultat, ne pas modifier <code>phrases</code>) ;</li>
-<li>Remplacer toutes les occurences de <code>a</code> par <code>Z</code> dans la chaîne <code>b</code> (afficher le résultat, ne pas modifier <code>phrases</code>) ;</li>
+<li>En utilisant la fonction <code>str_replace()</code>, remplacer la première occurrence du motif <code>a</code>, par le motif <code>Z</code> (afficher le résultat, ne pas modifier <code>phrases</code>) ;</li>
+<li>Remplacer toutes les occurrences de <code>a</code> par <code>Z</code> dans la chaîne <code>b</code> (afficher le résultat, ne pas modifier <code>phrases</code>) ;</li>
 <li>Utiliser la fonction <code>str_split()</code> pour séparer la chaîne <code>b</code> en utilisant la virgule comme séparateur de sous-chaînes ;</li>
-<li>Retirer tous les caractères de ponctuation de la chaîne <code>b</code>, puis utiliser la fonction <code>tr_trim()</code> sur le résultat pour retirer les caractères blancs du début et de la fin de la chaîne.</li>
+<li>Retirer tous les caractères de ponctuation de la chaîne <code>b</code>, puis utiliser la fonction <code>str_trim()</code> sur le résultat pour retirer les caractères blancs du début et de la fin de la chaîne.</li>
 </ol>
 
 

@@ -518,7 +518,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#jointure" id="toc-jointure" class="nav-link" data-scroll-target="#jointure">3.1 Jointure</a></li>
   <li><a href="#analyse-en-coupe" id="toc-analyse-en-coupe" class="nav-link" data-scroll-target="#analyse-en-coupe">3.2 Analyse en coupe</a></li>
-  <li><a href="#regressions-linéaire" id="toc-regressions-linéaire" class="nav-link" data-scroll-target="#regressions-linéaire">3.3 Regressions linéaire</a></li>
+  <li><a href="#régressions-linéaires" id="toc-régressions-linéaires" class="nav-link" data-scroll-target="#régressions-linéaires">3.3 Régressions linéaires</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -568,22 +568,22 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="evolution-temporelle" class="level3">
 <h3 class="anchored" data-anchor-id="evolution-temporelle">1.2 Evolution temporelle</h3>
-<p>On veut caractériser les résultas du brevet au niveau national.</p>
+<p>On veut caractériser les résultats du brevet au niveau national.</p>
 <ol type="1">
 <li><p>Créer un fichier de donnée aggrégé par année au niveau national (utiliser <code>group_by</code> et <code>summarize</code>).</p></li>
 <li><p>Comment semble calculé la colonne <code>taux_de_reussite</code>. Tester son intuition une colonne <code>taux_de_reussite2</code> et comparer avec <code>taux_de_reussite</code>.</p></li>
 <li><p>Faire des graphiques montrant l’évolution des nombres d’inscrits et d’admis.</p></li>
 <li><p>Faire des graphiques montrant le taux annuel d’admis.</p></li>
 <li><p>Faire des graphiques montrant les taux annuels d’admis pour chaque mention.</p></li>
-<li><p>Décrire et interpréter chaque graphiques.</p></li>
+<li><p>Décrire et interpréter chaque graphique.</p></li>
 </ol>
 </section>
 <section id="variation-en-coupe" class="level3">
 <h3 class="anchored" data-anchor-id="variation-en-coupe">1.3 Variation en coupe</h3>
-<p>On considère la dernière session reportée par le jeu de donnée.</p>
+<p>On considère la dernière session reportée par le jeu de données.</p>
 <ol type="1">
-<li>Créer un jeu de donnée filtré sur cette dernière année.</li>
-<li>Montrer es graphiques en barres pour représenter les différences sur les taux de réussites selon le type d’établissement et le secteur d’enseignement.</li>
+<li>Créer un jeu de données filtré sur cette dernière année.</li>
+<li>Montrer des graphiques en barres pour représenter les différences sur les taux de réussites selon le type d’établissement et le secteur d’enseignement.</li>
 <li>Faire des classements des dix meilleurs départements selon les différents taux de réussites.</li>
 </ol>
 </section>
@@ -616,12 +616,12 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="analyse-en-coupe">3.2 Analyse en coupe</h3>
 <ol type="1">
 <li>Faire des graphiques par points représentant le revenu moyen de la commune de l’établissement avec ses différents taux de réussites.</li>
-<li>Faire des graphiques en bar dans lequel par décile de revenu (utiliser la colonne de percentile coté socioeco).</li>
+<li>Faire des graphiques en barres dans lesquels par décile de revenu (utiliser la colonne de percentile coté socioeco).</li>
 </ol>
 </section>
-<section id="regressions-linéaire" class="level3">
-<h3 class="anchored" data-anchor-id="regressions-linéaire">3.3 Regressions linéaire</h3>
-<p>Pour une année donnée vs toutes taux de reussite en fonction de la taille de la commune, revenus moyen</p>
+<section id="régressions-linéaires" class="level3">
+<h3 class="anchored" data-anchor-id="régressions-linéaires">3.3 Régressions linéaires</h3>
+<p>Pour une année donnée, tous les taux de réussite en fonction de la taille de la commune et du revenu moyen</p>
 <ol type="1">
 <li>Faites une régression</li>
 </ol>

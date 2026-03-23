@@ -600,7 +600,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Décrire l’objet Utilisez <code>world</code>. Utiliser <code>summary()</code> sur la colonne de géométrie de l’objet <code>world</code> inclus dans le package <code>spData.</code> Utilisez <code>ggplot2</code>. Tracez la carte des continents. Utiliser le <code>theme_void()</code>. Tracez le continent asiatique, en filtrant puis appliquant la fonction d’union de formes géométrique <code>st_union</code>.</li>
 </ol>
 <ol start="2" type="1">
-<li>Rajouter à la carte des continents des ronds pour chaque pays représentant la racine carré de leur population divisé par 10000. Il faudra pour ça calculer les centroides de chaque pays avec la commande <code>st_centroid</code> du package <strong>sf</strong></li>
+<li>Rajouter à la carte des continents des ronds pour chaque pays représentant la racine carrée de leur population divisé par 10000. Il faudra pour ça calculer les centroides de chaque pays avec la commande <code>st_centroid</code> du package <strong>sf</strong></li>
 </ol>
 <ol start="3" type="1">
 <li>Tracez la carte de l’Inde dans le continent asiatique. Il faut :</li>
@@ -749,9 +749,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Charger les données de <code>TP3.zip</code>. Les gpkg s’ouvrent la commande <code>st_read</code> du package <code>sf</code>.</p></li>
 <li><p>Restreindre la base <code>magasins</code> aux types de magasins (<code>shop</code>) suivants : “gas”,“supermarket”,“convenience”, “car_repair”,“car”,“mall”,“convenience;gas”</p></li>
 <li><p>Transformer les deux jeux en sf dataframe en système de coordonnées EPSG 2154. Attention, pour la base <code>station</code>, il faut diviser longitude et latitude par 100000.</p></li>
-<li><p>Pour chaque station station, le magasins le plus proche et calculer la distance correspondate.</p></li>
+<li><p>Pour chaque station, trouver le magasin le plus proche et calculer la distance correspondante.</p></li>
 <li><p>Quelle est la part des magasins à moins de 100 mètres d’une station.</p></li>
-<li><p>Ajouter les attributs <code>shop</code> et <code>operator</code> pour chaque magasins les plus proche à la base stations.</p></li>
+<li><p>Ajouter les attributs <code>shop</code> et <code>operator</code> pour chaque magasin le plus proche à la base stations.</p></li>
 </ol>
 
 
