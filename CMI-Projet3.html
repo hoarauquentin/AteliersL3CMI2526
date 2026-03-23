@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -506,6 +541,15 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#nouveau-jeu-de-données" id="toc-nouveau-jeu-de-données" class="nav-link" data-scroll-target="#nouveau-jeu-de-données">Nouveau jeu de données</a></li>
   </ul></li>
+  <li><a href="#feuille-de-route" id="toc-feuille-de-route" class="nav-link" data-scroll-target="#feuille-de-route">Feuille de route</a>
+  <ul class="collapse">
+  <li><a href="#étape-1-nettoyage-du-jeu-de-données-immobilier" id="toc-étape-1-nettoyage-du-jeu-de-données-immobilier" class="nav-link" data-scroll-target="#étape-1-nettoyage-du-jeu-de-données-immobilier">Étape 1 — Nettoyage du jeu de données immobilier</a></li>
+  <li><a href="#étape-2-nettoyage-du-jeu-de-données-traitement" id="toc-étape-2-nettoyage-du-jeu-de-données-traitement" class="nav-link" data-scroll-target="#étape-2-nettoyage-du-jeu-de-données-traitement">Étape 2 — Nettoyage du jeu de données « traitement »</a></li>
+  <li><a href="#étape-3-rapprochement-spatial-et-calcul-des-distances" id="toc-étape-3-rapprochement-spatial-et-calcul-des-distances" class="nav-link" data-scroll-target="#étape-3-rapprochement-spatial-et-calcul-des-distances">Étape 3 — Rapprochement spatial et calcul des distances</a></li>
+  <li><a href="#étape-4-construction-du-panel-et-de-la-variable-de-traitement" id="toc-étape-4-construction-du-panel-et-de-la-variable-de-traitement" class="nav-link" data-scroll-target="#étape-4-construction-du-panel-et-de-la-variable-de-traitement">Étape 4 — Construction du panel et de la variable de traitement</a></li>
+  <li><a href="#étape-5-statistiques-descriptives" id="toc-étape-5-statistiques-descriptives" class="nav-link" data-scroll-target="#étape-5-statistiques-descriptives">Étape 5 — Statistiques descriptives</a></li>
+  <li><a href="#étape-6-estimation-économétrique" id="toc-étape-6-estimation-économétrique" class="nav-link" data-scroll-target="#étape-6-estimation-économétrique">Étape 6 — Estimation économétrique</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -561,8 +605,106 @@ ul.task-list li input[type="checkbox"] {
 <section id="nouveau-jeu-de-données" class="level3">
 <h3 class="anchored" data-anchor-id="nouveau-jeu-de-données">Nouveau jeu de données</h3>
 <p>Lien : <a href="https://parisnanterrefr-my.sharepoint.com/:u:/g/personal/qhoarau_parisnanterre_fr/IQA4MUsOpSYgR7MoG8NXj7YJAZEWT90b8Do2RYzHPlix6OE?e=Oyf2Rh" class="uri">https://parisnanterrefr-my.sharepoint.com/:u:/g/personal/qhoarau_parisnanterre_fr/IQA4MUsOpSYgR7MoG8NXj7YJAZEWT90b8Do2RYzHPlix6OE?e=Oyf2Rh</a></p>
+</section>
+</section>
+<section id="feuille-de-route" class="level2">
+<h2 class="anchored" data-anchor-id="feuille-de-route">Feuille de route</h2>
+<p>Les étapes ci-dessous constituent une progression recommandée. Leur ordre logique conditionne chaque étape suivante.</p>
+<section id="étape-1-nettoyage-du-jeu-de-données-immobilier" class="level3">
+<h3 class="anchored" data-anchor-id="étape-1-nettoyage-du-jeu-de-données-immobilier">Étape 1 — Nettoyage du jeu de données immobilier</h3>
+<p>Repartir du travail du Projet 2 :</p>
+<ul>
+<li>Charger et nettoyer le fichier de transactions immobilières : conserver uniquement les ventes de maisons ou appartements, supprimer les valeurs aberrantes de prix et de surface.</li>
+<li>Garder les variables utiles : identifiant du bien, coordonnées GPS, date de vente, prix de vente, surface.</li>
+<li><strong>Pour l’inférence causale</strong>, ne conserver que les biens vendus <strong>au moins deux fois</strong> (condition nécessaire pour l’estimateur within).</li>
+</ul>
+</section>
+<section id="étape-2-nettoyage-du-jeu-de-données-traitement" class="level3">
+<h3 class="anchored" data-anchor-id="étape-2-nettoyage-du-jeu-de-données-traitement">Étape 2 — Nettoyage du jeu de données « traitement »</h3>
+<p>Le second jeu de données recense les installations ou événements (éoliennes, inondations, incendies, etc.). L’objectif est de le réduire à <strong>une ligne par installation ou événement</strong>, avec :</p>
+<ul>
+<li>Les <strong>coordonnées GPS</strong> du point (longitude, latitude), ou à défaut la <strong>commune</strong> d’appartenance ;</li>
+<li>La <strong>date de première installation ou d’occurrence</strong> (mise en service pour une éolienne, date de l’inondation ou de l’incendie).</li>
+</ul>
+<p>Si plusieurs enregistrements correspondent au même site (mises à jour successives, par exemple), ne garder que la première date. Convertir ensuite ce jeu en objet spatial (<code>sf</code>) avec le même système de projection que le jeu immobilier.</p>
+</section>
+<section id="étape-3-rapprochement-spatial-et-calcul-des-distances" class="level3">
+<h3 class="anchored" data-anchor-id="étape-3-rapprochement-spatial-et-calcul-des-distances">Étape 3 — Rapprochement spatial et calcul des distances</h3>
+<ul>
+<li>Utiliser <code>sf::st_nearest_feature()</code> pour associer à chaque bien immobilier l’installation ou l’événement le plus proche.</li>
+<li>Calculer la distance entre chaque bien et son voisin le plus proche avec <code>sf::st_distance()</code>.</li>
+<li><strong>Filtrer</strong> : supprimer les biens situés au-delà d’un seuil raisonnable (ex. 10 ou 20 km) — seuls les biens situés à proximité de l’élément étudié sont pertinents pour l’analyse.</li>
+</ul>
+</section>
+<section id="étape-4-construction-du-panel-et-de-la-variable-de-traitement" class="level3">
+<h3 class="anchored" data-anchor-id="étape-4-construction-du-panel-et-de-la-variable-de-traitement">Étape 4 — Construction du panel et de la variable de traitement</h3>
+<p>Pour chaque transaction (bien × date de vente) :</p>
+<ul>
+<li>Récupérer la <strong>date de l’installation</strong> associée au bien le plus proche (identifiée à l’étape 2).</li>
+<li>Définir la variable <code>post</code> : vaut 1 si la vente a eu lieu <strong>après</strong> la date d’installation, 0 sinon.</li>
+<li>Définir le <strong>groupe de traitement</strong> : biens situés à moins d’un seuil de distance (ex. 2 ou 5 km) de l’installation. Le groupe de contrôle est constitué des biens plus éloignés, toujours dans la zone filtrée à l’étape 3.</li>
+<li>L’effet causal est capturé par l’interaction <code>traité × post</code>.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dans le cadre d’un DiD échelonné (installations arrivant à des dates différentes selon les sites), chaque bien a sa propre date de traitement de référence — celle de l’installation la plus proche identifiée à l’étape 2.</p>
+</div>
+</div>
+</section>
+<section id="étape-5-statistiques-descriptives" class="level3">
+<h3 class="anchored" data-anchor-id="étape-5-statistiques-descriptives">Étape 5 — Statistiques descriptives</h3>
+<p>Avant toute régression :</p>
+<ul>
+<li>Comparer les prix moyens (et leur évolution dans le temps) entre groupe traité et groupe de contrôle, avant et après le traitement.</li>
+<li>Représenter graphiquement l’évolution du prix moyen par groupe et par année : c’est une vérification visuelle de la tendance parallèle.</li>
+<li>Décrire la distribution des distances (histogramme, résumé statistique).</li>
+</ul>
+</section>
+<section id="étape-6-estimation-économétrique" class="level3">
+<h3 class="anchored" data-anchor-id="étape-6-estimation-économétrique">Étape 6 — Estimation économétrique</h3>
+<section id="twfe-two-way-fixed-effects" class="level4">
+<h4 class="anchored" data-anchor-id="twfe-two-way-fixed-effects">TWFE (Two-Way Fixed Effects)</h4>
+<p>Régression de base avec <code>fixest::feols()</code> :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">feols</span>(<span class="fu">log</span>(prix) <span class="sc">~</span> traite<span class="sc">:</span>post <span class="sc">|</span> id_bien <span class="sc">+</span> annee, <span class="at">data =</span> panel)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Effets fixes bien (<code>id_bien</code>) : contrôlent les caractéristiques invariantes de chaque bien.</li>
+<li>Effets fixes année (<code>annee</code>) : contrôlent les tendances communes à tous les biens.</li>
+<li>L’interaction <code>traite:post</code> estime l’effet moyen du traitement (ATT).</li>
+</ul>
+</section>
+<section id="did-échelonné-avec-did" class="level4">
+<h4 class="anchored" data-anchor-id="did-échelonné-avec-did">DiD échelonné avec <code>did</code></h4>
+<p>Lorsque les installations ont eu lieu à des dates différentes, le TWFE simple peut être biaisé (contamination par des effets de traitement hétérogènes). Utiliser l’estimateur de Callaway &amp; Sant’Anna :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(did)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>out <span class="ot">&lt;-</span> <span class="fu">att_gt</span>(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">yname  =</span> <span class="st">"log_prix"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">tname  =</span> <span class="st">"annee"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">idname =</span> <span class="st">"id_bien"</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">gname  =</span> <span class="st">"annee_traitement"</span>,  <span class="co"># année de la première installation pour chaque bien</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">data   =</span> panel</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">aggte</span>(out, <span class="at">type =</span> <span class="st">"simple"</span>)     <span class="co"># effet moyen agrégé</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="event-study" class="level4">
+<h4 class="anchored" data-anchor-id="event-study">Event study</h4>
+<p>Visualiser la dynamique de l’effet avant et après le traitement :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">aggte</span>(out, <span class="at">type =</span> <span class="st">"dynamic"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggdid</span>(<span class="fu">aggte</span>(out, <span class="at">type =</span> <span class="st">"dynamic"</span>))</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Les coefficients <strong>pré-traitement</strong> doivent être proches de zéro : c’est le test formel de la tendance parallèle.</li>
+<li>Les coefficients <strong>post-traitement</strong> montrent si l’effet apparaît immédiatement ou progressivement dans le temps.</li>
+</ul>
 
 
+</section>
 </section>
 </section>
 
